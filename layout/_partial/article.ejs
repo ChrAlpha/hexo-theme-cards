@@ -6,7 +6,7 @@
         <%- theme.meta.date.title + date(page.date, theme.meta.date.format) %>
         <% if(page.categories && page.categories.length > 0 && page.categories.forEach) { %>
             <% page.categories.forEach(function(cat) { %>
-                &nbsp;·&nbsp;<a href="<%- url_for(cat.path) %>"><%- cat.name %></a>
+                &nbsp;·&nbsp;<a href="<%- url_for(cat.path) %>" class="button"><%- cat.name %></a>
             <% }); %>
         <% } %>
     </div>
