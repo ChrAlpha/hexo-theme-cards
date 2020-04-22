@@ -1,0 +1,31 @@
+<%- partial('header', null, {cache: false, path: path}) %>
+<% if(!is_post()) { %>
+    <div class="author">
+        <div class="author__logo">
+            <% if(theme.site_info.cover.logo) { %>
+                <img no-lazy alt="author Image" src="<%- theme.site_info.cover.logo %>">
+            <% } else if(theme.site_info.sitename) { %>
+                <h1><%- theme.site_info.sitename %></h1>
+            <% } else if(config.title) { %>
+                <h1><%- config.title %></h1>
+            <% } %>
+        </div>
+        <% if(theme.site_info.cover.description) { %>
+            <div class="author__intro">
+                <%- markdown(theme.site_info.cover.description) %> 
+            </div>
+        <% } %> 
+        <% if(theme.site_info.cover.menu && theme.site_info.cover.menu.length && theme.site_info.cover.menu.forEach) { %>
+            <div class="cover-menus">
+                <% for(let i = 0; i < theme.site_info.cover.menu.length; ++i) { %>
+                    <a href="<%- theme.site_info.cover.menu[i].url %>" class="cover-menu button">
+                        <%- theme.site_info.cover.menu[i].name %>
+                    </a>
+                    <% if(i !== theme.site_info.cover.menu.length - 1) { %>
+                        ·
+                    <% } %>
+                <% } %>
+            </div>
+        <% } %>
+    </div>
+<% } %>

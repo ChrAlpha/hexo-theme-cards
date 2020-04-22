@@ -1,0 +1,52 @@
+<% if (site.posts && site.posts.length > 0) { %>
+    <div class="posts">
+        <% if (!page.prev) { %>
+            <% if (is_home()) { %>
+                <% site.posts.each(function(post){ %>
+                    <% if (post.top) { %>
+                        <% if (page.group == undefined || post.group == page.group) { %>
+                        <div class='post-card content-box'>
+                            <%- partial('post', {post: post}) %>
+                        </div>
+                        <% } %>
+                    <% } %>
+                <% }) %>
+            <% } else if (page.posts && page.posts.length > 0) { %>
+                <% page.posts.each(function(post){ %>
+                    <% if (post.top) { %>
+                        <div class='post-card content-box'>
+                            <%- partial('post', {post: post}) %>
+                        </div>
+                    <% } %>
+                <% }) %>
+            <% } %>
+        <% } %>
+        <% if (page.posts && page.posts.length > 0) { %>
+            <% page.posts.each(function(post){ %>
+                <% if (!post.top) { %>
+                <div class='post-card content-box'>
+                    <%- partial('post', {post: post}) %>
+                </div>
+                <% } %>
+            <% }) %>
+        <% } %>
+    </div>
+    <% if (page && page.posts) { %>
+        <% if (page.total > 1) { %>
+            <br>
+            <nav role="navigation" aria-label="Pagination Navigation">
+                <% if (page.prev != 0) { %>
+                    <a href="<%= url_for(page.prev_link) %>">
+                        <%- __('post.prev_page') %>
+                    </a>
+                <% } %>
+                <span><%= page.current%> / <%= page.total%></span>
+                <% if (page.next != 0) { %>
+                    <a href="<%= url_for(page.next_link) %>">
+                        <%- __('post.next_page') %>>
+                    </a>
+                <% } %>
+            </nav>
+        <% } %>
+    <% } %>
+<% } %>

@@ -1,0 +1,38 @@
+<% page.comments = false; %>
+<% if (site.posts && site.posts.length > 0) { %>
+    <% if (page.layout == 'tag') { %>
+        <main class="main tagscloud">
+            <%- tagcloud({
+                min_font: 16, 
+                max_font: 35, 
+                amount: 999, 
+                color: true, 
+                start_color: '#ACB3C2', 
+                end_color: '#454D5D',
+            }) %>
+        </main>
+        <style>
+            .tagscloud {
+                max-width: 40em;
+                margin: 2em auto;
+                margin-top: 0em;
+            }
+            .tagscloud a {
+                margin-right: 1em;
+                border-bottom: 1px solid #ACB3C2;
+                line-height: 65px;
+                white-space: nowrap;
+            }
+            .tagscloud a:hover {
+                border-bottom: 2px solid #454D5D;
+                /* font-style: bold; */
+                text-decoration: none;
+            }
+        </style>
+    <% } else { %>
+        <main class="main">
+            <%- partial('_partial/archive') %>
+        </main>
+    <% } %>
+<% } %>
+<%- partial('_partial/footer', null, {cache: !config.relative_link}) %>

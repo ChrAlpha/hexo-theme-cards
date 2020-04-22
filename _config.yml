@@ -1,0 +1,197 @@
+cdn: 
+  enable: false
+  css: 
+    style: 
+    markdown: https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css
+  js: 
+    valine: 
+
+
+
+# 自定义信息
+site_info: 
+  
+  # 显示在最上方 cover 处的站点名称
+  sitename: 
+  
+  # 网站图标
+  favicon: 
+  
+  # 封面 cover 设置
+  cover: 
+
+    # 若设置 logo，则优先使用 logo 代替 sitename
+    logo: 
+    
+    # logo 下方的一句话介绍
+    description: 
+    
+    # cover 按钮菜单，通常用于站内导航
+    menu: 
+      - name: 首页
+        url: /
+      - name: 标签
+        url: /tags/
+      - name: 归档
+        url: /archives/
+      - name: 友链
+        url: /friends/
+      - name: RSS
+        url: /atom.xml
+
+
+
+style: 
+
+  # 盒子大小
+  box: 
+    max_width: 800px
+    sp_width: 1540px 
+    max_width_logo: 600px 
+    link_item: 16rem
+
+  # 颜色配置
+  color: 
+    main_color: '#ffb90f'
+    link_color: '#ffb90f'
+    link_color_hover: '#eb5757'
+    title: '#50596c'
+    background: '#f4f4f4'
+    card_color: '#fff'
+    font_color: '#444'
+    codeblock: '#fffbf3'
+    categories_block: '#c2c2c2'
+    tags_block: '#f4f4f4'
+    footer_text: '#999'
+
+
+
+meta:
+  # 默认文章标题
+  title: 
+  
+  # 默认文章作者（可在front-matter中覆盖）
+  author:
+    name: ChrAlpha
+    url: https://chralpha.com
+  
+  # 文章创建日期
+  date:
+    title: ''
+    format: 'YYYY-MM-DD' # 日期格式 http://momentjs.com/docs/
+  
+  # 文章更新日期
+  updated:
+    title: '最后更新于：'
+    format: 'YYYY-MM-DD' # 日期格式 http://momentjs.com/docs/
+
+  copyright: 
+    enable: true
+    
+    # 永久链接前的描述
+    permalink: '本文链接：'
+    
+    # 在作者声明和永久链接之间，可以多行，支持 markdown
+    custom_text:
+      - '文章默认使用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh) 协议进行许可，使用时请注意遵守协议。'
+  
+  # 网站页脚，支持 markdown
+  site_footer:
+    - 'Copyright © 2019-2020 ChrAlpha.'
+    - 'Powered by [Hexo](https://hexo.io) | Theme - Card'
+
+
+
+optimize: 
+  lazyload:
+    enable: false
+    js: https://cdn.jsdelivr.net/npm/vanilla-lazyload@15.1.1/dist/lazyload.min.js
+    onlypost: false
+    loadingImg: 
+
+  nofollow:
+    enable: false
+    field: site
+    exclude:
+      - 'example.com'
+
+
+
+# 评论系统
+comments: 
+  enable: 
+
+  ## Disqus
+  disqus: 
+    enable: 
+    shortname: 
+    disqusjs:
+      enable: 
+      siteName: 
+      api: 
+      apikey: 
+      admin: 'chralpha'
+      nesting: 2
+
+  ## Valine
+  valine:
+    enable: 
+    leancloud:
+      app_id: 
+      app_key: 
+      valine_path: 
+    guest_info: nick,mail,link 
+    placeholder: just go!
+    avatar: '' 
+    pageSize: 8 
+    verify: 
+    notify: 
+    lang: 
+    highlight: 
+    visitor: 
+
+  ## Gitalk
+  gitalk:
+    enable:
+    repo:
+    owner:
+    clientID:
+    clientSecret:
+
+  ## Gitment
+  gitment:
+    enable:
+    repo:
+    owner:
+    client_id:
+    client_secret:
+  
+  livere:
+    enable: 
+    livere_uid:
+
+  changyan:
+    enable: 
+    appid:
+    conf:
+    thread_key_type: path # id | path. Only when you generate static id for each post before you using 'id'
+
+  wildfire:
+    enable: 
+    database_provider: firebase # firebase or wilddog
+    wilddog_site_id:
+    firebase_api_key:
+    firebase_auth_domain:
+    firebase_database_url:
+    firebase_project_id:
+    firebase_storage_bucket:
+    firebase_messaging_sender_id:
+    theme: light # light or dark
+    locale: en # en or zh-CN
+
+
+
+opengraph: 
+  enable: true
+  tc_type: summary_large_image
+

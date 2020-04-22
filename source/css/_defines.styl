@@ -1,0 +1,17 @@
+$max_width_main = convert(hexo-config('style.box.max_width')) || 800px
+$max_width_logo = convert(hexo-config('style.box.max_width_logo')) || 600px
+$max_link_item = convert(hexo-config('style.box.link_itme')) || 16rem
+@media screen and (min-width 2200px)
+    $max_width_main = convert(hexo-config('style.box.sp_width')) || 1540px
+
+$color_main = convert(hexo-config('style.color.main_color')) || #eb5757
+$color_link = convert(hexo-config('style.color.link_color')) || $color_main
+$color_link_hover = convert(hexo-config('style.color.link_color_hover')) || $color_link
+$color_title = convert(hexo-config('style.color.title')) || #50596c
+$color_background = convert(hexo-config('style.color.background')) || #f4f4f4
+$color_card = convert(hexo-config('style.color.card_color')) || #fff
+$color_font = convert(hexo-config('style.color.font_color')) || #444
+$color_codeblock = convert(hexo-config('style.color.codeblock')) || #fffbf3
+$color_categories_block = convert(hexo-config('style.color.categories_block')) || #c2c2c2
+$color_tags_block = convert(hexo-config('style.color.tags_block')) || #f4f4f4
+$color_footer_text = convert(hexo-config('style.color.footer_text')) || #999

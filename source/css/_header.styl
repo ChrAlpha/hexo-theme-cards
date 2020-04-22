@@ -1,0 +1,19 @@
+.header
+    display flex
+    justify-content space-between
+    align-items center
+    min-height var(--header-height)
+    padding 0 calc(var(--space)/2)
+    top 0
+    z-index 10
+
+.header__left
+.header__right
+    display flex
+    align-items center
+    font-family rubik,sans-serif,Varela Round
+
+@media screen and (min-width: 1024px)
+    .header
+        position sticky
+        width 100%

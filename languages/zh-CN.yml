@@ -1,0 +1,38 @@
+navbar:
+  home: 首页
+  link: 友链
+  archive: 归档
+  category: 分类
+  tag: 标签
+post:
+  top: 置顶
+  read_more: 阅读全文
+  sticky: 置顶
+  wordcount: '字数：%s字'
+  duration: '时长：%s分钟'
+  comments: 评论
+  comments_placeholder: 您所在的地区可能无法访问 Disqus 评论系统，请切换网络环境再尝试。
+  copy_button: 复制
+  copy_success: 复制成功
+  copy_failure: 复制失败
+  updated: 更新于
+  prev_page: 上一页
+  next_page: 下一页
+  copyright:
+    author: 本文作者
+    link: 本文链接
+    license_title: 版权声明
+    license_content: "本博客所有文章除特别声明外，均采用 %s 许可协议。转载请注明出处！"
+footer:
+  license: 'Blog content follows the [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)  License. Please observe the agreements when using.'
+  use: Use
+  theme: as theme
+  total_views: total visits
+  total_visitors: total visitors
+  times: times
+symbol:
+  comma: "，"
+  period: "。"
+  colon: "："
+  brackets_l: "（"
+  brackets_r: "）"

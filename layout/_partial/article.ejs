@@ -1,0 +1,68 @@
+<div class="post-title">
+    <h1 class="post-title__text">
+        <%- page.title %>
+    </h1>
+    <div class="post-meta">
+        <%- theme.meta.date.title + date(page.date, theme.meta.date.format) %>
+        <% if(page.categories && page.categories.length > 0 && page.categories.forEach) { %>
+            <% page.categories.forEach(function(cat) { %>
+                &nbsp;·&nbsp;<a href="<%- url_for(cat.path) %>"><%- cat.name %></a>
+            <% }); %>
+        <% } %>
+    </div>
+</div>
+<div class="post content-box">
+    <div class="post__header">
+        <% if(page.thumbnail) { %>
+            <img alt="Cover Image" src="<%- url_for(post.thumbnail) %>">
+        <% } %>
+    </div>
+    <div class="post__content">
+        <div class="markdown-body">
+            <%- page.content %>
+        </div>
+    </div>
+    <% if(theme.meta.copyright.enable) { %>
+        <div class="post__license">
+            <p>
+                <strong>本文作者：<%- theme.meta.author.name %></strong>
+            </p>
+            <% (theme.meta.copyright.custom_text || []).forEach((text) => { %>
+                <p>
+                    <strong>
+                        <%- markdown(text) %>
+                    </strong>
+                </p>
+            <% }); %>
+            <% if(theme.meta.copyright.permalink) { %>
+                <p>
+                    <strong>
+                        <%- theme.meta.copyright.permalink %>
+                    </strong>
+                    <a href="<%- page.permalink %>"><%- page.permalink %></a>
+                </p>
+            <% } %>
+        </div>
+    <% } %>
+    <div class="post-meta post-footer__meta">
+        <p>
+            <%- theme.meta.updated.title + date(page.updated, theme.meta.updated.format) %>
+        </p>
+    </div>
+    <% if(page.tags && page.tags.length && page.tags.forEach) { %>
+        <div class="post-tags post-card__tags">
+            <% if(page.categories && page.categories.length > 0 && page.categories.forEach) { %>
+                <% page.categories.forEach(function(cat) { %>
+                    <a href="<%- url_for(cat.path) %>" class="post-cats__link button"><%- cat.name %></a>
+                <% }); %>
+            <% } %>
+            <% page.tags.each(function(item) { %>
+                <a href="<%- url_for(item.path) %>" class="post-tags__link button"># <%=item.name %></a>
+            <% }); %>
+        </div>
+    <% } %>
+</div>
+<br>
+<div class="post__comment content-box">
+    <%- partial('../_third-party/comments.ejs') %>
+</div>

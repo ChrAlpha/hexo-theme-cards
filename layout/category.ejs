@@ -1,0 +1,31 @@
+<% page.comments = false; %>
+<main class="main">
+    <% if (site.posts && site.posts.length > 0) { %>
+        <% if (page.layout == 'category') { %>
+            <div class="all-categories content-box">
+                <% if(page.title) { %>
+                    <div class="post-title">
+                        <h1 class="post-title__text" style="text-align: left;">
+                            <%- page.title %>
+                        </h1>
+                        <hr>
+                    </div>
+                <% } %>
+                <% if (site.categories && site.categories.length && site.categories.forEach) { %>
+                    <% site.categories.sort('path').each(function(category){ %>
+                        <a class="<%= category.parent ? ' child' : ''%>" href="<%= url_for(category.path) %>">
+                            <time>&nbsp;&nbsp;<%= category.name %></time>
+                            <span class="title">
+                                (<%- category.posts.length %>)
+                            </span>
+                        </a>
+                        <br><br>
+                    <% }) %>
+                <% } %>
+            </div>
+        <% } else { %>
+            <%- partial('_partial/archive') %>
+        <% } %>
+    <% } %>
+</main>
+<%- partial('_partial/footer', null, {cache: !config.relative_link}) %>

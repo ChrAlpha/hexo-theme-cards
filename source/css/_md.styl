@@ -1,0 +1,157 @@
+ol
+ul
+    list-style none
+
+blockquote
+q
+    quotes none
+
+blockquote:after
+blockquote:before
+q:after
+q:before
+    content ""
+    content none
+
+table
+    border-collapse collapse
+    border-spacing 0
+
+
+p
+    margin-bottom 1.25em
+
+h1
+h2
+h3
+h4
+h5
+    transition color .6s
+    color var(--title-color)
+    margin 2.75rem 0 1rem
+    font-family miriam libre,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,pingfang sc,source han sans sc,noto sans cjk sc,sarasa gothic sc,microsoft yahei,sans-serif,Apple Color Emoji,Segoe UI Emoji,Varela Round
+    font-weight 430
+    line-height 1.5
+
+h1
+    font-size 2em
+
+h2
+    font-size 1.6em
+
+h3
+    font-size 1.4em
+
+h4
+    font-size 1.3em
+
+h5
+    font-size 1.2em
+
+small
+    font-size .889em
+
+strong
+    font-weight 600
+
+blockquote
+    border-left 4px solid var(--border-color)
+    padding-left calc(var(--space)/2)
+    color var(--title-color)
+
+em
+    font-style italic
+
+ul
+    list-style-type disc
+    line-height 1.8
+
+    li
+        margin-bottom .6em
+        font-family rubik,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,pingfang sc,noto sans cjk sc,sarasa gothic sc,microsoft yahei,sans-serif,Apple Color Emoji,Segoe UI Emoji
+
+ol
+    list-style-type decimal
+    line-height 1.8
+
+    li
+        margin-bottom .6em
+        font-family rubik,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,pingfang sc,noto sans cjk sc,sarasa gothic sc,microsoft yahei,sans-serif,Apple Color Emoji,Segoe UI Emoji
+
+*
+    box-sizing border-box
+    font-smoothing antialiased
+    osx-font-smoothing grayscale
+
+a
+    &:not(.button)
+        color var(--link-color)
+        transition opacity .2s
+
+        &:hover
+            opacity .8
+            text-decoration underline
+
+    &:-webkit-any-link
+        color var(--link-color)
+        cursor pointer
+        text-decoration none
+
+    .index-title
+        color var(--title-color)
+
+img
+    max-width 100%
+
+    &.lazyload
+        transition filter .375s ease 0s
+
+        &:not(.loaded)
+            filter blur(8px)
+
+            &:not(.loading)
+                padding-bottom 40%
+
+pre
+    padding calc(var(--space)/3) calc(var(--space)/2)
+    font-size 1em
+    background-color var(--bg-code)
+    margin-bottom 1em
+    border 1px solid var(--border-color)
+    border-radius var(--radius)
+    overflow auto
+
+    code
+        padding 0
+        background-color transparent
+
+code
+    background-color var(--bg-code)
+    font-size .85em
+    padding .2em .5em
+
+code[class*=language-]
+pre[class*=language-]
+    font-family JetBrainsMono NF,SF Mono,Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace,Varela Round
+    text-align left
+    white-space pre
+    word-spacing normal
+    word-break normal
+    word-wrap normal
+    line-height 1.5
+    tab-size 4
+    hyphens none
+
+@media print
+    code[class*=language-]
+    pre[class*=language-]
+        text-shadow none
+
+pre[class*=language-]
+    overflow auto
+
+:not(pre)
+    >code[class*=language-]
+        border-radius var(--radius)
+        white-space normal
+

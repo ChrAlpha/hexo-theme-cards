@@ -1,0 +1,32 @@
+<div class="post-card__header">
+    <% if(post.thumbnail) { %>
+        <a href='<%- url_for(post.link || post.path) %>'><img alt="Cover Image" src="<%- url_for(post.thumbnail) %>"></a>
+    <% } %>
+</div>
+<div class="post-card__content">
+    <a href="<%- url_for(post.link || post.path) %>" class="index-title">
+        <h2 class="post-card__title">
+            <%- post.title ? post.title : date(post.date, theme.meta.date.format) %>
+        </h2>
+    </a>
+    <p class="post-card__descrption">
+        <div class="markdown-body">
+            <%- post.excerpt || post.description %>
+        </div>    
+    </p>
+</div>
+<div class="post-meta post-card__meta">
+    <%- theme.meta.date.title + date(post.date, theme.meta.date.format) %>
+    <% if(post.categories && post.categories.length > 0 && post.categories.forEach) { %>
+        <% post.categories.forEach(function(cat) { %>
+            <span> · <a href="<%- url_for(cat.path) %>" class="button"><%- cat.name %></a></span>
+        <% }); %>
+    <% } %>
+</div>
+<% if(post.tags && post.tags.length && post.tags.forEach) { %>
+    <div class="post-tags post-card__tags">
+        <% post.tags.each(function(item) { %>
+            <a href="<%- url_for(item.path) %>" class="post-tags__link button"># <%=item.name %></a>
+        <% }); %>
+    </div>
+<% } %>
