@@ -127,6 +127,16 @@ optimize:
     exclude:
       - 'example.com'
 
+  jquery: 
+    enable: false
+    js: https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js
+
+  # 如需开启 fancybox 请确保开启上方 jQuery
+  fancybox: 
+    enable: false
+    auto: 
+    css: https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css
+    js: https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js
 
 
 # 评论系统

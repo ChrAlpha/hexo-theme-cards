@@ -13,6 +13,16 @@
     </script>
 <% } %>
 
+<!-- jQuery -->
+<% if(theme.optimize.jquery.enable) { %> 
+    <script src="<%- (theme.optimize.jquery.js) %>" crossorigin="anonymous"></script>   
+<% } %> 
+
+<!-- fancybox -->
+<% if(theme.optimize.fancybox.enable) { %>
+    <%- partial('_third-party/fancybox') %> 
+<% } %> 
+
 <% if(theme.comments.enable) { %>
     <% if(theme.comments.disqus.enable) { %>
         <% if(theme.comments.disqus.disqusjs.enable) { %>

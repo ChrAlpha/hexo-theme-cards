@@ -1,0 +1,36 @@
+<script async>
+    (() => {
+        var d = document.createElement('link');
+        d.rel = 'stylesheet';
+        d.href = '<%- theme.optimize.fancybox.css %>';
+        d.crossOrigin = 'annoymous';
+        d.media = 'screen';
+        document.head.appendChild(d);
+    })();
+</script>
+<script async src="<%- theme.optimize.fancybox.js %>"></script>
+<script async>
+    let lazyloadT = Boolean('<%- config.lazyload %>'),
+        auto_fancybox = Boolean('<%- theme.optimize.fancybox.auto %>')
+    if(auto_fancybox) {
+        $(".post__content").find('img').each(function () {
+            var element = document.createElement("a");
+            $(element).attr("data-fancybox", "gallery");
+            $(element).attr("href", $(this).attr("src"));
+            if (lazyloadT) {
+                $(element).attr("href", $(this).attr("data-srcset"));
+            }
+            $(this).wrap(element);
+        });
+    } else {
+        $(".post__content").find("fancybox").find('img').each(function () {
+            var element = document.createElement("a");
+            $(element).attr("data-fancybox", "gallery");
+            $(element).attr("href", $(this).attr("src"));
+            if (lazyloadT) {
+                $(element).attr("href", $(this).attr("data-srcset"));
+            }
+            $(this).wrap(element);
+        });
+    }
+</script>
