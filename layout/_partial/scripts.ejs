@@ -1,3 +1,18 @@
+<!-- lazyload -->
+<% if(theme.optimize.lazyload.enable) { %>
+    <% if(theme.optimize.lazyload.js) { %>
+        <script defer src="<%- theme.optimize.lazyload.js %>"></script>
+    <% } else { %>
+        <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@15.1.1/dist/lazyload.min.js"></script>
+    <% } %>
+    <script>
+    window.lazyLoadOptions = {
+        elements_selector: ".lazyload",
+        threshold: 0
+    };
+    </script>
+<% } %>
+
 <% if(theme.comments.enable) { %>
     <% if(theme.comments.disqus.enable) { %>
         <% if(theme.comments.disqus.disqusjs.enable) { %>
@@ -122,19 +137,4 @@
             })
         </script>
     <% } %>
-<% } %>
-
-<!-- lazyload -->
-<% if(theme.optimize.lazyload.enable) { %>
-    <% if(theme.optimize.lazyload.js) { %>
-        <script async src="<%- theme.optimize.lazyload.js %>"></script>
-    <% } else { %>
-        <script async src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@15.1.1/dist/lazyload.min.js"></script>
-    <% } %>
-    <script>
-    window.lazyLoadOptions = {
-        elements_selector: ".lazyload",
-        threshold: 0
-    };
-    </script>
 <% } %>
