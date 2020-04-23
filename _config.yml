@@ -63,6 +63,18 @@ style:
     categories_block: '#c2c2c2'
     tags_block: '#f4f4f4'
     footer_text: '#999'
+  
+  # 弧度设置
+  radius: 
+    main: 5px
+    button: 5px
+    
+  # 间距设置
+  space: 
+    main: 3.5rem
+    s_main: 2rem  # 当屏幕宽度小于 728px 时候启用
+    sm_main: 1rem  # 当屏幕宽度小于 500px 时候启用
+  
 
 
 
