@@ -108,9 +108,9 @@ meta:
       - '文章默认使用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh) 协议进行许可，使用时请注意遵守协议。'
   
   # 网站页脚，支持 markdown
-  site_footer:
-    - 'Copyright © 2019-2020 ChrAlpha.'
-    - 'Powered by [Hexo](https://hexo.io) | Theme - Card'
+  footer:
+    - 'Copyright © 2020 '
+    - 'Powered by [Hexo](https://hexo.io) | Theme - [Card](https://github.com/ChrAlpha/hexo-theme-card)'
 
 
 
