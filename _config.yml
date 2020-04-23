@@ -137,6 +137,10 @@ optimize:
     auto: 
     css: https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css
     js: https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js
+    
+  # 回到顶部按钮
+  back_to_top: 
+    enable: false
 
 
 # 评论系统

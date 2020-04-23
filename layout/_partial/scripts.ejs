@@ -23,6 +23,11 @@
     <%- partial('_third-party/fancybox') %> 
 <% } %> 
 
+<!-- back to top -->
+<% if(theme.optimize.back_to_top.enable) { %> 
+    <%- js(['js/b2t.js']) %> 
+<% } %> 
+
 <% if(theme.comments.enable) { %>
     <% if(theme.comments.disqus.enable) { %>
         <% if(theme.comments.disqus.disqusjs.enable) { %>
