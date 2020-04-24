@@ -1,45 +1,49 @@
 <main class='main'>
-	<div class="archives">
-		<%
-		var yr = -1, pd = -1;
-		site.posts.sort('date', -1).each((post) => {
-			post.year = date(post.date, 'YYYY');
-			if(post.year !== yr) {
-				yr = post.year;
-		%>
-				<div class="archives-item">
-					<div class="archives-left">
-						<div class="archives-icon icon-lg"></div>
-					</div>
-					<div class="archives-content">
-						<h3><%= yr %></h3>
-					</div>
-				</div>
-			<% } %>
-			<div class="archives-item">
-				<div class="archives-left">
-					<div class="archives-icon">
+    <% if (page.year || page.month) { %>
+		<%- partial('_partial/archive') %>
+	<% } else { %>
+        <div class="archives">
+            <%
+            var yr = -1, pd = -1;
+            site.posts.sort('date', -1).each((post) => {
+                post.year = date(post.date, 'YYYY');
+                if(post.year !== yr) {
+                    yr = post.year;
+            %>
+                    <div class="archives-item">
+                        <div class="archives-left">
+                            <div class="archives-icon icon-lg"></div>
+                        </div>
+                        <div class="archives-content">
+                            <h3><%= yr %></h3>
+                        </div>
+                    </div>
+                <% } %>
+                <div class="archives-item">
+                    <div class="archives-left">
+                        <div class="archives-icon">
 
-					</div>
-				</div>
-				<span class="archives-content">
-					<%= date(post.date, 'MM-DD') %>
-					&nbsp;
-					<span>
-					<a href="<%= url_for(post.link || post.path) %>">
-						<span style="color: #454D5D;font-size: 20px;">
-							<% if(post.title){ %>
-								<%- post.title %>
-							<% } else if(post.date) { %>
-								<%= date(post.date, config.date_format) %>
-							<% } %>
-						</span>
-					</a>
-					</h5>
-					<br><br>
-				</span>
-			</div>
-		<% }) %>
-	</div>
+                        </div>
+                    </div>
+                    <span class="archives-content">
+                        <%= date(post.date, 'MM-DD') %>
+                        &nbsp;
+                        <span>
+                        <a href="<%= url_for(post.link || post.path) %>">
+                            <span style="color: #454D5D;font-size: 20px;">
+                                <% if(post.title){ %>
+                                    <%- post.title %>
+                                <% } else if(post.date) { %>
+                                    <%= date(post.date, config.date_format) %>
+                                <% } %>
+                            </span>
+                        </a>
+                        </h5>
+                        <br><br>
+                    </span>
+                </div>
+            <% }) %>
+        </div>
+    <% } %>
 </main>
 <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>

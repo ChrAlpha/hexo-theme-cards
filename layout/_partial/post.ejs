@@ -16,7 +16,9 @@
     </p>
 </div>
 <div class="post-meta post-card__meta">
-    <%- theme.meta.date.title + date(post.date, theme.meta.date.format) %>
+    <a href="/archives/<%- date(post.date, 'YYYY/MM/') %>" class="button" style="color: #999;">
+        <%- theme.meta.date.title + date(post.date, theme.meta.date.format) %>
+    </a>
     <% if(post.categories && post.categories.length > 0 && post.categories.forEach) { %>
         <% post.categories.forEach(function(cat) { %>
             <span> · <a href="<%- url_for(cat.path) %>" class="button"><%- cat.name %></a></span>
