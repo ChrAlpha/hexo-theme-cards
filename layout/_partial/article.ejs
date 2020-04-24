@@ -3,7 +3,9 @@
         <%- page.title %>
     </h1>
     <div class="post-meta">
-        <%- theme.meta.date.title + date(page.date, theme.meta.date.format) %>
+        <a href="/archives/<%- date(post.date, 'YYYY/MM/') %>" class="button" style="color: #808080;">
+            <%- theme.meta.date.title + date(post.date, theme.meta.date.format) %>
+        </a>
         <% if(page.categories && page.categories.length > 0 && page.categories.forEach) { %>
             <% page.categories.forEach(function(cat) { %>
                 &nbsp;·&nbsp;<a href="<%- url_for(cat.path) %>" class="button"><%- cat.name %></a>
