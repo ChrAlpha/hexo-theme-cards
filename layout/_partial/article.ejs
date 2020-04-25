@@ -6,10 +6,8 @@
         <% if (theme.layout.meta.indexOf('date') != -1) { %>
             <%- partial('_meta/date') %>
         <% } %>
-        <% if(page.categories && page.categories.length > 0 && page.categories.forEach) { %>
-            <% page.categories.forEach(function(cat) { %>
-                &nbsp;·&nbsp;<a href="<%- url_for(cat.path) %>" class="button"><%- cat.name %></a>
-            <% }); %>
+        <% if (theme.layout.post.header.indexOf('categories') != -1) { %>
+            <%- partial('_meta/categories') %> 
         <% } %>
         <%- partial('_third-party/busuanzi', {position: 'page'}) %> 
     </div>

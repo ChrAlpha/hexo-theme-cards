@@ -19,10 +19,8 @@
     <% if (theme.layout.meta.indexOf('date') != -1) { %>
         <%- partial('_meta/date') %>
     <% } %>
-    <% if(post.categories && post.categories.length > 0 && post.categories.forEach) { %>
-        <% post.categories.forEach(function(cat) { %>
-            <span> · <a href="<%- url_for(cat.path) %>" class="button"><%- cat.name %></a></span>
-        <% }); %>
+    <% if (theme.layout.meta.indexOf('categories') != -1) { %>
+        <%- partial('_meta/categories') %> 
     <% } %>
 </div>
 <% if(post.tags && post.tags.length && post.tags.forEach) { %>
