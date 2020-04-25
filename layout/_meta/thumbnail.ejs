@@ -1,5 +1,5 @@
 <% if(post.thumbnail) { %>
-    <a href="<%- post.link || post.path %>">
+    <a href="<%- url_for(post.link || post.path) %>">
         <img alt="Cover Image" src="<%- url_for(post.thumbnail) %>">
     </a>
 <% } %>
