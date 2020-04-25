@@ -113,6 +113,39 @@ meta:
 
 
 
+# 布局设置
+layout: 
+
+  # 首页/归档
+  # title/excerpt/thumbnail/date/updated/categories/tags
+  meta: 
+    - title
+    - excerpt
+    - thumbnail
+    - date
+    - categories
+    # - updated
+    # - tags
+
+  # 文章页
+  post: 
+    header:
+      - title
+      - thumbnail
+      - date
+      - categories
+      # - updated
+      # - tags
+    footer: 
+      - copyright
+      # - date
+      # - categories
+      - updated
+      - tags
+
+
+
+
 optimize: 
   lazyload:
     enable: false
