@@ -16,8 +16,8 @@
 </div>
 <div class="post content-box">
     <div class="post__header">
-        <% if(page.thumbnail) { %>
-            <img alt="Cover Image" src="<%- url_for(post.thumbnail) %>">
+        <% if (theme.layout.post.header.indexOf('thumbnail') != -1) { %>
+            <%- partial('_meta/thumbnail') %> 
         <% } %>
     </div>
     <div class="post__content">

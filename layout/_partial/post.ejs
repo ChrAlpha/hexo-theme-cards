@@ -1,6 +1,6 @@
 <div class="post-card__header">
-    <% if(post.thumbnail) { %>
-        <a href='<%- url_for(post.link || post.path) %>'><img alt="Cover Image" src="<%- url_for(post.thumbnail) %>"></a>
+    <% if (theme.layout.post.header.indexOf('thumbnail') != -1) { %>
+        <%- partial('_meta/thumbnail') %> 
     <% } %>
 </div>
 <div class="post-card__content">
