@@ -1,5 +1,5 @@
 <div class="post-card__header">
-    <% if (theme.layout.post.header.indexOf('thumbnail') != -1) { %>
+    <% if (theme.layout.post.header.indexOf('thumbnail') !== -1) { %>
         <%- partial('_meta/thumbnail') %> 
     <% } %>
 </div>
@@ -16,13 +16,13 @@
     </p>
 </div>
 <div class="post-meta post-card__meta">
-    <% if (theme.layout.meta.indexOf('date') != -1) { %>
+    <% if (theme.layout.meta.indexOf('date') !== -1) { %>
         <%- partial('_meta/date') %>
     <% } %>
-    <% if (theme.layout.meta.indexOf('categories') != -1) { %>
+    <% if (theme.layout.meta.indexOf('categories') !== -1) { %>
         <%- partial('_meta/categories') %> 
     <% } %>
 </div>
-<% if (theme.layout.meta.indexOf('tags') != -1) { %>
+<% if (theme.layout.meta.indexOf('tags') !== -1) { %>
     <%- partial('_meta/tags') %> 
 <% } %>

@@ -3,10 +3,10 @@
         <%- page.title %>
     </h1>
     <div class="post-meta">
-        <% if (theme.layout.meta.indexOf('date') != -1) { %>
+        <% if (theme.layout.meta.indexOf('date') !== -1) { %>
             <%- partial('_meta/date') %>
         <% } %>
-        <% if (theme.layout.post.header.indexOf('categories') != -1) { %>
+        <% if (theme.layout.post.header.indexOf('categories') !== -1) { %>
             <%- partial('_meta/categories') %> 
         <% } %>
         <%- partial('_third-party/busuanzi', {position: 'page'}) %> 
@@ -14,7 +14,7 @@
 </div>
 <div class="post content-box">
     <div class="post__header">
-        <% if (theme.layout.post.header.indexOf('thumbnail') != -1) { %>
+        <% if (theme.layout.post.header.indexOf('thumbnail') !== -1) { %>
             <%- partial('_meta/thumbnail') %> 
         <% } %>
     </div>
@@ -23,13 +23,13 @@
             <%- page.content %>
         </div>
     </div>
-    <% if (theme.layout.post.footer.indexOf('copyright') != -1) { %>
+    <% if (theme.layout.post.footer.indexOf('copyright') !== -1) { %>
         <%- partial('_meta/copyright') %> 
     <% } %>
-    <% if (theme.layout.post.footer.indexOf('updated') != -1) { %>
+    <% if (theme.layout.post.footer.indexOf('updated') !== -1) { %>
         <%- partial('_meta/updated') %> 
     <% } %>
-    <% if (theme.layout.post.footer.indexOf('tags') != -1) { %>
+    <% if (theme.layout.post.footer.indexOf('tags') !== -1) { %>
         <%- partial('_meta/tags') %> 
     <% } %> 
 </div>
