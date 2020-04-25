@@ -2,7 +2,6 @@ cdn:
   enable: false
   css: 
     style: 
-    markdown: https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css
   js: 
     valine: 
 
@@ -72,8 +71,8 @@ style:
   # 间距设置
   space: 
     main: 3.5rem
-    s_main: 2rem  # 当屏幕宽度小于 728px 时候启用
-    sm_main: 1rem  # 当屏幕宽度小于 500px 时候启用
+    s_main: 2rem  # 当屏幕宽度小于 700px 时候启用
+    sm_main: 1rem  # 当屏幕宽度小于 450px 时候启用
   
 
 
@@ -192,19 +191,21 @@ comments:
     client_id:
     client_secret:
   
+  # Livere 来比力
   livere:
     enable: 
     livere_uid:
 
+  # 畅言
   changyan:
     enable: 
     appid:
     conf:
-    thread_key_type: path # id | path. Only when you generate static id for each post before you using 'id'
+    thread_key_type: path # id | path，当你需要为所有页面赋同一个评论区的时候使用 “id”
 
   wildfire:
     enable: 
-    database_provider: firebase # firebase or wilddog
+    database_provider: firebase # firebase | wilddog
     wilddog_site_id:
     firebase_api_key:
     firebase_auth_domain:
@@ -212,8 +213,8 @@ comments:
     firebase_project_id:
     firebase_storage_bucket:
     firebase_messaging_sender_id:
-    theme: light # light or dark
-    locale: en # en or zh-CN
+    theme: light # light | dark
+    locale: en
 
 
 
