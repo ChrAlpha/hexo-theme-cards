@@ -25,27 +25,8 @@
             <%- page.content %>
         </div>
     </div>
-    <% if(theme.meta.copyright.enable) { %>
-        <div class="post__license">
-            <p>
-                <strong>本文作者：<%- theme.meta.author.name %></strong>
-            </p>
-            <% (theme.meta.copyright.custom_text || []).forEach((text) => { %>
-                <p>
-                    <strong>
-                        <%- markdown(text) %>
-                    </strong>
-                </p>
-            <% }); %>
-            <% if(theme.meta.copyright.permalink) { %>
-                <p>
-                    <strong>
-                        <%- theme.meta.copyright.permalink %>
-                    </strong>
-                    <a href="<%- page.permalink %>"><%- page.permalink %></a>
-                </p>
-            <% } %>
-        </div>
+    <% if (theme.layout.post.footer.indexOf('copyright') != -1) { %>
+        <%- partial('_meta/copyright') %> 
     <% } %>
     <% if (theme.layout.post.footer.indexOf('updated') != -1) { %>
         <%- partial('_meta/updated') %> 
