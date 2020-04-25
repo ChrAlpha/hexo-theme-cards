@@ -29,18 +29,9 @@
     <% if (theme.layout.post.footer.indexOf('updated') != -1) { %>
         <%- partial('_meta/updated') %> 
     <% } %>
-    <% if(page.tags && page.tags.length && page.tags.forEach) { %>
-        <div class="post-tags post-card__tags">
-            <% if(page.categories && page.categories.length > 0 && page.categories.forEach) { %>
-                <% page.categories.forEach(function(cat) { %>
-                    <a href="<%- url_for(cat.path) %>" class="post-cats__link button"><%- cat.name %></a>
-                <% }); %>
-            <% } %>
-            <% page.tags.each(function(item) { %>
-                <a href="<%- url_for(item.path) %>" class="post-tags__link button"># <%=item.name %></a>
-            <% }); %>
-        </div>
-    <% } %>
+    <% if (theme.layout.post.footer.indexOf('tags') != -1) { %>
+        <%- partial('_meta/tags') %> 
+    <% } %> 
 </div>
 <br>
 <div class="post__comment content-box">

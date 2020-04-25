@@ -23,10 +23,6 @@
         <%- partial('_meta/categories') %> 
     <% } %>
 </div>
-<% if(post.tags && post.tags.length && post.tags.forEach) { %>
-    <div class="post-tags post-card__tags">
-        <% post.tags.each(function(item) { %>
-            <a href="<%- url_for(item.path) %>" class="post-tags__link button"># <%=item.name %></a>
-        <% }); %>
-    </div>
+<% if (theme.layout.meta.indexOf('tags') != -1) { %>
+    <%- partial('_meta/tags') %> 
 <% } %>
