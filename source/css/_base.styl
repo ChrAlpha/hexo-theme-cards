@@ -31,6 +31,8 @@ p
 body
     --bg-color $color_background
     --bg-content-color $color_card
+    --bg-tag-color $color_tags_block
+    --bg-cat-color $color_categories_block
     --bg-code $color_codeblock
     --body-color $color_font
     --title-color $color_title
@@ -46,7 +48,7 @@ body
     transition color .6s,background-color .6s
     margin 0
     padding 0
-    line-height 1.7
+    line-height 1.8
 
 @media screen and (max-width:728px)
     body
@@ -73,22 +75,14 @@ body
 
     &.tagscloud
         margin 0 auto
-        padding 0 5rem
+        padding 0 var(--space)
         max-width 100%
 
     &.friends 
         margin 0 auto 
-        padding 0 5rem
+        padding 0 var(--space)
         max-width 100%
 
-@media screen and (max-width: 450px)
-    .main
-        &.tagscloud
-            padding 0 0.5rem
-        &.friends
-            padding 0 0.5rem
-            
-            
 #b2t
     width 40px
     height 40px

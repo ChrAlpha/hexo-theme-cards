@@ -23,7 +23,7 @@
     font-size .8em
     color currentColor
     text-decoration none
-    background-color #c2c2c2
+    background-color var(--bg-cat-color)
     color currentColor!important
     padding .5em
     border-radius var(--radius)
@@ -38,7 +38,7 @@
     font-size .8em
     color currentColor
     text-decoration none
-    background-color var(--bg-color)
+    background-color var(--bg-tag-color)
     color currentColor!important
     padding .5em
     border-radius var(--radius)
@@ -49,15 +49,15 @@
 
 .post__header
     width calc(100% + var(--space)*2)
-    margin-left calc(var(--space)*-1)
-    margin-top calc(var(--space)*-1)
+    margin calc(var(--space)*-1)
     margin-bottom calc(var(--space)/2)
     overflow hidden
-    border-radius var(--radius) var(--radius) 0 0
+    border-radius var(--radius)
     
     img
         width 100%
         height auto
+        max-height calc(width * 2.25)
 
     &:empty
         display none
@@ -91,9 +91,10 @@
     margin-top 1.5rem
 
 .post-card__header
-    margin calc(var(--space)*-1) calc(var(--space)*-1) calc(var(--space)/2)
+    margin calc(var(--space)*-1)
+    margin-bottom calc(var(--space)/2)
     overflow hidden
-    border-radius var(--radius) var(--radius) 0 0
+    border-radius var(--radius)
 
     &:empty
         display none

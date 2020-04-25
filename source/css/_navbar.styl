@@ -6,5 +6,11 @@ nav
     a
         margin 0 10px
         padding 3px 10px
-        border 2px var(--link-color)
-        border-style dashed
+        background-color transparent
+        border 2px dashed var(--link-color)
+
+        &:hover
+            border 2px solid var(--link-color)
+            background-color var(--link-color)
+            color var(--bg-content-color)
+            text-decoration none
