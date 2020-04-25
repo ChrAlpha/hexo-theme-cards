@@ -73,7 +73,11 @@ style:
     main: 3.5rem
     s_main: 2rem  # 当屏幕宽度小于 700px 时候启用
     sm_main: 1rem  # 当屏幕宽度小于 450px 时候启用
-  
+
+  # 字体设置
+  font: 
+    base_fontsize: 16px
+    line_height: '1.8'  
 
 
 

@@ -12,7 +12,7 @@ section
     display block
 
 html
-    --base-font-size 16px
+    --base-font-size $font_basesize
     font-size var(--base-font-size)
 
 body[data-theme=dark]
@@ -38,9 +38,9 @@ body
     --title-color $color_title
     --link-color $color_link
     --border-color rgba(0,0,0,0.1)
-    --space 3.5rem
+    --space $space_main
     --content-width $max_width_main
-    --header-height 60px
+    --header-height $header_height
     --radius $radius_main
     font-weight 400
     background-color var(--bg-color)
@@ -48,7 +48,7 @@ body
     transition color .6s,background-color .6s
     margin 0
     padding 0
-    line-height 1.8
+    line-height $font_lineheight
 
 @media screen and (max-width:728px)
     body

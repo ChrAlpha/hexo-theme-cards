@@ -10,9 +10,11 @@
         </h2>
     </a>
     <p class="post-card__descrption">
-        <div class="markdown-body">
-            <%- post.excerpt || post.description %>
-        </div>    
+        <% if (theme.layout.meta.indexOf('excerpt') != -1) { %>
+            <div class="markdown-body">
+                <%- post.excerpt || post.description %>
+            </div>
+        <% } %>   
     </p>
 </div>
 <div class="post-meta post-card__meta">
