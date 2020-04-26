@@ -2,8 +2,8 @@
     <meta charset="utf-8">
 
     <!--icon-->
-    <% if(theme.site_info.favicon) { %>
-        <link rel="shortcut icon" type='image/x-icon' href="<%- url_for(theme.site_info.favicon) %>">
+    <% if(theme.head.favicon) { %>
+        <link rel="shortcut icon" type='image/x-icon' href="<%- url_for(theme.head.favicon) %>">
     <% } else if(config.favicon) { %>
         <link rel="shortcut icon" type='image/x-icon' href="<%- url_for(config.favicon) %>">
     <% } %>
@@ -109,5 +109,9 @@
             <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
         <% } %> 
     <% } %> 
+
+    <% theme.head.custom_head.forEach((item) => { %>
+        <%- item %> 
+    <% }); %>
 
 </head>
