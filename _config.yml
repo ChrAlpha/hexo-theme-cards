@@ -8,35 +8,40 @@ cdn:
 
 
 # 自定义信息
-site_info: 
-  
-  # 显示在最上方 cover 处的站点名称
-  sitename: 
+head: 
   
   # 网站图标
-  favicon: 
+  favicon: https://cdn.jsdelivr.net/npm/chrdnx@1.0.5/icon/favicon-32-transparent.png 
   
-  # 封面 cover 设置
-  cover: 
+  # 自定义 head
+  custom_head: 
+    - ''
+    - ''
 
-    # 若设置 logo，则优先使用 logo 代替 sitename
-    logo: 
-    
-    # logo 下方的一句话介绍
-    description: 
-    
-    # cover 按钮菜单，通常用于站内导航
-    menu: 
-      - name: 首页
-        url: /
-      - name: 标签
-        url: /tags/
-      - name: 归档
-        url: /archives/
-      - name: 友链
-        url: /friends/
-      - name: RSS
-        url: /atom.xml
+# 封面 cover 设置
+cover: 
+
+  # 显示在最上方 cover 处的站点名称
+  sitename: ChrAlpha 的幻想乡
+
+  # 若设置 logo，则优先使用 logo 代替 sitename
+  logo: 
+  
+  # logo 下方的一句话介绍
+  description: 所谓意义真的又有什么意义么
+  
+  # cover 按钮菜单，通常用于站内导航
+  menu: 
+    - name: 首页
+      url: /
+    - name: 标签
+      url: /tags/
+    - name: 归档
+      url: /archives/
+    - name: 友链
+      url: /friends/
+    - name: RSS
+      url: /atom.xml
 
 
 
