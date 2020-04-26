@@ -11,8 +11,13 @@ cdn:
 head: 
   
   # 网站图标
-  favicon: 
+  favicon: /favicon.ico
   
+  # 社交分享链接
+  opengraph: 
+    enable: true
+    tc_type: summary_large_image
+
   # 自定义 head
   custom_head: 
     - ''

@@ -77,8 +77,8 @@
     <% } %>
 
     <!--Social link-->
-    <% if(theme.opengraph.enable) { %> 
-        <meta name="twitter:card" content="<%= (theme.opengraph.tc_type || 'summary_large_image') %> " />
+    <% if(theme.head.opengraph.enable) { %> 
+        <meta name="twitter:card" content="<%= (theme.head.opengraph.tc_type || 'summary_large_image') %> " />
         <% if(page.layout == 'post') { %>
             <meta property="og:type" content="article" />
         <% } else { %>
