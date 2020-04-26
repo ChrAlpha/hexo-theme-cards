@@ -34,7 +34,7 @@
     <% } %> 
 </div>
 <br>
-<% if (page.comments !== false) { %>
+<% if (theme.comments.enable && page.comments !== false) { %>
     <div class="post__comment content-box">
         <%- partial('../_third-party/comments.ejs') %>
     </div>
