@@ -6,7 +6,7 @@
 <div class="post-card__content">
     <a href="<%- url_for(post.link || post.path) %>" class="index-title">
         <h2 class="post-card__title">
-            <%- post.title ? post.title : date(post.date, theme.meta.date.format) %>
+            <%- post.title || theme.meta.title %>
         </h2>
     </a>
     <p class="post-card__descrption">
