@@ -11,7 +11,7 @@ cdn:
 head: 
   
   # 网站图标
-  favicon: https://cdn.jsdelivr.net/npm/chrdnx@1.0.5/icon/favicon-32-transparent.png 
+  favicon: 
   
   # 自定义 head
   custom_head: 
@@ -22,26 +22,26 @@ head:
 cover: 
 
   # 显示在最上方 cover 处的站点名称
-  sitename: ChrAlpha 的幻想乡
+  sitename: Demo
 
   # 若设置 logo，则优先使用 logo 代替 sitename
   logo: 
   
   # logo 下方的一句话介绍
-  description: 所谓意义真的又有什么意义么
+  description: Hi, nice to meet you!
   
   # cover 按钮菜单，通常用于站内导航
   menu: 
     - name: 首页
-      url: /
+      url: /demo/
     - name: 标签
-      url: /tags/
+      url: /demo/tags/
     - name: 归档
-      url: /archives/
+      url: /demo/archives/
     - name: 友链
-      url: /friends/
-    - name: RSS
-      url: /atom.xml
+      url: /demo/friends/
+    - name: Page
+      url: /demo/page/
 
 
 
@@ -88,7 +88,7 @@ style:
 
 meta:
   # 默认文章标题
-  title: 
+  title: 'no title'
   
   # 默认文章作者（可在front-matter中覆盖）
   author:
@@ -128,27 +128,20 @@ layout:
   # 首页/归档
   # title/excerpt/thumbnail/date/updated/categories/tags
   meta: 
-    - title
     - excerpt
     - thumbnail
     - date
     - categories
-    # - updated
-    # - tags
+    - tags
 
   # 文章页
   post: 
     header:
-      - title
       - thumbnail
       - date
       - categories
-      # - updated
-      # - tags
     footer: 
       - copyright
-      # - date
-      # - categories
       - updated
       - tags
 
@@ -157,31 +150,25 @@ layout:
 
 optimize: 
   lazyload:
-    enable: false
+    enable: true
     js: https://cdn.jsdelivr.net/npm/vanilla-lazyload@15.1.1/dist/lazyload.min.js
     onlypost: false
     loadingImg: 
 
-  nofollow:
-    enable: false
-    field: site
-    exclude:
-      - 'example.com'
-
   jquery: 
-    enable: false
+    enable: true
     js: https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js
 
   # 如需开启 fancybox 请确保开启上方 jQuery
   fancybox: 
-    enable: false
-    auto: 
+    enable: true
+    auto: true
     css: https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css
     js: https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js
     
   # 回到顶部按钮
   back_to_top: 
-    enable: false
+    enable: true
 
 
 # 评论系统
@@ -197,7 +184,7 @@ comments:
       siteName: 
       api: 
       apikey: 
-      admin: 'chralpha'
+      admin: ''
       nesting: 2
 
   ## Valine
@@ -276,14 +263,14 @@ analytics:
       enable: true
       before_text: '' # 展示在数据前的内容，支持 HTML
       after_text: Viewers  # 展示在数据后的内容，支持 HTML
-      divider: '|' # 分隔符，HTML 语法支持
+      divider: '&nbsp;&nbsp;&nbsp;|' # 分隔符，HTML 语法支持
     
     # 全站 PV（Page Views）
     site_pv:
       enable: true
       before_text: ''  # 展示在数据前的内容，支持 HTML
       after_text: Views  # 展示在数据后的内容，支持 HTML
-      divider: '|'  # 分隔符，HTML 语法支持
+      divider: ''  # 分隔符，HTML 语法支持
     
     # 页面 PV
     page_pv:
