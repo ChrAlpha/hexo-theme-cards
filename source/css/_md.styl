@@ -53,6 +53,7 @@ a
         color var(--title-color)
 
 img
+    display inline-block
     max-width 100%
 
     &.lazyload
@@ -122,24 +123,6 @@ input
 
 *
     box-sizing border-box
-
-table
-    border none
-    display block
-    padding 0
-    max-width 100%
-    width 100%
-    border 1px solid var(--border-color)
-    background-color $colormd-12
-    border-radius 3px
-    overflow auto
-
-    th
-        font-weight 600
-
-    tr
-        background-color transparent
-        border-top none
 
 kbd
     display inline-block
@@ -245,10 +228,6 @@ code
     pre
         margin-bottom 0
         word-break normal
-
-figure
-    padding 0
-    margin 0
 
 h1 .octicon-link
 h2 .octicon-link
@@ -357,19 +336,39 @@ ul ul
     margin-top 0
     margin-bottom 0
 
-table td
-table th
-    padding 12px
+figure
+    padding 0
+    margin 0
 
-table td.gutter
-    text-align right
-    border-right 1px solid var(--border-color)
-    position sticky
-    left 0
+table
+    display block
+    width 100%
+    overflow auto
+
+figure table
+    border none
+    padding 0
+    max-width 100%
+    border 1px solid var(--border-color)
+    background-color $colormd-12
+    border-radius 3px
+
+    th
+        font-weight 600
+
+    tr
+        background-color transparent
+        border-top none
+
+    td.gutter
+        text-align right
+        border-right 1px solid var(--border-color)
+        position sticky
+        left 0
 
 .highlight pre
 pre
-    padding 0
+    padding 12px
     overflow auto
     font-size 85%
     line-height 1.45
@@ -386,6 +385,26 @@ pre
         margin 0 .2em .25em -1.6em
         vertical-align middle
 
+table
+    border-spacing 0
+    border-collapse collapse
+
+    th:not(.code):not(.gutter)
+        font-weight 600
+
+    tr:not(.code):not(.gutter)
+        background-color $colormd-12
+
+        &:not(.highlight)
+            background-color transparent
+
+        &:nth-child(2n)
+            background-color $colormd-12
+
+    td:not(.code):not(.gutter)
+    th:not(.code):not(.gutter)
+        padding 6px 13px
+        border 1px solid var(--border-color)
 
 .markdown-body
     text-size-adjust 100%
