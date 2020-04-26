@@ -15,7 +15,7 @@
 <div class="post content-box">
     <div class="post__header">
         <% if (theme.layout.post.header.indexOf('thumbnail') !== -1) { %>
-            <%- partial('_meta/thumbnail') %> 
+            <%- partial('_meta/thumbnail', {post: post, position: 'article'}) %> 
         <% } %>
     </div>
     <div class="post__content">

@@ -1,6 +1,6 @@
 <div class="post-card__header">
     <% if (theme.layout.post.header.indexOf('thumbnail') !== -1) { %>
-        <%- partial('_meta/thumbnail', {position: list}) %> 
+        <%- partial('_meta/thumbnail', {post: post, position: 'list'}) %> 
     <% } %>
 </div>
 <div class="post-card__content">
