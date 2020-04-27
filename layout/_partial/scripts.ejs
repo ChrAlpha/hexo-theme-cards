@@ -52,10 +52,7 @@
         </script>
         <% } else { %>
             <script>
-                var disqus_shortname = '<%= theme.comments.disqus.shortname %>';
-                if(page.permalink) {
-                    var disqus_url = '<%= page.permalink %>';
-                }
+                var disqus_shortname = '<%= theme.comments.disqus.shortname %>', disqus_url = '<%= page.permalink %>';
                 (function(){
                     var dsq = document.createElement('script');
                     dsq.type = 'text/javascript';
