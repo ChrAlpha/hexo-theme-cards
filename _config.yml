@@ -1,9 +1,16 @@
 cdn: 
-  enable: false
+  enable: true
   css: 
     style: 
+    highlight: 
+    fancybox: https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css
   js: 
+    lazyload: https://cdn.jsdelivr.net/npm/vanilla-lazyload@15.1.1/dist/lazyload.min.js
     valine: 
+    busuanzi: https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js
+    jquery: https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js
+    fancybox: https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js
+
 
 
 
@@ -156,20 +163,16 @@ layout:
 optimize: 
   lazyload:
     enable: true
-    js: https://cdn.jsdelivr.net/npm/vanilla-lazyload@15.1.1/dist/lazyload.min.js
     onlypost: false
     loadingImg: 
 
   jquery: 
     enable: true
-    js: https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js
 
   # 如需开启 fancybox 请确保开启上方 jQuery
   fancybox: 
     enable: true
     auto: true
-    css: https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css
-    js: https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js
     
   # 回到顶部按钮
   back_to_top: 

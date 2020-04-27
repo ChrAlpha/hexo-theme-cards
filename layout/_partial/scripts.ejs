@@ -1,7 +1,7 @@
 <!-- lazyload -->
 <% if(theme.optimize.lazyload.enable) { %>
-    <% if(theme.optimize.lazyload.js) { %>
-        <script defer src="<%- theme.optimize.lazyload.js %>"></script>
+    <% if(theme.cdn.enable && theme.cdn.js.lazyload) { %>
+        <script defer src="<%- theme.cdn.js.lazyload %>"></script>
     <% } else { %>
         <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@15.1.1/dist/lazyload.min.js"></script>
     <% } %>
@@ -17,7 +17,11 @@
 
 <!-- jQuery -->
 <% if(theme.optimize.jquery.enable) { %> 
-    <script src="<%- (theme.optimize.jquery.js) %>" crossorigin="anonymous"></script>   
+    <% if(theme.cdn.enable && theme.cdn.js.jquery) { %>
+        <script src="<%- (theme.cdn.js.jquery) %>" crossorigin="anonymous"></script>
+    <% } else { %>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" crossorigin="anonymous"></script>
+    <% } %>
 <% } %> 
 
 <!-- fancybox -->
@@ -65,7 +69,7 @@
     
     <% if(theme.comments.valine.enable) { %>
         <% if(theme.cdn.enable && theme.cdn.js.valine) { %>
-            <%- js(theme.info.cdn.js.valine) %>
+            <%- js(theme.cdn.js.valine) %>
         <% } else { %>
             <%- js(['js/valine.js']) %>
         <% } %>
