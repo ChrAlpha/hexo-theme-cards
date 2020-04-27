@@ -2,13 +2,13 @@
     (() => {
         var d = document.createElement('link');
         d.rel = 'stylesheet';
-        d.href = '<%- theme.optimize.fancybox.css %>';
+        d.href = '<%- theme.cdn.css.fancybox %>';
         d.crossOrigin = 'annoymous';
         d.media = 'screen';
         document.head.appendChild(d);
     })();
 </script>
-<script async src="<%- theme.optimize.fancybox.js %>"></script>
+<script async src="<%- theme.cdn.js.fancybox %>"></script>
 <script async>
     let lazyloadT = Boolean('<%- config.lazyload %>'),
         auto_fancybox = Boolean('<%- theme.optimize.fancybox.auto %>')
