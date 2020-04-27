@@ -6,7 +6,8 @@ cdn:
     fancybox: https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css
   js: 
     lazyload: https://cdn.jsdelivr.net/npm/vanilla-lazyload@15.1.1/dist/lazyload.min.js
-    valine: 
+    valine: https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js
+    wildfire: https://cdn.jsdelivr.net/npm/wildfire@0.3.9/dist/wildfire.auto.js
     busuanzi: https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js
     jquery: https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js
     fancybox: https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js
@@ -235,7 +236,7 @@ comments:
     enable: 
     appid:
     conf:
-    thread_key_type: path # id | path，当你需要为所有页面赋同一个评论区的时候使用 “id”
+    thread_key_type: path # id | path，单独定义时候用 “id”
 
   wildfire:
     enable: 

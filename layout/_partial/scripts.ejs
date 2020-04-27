@@ -156,6 +156,11 @@
     <% } %>
 
     <% if(theme.comments.wildfire.enable) { %>
+        <% if(theme.cdn.enable && theme.cdn.js.wildflre) { %>
+            <script src="<%- theme.cdn.js.wildflre %> "></script>
+        <% } else { %>
+            <script src="https://cdn.jsdelivr.net/npm/wildfire@0.3.9/dist/wildfire.auto.js"></script>
+        <% } %>
         <script>
             var wildfireConfig = () => ({
                 databaseProvider: '<%= theme.comments.wildfire.database_provider %>',
