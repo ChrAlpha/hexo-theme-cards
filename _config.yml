@@ -168,16 +168,16 @@ optimize:
     loadingImg: 
 
   jquery: 
-    enable: true
+    enable: false
 
   # 如需开启 fancybox 请确保开启上方 jQuery
   fancybox: 
-    enable: true
-    auto: true
+    enable: false
+    auto: false
     
   # 回到顶部按钮
   back_to_top: 
-    enable: true
+    enable: false
 
 
 # 评论系统
