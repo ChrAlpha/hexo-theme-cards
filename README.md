@@ -1,4 +1,4 @@
-<center><h1>Cards | Theme for Hexo<h1></center>
+<center><h1>Cards | Theme for Hexo</h1></center>
 
 ![](https://theme-cards.ichr.me/assets/img/info.png)
 
@@ -6,7 +6,7 @@
 >
 >   简洁 · 快速 · 强大
 
-正如你所见，这时 ChrAlpha 在 GitHub 上的 **第一个实质性项目**，希望大家喜欢！
+正如你所见，这是 ChrAlpha 在 GitHub 上的 **第一个实质性项目**，希望大家喜欢！
 
 正如其名，「Cards」，一款 单栏样式 & 卡片式设计 的现代 Hexo 主题。
 
@@ -36,9 +36,13 @@ hexo s --debug
 
 [Theme Cards 主题文档](https://theme-cards.ichr.me/)
 
+## Contribution 贡献
+
+欢迎各种形式的贡献，包括但不限于：主题优化，功能添加，代码改进，bug 反馈。我们期待你的参与！
+
 ## Maintainer 维护者
 
-**Theme Cards** © [ChrAlpha](https://github.com/ChrAlpha), Released under the GPL-3.0 License.
+**Theme Cards** © [ChrAlpha](https://github.com/ChrAlpha), Released under the [GPL-3.0](/LICENSE) License.
 
 >   [Personal HomePage](https://ichr.me/) · [Blog](https://blog.ichr.me/) · GitHub [@ChrAlpha](https://github.com/ChrAlpha) · Twitter [@ichralpha](https://twitter.com/ichralpha) · Keybase [@chralpha](https://keybase.io/chralpha) 
 
