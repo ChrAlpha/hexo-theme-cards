@@ -287,9 +287,3 @@ analytics:
       after_text: Views 
 
 
-
-
-opengraph: 
-  enable: true
-  tc_type: summary_large_image
-
