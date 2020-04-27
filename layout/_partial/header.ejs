@@ -1,7 +1,7 @@
 <header class="header">
     <div class="header__left">
         <% if(page.layout === 'post') { %>
-            <a href="/" class="button">
+            <a href="<%- config.root %>" class="button">
                 <span class="logo__text">
                     ← <%- config.title %> | <%- __('navbar.home')%>
                 </span>
