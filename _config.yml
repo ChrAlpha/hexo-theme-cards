@@ -198,10 +198,8 @@ comments:
   ## Valine
   valine:
     enable: 
-    leancloud:
-      app_id: 
-      app_key: 
-      valine_path: 
+    app_id: 
+    app_key: 
     guest_info: nick,mail,link 
     placeholder: just go!
     avatar: '' 
@@ -210,7 +208,6 @@ comments:
     notify: 
     lang: 
     highlight: 
-    visitor: 
 
   ## Gitalk
   gitalk:

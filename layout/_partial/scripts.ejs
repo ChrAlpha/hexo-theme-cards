@@ -68,8 +68,29 @@
         <% if(theme.cdn.enable && theme.cdn.js.valine) { %>
             <%- js(theme.cdn.js.valine) %>
         <% } else { %>
-            <%- js(['js/valine.js']) %>
+            <%- js(['js/valine.min.js']) %>
         <% } %>
+        <script>
+            var GUEST_INFO = ['nick','mail','link'];
+            var guest_info = '<%= theme.comments.valine.guest_info %>'.split(',').filter(function(item){
+                return GUEST_INFO.indexOf(item) > -1
+            });
+            var notify = '<%= theme.comments.notify %>' === 'true';
+            var verify = '<%= theme.comments.verify %>' === 'true';
+            new Valine({
+                el: '#valine_container',
+                notify: notify,
+                verify: verify,
+                appId: "<%= theme.comments.valine.app_id %>",
+                appKey: "<%= theme.comments.valine.app_key %>",
+                placeholder: "<%= theme.comments.valine.placeholder %>",
+                meta: guest_info,
+                pageSize: '<%= theme.comments.valine.pageSize %>',
+                avatar: '<%= theme.comments.valine.avatar %>',
+                lang: '<%= theme.comments.valine.lang %>',
+                guest_info: guest_info
+            });
+        </script>
     <% } %>
     
     <% if(theme.comments.gitalk.enable) { %>
