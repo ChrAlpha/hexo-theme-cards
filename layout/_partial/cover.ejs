@@ -1,5 +1,5 @@
 <%- partial('header', null, {cache: false, path: path}) %>
-<% if (page.layout !== 'post') { %>
+<% if (!(is_post() || is_page())) { %>
     <div class="author">
         <div class="author__logo">
             <% if (theme.cover.logo) { %>
