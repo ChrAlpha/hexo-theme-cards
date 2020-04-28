@@ -1,8 +1,8 @@
 cdn: 
   enable: true
   css: 
-    style: 
-    highlight: 
+    style: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.1/dist/css/style.min.css
+    highlight: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.1/dist/css/github.min.css
     fancybox: https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css
   js: 
     lazyload: https://cdn.jsdelivr.net/npm/vanilla-lazyload@latest/dist/lazyload.min.js
