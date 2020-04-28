@@ -22,7 +22,7 @@
         </div>
     <% } %>
     <% if (theme.comments.changyan.enable) { %>
-        <div id="SOHUCS" sid="<% if (theme.comments.changyan.thread_key_type == "id"){ %><%= page.id %><% } else { %><%= page.path %><% } %>"></div>
+        <div id="SOHUCS" sid="<%- page[theme.comments.changyan.thread_key_type] %>"></div>
     <% } %>
     <% if (theme.comments.wildfire.enable) { %>
         <div class="wildfire_thread"></div>
