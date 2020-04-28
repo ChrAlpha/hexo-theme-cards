@@ -1,5 +1,5 @@
-<% if(position === 'page') { %>
-    <% if(theme.analytics.busuanzi.enable && theme.analytics.busuanzi.page_pv.enable) { %> 
+<% if (position === 'page') { %>
+    <% if (theme.analytics.busuanzi.enable && theme.analytics.busuanzi.page_pv.enable) { %> 
         <span id="busuanzi_container_page_pv" hidden>
             <span>·</span>
             <span><%- theme.analytics.busuanzi.page_pv.before_text %></span>
@@ -9,26 +9,26 @@
     <% } %> 
 <% } %> 
 
-<% if(position === 'site') { %>
-    <% if(theme.analytics.busuanzi.enable) { %>
-        <% if(theme.analytics.busuanzi.site_uv.enable) { %>
+<% if (position === 'site') { %>
+    <% if (theme.analytics.busuanzi.enable) { %>
+        <% if (theme.analytics.busuanzi.site_uv.enable) { %>
             <!-- Busuanzi UV -->
             <span id="busuanzi_container_site_uv" hidden>
                 <span><%- theme.analytics.busuanzi.site_uv.before_text %></span>
                 <span id="busuanzi_value_site_uv"></span>
                 <span><%- theme.analytics.busuanzi.site_uv.after_text %></span>
-                <% if(theme.analytics.busuanzi.site_uv.divider) { %>
+                <% if (theme.analytics.busuanzi.site_uv.divider) { %>
                     <span><%- theme.analytics.busuanzi.site_uv.divider %></span>
                 <% } %>
             </span>
         <% } %>
-        <% if(theme.analytics.busuanzi.site_pv.enable) { %>
+        <% if (theme.analytics.busuanzi.site_pv.enable) { %>
             <!-- Busuanzi PV -->
             <span id="busuanzi_container_site_pv" hidden>
                 <span><%- theme.analytics.busuanzi.site_pv.before_text %></span>
                 <span id="busuanzi_value_site_pv"></span>
                 <span><%- theme.analytics.busuanzi.site_pv.after_text %></span>
-                <% if(theme.analytics.busuanzi.site_pv.divider) { %>
+                <% if (theme.analytics.busuanzi.site_pv.divider) { %>
                     <span><%- theme.analytics.busuanzi.site_pv.divider %></span>
                 <% } %>
             </span>

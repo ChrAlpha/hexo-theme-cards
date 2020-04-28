@@ -1,6 +1,6 @@
 <footer class="footer">
     <%- partial('_third-party/busuanzi', {position: 'site'}) %> 
-    <% if(theme.meta.footer && theme.meta.footer.length) { %>
+    <% if (theme.meta.footer && theme.meta.footer.length) { %>
         <% for(let i = 0; i < theme.meta.footer.length; ++i) { %>
             <%- markdown(theme.meta.footer[i]) %>
         <% } %>

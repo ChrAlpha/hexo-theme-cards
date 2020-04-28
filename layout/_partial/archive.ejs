@@ -2,7 +2,7 @@
     <div class="posts">
         <% if (!page.prev) { %>
             <% if (is_home()) { %>
-                <% site.posts.each(function(post){ %>
+                <% site.posts.each((post) => { %>
                     <% if (post.top) { %>
                         <% if (page.group == undefined || post.group == page.group) { %>
                         <div class='post-card content-box'>
@@ -12,7 +12,7 @@
                     <% } %>
                 <% }) %>
             <% } else if (page.posts && page.posts.length > 0) { %>
-                <% page.posts.each(function(post){ %>
+                <% page.posts.each((post) => { %>
                     <% if (post.top) { %>
                         <div class='post-card content-box'>
                             <%- partial('post', {post: post}) %>
@@ -22,7 +22,7 @@
             <% } %>
         <% } %>
         <% if (page.posts && page.posts.length > 0) { %>
-            <% page.posts.each(function(post){ %>
+            <% page.posts.each((post) => { %>
                 <% if (!post.top) { %>
                 <div class='post-card content-box'>
                     <%- partial('post', {post: post}) %>

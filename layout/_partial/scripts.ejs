@@ -1,23 +1,23 @@
 <!-- lazyload -->
-<% if(theme.optimize.lazyload.enable) { %>
-    <% if(theme.cdn.enable && theme.cdn.js.lazyload) { %>
+<% if (theme.optimize.lazyload.enable) { %>
+    <% if (theme.cdn.enable && theme.cdn.js.lazyload) { %>
         <script defer src="<%- theme.cdn.js.lazyload %>"></script>
     <% } else { %>
         <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@15.1.1/dist/lazyload.min.js"></script>
     <% } %>
     <script>
-    window.lazyLoadOptions = {
-        elements_selector: ".lazyload",
-        threshold: 0
-    };
+        window.lazyLoadOptions = {
+            elements_selector: ".lazyload",
+            threshold: 0
+        };
     </script>
 <% } %>
 
 <%- partial('_third-party/analytics') %> 
 
 <!-- jQuery -->
-<% if(theme.optimize.jquery.enable) { %> 
-    <% if(theme.cdn.enable && theme.cdn.js.jquery) { %>
+<% if (theme.optimize.jquery.enable) { %> 
+    <% if (theme.cdn.enable && theme.cdn.js.jquery) { %>
         <script src="<%- (theme.cdn.js.jquery) %>" crossorigin="anonymous"></script>
     <% } else { %>
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" crossorigin="anonymous"></script>
@@ -25,18 +25,18 @@
 <% } %> 
 
 <!-- fancybox -->
-<% if(theme.optimize.fancybox.enable) { %>
+<% if (theme.optimize.fancybox.enable) { %>
     <%- partial('_third-party/fancybox') %> 
 <% } %> 
 
 <!-- back to top -->
-<% if(theme.optimize.back_to_top.enable) { %> 
+<% if (theme.optimize.back_to_top.enable) { %> 
     <%- js(['js/b2t.js']) %> 
 <% } %> 
 
-<% if(theme.comments.enable) { %>
-    <% if(theme.comments.disqus.enable) { %>
-        <% if(theme.comments.disqus.disqusjs.enable) { %>
+<% if (theme.comments.enable) { %>
+    <% if (theme.comments.disqus.enable) { %>
+        <% if (theme.comments.disqus.disqusjs.enable) { %>
         <script src="https://cdn.jsdelivr.net/npm/disqusjs@1.2/dist/disqus.js"></script>
         <script>
             new DisqusJS({
@@ -57,15 +57,15 @@
                     var dsq = document.createElement('script');
                     dsq.type = 'text/javascript';
                     dsq.async = true;
-                    dsq.src = '//' + disqus_shortname + '.disqus.com/<% if(page.comments) { %>embed.js<% } else { %>count.js<% } %>';
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/<% if (page.comments) { %>embed.js<% } else { %>count.js<% } %>';
                     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                 })();
             </script>
         <% } %>
     <% } %>
     
-    <% if(theme.comments.valine.enable) { %>
-        <% if(theme.cdn.enable && theme.cdn.js.valine) { %>
+    <% if (theme.comments.valine.enable) { %>
+        <% if (theme.cdn.enable && theme.cdn.js.valine) { %>
             <%- js(theme.cdn.js.valine) %>
         <% } else { %>
             <%- js(['js/valine.min.js']) %>
@@ -93,7 +93,7 @@
         </script>
     <% } %>
     
-    <% if(theme.comments.gitalk.enable) { %>
+    <% if (theme.comments.gitalk.enable) { %>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
         <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
         <script>
@@ -110,7 +110,7 @@
         </script>
     <% } %>
     
-    <% if(theme.comments.gitment.enable) { %>
+    <% if (theme.comments.gitment.enable) { %>
         <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
         <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
         <script>
@@ -127,11 +127,11 @@
         </script>
     <% } %>
     
-    <% if(theme.comments.livere.enable){ %>
+    <% if (theme.comments.livere.enable){ %>
         <script type="text/javascript">
             (function(d, s) {
                 var j, e = d.getElementsByTagName(s)[0];
-                if(typeof LivereTower === 'function') { return; }
+                if (typeof LivereTower === 'function') { return; }
                 j = d.createElement(s);
                 j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
                 j.async = true;
@@ -140,7 +140,7 @@
         </script>
     <% } %>
     
-    <% if(theme.comments.changyan.enable) { %>
+    <% if (theme.comments.changyan.enable) { %>
         <script>
             (function(){
                 var appid = '<%= theme.comments.changyan.appid %>';
@@ -149,14 +149,14 @@
                 if (width < 960) {
                     window.document.write('<script id="changyan_mobile_js" charset="utf-8" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>');
                 } else {
-                    var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})});
+                    var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if (typeof a==="function"){if (window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if (e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})});
                 }
             })();
         </script>
     <% } %>
 
-    <% if(theme.comments.wildfire.enable) { %>
-        <% if(theme.cdn.enable && theme.cdn.js.wildflre) { %>
+    <% if (theme.comments.wildfire.enable) { %>
+        <% if (theme.cdn.enable && theme.cdn.js.wildflre) { %>
             <script src="<%- theme.cdn.js.wildflre %> "></script>
         <% } else { %>
             <script src="https://cdn.jsdelivr.net/npm/wildfire@0.3.9/dist/wildfire.auto.js"></script>

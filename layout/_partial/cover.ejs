@@ -1,27 +1,27 @@
 <%- partial('header', null, {cache: false, path: path}) %>
-<% if(page.layout !== 'post') { %>
+<% if (page.layout !== 'post') { %>
     <div class="author">
         <div class="author__logo">
-            <% if(theme.cover.logo) { %>
+            <% if (theme.cover.logo) { %>
                 <img no-lazy alt="author Image" src="<%- theme.cover.logo %>">
-            <% } else if(theme.cover.sitename) { %>
+            <% } else if (theme.cover.sitename) { %>
                 <h1><%- theme.cover.sitename %></h1>
-            <% } else if(config.title) { %>
+            <% } else if (config.title) { %>
                 <h1><%- config.title %></h1>
             <% } %>
         </div>
-        <% if(theme.cover.description) { %>
+        <% if (theme.cover.description) { %>
             <div class="author__intro">
                 <%- markdown(theme.cover.description) %> 
             </div>
         <% } %> 
-        <% if(theme.cover.menu && theme.cover.menu.length && theme.cover.menu.forEach) { %>
+        <% if (theme.cover.menu && theme.cover.menu.length && theme.cover.menu.forEach) { %>
             <div class="cover-menus">
                 <% for(let i = 0; i < theme.cover.menu.length; ++i) { %>
                     <a href="<%- theme.cover.menu[i].url %>" class="cover-menu button">
                         <%- theme.cover.menu[i].name %>
                     </a>
-                    <% if(i !== theme.cover.menu.length - 1) { %>
+                    <% if (i !== theme.cover.menu.length - 1) { %>
                         ·
                     <% } %>
                 <% } %>

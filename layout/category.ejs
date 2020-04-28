@@ -1,9 +1,9 @@
 <% page.comments = false; %>
 <main class="main">
     <% if (site.posts && site.posts.length > 0) { %>
-        <% if (page.layout == 'category') { %>
+        <% if (page.layout === 'category') { %>
             <div class="all-categories content-box">
-                <% if(page.title) { %>
+                <% if (page.title) { %>
                     <div class="post-title">
                         <h1 class="post-title__text" style="text-align: left;">
                             <%- page.title %>
@@ -12,8 +12,8 @@
                     </div>
                 <% } %>
                 <% if (site.categories && site.categories.length && site.categories.forEach) { %>
-                    <% site.categories.sort('path').each(function(category){ %>
-                        <a class="<%= category.parent ? ' child' : ''%>" href="<%= url_for(category.path) %>">
+                    <% site.categories.sort('path').forEach((category) => { %>
+                        <a class="<%= category.parent ? ' child' : ''%>" href="<%- url_for(category.path) %>">
                             <time>&nbsp;&nbsp;<%= category.name %></time>
                             <span class="title">
                                 (<%- category.posts.length %>)

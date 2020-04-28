@@ -12,7 +12,7 @@
 <script async>
     let lazyloadT = Boolean('<%- config.lazyload %>'),
         auto_fancybox = Boolean('<%- theme.optimize.fancybox.auto %>')
-    if(auto_fancybox) {
+    if (auto_fancybox) {
         $(".post__content").find('img').each(function () {
             var element = document.createElement("a");
             $(element).attr("data-fancybox", "gallery");

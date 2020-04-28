@@ -10,7 +10,7 @@
         </h2>
     </a>
     <p class="post-card__descrption">
-        <% if (theme.layout.meta.indexOf('excerpt') != -1) { %>
+        <% if (theme.layout.meta.indexOf('excerpt') !== -1) { %>
             <div class="markdown-body">
                 <%- post.excerpt || post.description %>
             </div>

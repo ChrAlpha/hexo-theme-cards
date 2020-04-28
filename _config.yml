@@ -80,6 +80,7 @@ style:
     categories_block: '#c2c2c2'
     tags_block: '#f4f4f4'
     footer_text: '#999'
+    footer_link: '#6b6b6b'
   
   # 弧度设置
   radius: 

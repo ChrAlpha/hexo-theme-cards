@@ -1,14 +1,14 @@
-<% if(theme.analytics && theme.analytics.google_site_id) { %> 
+<% if (theme.analytics && theme.analytics.google_site_id) { %> 
     <!-- Google Analytics -->
     <script>
         window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-        ga('create', '<%= theme.analytics.google_site_id %>', 'auto');
+        ga('create', '<%- theme.analytics.google_site_id %>', 'auto');
         ga('send', 'pageview');
     </script>
     <script async src="https://www.google-analytics.com/analytics.js"></script>
 <% } %> 
 
-<% if(theme.analytics && theme.analytics.gtags) { %>
+<% if (theme.analytics && theme.analytics.gtags) { %>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=<%- theme.analytics.gtags_site_id %>"></script>
     <script>
@@ -19,20 +19,20 @@
     </script>
 <% } %> 
 
-<% if(theme.analytics && theme.analytics.baidu_site_id) { %> 
+<% if (theme.analytics && theme.analytics.baidu_site_id) { %> 
     <!-- Baidu Analytics -->
     <script>
         var _hmt = _hmt || [];
         (function() {
             var hm = document.createElement('script');
-            hm.src = 'https://hm.baidu.com/hm.js?<%= theme.analytics.baidu_site_id %>';
+            hm.src = 'https://hm.baidu.com/hm.js?<%- theme.analytics.baidu_site_id %>';
             var s = document.getElementsByTagName('script')[0];
             s.parentNode.insertBefore(hm, s);
         })();
     </script>
 <% } %> 
 
-<% if(theme.analytics && theme.analytics.cnzz_site_id) { %> 
+<% if (theme.analytics && theme.analytics.cnzz_site_id) { %> 
     <!-- CNZZ Analytics -->
     <script type="text/javascript">
         var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
