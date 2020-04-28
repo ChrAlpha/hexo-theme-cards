@@ -1,0 +1,25 @@
+{
+  "name": "hexo-theme-cards",
+  "version": "0.0.1",
+  "description": "A Simple & Swift Theme for Hexo, designed as its name",
+  "main": "README.md",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChrAlpha/hexo-theme-cards.git"
+  },
+  "keywords": [
+    "hexo",
+    "theme",
+    "cards",
+    "ChrAlpha"
+  ],
+  "author": "ChrAlpha",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/ChrAlpha/hexo-theme-cards/issues"
+  },
+  "homepage": "https://github.com/ChrAlpha/hexo-theme-cards#readme"
+}
