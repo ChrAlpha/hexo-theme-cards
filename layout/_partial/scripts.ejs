@@ -31,7 +31,11 @@
 
 <!-- back to top -->
 <% if (theme.optimize.back_to_top.enable) { %> 
-    <%- js(['js/b2t.js']) %> 
+    <% if (theme.cdn.enable && theme.cdn.js.back_to_top) { %>
+        <script src="<%- theme.cdn.js.back_to_top %>"></script>
+    <% } else { %>
+        <%- js(['js/b2t.js']) %>
+    <% } %>
 <% } %> 
 
 <% if (theme.comments.enable) { %>
