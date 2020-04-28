@@ -76,7 +76,7 @@ style:
     background: '#f4f4f4'
     card_color: '#fff'
     font_color: '#444'
-    codeblock: '#fffbf3'
+    codeblock: '#f8f8f8'
     categories_block: '#c2c2c2'
     tags_block: '#f4f4f4'
     footer_text: '#999'
