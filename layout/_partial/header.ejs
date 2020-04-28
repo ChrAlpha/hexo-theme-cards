@@ -1,6 +1,6 @@
 <header class="header">
     <div class="header__left">
-        <% if (is_post() || is_page()) { %>
+        <% if (!(is_home() || is_tag() || is_category() || is_archive() || page.layout === 'tag' || page.layout === 'category' || page.layout === 'links')) { %>
             <a href="<%- config.root %>" class="button">
                 <span class="logo__text">
                     ← <%- config.title %> | <%- __('navbar.home')%>
