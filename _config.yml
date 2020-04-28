@@ -6,6 +6,7 @@ cdn:
     fancybox: https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css
   js: 
     lazyload: https://cdn.jsdelivr.net/npm/vanilla-lazyload@latest/dist/lazyload.min.js
+    back_to_top: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.1/dist/js/b2t.min.js
     valine: https://cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js
     wildfire: https://cdn.jsdelivr.net/npm/wildfire@latest/dist/wildfire.auto.js
     busuanzi: https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js
