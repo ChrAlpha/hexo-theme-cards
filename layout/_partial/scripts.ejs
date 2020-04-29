@@ -72,7 +72,7 @@
         <% if (theme.cdn.enable && theme.cdn.js.valine) { %>
             <%- js(theme.cdn.js.valine) %>
         <% } else { %>
-            <%- js(['js/valine.min.js']) %>
+            <%- js('https://cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js') %>
         <% } %>
         <script>
             new Valine({
