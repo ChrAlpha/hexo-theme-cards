@@ -201,16 +201,19 @@ comments:
   ## Valine
   valine:
     enable: 
-    app_id: 
-    app_key: 
-    guest_info: nick,mail,link 
-    placeholder: just go!
-    avatar: '' 
-    pageSize: 8 
-    verify: 
-    notify: 
+    appId: 
+    appKey: 
+    meta: ['nick', 'mail', 'link']
+    requiredFields: []
+    path: 
+    placeholder: 'just go!'
+    avatar: 
+    pageSize: 
     lang: 
     highlight: 
+    recordIP: 
+    emojiCDN: 
+    emojiMaps: {}
 
   ## Gitalk
   gitalk:
