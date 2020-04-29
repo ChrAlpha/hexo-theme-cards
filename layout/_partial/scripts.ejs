@@ -96,12 +96,17 @@
                 lang: "<%- theme.comments.valine.lang || 'zh-CN' %>",
                 highlight: <%- theme.comments.valine.highlight || false %>,
                 recordIP: <%- theme.comments.valine.recordIP || false %>,
-                emojiCDN: "<%- theme.comments.valine.emojiCDN %>",
-                emojiMaps: {
-                    <% for (let key in theme.comments.valine.emojiMaps) { %>
-                        <%- key + ': \"' + theme.comments.valine.emojiMaps[key] + '\",' %>
-                    <% } %>
-                }
+                
+                <% if (theme.comments.valine.emojiCDN) { %>
+                    emojiCDN: "<%- theme.comments.valine.emojiCDN %>",
+                <% } %>
+                <% if (theme.comments.valine.emojiMaps) { %>
+                    emojiMaps: {
+                        <% for (let key in theme.comments.valine.emojiMaps) { %>
+                            <%- key + ': \"' + theme.comments.valine.emojiMaps[key] + '\",' %>
+                        <% } %>
+                    }
+                <% } %>
             });
         </script>
     <% } %>
