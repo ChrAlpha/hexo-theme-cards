@@ -75,21 +75,33 @@
             <%- js('https://cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js') %>
         <% } %>
         <script>
+            var valine_meta = ['nick', 'mail', 'link'],
+                guest_info = '<%= theme.comments.valine.meta %>'.split(',').filter(function(item){
+                    return valine_meta.indexOf(item) > -1
+                }),
+                guest_required = '<%= theme.comments.valine.requiredFields %>'.split(',').filter(function(item){
+                    return valine_meta.indexOf(item) > -1
+                });
+            
             new Valine({
                 el: '#valine_container',
-                appId: "<%= theme.comments.valine.appId %>",
-                appKey: "<%= theme.comments.valine.appKey %>",
+                appId: "<%- theme.comments.valine.appId %>",
+                appKey: "<%- theme.comments.valine.appKey %>",
                 placeholder: "<%= theme.comments.valine.placeholder %>",
-                meta: <%= theme.comments.valine.meta %>,
-                requiredFields: <%= theme.comments.valine.requiredFields %>,
+                meta: guest_info,
+                requiredFields: guest_required,
                 path: "<%- theme.comments.valine.path || page.path %>",
-                pageSize: "<%= theme.comments.valine.pageSize %>",
-                avatar: "<%= theme.comments.valine.avatar %>",
-                lang: "<%= theme.comments.valine.lang %>",
-                highlight: <%- theme.comments.valine.highlight %>,
-                recordIP: <%- theme.comments.valine.recordIP %>,
+                pageSize: <%- theme.comments.valine.pageSize !== null ? theme.comments.valine.pageSize : 10 %>,
+                avatar: "<%- theme.comments.valine.avatar %>",
+                lang: "<%- theme.comments.valine.lang || 'zh-CN' %>",
+                highlight: <%- theme.comments.valine.highlight || false %>,
+                recordIP: <%- theme.comments.valine.recordIP || false %>,
                 emojiCDN: "<%- theme.comments.valine.emojiCDN %>",
-                emojiMaps: <%- theme.comments.valine.emojiMaps %>
+                emojiMaps: {
+                    <% for (let key in theme.comments.valine.emojiMaps) { %>
+                        <%- key + ': \"' + theme.comments.valine.emojiMaps[key] + '\",' %>
+                    <% } %>
+                }
             });
         </script>
     <% } %>
