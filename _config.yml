@@ -203,8 +203,8 @@ comments:
     enable: 
     appId: 
     appKey: 
-    meta: ['nick', 'mail', 'link']
-    requiredFields: []
+    meta: nick,mail,link
+    requiredFields: nick,mail
     path: 
     placeholder: 'just go!'
     avatar: 
@@ -213,7 +213,7 @@ comments:
     highlight: 
     recordIP: 
     emojiCDN: 
-    emojiMaps: {}
+    emojiMaps: 
 
   ## Gitalk
   gitalk:
