@@ -1,5 +1,5 @@
 <!-- lazyload -->
-<% if (theme.optimize.lazyload.enable) { %>
+<% if (config.lazyload.enable) { %>
     <% if (theme.cdn.enable && theme.cdn.js.lazyload) { %>
         <script defer src="<%- theme.cdn.js.lazyload %>"></script>
     <% } else { %>

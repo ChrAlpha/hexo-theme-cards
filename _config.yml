@@ -163,6 +163,8 @@ layout:
 
 
 optimize: 
+
+  # 如需开启，请复制下段内容至站点配置文件中
   lazyload:
     enable: true
     onlypost: false
