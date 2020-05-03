@@ -76,10 +76,10 @@
         <% } %>
         <script>
             var valine_meta = ['nick', 'mail', 'link'],
-                guest_info = '<%= theme.comments.valine.meta %>'.split(',').filter(function(item){
+                guest_info = '<%= theme.comments.valine.meta %>'.split(',').filter((item) => {
                     return valine_meta.indexOf(item) > -1
                 }),
-                guest_required = '<%= theme.comments.valine.requiredFields %>'.split(',').filter(function(item){
+                guest_required = '<%= theme.comments.valine.requiredFields %>'.split(',').filter((item) => {
                     return valine_meta.indexOf(item) > -1
                 });
             
@@ -99,14 +99,8 @@
                 
                 <% if (theme.comments.valine.emojiCDN) { %>
                     emojiCDN: "<%- theme.comments.valine.emojiCDN %>",
-                <% } %>
-                <% if (theme.comments.valine.emojiMaps) { %>
-                    emojiMaps: {
-                        <% for (let key in theme.comments.valine.emojiMaps) { %>
-                            <%- key + ': \"' + theme.comments.valine.emojiMaps[key] + '\",' %>
-                        <% } %>
-                    }
-                <% } %>
+                    emojiMaps: <%- JSON.stringify(theme.comments.valine.emojiMaps) %>
+                <% } %> 
             });
         </script>
     <% } %>
