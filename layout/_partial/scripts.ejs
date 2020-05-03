@@ -38,7 +38,7 @@
     <% } %>
 <% } %> 
 
-<% if (is_post() && theme.comments.enable) { %>
+<% if (theme.comments.enable) { %>
     <% if (theme.comments.disqus.enable) { %>
         <% if (theme.comments.disqus.disqusjs.enable) { %>
         <script src="https://cdn.jsdelivr.net/npm/disqusjs@1.2/dist/disqus.js"></script>
@@ -76,10 +76,10 @@
         <% } %>
         <script>
             var valine_meta = ['nick', 'mail', 'link'],
-                guest_info = '<%= theme.comments.valine.meta %>'.split(',').filter((item) => {
+                guest_info = '<%= theme.comments.valine.meta %>'.split(',').filter(function(item){
                     return valine_meta.indexOf(item) > -1
                 }),
-                guest_required = '<%= theme.comments.valine.requiredFields %>'.split(',').filter((item) => {
+                guest_required = '<%= theme.comments.valine.requiredFields %>'.split(',').filter(function(item){
                     return valine_meta.indexOf(item) > -1
                 });
             
@@ -99,8 +99,14 @@
                 
                 <% if (theme.comments.valine.emojiCDN) { %>
                     emojiCDN: "<%- theme.comments.valine.emojiCDN %>",
-                    emojiMaps: <%- JSON.stringify(theme.comments.valine.emojiMaps) %>
-                <% } %> 
+                <% } %>
+                <% if (theme.comments.valine.emojiMaps) { %>
+                    emojiMaps: {
+                        <% for (let key in theme.comments.valine.emojiMaps) { %>
+                            <%- key + ': \"' + theme.comments.valine.emojiMaps[key] + '\",' %>
+                        <% } %>
+                    }
+                <% } %>
             });
         </script>
     <% } %>

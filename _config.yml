@@ -1,10 +1,10 @@
-cdn: 
+cdn:
   enable: true
-  css: 
+  css:
     style: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.1/dist/css/style.min.css
     highlight: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.1/dist/css/github.min.css
     fancybox: https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css
-  js: 
+  js:
     lazyload: https://cdn.jsdelivr.net/npm/vanilla-lazyload@latest/dist/lazyload.min.js
     back_to_top: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.1/dist/js/b2t.min.js
     valine: https://cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js
@@ -17,59 +17,57 @@ cdn:
 
 
 # 自定义信息
-head: 
-  
+head:
+
   # 网站图标
-  favicon: /favicon.ico
-  
+  favicon: /favicon.png
+
   # 社交分享链接
-  opengraph: 
+  opengraph:
     enable: true
     tc_type: summary_large_image
 
   # 自定义 head
-  custom_head: 
+  custom_head:
     - ''
     - ''
 
 # 封面 cover 设置
-cover: 
+cover:
 
   # 显示在最上方 cover 处的站点名称
-  sitename: Demo
+  sitename: CaryC Blog
 
   # 若设置 logo，则优先使用 logo 代替 sitename
-  logo: 
-  
+  logo:
+
   # logo 下方的一句话介绍
-  description: Hi, nice to meet you!
-  
+  description: 我的思想汇报
+
   # cover 按钮菜单，通常用于站内导航
-  menu: 
+  menu:
     - name: 首页
-      url: /demo/
+      url: /
     - name: 标签
-      url: /demo/tags/
+      url: /tags
     - name: 归档
-      url: /demo/archives/
-    - name: 友链
-      url: /demo/friends/
-    - name: Page
-      url: /demo/page/
+      url: /archives
+    - name: 关于
+      url: /about
 
 
 
-style: 
+style:
 
   # 盒子大小
-  box: 
+  box:
     max_width: 800px
-    sp_width: 1540px 
-    max_width_logo: 600px 
+    sp_width: 1540px
+    max_width_logo: 600px
     link_item: 16rem
 
   # 颜色配置
-  color: 
+  color:
     main_color: '#ffb90f'
     link_color: '#ffb90f'
     link_color_hover: '#eb5757'
@@ -82,66 +80,67 @@ style:
     tags_block: '#f4f4f4'
     footer_text: '#999'
     footer_link: '#6b6b6b'
-  
+
   # 弧度设置
-  radius: 
+  radius:
     main: 5px
     button: 5px
-    
+
   # 间距设置
-  space: 
+  space:
     main: 3.5rem
     s_main: 2rem  # 当屏幕宽度小于 700px 时候启用
     sm_main: 1rem  # 当屏幕宽度小于 450px 时候启用
 
   # 字体设置
-  font: 
+  font:
     base_fontsize: 16px
-    line_height: '1.8'  
+    line_height: '1.8'
 
 
 
 meta:
   # 默认文章标题
   title: 'no title'
-  
+
   # 默认文章作者（可在front-matter中覆盖）
   author:
-    name: ChrAlpha
-    url: https://chralpha.com
-  
+    name: CaryC
+    url: https://blog.wdsxhb.club
+
   # 文章创建日期
   date:
     title: ''
     format: 'YYYY-MM-DD' # 日期格式 http://momentjs.com/docs/
-  
+
   # 文章更新日期
   updated:
     title: '最后更新于：'
     format: 'YYYY-MM-DD' # 日期格式 http://momentjs.com/docs/
 
-  copyright: 
+  copyright:
     enable: true
-    
+
     # 永久链接前的描述
     permalink: '本文链接：'
-    
+
     # 在作者声明和永久链接之间，可以多行，支持 markdown
     custom_text:
       - '文章默认使用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh) 协议进行许可，使用时请注意遵守协议。'
-  
+
   # 网站页脚，支持 markdown
   footer:
-    - 'Copyright © 2020'
+    - '© 2020 CaryC Blog. [CaryC](https://www.douban.com/people/Caryc/) All Rights Reserved.'
+    - 'Powered by [Hexo](https://hexo.io) | Theme by [Cards](https://github.com/ChrAlpha/hexo-theme-cards)'
 
 
 
 # 布局设置
-layout: 
+layout:
 
   # 首页/归档
   # title/excerpt/thumbnail/date/updated/categories/tags
-  meta: 
+  meta:
     - excerpt
     - thumbnail
     - date
@@ -149,12 +148,12 @@ layout:
     - tags
 
   # 文章页
-  post: 
+  post:
     header:
       - thumbnail
       - date
       - categories
-    footer: 
+    footer:
       - copyright
       - updated
       - tags
@@ -162,57 +161,57 @@ layout:
 
 
 
-optimize: 
+optimize:
   lazyload:
     enable: true
     onlypost: false
-    loadingImg: 
+    loadingImg:
 
-  jquery: 
+  jquery:
     enable: false
 
   # 如需开启 fancybox 请确保开启上方 jQuery
-  fancybox: 
+  fancybox:
     enable: false
     auto: false
-    
+
   # 回到顶部按钮
-  back_to_top: 
+  back_to_top:
     enable: false
 
 
 # 评论系统
-comments: 
-  enable: 
+comments:
+  enable: true
 
   ## Disqus
-  disqus: 
-    enable: 
-    shortname: 
+  disqus:
+    enable: true
+    shortname: caryc-blog
     disqusjs:
-      enable: 
-      siteName: 
-      api: 
-      apikey: 
+      enable:
+      siteName:
+      api:
+      apikey:
       admin: ''
       nesting: 2
 
   ## Valine
   valine:
-    enable: 
-    appId: 
-    appKey: 
+    enable:
+    appId:
+    appKey:
     meta: nick,mail,link
     requiredFields: nick,mail
-    path: 
+    path:
     placeholder: 'just go!'
-    avatar: 
-    pageSize: 
-    lang: 
-    highlight: 
-    recordIP: 
-    emojiCDN: 
-    emojiMaps: 
+    avatar:
+    pageSize:
+    lang:
+    highlight:
+    recordIP:
+    emojiCDN:
+    emojiMaps:
 
   ## Gitalk
   gitalk:
@@ -229,21 +228,21 @@ comments:
     owner:
     client_id:
     client_secret:
-  
+
   # Livere 来比力
   livere:
-    enable: 
+    enable:
     livere_uid:
 
   # 畅言
   changyan:
-    enable: 
+    enable:
     appid:
     conf:
     thread_key_type: path # id | path，单独定义时候用 “id”
 
   wildfire:
-    enable: 
+    enable:
     database_provider: firebase # firebase | wilddog
     wilddog_site_id:
     firebase_api_key:
@@ -259,33 +258,31 @@ comments:
 
 # 统计服务
 analytics:
-  google_site_id:
+  google_site_id: UA-164526860-1
   gtags_site_id:
-  baidu_site_id: 
-  cnzz_site_id: 
+  baidu_site_id:
+  cnzz_site_id:
 
   # busuanzi 计数系统
   busuanzi:
-    enable: false
-    
+    enable: true
+
     # 全站 UV（Unique Viewers）
     site_uv:
       enable: true
       before_text: '' # 展示在数据前的内容，支持 HTML
       after_text: Viewers  # 展示在数据后的内容，支持 HTML
       divider: '&nbsp;&nbsp;&nbsp;|' # 分隔符，HTML 语法支持
-    
+
     # 全站 PV（Page Views）
     site_pv:
       enable: true
       before_text: ''  # 展示在数据前的内容，支持 HTML
       after_text: Views  # 展示在数据后的内容，支持 HTML
       divider: ''  # 分隔符，HTML 语法支持
-    
+
     # 页面 PV
     page_pv:
-      enable: true
+      enable: false
       before_text: ''
-      after_text: Views 
-
-
+      after_text: Views
