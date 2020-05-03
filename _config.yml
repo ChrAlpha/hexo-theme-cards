@@ -97,7 +97,8 @@ style:
   # 字体设置
   font: 
     base_fontsize: 16px
-    line_height: '1.8'  
+    code_fontsize: 14px
+    line_height: '1.8'
 
 
 
