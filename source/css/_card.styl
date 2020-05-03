@@ -70,6 +70,21 @@
 
     img
         display block
+        justify-content center!important
+        align-items center!important
+        margin-left auto
+        margin-right auto
+        border-radius 4px
+        background 0 0
+
+        &.lazyload
+            transition filter .375s ease 0s
+
+            &:not(.loaded)
+                filter blur(8px)
+
+                &:not(.loading)
+                    padding-bottom 40%
 
 .post-comments
     padding calc(var(--space)/2)

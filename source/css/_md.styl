@@ -55,25 +55,6 @@ a
 img
     max-width 100%
 
-.post
-    img
-        display block
-        justify-content center!important
-        align-items center!important
-        margin-left auto
-        margin-right auto
-        border-radius 4px
-        background 0 0
-
-    &.lazyload
-        transition filter .375s ease 0s
-
-        &:not(.loaded)
-            filter blur(8px)
-
-            &:not(.loading):not(.loaded)
-                padding-bottom 40%
-
 .katex-block
     overflow: auto
 
@@ -216,12 +197,6 @@ dl
     dd
         padding 0 16px
         margin-bottom 16px
-
-img[align=right]
-    padding-left 20px
-
-img[align=left]
-    padding-right 20px
 
 code
     padding .2em .4em
@@ -448,12 +423,6 @@ table
         font-size 2em
         margin .67em 0
         font-size 32px
-
-    img
-        border-style none
-        max-width 100%
-        box-sizing initial
-        background-color $colormd-13
 
     h2
         font-size 24px
