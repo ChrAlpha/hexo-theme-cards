@@ -2,7 +2,7 @@
     <div class="links-list">
         <div class='links-content'>
             <% (page.links || []).forEach((item) => { %>
-                <a class='links-card button' style='background:<%- item.backgroundColor %>; color:<%- item.textColor %>' target="_blank" href='<%- url_for(item.url || '') %>'>
+                <a class='links-card button' style='background:<%- item.backgroundColor %>; color:<%- item.textColor %>' target="<%- item.target || '_blank' %>" href='<%- url_for(item.url || '') %>'>
                     <div class='links-left'>
                     <% if (item.avatar) { %>
                         <img no-lazy class='avatar' src='<%- item.avatar %>'/>
