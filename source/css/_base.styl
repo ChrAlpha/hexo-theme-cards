@@ -33,6 +33,8 @@ body
     --border-color rgba(0,0,0,0.1)
     --space $space_main
     --content-width $max_width_main
+    --logo-width $max_width_logo
+    --link-item-width $max_link_item
     --header-height $header_height
     --radius $radius_main
     font-weight 400
@@ -43,18 +45,18 @@ body
     padding 0
     line-height $font_lineheight
 
-@media screen and (max-width:728px)
+@media screen and (max-width:700px)
     body
         --space $space_s
         
-@media screen and (max-width:500px)
+@media screen and (max-width:450px)
     body
         --space $space_sm
 
 .main
     margin 0 auto
     padding 1.5vw 15px 0
-    max-width 800px
+    max-width var(--content-width)
 
     &.tagscloud
         margin 0 auto

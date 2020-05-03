@@ -10,8 +10,6 @@
         line-height: 1.3
         .links-card
             display: flex
-            border-radius: $border-codeblock
-            box-shadow: $boxshadow-card
             padding: 16px * 0.5
             margin: 0 auto
             margin-top: "calc(2.25 * %s + 32px)" % 16px
@@ -20,7 +18,7 @@
             justify-content: flex-start
             align-content: flex-start
             flex-direction: column
-            max-width 16rem
+            max-width var(--link-item-width)
             width: "calc(100%/4 - %s)" % 16px
 
             @media screen and (max-width: 1280px)
@@ -41,7 +39,6 @@
             .avatar
                 width: 64px
                 height: 64px
-                box-shadow: $boxshadow-card
                 margin: 16px 16px * 0.5 16px * 0.25 16px * 0.5
                 margin-top: "calc(-1.25 * %s - 32px)" % 16px
                 border-radius: 100%
@@ -65,13 +62,11 @@
             p
                 margin: 0
                 &.links-name
-                    font-size: $fontsize-code
                     padding-top: 6px
                     padding-bottom 4px
                     font-weight: bold
 
                 &.tags
-                    font-size: $fontsize-footnote
                     display: inline
                     background: none
                     word-wrap: break-word
