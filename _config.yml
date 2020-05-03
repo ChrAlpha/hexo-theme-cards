@@ -132,8 +132,7 @@ meta:
   
   # 网站页脚，支持 markdown
   footer:
-    - 'Copyright © 2020 '
-    - 'Powered by [Hexo](https://hexo.io) | Theme - [Cards](https://github.com/ChrAlpha/hexo-theme-cards)'
+    - 'Copyright © 2020'
 
 
 
