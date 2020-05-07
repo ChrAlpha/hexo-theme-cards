@@ -121,6 +121,10 @@ meta:
     title: '最后更新于：'
     format: 'YYYY-MM-DD' # 日期格式 http://momentjs.com/docs/
 
+  auto_excerpt: 
+    enable: true
+    length: 150
+
   copyright: 
     enable: true
     

@@ -12,7 +12,11 @@
     <p class="post-card__descrption">
         <% if (theme.layout.meta.indexOf('excerpt') !== -1) { %>
             <div class="markdown-body">
-                <%- post.excerpt || post.description %>
+                <% if (post.excerpt || post.description) { %>
+                    <%- post.excerpt || post.description %>
+                <% } else if (theme.meta.auto_excerpt.enable) { %>
+                    <%- strip_html(truncate(post.content, {length: theme.meta.auto_excerpt.length})) %>
+                <% } %>
             </div>
         <% } %>   
     </p>
