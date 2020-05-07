@@ -1,22 +1,16 @@
-cdn: 
-  enable: true
-  css: 
-    style: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.1/dist/css/style.min.css
-    highlight: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.1/dist/css/github.min.css
-    fancybox: https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css
-  js: 
-    lazyload: https://cdn.jsdelivr.net/npm/vanilla-lazyload@latest/dist/lazyload.min.js
-    back_to_top: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.1/dist/js/b2t.min.js
-    valine: https://cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js
-    wildfire: https://cdn.jsdelivr.net/npm/wildfire@latest/dist/wildfire.auto.js
-    busuanzi: https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js
-    jquery: https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js
-    fancybox: https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js
+# ---------------------------------------------------------------
+# ⚠ 注意！
+# ---------------------------------------------------------------
+# Hexo 有两个配置文件，分别为位于站点根目录的「站点配置文件」和此处的「主题配置文件」
+# 修改时注意对应配置文件，部分主题配置文件的内容可能需要复制到站点配置文件才能生效
 
 
 
-
+# ---------------------------------------------------------------
 # 自定义信息
+# ---------------------------------------------------------------
+
+# <head> 标签配置
 head: 
   
   # 网站图标
@@ -58,6 +52,10 @@ cover:
       url: /demo/page/
 
 
+
+# ---------------------------------------------------------------
+# 样式自定义
+# ---------------------------------------------------------------
 
 style: 
 
@@ -102,7 +100,12 @@ style:
 
 
 
+# ---------------------------------------------------------------
+# meta 库
+# ---------------------------------------------------------------
+
 meta:
+
   # 默认文章标题
   title: 'no title'
   
@@ -121,10 +124,12 @@ meta:
     title: '最后更新于：'
     format: 'YYYY-MM-DD' # 日期格式 http://momentjs.com/docs/
 
+  # 文章自动摘要
   auto_excerpt: 
     enable: true
     length: 150
 
+  # 文章版权声明
   copyright: 
     enable: true
     
@@ -141,7 +146,10 @@ meta:
 
 
 
+# ---------------------------------------------------------------
 # 布局设置
+# ---------------------------------------------------------------
+
 layout: 
 
   # 首页/归档
@@ -166,6 +174,9 @@ layout:
 
 
 
+# ---------------------------------------------------------------
+# 优化/功能 插件
+# ---------------------------------------------------------------
 
 optimize: 
 
@@ -187,8 +198,10 @@ optimize:
   back_to_top: 
     enable: false
 
-
+# ---------------------------------------------------------------
 # 评论系统
+# ---------------------------------------------------------------
+
 comments: 
   enable: 
 
@@ -263,8 +276,10 @@ comments:
     locale: en
 
 
-
+# ---------------------------------------------------------------
 # 统计服务
+# ---------------------------------------------------------------
+
 analytics:
   google_site_id:
   gtags_site_id:
@@ -294,5 +309,62 @@ analytics:
       enable: true
       before_text: ''
       after_text: Views 
+
+
+
+# ---------------------------------------------------------------
+# CDN for vendors
+# ---------------------------------------------------------------
+
+# Vendors
+# 某一项留空则调用 默认/本地 文件
+vendors:
+
+  # main style css
+  # https://github.com/ChrAlpha/hexo-theme-cards/tree/master/dist/css
+  # Version: 0.1.x
+  # 如果你有自定义样式，请务必将此项修改为自己的 CDN 地址，或者单纯留空
+  style: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.1/dist/css/style.min.css
+  
+  # code highlight css
+  # https://github.com/ChrAlpha/hexo-theme-cards/tree/master/dist/css
+  # Version: 0.1.x
+  highlight: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.1/dist/css/github.min.css
+
+  # Lazyload js
+  # https://github.com/verlok/lazyload
+  # Version: 15.1.1
+  lazyload: 
+  
+  # back_to_top button
+  # https://github.com/ChrAlpha/hexo-theme-cards/tree/master/dist/js
+  # Version 0.1.x
+  back_to_top: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.1/dist/js/b2t.min.js
+  
+  # Valine comments system
+  # https://github.com/xcss/Valine/
+  # Version: latest
+  valine: 
+  
+  # Wildfire comments system
+  # https://github.com/cheng-kang/wildfire/
+  # Version: 0.3.9
+  wildfire: 
+  
+  # busuanzi counter js
+  # https://busuanzi.ibruce.info
+  busuanzi: 
+  
+  # jQuery js
+  # https://github.com/jquery/jquery/
+  # Version: 3.4.1
+  jquery: 
+  
+  # fancybox css
+  # https://github.com/fancyapps/fancybox/
+  # Version: 3.5.7
+  fancybox: 
+    css: 
+    js: 
 
 
