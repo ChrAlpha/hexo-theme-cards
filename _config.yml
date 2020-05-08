@@ -333,7 +333,7 @@ vendors:
 
   # Lazyload js
   # https://github.com/verlok/lazyload
-  # Version: 15.1.1
+  # Version: 12.0.0
   lazyload: 
   
   # back_to_top button
@@ -343,7 +343,7 @@ vendors:
   
   # Valine comments system
   # https://github.com/xcss/Valine/
-  # Version: latest
+  # Version: 1.4.14
   valine: 
   
   # Wildfire comments system
