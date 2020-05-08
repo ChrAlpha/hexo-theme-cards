@@ -62,7 +62,8 @@ style:
   # 盒子大小
   box: 
     max_width: 800px
-    sp_width: 1540px 
+    sp_width: 1540px
+    toc_width: 220px
     max_width_logo: 600px 
     link_item: 16rem
 
@@ -129,6 +130,11 @@ meta:
     enable: true
     length: 150
 
+  # 文章目录
+  toc: 
+    enable: true
+    list_number: false
+
   # 文章版权声明
   copyright: 
     enable: true
@@ -171,6 +177,8 @@ layout:
       - copyright
       - updated
       - tags
+    side: 
+      - toc
 
 
 
@@ -324,7 +332,7 @@ vendors:
   # https://github.com/ChrAlpha/hexo-theme-cards/tree/master/dist/css
   # Version: 0.1.x
   # 如果你有自定义样式，请务必将此项修改为自己的 CDN 地址，或者单纯留空
-  style: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.1/dist/css/style.min.css
+  style: #https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.1/dist/css/style.min.css
   
   # code highlight css
   # https://github.com/ChrAlpha/hexo-theme-cards/tree/master/dist/css

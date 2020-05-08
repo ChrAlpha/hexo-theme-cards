@@ -1,0 +1,27 @@
+.with-side
+    max-width calc(var(--content-width) + var(--toc-width) * 2)
+    padding 0 var(--toc-width)
+    margin 0 auto
+
+.post-side
+    display block
+    height 0
+    float right
+
+    .post-side__toc
+        display block
+        margin-left 0.6em
+
+        .toc
+            display none
+            width var(--toc-width)
+            margin-left 0.6em
+            overflow auto
+            position fixed
+            height 50vh
+            list-style-type none
+            padding-left 0
+
+            .toc-child
+                padding-left 1em
+                list-style-type none

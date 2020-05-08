@@ -12,6 +12,19 @@
         <%- partial('_third-party/busuanzi', {position: 'page'}) %> 
     </div>
 </div>
+
+<% if (theme.meta.toc.enable && theme.layout.post.side.indexOf('toc') !== -1 && page.toc !== false) { %>
+    <div class="with-side">
+        <script>
+            var main_width = <%- parseInt(theme.style.box.max_width) || 800 %>, toc_width = <%- parseInt(theme.style.box.toc_width) || 220 %>
+        </script>
+        <%- js('js/toc.js') %>
+        <aside class="post-side">
+            <div class="post-side__toc">
+                <%- toc(page.content, {list_number: (theme.meta.toc.list_number || false), max_depth: 6, min_depth: 2}) %>
+            </div>
+        </aside>
+<% } %>
 <div class="post content-box">
     <div class="post__header">
         <% if (theme.layout.post.header.indexOf('thumbnail') !== -1) { %>
@@ -37,5 +50,8 @@
 <% if (theme.comments.enable && page.comments !== false) { %>
     <div class="post__comment content-box">
         <%- partial('_third-party/comments.ejs') %>
+    </div>
+<% } %>
+<% if (theme.meta.toc.enable && theme.layout.post.side.indexOf('toc') !== -1 && page.toc !== false) { %>
     </div>
 <% } %>
