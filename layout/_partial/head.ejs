@@ -79,7 +79,7 @@
         <%- feed_tag(config.feed.path, {title: config.title}) %>
     <% } %>
 
-    <%- css(theme.vendors.style || '') %> 
+    <%- css(theme.vendors.style || 'style.css') %> 
     <% if (page.layout === 'post') { %>
         <link rel="stylesheet" href="<%-theme.vendors.highlight || config.root + 'github.min.css' %>" crossorigin="anonymous" media="none" onload="this.media='all'">
     <% } %>
