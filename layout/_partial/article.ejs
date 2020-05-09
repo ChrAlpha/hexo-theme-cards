@@ -15,10 +15,6 @@
 
 <% if (theme.meta.toc.enable && theme.layout.post.side.indexOf('toc') !== -1 && page.toc !== false) { %>
     <div class="with-side">
-        <script>
-            var main_width = <%- parseInt(theme.style.box.max_width) || 800 %>, toc_width = <%- parseInt(theme.style.box.toc_width) || 220 %>
-        </script>
-        <%- js('js/toc.js') %>
         <aside class="post-side">
             <div class="post-side__toc">
                 <%- toc(page.content, {list_number: (theme.meta.toc.list_number || false), max_depth: 6, min_depth: 2}) %>
