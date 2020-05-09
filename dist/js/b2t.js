@@ -24,10 +24,10 @@ document.addEventListener('DOMContentLoaded', function() {
     function filterGoTopButtonVisibility(timestamp) {
         let windowPageYOffset = window.pageYOffset || document.documentElement.scrollTop;
         if (windowPageYOffset > windowViewPortHeight) {
-            goTopButton.classList.add('show');
+            goTopButton.style.display = 'block';
             isRequestingAnimationFrame = false;
         } else {
-            goTopButton.classList.remove('show');
+            goTopButton.style.display = 'none';
             requestAnimationFrame(filterGoTopButtonVisibility);
         }
     }
