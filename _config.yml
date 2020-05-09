@@ -61,9 +61,6 @@ style:
 
   # 盒子大小
   box: 
-    max_width: 800px
-    sp_width: 1540px
-    toc_width: 220px
     max_width_logo: 600px 
     link_item: 16rem
 
