@@ -7,7 +7,7 @@ h5 {
   color: var(--title-color);
   margin: 2.75rem 0 1rem;
   font-family: miriam libre, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, pingfang sc, source han sans sc, noto sans cjk sc, sarasa gothic sc, microsoft yahei, sans-serif, Apple Color Emoji, Segoe UI Emoji, Varela Round;
-  font-weight: 430;
+  font-weight: 500;
   line-height: 1.5;
 }
 h1 {
@@ -28,10 +28,18 @@ h5 {
 small {
   font-size: 0.889em;
 }
+b,
 strong {
-  font-weight: 600;
+  font-weight: 700;
+}
+em {
+  font-style: italic;
+}
+s {
+  text-decoration: line-through;
 }
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-smoothing: antialiased;
   osx-font-smoothing: grayscale;
@@ -109,9 +117,6 @@ input {
 [type=checkbox] {
   box-sizing: border-box;
   padding: 0;
-}
-* {
-  box-sizing: border-box;
 }
 kbd {
   display: inline-block;
@@ -345,6 +350,7 @@ figure table td.gutter {
   background-color: var(--bg-code);
   text-align: right;
   border-right: 1px solid var(--border-color);
+  position: -webkit-sticky;
   position: sticky;
   left: 0;
 }
@@ -405,11 +411,6 @@ table th:not(.code):not(.gutter) {
 }
 .markdown-body a:hover {
   text-decoration: underline;
-}
-.markdown-body strong {
-  font-weight: inherit;
-  font-weight: bolder;
-  font-weight: 600;
 }
 .markdown-body h1 {
   font-size: 2em;
