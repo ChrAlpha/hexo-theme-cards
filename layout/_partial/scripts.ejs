@@ -1,4 +1,4 @@
-<% if (config.lazyload.enable) { %>
+<% if (config.lazyload && config.lazyload.enable) { %>
     <script defer crossorigin="anonymous" src="<%- theme.vendors.lazyload || 'https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.0.0/dist/lazyload.min.js' %>"></script>
     <script>
         window.lazyLoadOptions = {
