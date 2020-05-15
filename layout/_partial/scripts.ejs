@@ -25,7 +25,7 @@
 <% if (is_post() && theme.comments.enable) { %>
     <% if (theme.comments.disqus.enable) { %>
         <% if (theme.comments.disqus.disqusjs.enable) { %>
-        <script defer crossorigin="anonymous" src="https://cdn.jsdelivr.net/npm/disqusjs@1.2/dist/disqus.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/disqusjs@1.2/dist/disqus.js"></script>
         <script>
             new DisqusJS({
             shortname: '<%= theme.comments.disqus.shortname %>',
@@ -53,7 +53,7 @@
     <% } %>
     
     <% if (theme.comments.valine.enable) { %>
-        <script defer crossorigin="anonymous" src="<%- theme.vendors.valine || 'https://cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js' %>"></script>
+        <%- js(theme.vendors.valine || 'https://cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js') %>
         <script>
             var valine_meta = ['nick', 'mail', 'link'],
                 guest_info = '<%= theme.comments.valine.meta %>'.split(',').filter((item) => {
@@ -87,7 +87,7 @@
     
     <% if (theme.comments.gitalk.enable) { %>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-        <script defer crossorigin="anonymous" src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
         <script>
             var gitalk = new Gitalk({
                 clientID: "<%- theme.comments.gitalk.clientID %>",
@@ -104,7 +104,7 @@
     
     <% if (theme.comments.gitment.enable) { %>
         <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-        <script defer crossorigin="anonymous" src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+        <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
         <script>
             var gitment = new Gitment({
                 id: window.location.pathname,
@@ -148,7 +148,7 @@
     <% } %>
 
     <% if (theme.comments.wildfire.enable) { %>
-        <script defer crossorigin="anonymous" src="<%- theme.vendors.wildfire || 'https://cdn.jsdelivr.net/npm/wildfire@0.3.9/dist/wildfire.auto.js' %>"></script>
+        <%- js(theme.vendors.wildfire || 'https://cdn.jsdelivr.net/npm/wildfire@0.3.9/dist/wildfire.auto.js') %>
         <script>
             var wildfireConfig = () => ({
                 databaseProvider: '<%= theme.comments.wildfire.database_provider %>',
