@@ -1,15 +1,6 @@
-<script async>
-    (() => {
-        var d = document.createElement('link');
-        d.rel = 'stylesheet';
-        d.href = "<%- theme.vendors.fancybox.css || 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.4.1/dist/jquery.fancybox.min.css' %>";
-        d.crossOrigin = 'annoymous';
-        d.media = 'screen';
-        document.head.appendChild(d);
-    })();
-</script>
-<script async src="<%- theme.vendors.fancybox.js || 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.4.1/dist/jquery.fancybox.min.js' %>"></script>
-<script async>
+<%- css(theme.vendors.fancybox.css || 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.4.1/dist/jquery.fancybox.min.css') %>
+<%- js(theme.vendors.fancybox.js || 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.4.1/dist/jquery.fancybox.min.js') %>
+<script>
     let lazyloadT = Boolean('<%- config.lazyload %>'),
         auto_fancybox = Boolean('<%- theme.optimize.fancybox.auto %>')
     if (auto_fancybox) {
