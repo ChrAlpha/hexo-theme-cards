@@ -15,6 +15,20 @@ html
     --base-font-size $font_basesize
     font-size var(--base-font-size)
 
+::-webkit-scrollbar 
+    width .49rem!important
+    height .36rem!important
+    background 0 0!important
+
+::-webkit-scrollbar-thumb
+    border-radius 20% 20%
+    background rgba(0,0,0,.3)!important
+
+@media screen and (max-width: 762px)
+    ::-webkit-scrollbar 
+        width .25rem!important
+        height .16rem!important
+
 body
 p
     font-family rubik,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,pingfang sc,source han sans sc,noto sans cjk sc,sarasa gothic sc,microsoft yahei,sans-serif,Apple Color Emoji,Segoe UI Emoji,Varela Round
