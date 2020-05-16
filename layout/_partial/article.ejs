@@ -51,3 +51,21 @@
 <% if (theme.meta.toc.enable && theme.layout.post.side.indexOf('toc') !== -1 && page.toc !== false) { %>
     </div>
 <% } %>
+
+<% if (!(is_home() || is_tag() || is_category() || is_archive() || page.layout === 'tag' || page.layout === 'category' || page.layout === 'links')) { %>
+    <br>
+    <div class="author">
+        <% if (theme.cover.menu && theme.cover.menu.length && theme.cover.menu.forEach) { %>
+            <div class="cover-menus">
+                <% for(let i = 0; i < theme.cover.menu.length; ++i) { %>
+                    <a href="<%- theme.cover.menu[i].url %>" class="cover-menu button">
+                        <%- theme.cover.menu[i].name %>
+                    </a>
+                    <% if (i !== theme.cover.menu.length - 1) { %>
+                        ·
+                    <% } %>
+                <% } %>
+            </div>
+        <% } %>
+    </div>
+<% } %>
