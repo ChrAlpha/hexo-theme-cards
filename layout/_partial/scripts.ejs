@@ -18,7 +18,7 @@
     <%- partial('_third-party/fancybox') %> 
 <% } %> 
 
-<% if (theme.optimize.back_to_top.enable) { %> 
+<% if (theme.optimize.back_to_top.enable && theme.optimize.back_to_top.smoothly) { %> 
     <script defer crossorigin="anonymous" src="<%- theme.vendors.back_to_top || config.root + 'js/b2t.js' %>"></script>
 <% } %> 
 
