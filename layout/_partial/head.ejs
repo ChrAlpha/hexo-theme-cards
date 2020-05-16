@@ -62,7 +62,7 @@
     <!--Social link-->
     <% if (theme.head.opengraph.enable) { %> 
         <meta name="twitter:card" content="<%= (theme.head.opengraph.tc_type || 'summary_large_image') %> " />
-        <% if (page.layout === 'post') { %>
+        <% if (is_post()) { %>
             <meta property="og:type" content="article" />
         <% } else { %>
             <meta property="og:type" content="website" />
@@ -80,7 +80,7 @@
     <% } %>
 
     <%- css(theme.vendors.style || 'style.css') %> 
-    <% if (page.layout === 'post') { %>
+    <% if (is_post()) { %>
         <link rel="stylesheet" href="<%-theme.vendors.highlight || config.root + 'github.min.css' %>" crossorigin="anonymous" media="none" onload="this.media='all'">
     <% } %>
 
