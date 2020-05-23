@@ -19,7 +19,7 @@ head:
   # 社交分享链接
   opengraph: 
     enable: true
-    type: blog
+    type: 
     twitter_card: summary_large_image
     twitter_id: 
     twitter_site: 
