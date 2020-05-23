@@ -179,6 +179,7 @@ layout:
       - thumbnail
       - date
       - categories
+      - expire
     footer: 
       - copyright
       - updated
