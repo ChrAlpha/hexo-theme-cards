@@ -1,0 +1,115 @@
+.with-side
+    max-width calc(var(--content-width) + var(--toc-width) * 2)
+    margin 0 auto
+
+.content-box
+    background-color var(--bg-content-color)
+    max-width var(--content-width)
+    margin 0 auto
+    transition background-color .6s
+    padding var(--space)
+    border-radius var(--radius)
+    box-shadow 1px 1px 5px 0 rgba(0,0,0,.02),1px 1px 15px 0 rgba(0,0,0,.03)
+    transition transform .3s,background-color .3s,box-shadow .6s
+
+.post-card
+    margin-bottom var(--space)
+    position relative
+
+    &:hover
+        transform translateY(-5px)
+        box-shadow 1px 10px 30px 0 rgba(0,0,0,.1)
+
+.post-card__header
+    margin calc(var(--space)*-1)
+    margin-bottom calc(var(--space)/2)
+    overflow hidden
+    border-radius var(--radius)
+
+    &:empty
+        display none
+
+.post-card__image
+    min-width 100%
+
+.post-card__title
+    margin-top 0
+
+.post-card__tags
+    z-index 1
+    position relative
+
+.post-card__cats
+    z-index 1
+    position relative
+
+.post-card__link
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+    color #000
+    opacity 0
+    overflow hidden
+    text-indent -9999px
+    z-index 0
+
+.post-meta
+    font-size .8em
+    opacity .8
+    font-family rubik,sans-serif
+
+.post-title
+    padding calc(var(--space)/2) 0 calc(var(--space)/2)
+    text-align center
+
+.post__header
+    width calc(100% + var(--space)*2)
+    margin calc(var(--space)*-1)
+    margin-bottom calc(var(--space)/2)
+    overflow hidden
+    border-radius var(--radius)
+    
+    img
+        width 100%
+        height auto
+        max-height calc(width * 2.25)
+
+    &:empty
+        display none
+
+.post__content
+    p
+        line-height $font_lineheight
+
+    img
+        display block
+        justify-content center!important
+        align-items center!important
+        margin-left auto
+        margin-right auto
+        border-radius 4px
+        background 0 0
+
+        &.lazyload
+            transition filter .375s ease 0s
+
+            &:not(.loaded)
+                filter blur(8px)
+
+                &:not(.loading)
+                    padding-bottom 40%
+
+.post-comments
+    padding calc(var(--space)/2)
+    max-width var(--content-width)
+    margin 0 auto
+    font-family rubik,sans-serif
+
+    &:empty
+        display none
+
+.post-footer__meta
+    font-size 14px
+    margin-top 1.5rem

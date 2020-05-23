@@ -1,0 +1,98 @@
+.post-cats
+    display inline-block
+    margin 1em 0 0
+
+.post-cats__link
+    display inline-block
+    margin-right .5em
+    margin-top .5em
+    font-size .8em
+    color currentColor
+    text-decoration none
+    background-color var(--bg-cat-color)
+    color currentColor!important
+    padding .5em
+    border-radius var(--radius)
+
+.post-tags
+    display inline-block
+    margin 1em 0 0
+
+.post-tags__link
+    display inline-block
+    margin-right .5em
+    margin-top .5em
+    font-size .8em
+    color currentColor
+    text-decoration none
+    background-color var(--bg-tag-color)
+    color currentColor!important
+    padding .5em
+    border-radius var(--radius)
+
+#b2t
+    display none
+    width 40px
+    height 40px
+    position fixed
+    z-index 1001
+    right 20px
+    bottom 30px
+    background none
+
+.post-side
+    display block
+    height 0
+    float right
+    position -webkit-sticky
+    position sticky
+    top: calc(var(--header-height) + 10px)
+    margin-left -100%
+            
+    .post-side__toc
+        display block
+        
+        .toc
+            display none
+            width var(--toc-width)
+            overflow auto
+            height calc(100vh - var(--header-height) - 20px)
+            list-style-type none
+            padding-left 0.6em
+
+            .toc-child
+                padding-left .35em
+                list-style-type none
+           
+@media screen and (max-width: 1280px)
+    .post-side
+        width calc(100vw / 6 - 20px)
+        
+        .post-side__toc
+            .toc
+                width calc(100vw / 6 - 20px)
+
+    .post.content-box
+        width calc(100vw / 6 * 4)
+
+@media screen and (min-width: 1080px)
+    .post-side
+        .post-side__toc
+            .toc
+                display block
+    
+@media screen and (max-width: 1080px)
+    .post.content-box
+        width 100%
+
+.post__license
+    background-color rgb(245, 245, 245)
+    word-break break-all
+    margin 3em 0 1em 0
+    padding 0.5rem 0.8rem
+    border-left 4px solid rgb(244, 67, 54)
+    list-style none
+
+    p 
+        margin 3px 1px 3px 1px
+        padding 0
