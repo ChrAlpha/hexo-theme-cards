@@ -13,6 +13,9 @@ post:
   updated: 更新于
   prev_page: 上一页
   next_page: 下一页
+  copyright: 
+    author: '本文作者：'
+    permalink: '本文链接：'
 symbol:
   comma: "，"
   period: "。"

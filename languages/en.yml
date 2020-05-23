@@ -13,6 +13,9 @@ post:
   updated: updated at
   prev_page: Previous
   next_page: Next
+  copyright: 
+    author: 'Author: '
+    permalink: 'Permalink: '
 symbol:
   comma: ", "
   period: ". "

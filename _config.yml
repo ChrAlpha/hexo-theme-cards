@@ -143,9 +143,6 @@ meta:
   copyright: 
     enable: true
     
-    # 永久链接前的描述
-    permalink: '本文链接：'
-    
     # 在作者声明和永久链接之间，可以多行，支持 markdown
     custom_text:
       - '文章默认使用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh) 协议进行许可，使用时请注意遵守协议。'
