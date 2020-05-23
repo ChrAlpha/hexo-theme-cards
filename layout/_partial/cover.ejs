@@ -1,7 +1,7 @@
 <%- partial('header', null, {cache: false, path: path}) %>
 <% if (is_home() || is_tag() || is_category() || is_archive() || page.layout === 'tag' || page.layout === 'category' || page.layout === 'links') { %>
-    <div class="author">
-        <div class="author__logo">
+    <div class="cover">
+        <div class="cover__logo">
             <% if (theme.cover.logo) { %>
                 <img no-lazy alt="author Image" src="<%- theme.cover.logo %>">
             <% } else if (theme.cover.sitename) { %>
@@ -11,18 +11,18 @@
             <% } %>
         </div>
         <% if (theme.cover.description) { %>
-            <div class="author__intro">
+            <div class="cover__intro">
                 <%- markdown(theme.cover.description) %> 
             </div>
         <% } %> 
         <% if (theme.cover.menu && theme.cover.menu.length && theme.cover.menu.forEach) { %>
-            <div class="cover-menus">
+            <div class="cover__menus">
                 <% for(let i = 0; i < theme.cover.menu.length; ++i) { %>
                     <a href="<%- url_for(theme.cover.menu[i].url) %>" class="cover-menu button">
                         <%- theme.cover.menu[i].name %>
                     </a>
                     <% if (i !== theme.cover.menu.length - 1) { %>
-                        ·
+                        <span class="separate-dot"></span>
                     <% } %>
                 <% } %>
             </div>

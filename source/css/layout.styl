@@ -1,8 +1,4 @@
-.with-side
-    max-width calc(var(--content-width) + var(--toc-width) * 2)
-    margin 0 auto
-
-.content-box
+.content-card
     background-color var(--bg-content-color)
     max-width var(--content-width)
     margin 0 auto
@@ -11,6 +7,10 @@
     border-radius var(--radius)
     box-shadow 1px 1px 5px 0 rgba(0,0,0,.02),1px 1px 15px 0 rgba(0,0,0,.03)
     transition transform .3s,background-color .3s,box-shadow .6s
+
+.post__with-side
+    max-width calc(var(--content-width) + var(--toc-width) * 2)
+    margin 0 auto
 
 .post-card
     margin-bottom var(--space)
@@ -55,14 +55,15 @@
     text-indent -9999px
     z-index 0
 
-.post-meta
-    font-size .8em
-    opacity .8
-    font-family rubik,sans-serif
-
 .post-title
     padding calc(var(--space)/2) 0 calc(var(--space)/2)
     text-align center
+
+.post-card__meta
+.post-title__meta
+    font-size .8em
+    opacity .8
+    font-family rubik,sans-serif
 
 .post__header
     width calc(100% + var(--space)*2)

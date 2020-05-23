@@ -2,7 +2,7 @@
     <h1 class="post-title__text">
         <%- page.title %>
     </h1>
-    <div class="post-meta">
+    <div class="post-title__meta">
         <% if (theme.layout.meta.indexOf('date') !== -1) { %>
             <%- partial('_meta/date') %>
         <% } %>
@@ -14,14 +14,14 @@
 </div>
 
 <% if (theme.meta.toc.enable && theme.layout.post.side.indexOf('toc') !== -1 && page.toc !== false) { %>
-    <div class="with-side">
+    <div class="post__with-side">
         <aside class="post-side">
             <div class="post-side__toc">
                 <%- toc(page.content, {list_number: (theme.meta.toc.list_number || false), max_depth: 6, min_depth: 2}) %>
             </div>
         </aside>
 <% } %>
-<div class="post content-box">
+<article class="post content-card">
     <div class="post__header">
         <% if (theme.layout.post.header.indexOf('thumbnail') !== -1) { %>
             <%- partial('_meta/thumbnail', {post: post, position: 'article'}) %> 
@@ -39,12 +39,13 @@
         <%- partial('_meta/updated') %> 
     <% } %>
     <% if (theme.layout.post.footer.indexOf('tags') !== -1) { %>
-        <%- partial('_meta/tags') %> 
+        <%- partial('_meta/categories-block') %> 
+        <%- partial('_meta/tags-block') %> 
     <% } %> 
-</div>
+</article>
 <br>
 <% if (theme.comments.enable && page.comments !== false) { %>
-    <div class="post__comment content-box">
+    <div class="post__comment content-card">
         <%- partial('_third-party/comments.ejs') %>
     </div>
 <% } %>
@@ -54,9 +55,9 @@
 
 <% if (!(is_home() || is_tag() || is_category() || is_archive() || page.layout === 'tag' || page.layout === 'category' || page.layout === 'links')) { %>
     <br>
-    <div class="author">
+    <div class="cover">
         <% if (theme.cover.menu && theme.cover.menu.length && theme.cover.menu.forEach) { %>
-            <div class="cover-menus">
+            <div class="cover__menus">
                 <% for(let i = 0; i < theme.cover.menu.length; ++i) { %>
                     <a href="<%- theme.cover.menu[i].url %>" class="cover-menu button">
                         <%- theme.cover.menu[i].name %>

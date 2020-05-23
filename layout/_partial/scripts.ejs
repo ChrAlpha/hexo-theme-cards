@@ -28,14 +28,14 @@
         <script src="https://cdn.jsdelivr.net/npm/disqusjs@1.2/dist/disqus.js"></script>
         <script>
             new DisqusJS({
-            shortname: '<%= theme.comments.disqus.shortname %>',
-            siteName: '<%= config.title %>',
-            api: '<%= theme.comments.disqus.disqusjs.api %>',
-            apikey: '<%= theme.comments.disqus.disqusjs.apiKey %>',
-            admin: '<%= theme.comments.disqus.disqusjs.admin %>',
-            identifier: '<%= page.path %>',
-            url: '<%= page.permalink %>',
-            nesting: '<%= theme.comments.disqus.disqusjs.nesting %>'
+                shortname: '<%= theme.comments.disqus.shortname %>',
+                siteName: '<%= config.title %>',
+                api: '<%= theme.comments.disqus.disqusjs.api %>',
+                apikey: '<%= theme.comments.disqus.disqusjs.apiKey %>',
+                admin: '<%= theme.comments.disqus.disqusjs.admin %>',
+                identifier: '<%= page.path %>',
+                url: '<%= page.permalink %>',
+                nesting: '<%= theme.comments.disqus.disqusjs.nesting %>'
             });
         </script>
         <% } else { %>

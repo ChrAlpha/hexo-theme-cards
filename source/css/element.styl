@@ -40,6 +40,9 @@
     bottom 30px
     background none
 
+.separate-dot:after
+    content ' · '
+
 .post-side
     display block
     height 0
@@ -72,7 +75,7 @@
             .toc
                 width calc(100vw / 6 - 20px)
 
-    .post.content-box
+    .post.content-card
         width calc(100vw / 6 * 4)
 
 @media screen and (min-width: 1080px)
@@ -82,7 +85,7 @@
                 display block
     
 @media screen and (max-width: 1080px)
-    .post.content-box
+    .post.content-card
         width 100%
 
 .post__license

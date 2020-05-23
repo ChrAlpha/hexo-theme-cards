@@ -5,7 +5,7 @@
                 <% site.posts.each((post) => { %>
                     <% if (post.top) { %>
                         <% if (page.group == undefined || post.group == page.group) { %>
-                        <div class='post-card content-box'>
+                        <div class='post-card content-card'>
                             <%- partial('post', {post: post}) %>
                         </div>
                         <% } %>
@@ -14,7 +14,7 @@
             <% } else if (page.posts && page.posts.length > 0) { %>
                 <% page.posts.each((post) => { %>
                     <% if (post.top) { %>
-                        <div class='post-card content-box'>
+                        <div class='post-card content-card'>
                             <%- partial('post', {post: post}) %>
                         </div>
                     <% } %>
@@ -24,7 +24,7 @@
         <% if (page.posts && page.posts.length > 0) { %>
             <% page.posts.each((post) => { %>
                 <% if (!post.top) { %>
-                <div class='post-card content-box'>
+                <div class='post-card content-card'>
                     <%- partial('post', {post: post}) %>
                 </div>
                 <% } %>

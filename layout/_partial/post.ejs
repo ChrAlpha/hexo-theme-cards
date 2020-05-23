@@ -21,7 +21,7 @@
         <% } %>   
     </p>
 </div>
-<div class="post-meta post-card__meta">
+<div class="post-card__meta">
     <% if (theme.layout.meta.indexOf('date') !== -1) { %>
         <%- partial('_meta/date') %>
     <% } %>
@@ -30,5 +30,5 @@
     <% } %>
 </div>
 <% if (theme.layout.meta.indexOf('tags') !== -1) { %>
-    <%- partial('_meta/tags') %> 
+    <%- partial('_meta/tags-block') %> 
 <% } %>
