@@ -10,13 +10,11 @@
                 </strong>
             </p>
         <% }); %>
-        <% if (theme.meta.copyright.permalink) { %>
-            <p>
-                <strong>
-                    <%- __('post.copyright.permalink') %>
-                </strong>
-                <a href="<%- page.permalink %>"><%- page.permalink %></a>
-            </p>
-        <% } %>
+        <p>
+            <strong>
+                <%- __('post.copyright.permalink') %>
+            </strong>
+            <a href="<%- page.permalink %>"><%- page.permalink %></a>
+        </p>
     </div>
 <% } %>
