@@ -94,7 +94,8 @@ style:
   font: 
     base_fontsize: 16px
     code_fontsize: 14px
-    line_height: '1.8'
+    toc_fontsize: 14px
+    line_height: '1.75'
 
 
 
