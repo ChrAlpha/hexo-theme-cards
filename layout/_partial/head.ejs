@@ -61,18 +61,8 @@
 
     <!--Social link-->
     <% if (theme.head.opengraph.enable) { %> 
-        <meta name="twitter:card" content="<%= (theme.head.opengraph.tc_type || 'summary_large_image') %> " />
-        <% if (is_post()) { %>
-            <meta property="og:type" content="article" />
-        <% } else { %>
-            <meta property="og:type" content="website" />
-        <% } %>
-        <meta property="og:locale" content="<%- config.language %>" />
-        <meta property="og:site_name" content="<%= config.title %>>" />
-        <meta property="og:title" content="<%= title %> | <%= config.title %> " />
-        <meta property="og:description" content="<%= description %> " />
-        <meta property="og:image" content="<%- page.thumbnail %>" />
-    <% } %> 
+        <%- open_graph(type: theme.head.opengraph.type, twitter_card: theme.head.opengraph.twitter_card, twitter_id: theme.head.opengraph.twitter_id, image: theme.head.opengraph.image, fb_admins: theme.head.opengraph.fb_admins, fb_app_id: theme.head.opengraph.fb_app_id) %>
+    <% } %>
 
     <!-- feed -->
     <% if (config.feed && config.feed.path){ %>

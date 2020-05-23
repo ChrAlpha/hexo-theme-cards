@@ -19,7 +19,13 @@ head:
   # 社交分享链接
   opengraph: 
     enable: true
-    tc_type: summary_large_image
+    type: blog
+    twitter_card: summary_large_image
+    twitter_id: 
+    twitter_site: 
+    image: page.thumbnail
+    fb_admins: 
+    fb_app_id: 
 
   # 自定义 head
   custom_head: 

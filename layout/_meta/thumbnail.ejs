@@ -1,9 +1,9 @@
 <% if (post.thumbnail) { %>
     <% if (position === 'list') { %>
         <a href="<%- url_for(post.link || post.path) %>">
-            <img alt="Cover Image" src="<%- url_for(post.thumbnail) %>">
+            <img alt="Cover Image" src="<%- post.thumbnail %>">
         </a>
     <% } else { %>
-        <img alt="Cover Image" src="<%- url_for(post.thumbnail) %>">
+        <img alt="Cover Image" src="<%- post.thumbnail %>">
     <% } %>
 <% } %>
