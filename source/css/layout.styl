@@ -84,22 +84,19 @@
         line-height $font_lineheight
 
     img
+        &.inline
+            display inline
+
+    div>img,p>img
         display block
-        justify-content center!important
-        align-items center!important
-        margin-left auto
-        margin-right auto
+        margin auto
         border-radius 4px
-        background 0 0
 
-        &.lazyload
-            transition filter .375s ease 0s
+    span
+        img
+            display inline
+            margin auto
 
-            &:not(.loaded)
-                filter blur(8px)
-
-                &:not(.loading)
-                    padding-bottom 40%
 
 .post-comments
     padding calc(var(--space)/2)

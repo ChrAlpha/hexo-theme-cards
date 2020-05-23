@@ -63,6 +63,15 @@ a
 img
     max-width 100%
 
+    &.lazyload
+        transition filter .375s ease 0s
+
+        &:not(.loaded)
+            filter blur(8px)
+
+            &:not(.loading)
+                padding-bottom 40%
+
 .katex-block
     overflow: auto
 
