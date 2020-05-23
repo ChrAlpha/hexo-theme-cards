@@ -18,7 +18,7 @@
         <% if (theme.cover.menu && theme.cover.menu.length && theme.cover.menu.forEach) { %>
             <div class="cover-menus">
                 <% for(let i = 0; i < theme.cover.menu.length; ++i) { %>
-                    <a href="<%- theme.cover.menu[i].url %>" class="cover-menu button">
+                    <a href="<%- url_for(theme.cover.menu[i].url) %>" class="cover-menu button">
                         <%- theme.cover.menu[i].name %>
                     </a>
                     <% if (i !== theme.cover.menu.length - 1) { %>

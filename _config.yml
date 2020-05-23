@@ -41,15 +41,15 @@ cover:
   # cover 按钮菜单，通常用于站内导航
   menu: 
     - name: 首页
-      url: /demo/
+      url: /
     - name: 标签
-      url: /demo/tags/
+      url: /tags/
     - name: 归档
-      url: /demo/archives/
+      url: /archives/
     - name: 友链
-      url: /demo/friends/
+      url: /friends/
     - name: Page
-      url: /demo/page/
+      url: /page/
 
 
 
