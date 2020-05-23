@@ -16,6 +16,7 @@ post:
   copyright: 
     author: '本文作者：'
     permalink: '本文鏈接：'
+  expire: "本文最後更新於 %s 天前，文中部分描述可能已經過時。"
 symbol:
   comma: "，"
   period: "。"

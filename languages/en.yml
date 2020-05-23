@@ -16,6 +16,7 @@ post:
   copyright: 
     author: 'Author: '
     permalink: 'Permalink: '
+  expire: "This article was last updated on %s days ago, the information described in the article may be outdated."
 symbol:
   comma: ", "
   period: ". "

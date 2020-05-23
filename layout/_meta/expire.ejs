@@ -1,0 +1,20 @@
+<% if (theme.meta.expire.enable && page.expire !== false) { %>
+    <div class="post__expire" id="post-expired-notify">
+        <p>
+            <%- __('post.expire', '<span id="expire-date"></span>') %>
+        </p>
+    </div>
+    <script>
+        (() => {
+            var update = Date.parse("<%- date(page.updated, 'YYYY-MM-DD') %>"),
+                date = new Date(),
+                now = date.getTime(),
+                expire = now - update,
+                expire_days = Math.floor(expire/(24*3600*1000));
+            if (expire_days >= <%- theme.meta.expire.duration || 120 %>) {
+                document.querySelectorAll('#expire-date')[0].innerHTML = expire_days;
+                document.querySelectorAll('#post-expired-notify')[0].style.display = 'block';
+            }
+        })();
+    </script>
+<% } %>

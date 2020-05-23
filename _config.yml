@@ -129,6 +129,11 @@ meta:
     title: '最后更新于：'
     format: 'YYYY-MM-DD' # 日期格式 http://momentjs.com/docs/
 
+  # 文章过时提醒
+  expire: 
+    enable: true
+    duration: 120  # 超过此天数则显示过期提醒
+
   # 文章自动摘要
   auto_excerpt: 
     enable: true

@@ -26,6 +26,9 @@
         <% if (theme.layout.post.header.indexOf('thumbnail') !== -1) { %>
             <%- partial('_meta/thumbnail', {post: post, position: 'article'}) %> 
         <% } %>
+        <% if (theme.layout.post.header.indexOf('expire')) { %>
+            <%- partial('_meta/expire') %>
+        <% } %>
     </div>
     <div class="post__content">
         <div class="markdown-body">
