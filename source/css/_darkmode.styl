@@ -1,0 +1,83 @@
+@media (prefers-color-scheme: dark)
+    :root
+        --color-mode 'dark'
+
+        &:not([data-user-color-scheme])
+            --main-color $color_main
+            --bg-color #181c27
+            --bg-content-color #252d38
+            --bg-tag-color #778899
+            --bg-cat-color #696969
+            --bg-code #708090
+            --body-color rgba(255,255,255,0.8)
+            --title-color rgba(252,252,252,0.9)
+            --link-color $color_link
+            --link-color-hover $color_link_hover
+            --border-color rgba(0,0,0,0.1)
+
+            blockquote
+                border-left .25em solid rgba(255,255,255,0.5)
+                color rgba(255,255,255,0.5)
+
+            .post__license
+                background-color #6a737d
+
+            .post-card__header
+            .post__header
+            .post__content
+                img
+                    opacity 0.8
+                    filter brightness(.8) contrast(1.2)
+
+                    &:hover
+                        opacity 1
+                        filter none
+
+            figure.highlight
+                table 
+                    background-color #f6f8fa
+                    opacity 0.7
+                    filter brightness(.7) contrast(1.2)
+
+                    pre 
+                        background-color #f6f8fa
+
+[data-user-color-scheme="dark"]
+    --main-color $color_main
+    --bg-color #181c27
+    --bg-content-color #252d38
+    --bg-tag-color #778899
+    --bg-cat-color #696969
+    --bg-code #708090
+    --body-color rgba(255,255,255,0.8)
+    --title-color rgba(252,252,252,0.9)
+    --link-color $color_link
+    --link-color-hover $color_link_hover
+    --border-color rgba(0,0,0,0.1)
+
+    blockquote
+        border-left .25em solid rgba(255,255,255,0.5)
+        color rgba(255,255,255,0.5)
+
+    .post__license
+        background-color #6a737d
+
+    .post-card__header
+    .post__header
+    .post__content
+        img
+            opacity 0.8
+            filter brightness(.8) contrast(1.2)
+
+            &:hover
+                opacity 1
+                filter none
+
+    figure.highlight
+        table 
+            background-color #f6f8fa
+            opacity 0.7
+            filter brightness(.7) contrast(1.2)
+
+            pre 
+                background-color #f6f8fa
