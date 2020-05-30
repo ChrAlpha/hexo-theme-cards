@@ -347,7 +347,7 @@ vendors:
   # https://github.com/ChrAlpha/hexo-theme-cards/tree/master/dist/css
   # Version: 0.3.x
   # 如果你有自定义样式，请务必将此项修改为自己的 CDN 地址，或者单纯留空
-  style: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.3/dist/css/style.min.css
+  style: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.3.0/dist/css/style.min.css
   
   # code highlight css
   # https://github.com/ChrAlpha/hexo-theme-cards/tree/master/dist/css

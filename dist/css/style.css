@@ -178,7 +178,9 @@ body {
   display: inline;
 }
 .post__content div>img,
-.post__content p>img {
+.post__content p>img,
+.post__content div>picture>img,
+.post__content p>picture>img {
   display: block;
   margin: auto;
   border-radius: 4px;
