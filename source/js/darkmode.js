@@ -49,10 +49,7 @@
         if (currentSetting === getModeFromCSSMediaQuery()) {
             resetRootDarkModeAttributeAndLS();
         } else if (validColorModeKeys[currentSetting]) {
-            rootElement.setAttribute(
-            rootElementDarkModeAttributeName,
-            currentSetting
-            );
+            rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
         } else {
             resetRootDarkModeAttributeAndLS();
         }
@@ -64,7 +61,7 @@
     };
 
     const toggleCustomDarkMode = () => {
-        let currentSetting = getLS(darkModeStorageKey);
+        var currentSetting = getLS(darkModeStorageKey);
 
         if (validColorModeKeys[currentSetting]) {
             currentSetting = invertDarkModeObj[currentSetting];
