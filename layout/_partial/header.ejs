@@ -9,6 +9,11 @@
         <% } %>
     </div>
     <div class="header__right">
+        <% if (theme.optimize.darkmode.enable) { %>
+            <a href="javaScript:void(0);" id="btn-toggle-dark">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </a>
+        <% } %>
         <% if (theme.optimize.back_to_top.enable) { %> 
             <a href="<%- theme.optimize.back_to_top.smoothly ? 'javaScript:void(0);' : '#' %>" id="b2t" style="<%- theme.optimize.back_to_top.smoothly ? '' : 'display: block' %>">
                 <svg class="svg-icon" viewBox="0 0 20 20" width='36' height='36'>

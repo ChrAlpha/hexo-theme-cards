@@ -214,6 +214,10 @@ optimize:
     enable: false
     smoothly: false
 
+  # 深色模式（beta）
+  darkmode: 
+    enable: false
+
 # ---------------------------------------------------------------
 # 评论系统
 # ---------------------------------------------------------------
@@ -357,6 +361,11 @@ vendors:
   # https://github.com/ChrAlpha/hexo-theme-cards/tree/master/dist/js
   # Version 0.2.x
   back_to_top: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.2/dist/js/b2t.min.js
+
+  # darkmode toggle button
+  # https://github.com/ChrAlpha/hexo-theme-cards/tree/master/dist/js
+  # Version 0.3.1
+  darkmode: 
   
   # Valine comments system
   # https://github.com/xcss/Valine/

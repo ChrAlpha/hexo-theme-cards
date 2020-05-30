@@ -22,6 +22,10 @@
     <script defer crossorigin="anonymous" src="<%- theme.vendors.back_to_top || config.root + 'js/b2t.js' %>"></script>
 <% } %> 
 
+<% if (theme.optimize.darkmode.enable) { %>
+    <script defer crossorigin="anonymous" src="<%- theme.vendors.darkmode || config.root + 'js/darkmode.js' %>"></script>
+<% } %>
+
 <% if (page.comments && theme.comments.enable) { %>
     <% if (theme.comments.disqus.enable) { %>
         <% if (theme.comments.disqus.disqusjs.enable) { %>
