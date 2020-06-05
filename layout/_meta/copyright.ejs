@@ -3,18 +3,16 @@
         <p>
             <strong><%- __('post.copyright.author') %></strong><%- theme.meta.author.name %>
         </p>
-        <% (theme.meta.copyright.custom_text || []).forEach((text) => { %>
-            <p>
-                <strong>
-                    <%- markdown(text) %>
-                </strong>
-            </p>
-        <% }); %>
         <p>
             <strong>
                 <%- __('post.copyright.permalink') %>
             </strong>
             <a href="<%- page.permalink %>"><%- page.permalink %></a>
         </p>
+        <% (theme.meta.copyright.custom_text || []).forEach((text) => { %>
+            <strong>
+                <%- markdown(text) %>
+            </strong>
+        <% }); %>
     </div>
 <% } %>
