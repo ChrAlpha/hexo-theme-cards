@@ -72,7 +72,7 @@
                 padding-left .35em
                 list-style-type none
            
-@media screen and (max-width: 1280px)
+@media screen and (max-width: 1246px)
     .post-side
         width calc(100vw / 6 - 20px)
         
@@ -81,6 +81,7 @@
                 width calc(100vw / 6 - 20px)
 
     .post.content-card
+        max-width calc(100vw / 6 * 4)
         width calc(100vw / 6 * 4)
 
 @media screen and (min-width: 1080px)
@@ -91,6 +92,7 @@
     
 @media screen and (max-width: 1080px)
     .post.content-card
+        max-width var(--content-width)
         width 100%
 
 .post__license

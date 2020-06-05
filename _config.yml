@@ -93,8 +93,7 @@ style:
   # 间距设置
   space: 
     main: 3.5rem
-    s_main: 2rem  # 当屏幕宽度小于 700px 时候启用
-    sm_main: 1rem  # 当屏幕宽度小于 450px 时候启用
+    sm_main: 1rem  # 当屏幕宽度小于 650px 时候启用
 
   # 字体设置
   font: 
