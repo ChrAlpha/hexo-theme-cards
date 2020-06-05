@@ -1,6 +1,6 @@
 {
   "name": "hexo-theme-cards",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "A Simple & Swift Theme for Hexo, designed as its name",
   "main": "README.md",
   "scripts": {
