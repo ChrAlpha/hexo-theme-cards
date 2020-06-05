@@ -11,7 +11,7 @@
   --link-color-hover: #eb5757;
   --border-color: rgba(0,0,0,0.1);
   --space: 3.5rem;
-  --content-width: 800px;
+  --content-width: 776px;
   --logo-width: 600px;
   --toc-width: 220px;
   --link-item-width: 16rem;
@@ -65,14 +65,9 @@ body {
   padding: 0;
   line-height: 1.75;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 650px) {
   body {
-    --space: 2rem;
-  }
-}
-@media screen and (max-width: 450px) {
-  body {
-    --space: 1rem;
+    --space: 1.5rem;
   }
 }
 .main {
@@ -700,6 +695,10 @@ table th:not(.code):not(.gutter) {
   box-flex: 1;
   padding: 2px 0 2px 0.8rem;
 }
+.archives .archives-item .archives-content .archives-title {
+  color: var(--title-color);
+  font-size: 20px;
+}
 .archives .archives-item .archives-icon::before {
   border: 0.1rem solid var(--main-color);
   border-radius: 50%;
@@ -731,6 +730,9 @@ table th:not(.code):not(.gutter) {
   position: absolute;
   top: 1.2rem;
   width: 2px;
+}
+.archives .archives-item:last-child::before {
+  background: 0 0;
 }
 .links-list {
   margin: 0 auto;
@@ -956,7 +958,6 @@ nav a:hover {
   position: -webkit-sticky;
   position: sticky;
   top: calc(var(--header-height) + 10px);
-  margin-left: -100%;
 }
 .post-side .post-side__toc {
   display: block;
@@ -978,14 +979,16 @@ nav a:hover {
   padding-left: 0.35em;
   list-style-type: none;
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1246px) {
   .post-side {
     width: calc(100vw / 6 - 20px);
   }
   .post-side .post-side__toc .toc {
     width: calc(100vw / 6 - 20px);
   }
-  .post.content-card {
+  .post,
+  .post__comment {
+    max-width: calc(100vw / 6 * 4);
     width: calc(100vw / 6 * 4);
   }
 }
@@ -995,7 +998,9 @@ nav a:hover {
   }
 }
 @media screen and (max-width: 1080px) {
-  .post.content-card {
+  .post,
+  .post__comment {
+    max-width: var(--content-width);
     width: 100%;
   }
 }
@@ -1030,10 +1035,10 @@ nav a:hover {
   :root:not([data-user-color-scheme]) {
     --main-color: #ffb90f;
     --bg-color: #181c27;
-    --bg-content-color: #252d38;
-    --bg-tag-color: #789;
-    --bg-cat-color: #696969;
-    --bg-code: #708090;
+    --bg-content-color: #232222;
+    --bg-tag-color: #696969;
+    --bg-cat-color: #789;
+    --bg-code: #000;
     --body-color: rgba(255,255,255,0.8);
     --title-color: rgba(252,252,252,0.9);
     --link-color: #ffb90f;
@@ -1045,7 +1050,7 @@ nav a:hover {
     color: rgba(255,255,255,0.5);
   }
   :root:not([data-user-color-scheme]) .post__license {
-    background-color: #6a737d;
+    background-color: rgba(255,255,255,0.2);
   }
   :root:not([data-user-color-scheme]) .post-card__header img,
   :root:not([data-user-color-scheme]) .post__header img,
@@ -1059,22 +1064,14 @@ nav a:hover {
     opacity: 1;
     filter: none;
   }
-  :root:not([data-user-color-scheme]) figure.highlight table {
-    background-color: #f6f8fa;
-    opacity: 0.7;
-    filter: brightness(0.7) contrast(1.2);
-  }
-  :root:not([data-user-color-scheme]) figure.highlight table pre {
-    background-color: #f6f8fa;
-  }
 }
 [data-user-color-scheme="dark"] {
   --main-color: #ffb90f;
   --bg-color: #181c27;
-  --bg-content-color: #252d38;
-  --bg-tag-color: #789;
-  --bg-cat-color: #696969;
-  --bg-code: #708090;
+  --bg-content-color: #232222;
+  --bg-tag-color: #696969;
+  --bg-cat-color: #789;
+  --bg-code: #000;
   --body-color: rgba(255,255,255,0.8);
   --title-color: rgba(252,252,252,0.9);
   --link-color: #ffb90f;
@@ -1086,7 +1083,7 @@ nav a:hover {
   color: rgba(255,255,255,0.5);
 }
 [data-user-color-scheme="dark"] .post__license {
-  background-color: #6a737d;
+  background-color: rgba(255,255,255,0.2);
 }
 [data-user-color-scheme="dark"] .post-card__header img,
 [data-user-color-scheme="dark"] .post__header img,
@@ -1099,12 +1096,4 @@ nav a:hover {
 [data-user-color-scheme="dark"] .post__content img:hover {
   opacity: 1;
   filter: none;
-}
-[data-user-color-scheme="dark"] figure.highlight table {
-  background-color: #f6f8fa;
-  opacity: 0.7;
-  filter: brightness(0.7) contrast(1.2);
-}
-[data-user-color-scheme="dark"] figure.highlight table pre {
-  background-color: #f6f8fa;
 }
