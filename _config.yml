@@ -350,8 +350,8 @@ vendors:
   
   # code highlight css
   # https://github.com/ChrAlpha/hexo-theme-cards/tree/master/dist/css
-  # Version: 0.1.x
-  highlight: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.1/dist/css/github.min.css
+  # Version: 0.3.x
+  highlight: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.3/dist/css/github.min.css
 
   # Lazyload js
   # https://github.com/verlok/lazyload
