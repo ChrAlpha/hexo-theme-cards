@@ -4,7 +4,7 @@
   --bg-content-color: #fff;
   --bg-tag-color: #f4f4f4;
   --bg-cat-color: #c2c2c2;
-  --bg-code: #f8f8f8;
+  --bg-code: #eee;
   --body-color: #4c4d4e;
   --title-color: #50596c;
   --link-color: #ffb90f;
@@ -38,7 +38,7 @@ html {
   font-size: var(--base-font-size);
 }
 ::-webkit-scrollbar {
-  width: 0.49rem !important;
+  width: 0.56rem !important;
   height: 0.36rem !important;
   background: 0 0 !important;
 }
