@@ -28,6 +28,10 @@
             flex 1 1 auto
             box-flex 1
             padding 2px 0 2px .8rem
+            
+            .archives-title
+                color var(--title-color)
+                font-size 20px
 
         .archives-icon::before
             border .1rem solid var(--main-color)
@@ -53,12 +57,13 @@
                 top .4rem
                 width .4rem
 
-    .archives-item::before
-        background #e7e9ed
-        content ""
-        height 100%
-        left 11px
-        position absolute
-        top 1.2rem
-        width 2px
-
+        &::before
+            background #e7e9ed
+            content ""
+            height 100%
+            left 11px
+            position absolute
+            top 1.2rem
+            width 2px
+        &:last-child::before
+            background 0 0

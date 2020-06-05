@@ -29,8 +29,8 @@
                         <%= date(post.date, 'MM-DD') %>
                         &nbsp;
                         <span>
-                        <a href="<%= url_for(post.link || post.path) %>">
-                            <span style="color: #454D5D;font-size: 20px;">
+                        <a href="<%= url_for(post.link || post.path) %>" class="archives-title">
+                            <span>
                                 <% if (post.title){ %>
                                     <%- post.title %>
                                 <% } else if (post.date) { %>
