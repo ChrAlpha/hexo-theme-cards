@@ -20,40 +20,70 @@
                 <%- toc(page.content, {list_number: (theme.meta.toc.list_number || false), max_depth: 6, min_depth: 2}) %>
             </div>
         </aside>
-<% } %>
-<article class="post content-card">
-    <div class="post__header">
-        <% if (theme.layout.post.header.indexOf('thumbnail') !== -1) { %>
-            <%- partial('_meta/thumbnail', {post: post, position: 'article'}) %> 
-        <% } %>
-        <% if (theme.layout.post.header.indexOf('expire')) { %>
-            <%- partial('_meta/expire') %>
+        <article class="post content-card">
+            <div class="post__header">
+                <% if (theme.layout.post.header.indexOf('thumbnail') !== -1) { %>
+                    <%- partial('_meta/thumbnail', {post: post, position: 'article'}) %> 
+                <% } %>
+                <% if (theme.layout.post.header.indexOf('expire')) { %>
+                    <%- partial('_meta/expire') %>
+                <% } %>
+            </div>
+            <div class="post__content">
+                <div class="markdown-body">
+                    <%- page.content %>
+                </div>
+            </div>
+            <% if (theme.layout.post.footer.indexOf('copyright') !== -1) { %>
+                <%- partial('_meta/copyright') %> 
+            <% } %>
+            <% if (theme.layout.post.footer.indexOf('updated') !== -1) { %>
+                <%- partial('_meta/updated') %> 
+            <% } %>
+            <% if (theme.layout.post.footer.indexOf('tags') !== -1) { %>
+                <%- partial('_meta/categories-block') %> 
+                <%- partial('_meta/tags-block') %> 
+            <% } %> 
+        </article>
+        <br>
+        <% if (theme.comments.enable && page.comments !== false) { %>
+            <div class="post__comment content-card">
+                <%- partial('_third-party/comments.ejs') %>
+            </div>
         <% } %>
     </div>
-    <div class="post__content">
-        <div class="markdown-body">
-            <%- page.content %>
+<% } else { %>
+    <article class="post content-card">
+        <div class="post__header">
+            <% if (theme.layout.post.header.indexOf('thumbnail') !== -1) { %>
+                <%- partial('_meta/thumbnail', {post: post, position: 'article'}) %> 
+            <% } %>
+            <% if (theme.layout.post.header.indexOf('expire')) { %>
+                <%- partial('_meta/expire') %>
+            <% } %>
         </div>
-    </div>
-    <% if (theme.layout.post.footer.indexOf('copyright') !== -1) { %>
-        <%- partial('_meta/copyright') %> 
+        <div class="post__content">
+            <div class="markdown-body">
+                <%- page.content %>
+            </div>
+        </div>
+        <% if (theme.layout.post.footer.indexOf('copyright') !== -1) { %>
+            <%- partial('_meta/copyright') %> 
+        <% } %>
+        <% if (theme.layout.post.footer.indexOf('updated') !== -1) { %>
+            <%- partial('_meta/updated') %> 
+        <% } %>
+        <% if (theme.layout.post.footer.indexOf('tags') !== -1) { %>
+            <%- partial('_meta/categories-block') %> 
+            <%- partial('_meta/tags-block') %> 
+        <% } %> 
+    </article>
+    <br>
+    <% if (theme.comments.enable && page.comments !== false) { %>
+        <div class="post__comment content-card">
+            <%- partial('_third-party/comments.ejs') %>
+        </div>
     <% } %>
-    <% if (theme.layout.post.footer.indexOf('updated') !== -1) { %>
-        <%- partial('_meta/updated') %> 
-    <% } %>
-    <% if (theme.layout.post.footer.indexOf('tags') !== -1) { %>
-        <%- partial('_meta/categories-block') %> 
-        <%- partial('_meta/tags-block') %> 
-    <% } %> 
-</article>
-<br>
-<% if (theme.comments.enable && page.comments !== false) { %>
-    <div class="post__comment content-card">
-        <%- partial('_third-party/comments.ejs') %>
-    </div>
-<% } %>
-<% if (theme.meta.toc.enable && theme.layout.post.side.indexOf('toc') !== -1 && page.toc !== false) { %>
-    </div>
 <% } %>
 
 <% if (!(is_home() || is_tag() || is_category() || is_archive() || page.layout === 'tag' || page.layout === 'category' || page.layout === 'links')) { %>
