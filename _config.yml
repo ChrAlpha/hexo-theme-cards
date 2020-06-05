@@ -79,7 +79,7 @@ style:
     background: '#f4f4f4'
     card_color: '#fff'
     font_color: '#4c4d4e'
-    codeblock: '#f8f8f8'
+    codeblock: '#eeeeee'
     categories_block: '#c2c2c2'
     tags_block: '#f4f4f4'
     footer_text: '#999'
