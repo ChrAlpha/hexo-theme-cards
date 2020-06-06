@@ -83,15 +83,25 @@
     color: #fff;
     font-weight: 700;
   }
+  :root:not([data-user-color-scheme]) .highlight .attribute,
+  :root:not([data-user-color-scheme]) .highlight .name,
+  :root:not([data-user-color-scheme]) .highlight .tag {
+    color: #acc4d8;
+    font-weight: 400;
+  }
 }
-
-[data-user-color-scheme=dark] .highlight {
+[data-user-color-scheme="dark"] .highlight {
   color: rgba(255, 255, 255, 0.8);
 }
-
-[data-user-color-scheme=dark] .highlight .keyword,
-[data-user-color-scheme=dark] .highlight .selector-tag,
-[data-user-color-scheme=dark] .highlight .subst {
+[data-user-color-scheme="dark"] .highlight .keyword,
+[data-user-color-scheme="dark"] .highlight .selector-tag,
+[data-user-color-scheme="dark"] .highlight .subst {
   color: #fff;
   font-weight: 700;
+}
+[data-user-color-scheme] .highlight .attribute,
+[data-user-color-scheme] .highlight .name,
+[data-user-color-scheme] .highlight .tag {
+  color: #acc4d8;
+  font-weight: 400;
 }
