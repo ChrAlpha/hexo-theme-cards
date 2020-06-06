@@ -93,7 +93,7 @@ style:
   # 间距设置
   space: 
     main: 3.5rem
-    sm_main: 1rem  # 当屏幕宽度小于 650px 时候启用
+    sm_main: 1.5rem  # 当屏幕宽度小于 650px 时候启用
 
   # 字体设置
   font: 
@@ -147,9 +147,10 @@ meta:
   copyright: 
     enable: true
     
-    # 在作者声明和永久链接之间，可以多行，支持 markdown
+    # 在作者声明和永久链接之后，可以多行，支持 markdown
     custom_text:
-      - '文章默认使用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh) 协议进行许可，使用时请注意遵守协议。'
+      # - ''
+      # - ''
   
   # 网站页脚，支持 markdown
   footer:
