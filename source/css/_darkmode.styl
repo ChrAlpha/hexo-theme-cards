@@ -13,7 +13,7 @@
             --title-color rgba(252,252,252,0.9)
             --link-color $color_link
             --link-color-hover $color_link_hover
-            --border-color rgba(0,0,0,0.1)
+            --border-color rgba(255,255,255,0.1)
 
             blockquote
                 border-left .25em solid rgba(255,255,255,0.5)
@@ -33,6 +33,10 @@
                         opacity 1
                         filter none
 
+            table
+                tr:not(.code):not(.gutter):nth-child(2n)
+                    background-color #353535
+
 [data-user-color-scheme="dark"]
     --main-color $color_main
     --bg-color #181c27
@@ -44,7 +48,7 @@
     --title-color rgba(252,252,252,0.9)
     --link-color $color_link
     --link-color-hover $color_link_hover
-    --border-color rgba(0,0,0,0.1)
+    --border-color rgba(255,255,255,0.1)
 
     blockquote
         border-left .25em solid rgba(255,255,255,0.5)
@@ -63,3 +67,7 @@
             &:hover
                 opacity 1
                 filter none
+
+    table
+        tr:not(.code):not(.gutter):nth-child(2n)
+            background-color #353535
