@@ -46,17 +46,21 @@ s
     osx-font-smoothing grayscale
 
 a
+    color var(--link-color)
+    cursor pointer
+    text-decoration none
+
+    &:-webkit-any-link
+        color var(--link-color)
+        cursor pointer
+        text-decoration none
+
     &:not(.button)
         color var(--link-color)
         transition opacity .2s
 
         &:hover
             text-decoration underline
-
-    &:-webkit-any-link
-        color var(--link-color)
-        cursor pointer
-        text-decoration none
 
     .index-title
         color var(--title-color)
