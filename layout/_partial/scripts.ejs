@@ -10,11 +10,8 @@
 
 <%- partial('_third-party/analytics') %> 
 
-<% if (theme.optimize.jquery.enable) { %> 
-    <script crossorigin="anonymous" src="<%- theme.vendors.jquery || 'https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js' %>"></script>
-<% } %>
-
 <% if (theme.optimize.fancybox.enable) { %>
+    <script crossorigin="anonymous" src="<%- theme.vendors.jquery || 'https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js' %>"></script>
     <%- partial('_third-party/fancybox') %> 
 <% } %> 
 
