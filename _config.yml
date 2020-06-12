@@ -376,6 +376,11 @@ vendors:
   # Version: 0.3.9
   wildfire: 
   
+  # MathJax js
+  # https://www.mathjax.org/
+  # Version: 3
+  mathjax: 
+
   # busuanzi counter js
   # https://busuanzi.ibruce.info
   busuanzi: 

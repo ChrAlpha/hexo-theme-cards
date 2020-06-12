@@ -17,7 +17,11 @@
 
 <% if (theme.optimize.back_to_top.enable && theme.optimize.back_to_top.smoothly) { %> 
     <script defer crossorigin="anonymous" src="<%- theme.vendors.back_to_top || config.root + 'js/b2t.js' %>"></script>
-<% } %> 
+<% } %>
+
+<% if (page.mathjax) { %>
+    <%- partial('_third-party/mathjax') %>
+<% } %>
 
 <% if (page.comments && theme.comments.enable) { %>
     <% if (theme.comments.disqus.enable) { %>
