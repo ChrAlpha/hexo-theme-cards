@@ -29,8 +29,8 @@ head:
 
   # 自定义 head
   custom_head: 
-    - ''
-    - ''
+    # - ''
+    # - ''
 
 # 封面 cover 设置
 cover: 
@@ -100,6 +100,7 @@ style:
     base_fontsize: 16px
     code_fontsize: 14px
     toc_fontsize: 14px
+    button_fontsize: 12px
     line_height: '1.75'
 
 
@@ -165,7 +166,6 @@ meta:
 layout: 
 
   # 首页/归档
-  # title/excerpt/thumbnail/date/updated/categories/tags
   meta: 
     - excerpt
     - thumbnail
@@ -201,20 +201,17 @@ optimize:
     onlypost: false
     loadingImg: 
 
-  jquery: 
-    enable: false
-
-  # 如需开启 fancybox 请确保开启上方 jQuery
+  # 图片点击放大插件
   fancybox: 
     enable: false
     auto: false
     
-  # 回到顶部按钮
+  # 返回顶部按钮
   back_to_top: 
     enable: false
     smoothly: false
 
-  # 深色模式（beta）
+  # 深色模式
   darkmode: 
     enable: false
 
@@ -394,5 +391,10 @@ vendors:
   fancybox: 
     css: 
     js: 
+
+  # 自定义 script
+  custom_script: 
+    # - ''
+    # - ''
 
 
