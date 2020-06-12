@@ -100,7 +100,6 @@ style:
     base_fontsize: 16px
     code_fontsize: 14px
     toc_fontsize: 14px
-    button_fontsize: 12px
     line_height: '1.75'
 
 
