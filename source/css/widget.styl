@@ -13,10 +13,84 @@
         align-items center
         font-family rubik,sans-serif,Varela Round
 
-@media screen and (min-width: 1024px)
-    .header
-        position sticky
-        width 100%
+    .header__left
+    
+        .logo__text
+            font-size 18px
+            padding 16px 10px 16px 10px
+            border-radius 5px
+
+            &:hover
+                background-color var(--bg-menu)
+
+    .header__right
+    
+        .cover__menus
+            padding 0 15px 0 15px
+            
+            .cover-menu
+                font-size 16px
+                padding 16px 10px 16px 10px
+                border-radius 5px
+
+                &:hover
+                    background-color var(--bg-menu)
+
+        .btn-darkmode
+            padding 12px 10px 12px 10px
+            border-radius 5px
+
+        .dropdown-icon
+            display none
+            padding 16px 10px 16px 10px
+            border 0!important
+            background-color transparent
+
+            *
+                width 20px
+                height 20px
+
+        .dropdown-menus
+            display none
+            background var(--bg-content-color)
+            position absolute
+            left 10px
+            right 10px
+            top 10px
+            z-index 10000
+            border-radius 6px
+            padding 24px
+            justify-items center
+            justify-content center 
+            flex-direction column
+            transition all 0.35s ease
+            transform translateY(calc(-100% - 20px))
+
+
+            .dropback-icon
+                position absolute
+                top 10px
+                right 10px
+                padding 16px 10px 16px 10px
+                border 0!important
+                background-color transparent
+
+                *
+                    width 20px
+                    height 20px
+
+            .dropdown-menu
+                padding 10px
+
+@media screen and (max-width: 764px)
+    .cover__menus
+        display none!important
+    
+    .dropdown-icon
+        display block!important
+        
+    .dropdown-menus
+        display flex!important
 
 .footer
     display block
