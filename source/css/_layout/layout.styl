@@ -4,12 +4,12 @@
     margin 0 auto
     transition background-color .6s
     padding var(--space)
-    border-radius var(--radius)
+    border-radius $radius_main
     box-shadow 1px 1px 5px 0 rgba(0,0,0,.02),1px 1px 15px 0 rgba(0,0,0,.03)
     transition transform .3s,background-color .3s,box-shadow .6s
 
 .post__with-side
-    max-width calc(var(--content-width) + var(--toc-width) * 2)
+    max-width 'calc(var(--content-width) + %s * 2)' % $max_width_toc
     margin 0 auto
 
 .post-card
@@ -24,7 +24,7 @@
     margin calc(var(--space)*-1)
     margin-bottom calc(var(--space)/2)
     overflow hidden
-    border-radius var(--radius)
+    border-radius $radius_main
 
     &:empty
         display none
@@ -70,7 +70,7 @@
     margin calc(var(--space)*-1)
     margin-bottom calc(var(--space)/2)
     overflow hidden
-    border-radius var(--radius)
+    border-radius $radius_main
     
     img
         width 100%

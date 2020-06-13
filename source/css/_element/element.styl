@@ -11,7 +11,7 @@
     background-color var(--bg-cat-color)
     color currentColor!important
     padding 0.25rem 0.6rem 0.25rem 0.6rem
-    border-radius var(--radius)
+    border-radius $radius_button
 
 .post-tags
     display inline-block
@@ -26,7 +26,7 @@
     background-color var(--bg-tag-color)
     color currentColor!important
     padding 0.25rem 0.6rem 0.25rem 0.6rem
-    border-radius var(--radius)
+    border-radius $radius_button
 
 #b2t
     display none
@@ -47,17 +47,17 @@
     float right
     position -webkit-sticky
     position sticky
-    top: calc(var(--header-height) + 10px)
+    top: 'calc(%s + 10px)' % $header_height
             
     .post-side__toc
         display block
         
         .toc
             display none
-            width var(--toc-width)
-            font-size var(--toc-fontsize)
+            width $max_width_toc
+            font-size $font_tocsize
             overflow auto
-            height calc(100vh - var(--header-height) - 20px)
+            height 'calc(100vh - %s - 20px)' % $header_height
             list-style-type none
             padding-left 0.6em
 
