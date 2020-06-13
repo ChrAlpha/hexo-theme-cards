@@ -11,7 +11,7 @@
     </a>
     <p class="post-card__descrption">
         <% if (theme.layout.meta.indexOf('excerpt') !== -1) { %>
-            <div class="markdown-body">
+            <div class="md-content">
                 <% if (post.excerpt || post.description) { %>
                     <%- post.excerpt || post.description %>
                 <% } else if (theme.meta.auto_excerpt.enable) { %>

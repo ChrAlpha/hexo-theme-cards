@@ -216,7 +216,7 @@ dl
 code
     padding .2em .4em
     margin 0
-    font-size var(--code-fontsize)
+    font-size $font_codesize
     background-color var(--bg-code)
     border-radius 3px
 
@@ -274,7 +274,7 @@ code
 kbd
 pre
     font-family monospace,monospace
-    font-size var(--code-fontsize)
+    font-size $font_codesize
 
 hr:after
 hr:before
@@ -305,7 +305,7 @@ ul ul ol
 code
 pre
     font-family SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace
-    font-size var(--code-fontsize)
+    font-size $font_codesize
 
 input::-webkit-inner-spin-button
 input::-webkit-outer-spin-button
@@ -378,7 +378,7 @@ figure table
 pre
     padding 12px 16px
     overflow auto
-    font-size var(--code-fontsize)
+    font-size $font_codesize
     line-height 1.45
     background-color var(--bg-codeblock)
     border-radius 3px
@@ -422,7 +422,7 @@ overflows
         td
             white-space nowrap
 
-.markdown-body
+.md-content
     text-size-adjust 100%
     color var(--body-color)
     font-size 16px
