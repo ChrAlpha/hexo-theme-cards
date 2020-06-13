@@ -7,7 +7,7 @@
             <%- partial('_meta/date') %>
         <% } %>
         <% if (theme.layout.post.header.indexOf('categories') !== -1) { %>
-            <%- partial('_meta/categories') %> 
+            <%- partial('_meta/category') %> 
         <% } %>
         <%- partial('_third-party/busuanzi', {position: 'page'}) %> 
     </div>
@@ -41,8 +41,8 @@
                 <%- partial('_meta/updated') %> 
             <% } %>
             <% if (theme.layout.post.footer.indexOf('tags') !== -1) { %>
-                <%- partial('_meta/categories-block') %> 
-                <%- partial('_meta/tags-block') %> 
+                <%- partial('_meta/categories') %> 
+                <%- partial('_meta/tags') %> 
             <% } %> 
         </article>
         <br>
@@ -74,8 +74,8 @@
             <%- partial('_meta/updated') %> 
         <% } %>
         <% if (theme.layout.post.footer.indexOf('tags') !== -1) { %>
-            <%- partial('_meta/categories-block') %> 
-            <%- partial('_meta/tags-block') %> 
+            <%- partial('_meta/categories') %> 
+            <%- partial('_meta/tags') %> 
         <% } %> 
     </article>
     <br>
