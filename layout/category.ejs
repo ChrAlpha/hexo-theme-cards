@@ -5,9 +5,9 @@
             <div class="all-categories content-card">
                 <% if (page.title) { %>
                     <div class="post-title">
-                        <h1 class="post-title__text" style="text-align: left;">
+                        <h2 class="post-title__text" style="text-align: left;">
                             <%- page.title %>
-                        </h1>
+                        </h2>
                         <hr>
                     </div>
                 <% } %>
@@ -19,7 +19,7 @@
                                 (<%- category.posts.length %>)
                             </span>
                         </a>
-                        <br><br>
+                        <br>
                     <% }) %>
                 <% } %>
             </div>
