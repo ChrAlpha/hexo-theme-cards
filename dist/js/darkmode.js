@@ -3,7 +3,6 @@
     const darkModeStorageKey = "user-color-scheme";
     const darkModeMediaQueryKey = "--color-mode";
     const rootElementDarkModeAttributeName = "data-user-color-scheme";
-    const darkModeToggleBottonElement = document.getElementById("btn-toggle-dark");
 
     const setLS = (k, v) => {
         try {
@@ -77,7 +76,10 @@
 
     applyCustomDarkModeSettings();
 
-    darkModeToggleBottonElement.addEventListener("click", () => {
-        applyCustomDarkModeSettings(toggleCustomDarkMode());
-    });
+    window.onload = () => {
+        const darkModeToggleBottonElement = document.getElementById("btn-toggle-dark");
+        darkModeToggleBottonElement.addEventListener("click", () => {
+            applyCustomDarkModeSettings(toggleCustomDarkMode());
+        });
+    }
 })();
