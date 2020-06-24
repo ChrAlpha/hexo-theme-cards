@@ -25,15 +25,12 @@
         var title = page.title;
         var keywords = page.keywords;
         if (!keywords) {
-            keywords = config.keywords;
+            if (is_post() && page.tags && page.tags.length > 0) {
+                keywords += page.tags.map(t => t.name).join(', ');
+            }
+            keywords += config.keywords ? ', ' + config.keywords : '';
         } else {
-            keywords += ', ' + config.keywords;
-        }
-        var description = page.description;
-        if (!description) {
-            description = config.description || '';
-        } else {
-            description += ' -- ' + config.title;
+            keywords += config.keywords ? ', ' + config.keywords : '';
         }
         if (is_archive()) {
             title = __('navbar.archive');
@@ -47,19 +44,15 @@
         } else if (is_tag()) {
             title = __('navbar.tag') + __('symbol.colon') + page.tag;
         } else if (is_home()) {
-            keywords = config.keywords || '';
-            description = config.description || '';
+            keywords += config.keywords || '';
         }
     %>
     <title><% if (title) { %><%= title %> | <% } %><%= config.title %></title>
     <% if (keywords) { %>
         <meta name="keywords" content="<%= keywords %>">
     <% } %>
-    <% if (description) { %>
-        <meta name="description" content="<%= description %>">
-    <% } %>
 
-    <!--Social link-->
+    <!-- OpenGraph -->
     <% if (theme.head.opengraph.enable) { %> 
         <%- open_graph({type: theme.head.opengraph.type, twitter_card: theme.head.opengraph.twitter_card, twitter_id: theme.head.opengraph.twitter_id, image: eval(theme.head.opengraph.image), fb_admins: theme.head.opengraph.fb_admins, fb_app_id: theme.head.opengraph.fb_app_id}) %>
     <% } %>
