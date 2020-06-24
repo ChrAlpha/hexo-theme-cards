@@ -4,6 +4,7 @@ navbar:
   archive: Archive
   category: Category
   tag: Tag
+  top: Back to Top
 post:
   top: Top
   read_more: Read More

@@ -4,6 +4,7 @@ navbar:
   archive: 歸檔
   category: 分類
   tag: 標籤
+  top: 回到頂部
 post:
   top: 置頂
   read_more: 閱讀全文
