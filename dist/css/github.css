@@ -62,10 +62,10 @@
   font-weight: 700;
 }
 .highlight .deletion {
-  background: #fdd;
+  background:rgba(255,127,80,.3);
 }
 .highlight .addition {
-  background: #dfd;
+  background:rgba(0,250,154,.3)
 }
 .highlight .emphasis {
   font-style: italic;
