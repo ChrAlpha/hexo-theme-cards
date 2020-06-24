@@ -71,6 +71,9 @@
 
     <%- css(theme.vendors.style || 'css/style.css') %> 
     <% if (is_post()) { %>
+        <% if (theme.optimize.note.enable) { %>
+            <link rel="stylesheet" href="<%-theme.vendors.note || config.root + 'css/note.css' %>" crossorigin="anonymous" media="none" onload="this.media='all'">
+        <% } %>
         <link rel="stylesheet" href="<%-theme.vendors.highlight || config.root + 'css/github.min.css' %>" crossorigin="anonymous" media="none" onload="this.media='all'">
     <% } %>
 

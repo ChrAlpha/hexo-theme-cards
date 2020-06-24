@@ -176,6 +176,10 @@ optimize:
     onlypost: false
     loadingImg: 
 
+  # note 标签插件
+  note: 
+    enable: true
+
   # 图片点击放大插件
   fancybox: 
     enable: false
@@ -325,6 +329,11 @@ vendors:
   # https://github.com/ChrAlpha/hexo-theme-cards/tree/master/dist/css
   # Version: 0.4.x
   highlight: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.4/dist/css/github.min.css
+
+  # tag-plugin note css
+  # https://github.com/ChrAlpha/hexo-theme-cards/tree/master/dist/css
+  # Version 0.6.x
+  note: 
 
   # Lazyload js
   # https://github.com/verlok/lazyload
