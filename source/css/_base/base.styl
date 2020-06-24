@@ -9,8 +9,6 @@
     --bg-codeblock #f8f8f8
     --body-color $color_font
     --title-color $color_title
-    --link-color $color_link
-    --link-color-hover $color_link_hover
     --border-color rgba(0,0,0,0.1)
     --space $space_main
     --content-width $max_width_main
@@ -29,7 +27,7 @@ section
     display block
 
 html
-    --base-font-size $font_basesize
+    --base-font-size $fontsize
     font-size var(--base-font-size)
 
 ::-webkit-scrollbar 
@@ -56,7 +54,7 @@ body
     transition color .6s,background-color .6s
     margin 0
     padding 0
-    line-height $font_lineheight
+    line-height $lineheight
 
 @media screen and (max-width:650px)
     body

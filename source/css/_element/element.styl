@@ -55,15 +55,14 @@
         .toc
             display none
             width $max_width_toc
-            font-size $font_tocsize
+            font-size $toc_fontsize
             overflow auto
             height 'calc(100vh - %s - 20px)' % $header_height
             list-style-type none
             padding-left 0.6em
 
             a:hover
-                color var(--link-color-hover)
-                text-decoration none
+                text-decoration underline
 
             .toc-child
                 padding-left .35em

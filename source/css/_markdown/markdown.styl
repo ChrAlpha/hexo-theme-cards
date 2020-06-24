@@ -46,17 +46,17 @@ s
     osx-font-smoothing grayscale
 
 a
-    color var(--link-color)
+    color var(--main-color)
     cursor pointer
     text-decoration none
 
     &:-webkit-any-link
-        color var(--link-color)
+        color var(--main-color)
         cursor pointer
         text-decoration none
 
     &:not(.button)
-        color var(--link-color)
+        color var(--main-color)
         transition opacity .2s
 
         &:hover
@@ -216,7 +216,7 @@ dl
 code
     padding .2em .4em
     margin 0
-    font-size $font_codesize
+    font-size $code_fontsize
     background-color var(--bg-code)
     border-radius 3px
 
@@ -274,7 +274,7 @@ code
 kbd
 pre
     font-family monospace,monospace
-    font-size $font_codesize
+    font-size $code_fontsize
 
 hr:after
 hr:before
@@ -305,7 +305,7 @@ ul ul ol
 code
 pre
     font-family SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace
-    font-size $font_codesize
+    font-size $code_fontsize
 
 input::-webkit-inner-spin-button
 input::-webkit-outer-spin-button
@@ -378,7 +378,7 @@ figure table
 pre
     padding 12px 16px
     overflow auto
-    font-size $font_codesize
+    font-size $code_fontsize
     line-height 1.45
     background-color var(--bg-codeblock)
     border-radius 3px

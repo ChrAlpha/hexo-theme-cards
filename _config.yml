@@ -65,42 +65,18 @@ cover:
 
 style: 
 
-  # 盒子大小
-  box: 
-    max_width_logo: 600px 
-    link_item: 16rem
-
   # 颜色配置
   color: 
     main_color: '#ffb90f'
-    link_color: '#ffb90f'
-    link_color_hover: '#eb5757'
-    title: '#50596c'
-    background: '#f4f4f4'
-    card_color: '#fff'
-    font_color: '#4c4d4e'
-    codeblock: '#eeeeee'
-    categories_block: '#c2c2c2'
-    tags_block: '#f4f4f4'
-    footer_text: '#999'
-    footer_link: '#6b6b6b'
-  
+
   # 弧度设置
   radius: 
-    main: 5px
-    button: 5px
+    main_radius: 5px
     
   # 间距设置
   space: 
     main: 3.5rem
     sm_main: 1.5rem  # 当屏幕宽度小于 650px 时候启用
-
-  # 字体设置
-  font: 
-    base_fontsize: 16px
-    code_fontsize: 14px
-    toc_fontsize: 14px
-    line_height: '1.75'
 
 
 
