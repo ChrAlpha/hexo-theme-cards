@@ -233,6 +233,29 @@ comments:
     emojiCDN: 
     emojiMaps: 
 
+  # MiniValine
+  minivaline: 
+    enable: 
+    appId: 
+    appKey: 
+    mode: 
+    placeholder: 
+    pathname: 
+    adminEmailMd5: 
+    master: 
+    friends: 
+    tagMeta: 
+    math: 
+    md: 
+    lang: 
+    emoticonUrl:
+    NoRecordIP: 
+    maxNest: 
+    pageSize: 
+    enableQQ: 
+    visitor: 
+    serverURLs: 
+
   ## Gitalk
   gitalk:
     enable:
@@ -356,6 +379,11 @@ vendors:
   # https://github.com/xcss/Valine/
   # Version: 1.4.14
   valine: 
+
+  # MiniValine
+  # https://github.com/MiniValine/MiniValine
+  # Version 2.7.5
+  minivaline: 
   
   # Wildfire comments system
   # https://github.com/cheng-kang/wildfire/

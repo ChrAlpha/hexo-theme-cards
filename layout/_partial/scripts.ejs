@@ -87,6 +87,34 @@
             });
         </script>
     <% } %>
+
+    <% if (theme.comments.minivaline.enable) { %>
+        <%- js(theme.vendors.minivaline || 'https://cdn.jsdelivr.net/npm/minivaline@2.7.5/dist/MiniValine.min.js') %>
+        <script>
+            new MiniValine({
+                el: '#minivaline_container',
+                appId: '<%- theme.comments.minivaline.appId %>',
+                appKey: '<%- theme.comments.minivaline.appKey %>',
+                mode: '<%- theme.comments.minivaline.mode || "DesertsP" %>',
+                placeholder: '<%- theme.comments.minivaline.placeholder || "just go!" %>',
+                pathname: '<%- theme.comments.minivaline.pathname || page.path %>',
+                adminEmailMd5: '<%- theme.comments.minivaline.adminEmailMd5 %>',
+                master: <%- theme.comments.minivaline.master %>,
+                friends: <%- theme.comments.minivaline.friends %>,
+                tagMeta: <%- theme.comments.minivaline.tagMeta %>,
+                math: <%- theme.comments.minivaline.math %>,
+                md: <%- theme.comments.minivaline.md %>,
+                lang: '<%- theme.comments.minivaline.lang || "zh-CN" %>',
+                emoticonUrl: <%- theme.comments.minivaline.emoticonUrl %>,
+                NoRecordIP: <%- theme.comments.minivaline.NoRecordIP %>,
+                maxNest: <%- theme.comments.minivaline.maxNest %>,
+                pageSize: <%- theme.comments.minivaline.pageSize %>,
+                enableQQ: <%- theme.comments.minivaline.enableQQ %>,
+                visitor: <%- theme.comments.minivaline.visitor %>,
+                serverURLs: '<%- theme.comments.minivaline.serverURLs %>'
+            });
+        </script>
+    <% } %>
     
     <% if (theme.comments.gitalk.enable) { %>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
