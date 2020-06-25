@@ -59,15 +59,15 @@
         <script>   
             new Valine({
                 el: '#valine_container',
-                appId: "<%- theme.comments.valine.appId %>",
-                appKey: "<%- theme.comments.valine.appKey %>",
-                placeholder: "<%= theme.comments.valine.placeholder %>",
-                path: "<%- theme.comments.valine.path || page.path %>",
+                appId: '<%- theme.comments.valine.appId %>',
+                appKey: '<%- theme.comments.valine.appKey %>',
+                placeholder: '<%= theme.comments.valine.placeholder %>',
+                path: '<%- theme.comments.valine.path || page.path %>',
                 pageSize: <%- theme.comments.valine.pageSize !== null ? theme.comments.valine.pageSize : 10 %>,
-                avatar: "<%- theme.comments.valine.avatar %>",
+                avatar: '<%- theme.comments.valine.avatar %>',
                 meta: <%- theme.comments.valine.meta %>,
                 pageSize: <%- theme.comments.valine.pageSize %>,
-                lang: "<%- theme.comments.valine.lang || 'zh-CN' %>",
+                lang: '<%- theme.comments.valine.lang || "zh-CN" %>',
                 visitor: <%- theme.comments.valine.visitor %>
                 highlight: <%- theme.comments.valine.highlight %>,
                 avatarForce: <%- theme.comments.valine.avatarForce %>,
@@ -77,7 +77,7 @@
                 requiredFields: <%= theme.comments.valine.requiredFields %>,
                 
                 <% if (theme.comments.valine.emojiCDN) { %>
-                    emojiCDN: "<%- theme.comments.valine.emojiCDN %>",
+                    emojiCDN: '<%- theme.comments.valine.emojiCDN %>',
                     emojiMaps: <%- JSON.stringify(theme.comments.valine.emojiMaps) %>
                 <% } %> 
             });
@@ -117,11 +117,11 @@
         <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
         <script>
             var gitalk = new Gitalk({
-                clientID: "<%- theme.comments.gitalk.clientID %>",
-                clientSecret: "<%- theme.comments.gitalk.clientSecret %>",
-                repo: "<%- theme.comments.gitalk.repo %>",
-                owner: "<%- theme.comments.gitalk.owner %>",
-                admin: "<%- theme.comments.gitalk.owner %>",
+                clientID: '<%- theme.comments.gitalk.clientID %>',
+                clientSecret: '<%- theme.comments.gitalk.clientSecret %>',
+                repo: '<%- theme.comments.gitalk.repo %>',
+                owner: '<%- theme.comments.gitalk.owner %>',
+                admin: '<%- theme.comments.gitalk.owner %>',
                 id: window.location.pathname,
                 distractionFreeMode: false
             });
