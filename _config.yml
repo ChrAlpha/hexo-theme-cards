@@ -325,7 +325,7 @@ vendors:
   # 如果你有自定义样式，请务必将此项修改为自己的 CDN 地址，或者单纯留空
   style: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.6/dist/css/style.min.css
 
-  # darkmode toggle
+  # darkmode
   # https://github.com/ChrAlpha/hexo-theme-cards/tree/master/dist/js
   # Version 0.6.1
   darkmode: 
