@@ -320,27 +320,27 @@ analytics:
 vendors:
 
   # main style css
-  # https://github.com/ChrAlpha/hexo-theme-cards/tree/master/dist/css
-  # Version: 0.6.x
+  # https://github.com/ChrAlpha/hexo-theme-cards
+  # Version: 0.6.1
   # 如果你有自定义样式，请务必将此项修改为自己的 CDN 地址，或者单纯留空
-  style: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.6/dist/css/style.min.css
+  style: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.6.1/dist/css/style.min.css
 
   # darkmode
-  # https://github.com/ChrAlpha/hexo-theme-cards/tree/master/dist/js
+  # https://github.com/ChrAlpha/hexo-theme-cards
   # Version 0.6.1
   darkmode: 
-    css: 
-    js: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.6.1/dist/js/darkmode.min.js
+    css: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.6.1/dist/css/dark.min.css
+    js: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.6/dist/js/darkmode.min.js
   
   # code highlight css
-  # https://github.com/ChrAlpha/hexo-theme-cards/tree/master/dist/css
-  # Version: 0.6.x
+  # https://github.com/ChrAlpha/hexo-theme-cards
+  # Version: 0.6
   highlight: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.6/dist/css/github.min.css
 
   # tag-plugin note css
-  # https://github.com/ChrAlpha/hexo-theme-cards/tree/master/dist/css
+  # https://github.com/ChrAlpha/hexo-theme-cards
   # Version 0.6.1
-  note: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.6.1/dist/css/note.min.css
+  note: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.6/dist/css/note.min.css
 
   # Lazyload js
   # https://github.com/verlok/lazyload
@@ -348,7 +348,7 @@ vendors:
   lazyload: 
   
   # back_to_top button
-  # https://github.com/ChrAlpha/hexo-theme-cards/tree/master/dist/js
+  # https://github.com/ChrAlpha/hexo-theme-cards
   # Version 0.2
   back_to_top: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.2/dist/js/b2t.min.js
   
