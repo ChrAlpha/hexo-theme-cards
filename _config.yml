@@ -219,17 +219,20 @@ comments:
   valine:
     enable: 
     appId: 
-    appKey: 
-    meta: nick,mail,link
-    requiredFields: nick,mail
+    appKey:
+    placeholder: 
     path: 
-    placeholder: 'just go!'
     avatar: 
+    meta: [nick, mail, link]
     pageSize: 
     lang: 
+    visitor: 
     highlight: 
+    avatarForce: 
     recordIP: 
+    serverURLs: 
     enableQQ: 
+    requiredFields: [nick, mail]
     emojiCDN: 
     emojiMaps: 
 

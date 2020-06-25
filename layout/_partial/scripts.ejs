@@ -55,30 +55,26 @@
     <% } %>
     
     <% if (theme.comments.valine.enable) { %>
-        <%- js(theme.vendors.valine || 'https://cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js') %>
-        <script>
-            var valine_meta = ['nick', 'mail', 'link'],
-                guest_info = '<%= theme.comments.valine.meta %>'.split(',').filter((item) => {
-                    return valine_meta.indexOf(item) > -1
-                }),
-                guest_required = '<%= theme.comments.valine.requiredFields %>'.split(',').filter((item) => {
-                    return valine_meta.indexOf(item) > -1
-                });
-            
+        <%- js(theme.vendors.valine || 'https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js') %>
+        <script>   
             new Valine({
                 el: '#valine_container',
                 appId: "<%- theme.comments.valine.appId %>",
                 appKey: "<%- theme.comments.valine.appKey %>",
                 placeholder: "<%= theme.comments.valine.placeholder %>",
-                meta: guest_info,
-                requiredFields: guest_required,
                 path: "<%- theme.comments.valine.path || page.path %>",
                 pageSize: <%- theme.comments.valine.pageSize !== null ? theme.comments.valine.pageSize : 10 %>,
                 avatar: "<%- theme.comments.valine.avatar %>",
+                meta: <%- theme.comments.valine.meta %>,
+                pageSize: <%- theme.comments.valine.pageSize %>,
                 lang: "<%- theme.comments.valine.lang || 'zh-CN' %>",
-                highlight: <%- theme.comments.valine.highlight || false %>,
-                recordIP: <%- theme.comments.valine.recordIP || false %>,
-                enableQQ: <%- theme.comments.valine.enableQQ || false %>,
+                visitor: <%- theme.comments.valine.visitor %>
+                highlight: <%- theme.comments.valine.highlight %>,
+                avatarForce: <%- theme.comments.valine.avatarForce %>,
+                recordIP: <%- theme.comments.valine.recordIP %>,
+                serverURLs: '<%- theme.comments.valine.serverURLs %>'
+                enableQQ: <%- theme.comments.valine.enableQQ %>,
+                requiredFields: <%= theme.comments.valine.requiredFields %>,
                 
                 <% if (theme.comments.valine.emojiCDN) { %>
                     emojiCDN: "<%- theme.comments.valine.emojiCDN %>",
@@ -96,7 +92,7 @@
                 appId: '<%- theme.comments.minivaline.appId %>',
                 appKey: '<%- theme.comments.minivaline.appKey %>',
                 mode: '<%- theme.comments.minivaline.mode || "DesertsP" %>',
-                placeholder: '<%- theme.comments.minivaline.placeholder || "just go!" %>',
+                placeholder: '<%= theme.comments.minivaline.placeholder || "just go!" %>',
                 pathname: '<%- theme.comments.minivaline.pathname || page.path %>',
                 adminEmailMd5: '<%- theme.comments.minivaline.adminEmailMd5 %>',
                 master: <%- theme.comments.minivaline.master %>,
