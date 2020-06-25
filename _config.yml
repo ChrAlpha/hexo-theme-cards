@@ -75,8 +75,8 @@ style:
     
   # 间距设置
   space: 
-    main: 3.5rem
-    sm_main: 1.5rem  # 当屏幕宽度小于 650px 时候启用
+    main_space: 3.5rem
+    sm_space: 1.5rem  # 当屏幕宽度小于 650px 时候启用
 
 
 
@@ -332,8 +332,8 @@ vendors:
 
   # tag-plugin note css
   # https://github.com/ChrAlpha/hexo-theme-cards/tree/master/dist/css
-  # Version 0.6.x
-  note: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.6/dist/css/note.min.css
+  # Version 0.6.1
+  note: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.6.1/dist/css/note.min.css
 
   # Lazyload js
   # https://github.com/verlok/lazyload
@@ -342,12 +342,12 @@ vendors:
   
   # back_to_top button
   # https://github.com/ChrAlpha/hexo-theme-cards/tree/master/dist/js
-  # Version 0.2.x
+  # Version 0.2
   back_to_top: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.2/dist/js/b2t.min.js
 
   # darkmode toggle button
   # https://github.com/ChrAlpha/hexo-theme-cards/tree/master/dist/js
-  # Version 0.5.x
+  # Version 0.5
   darkmode: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.5/dist/js/darkmode.min.js
   
   # Valine comments system

@@ -49,13 +49,14 @@
             <script>
                 document.getElementById('btn-dropdown').addEventListener('click', () => {
                     const dd = document.getElementById('dropdown-menus');
-                    dd.style.transform = 'translateY(0)';
-                    dd.style['box-shadow'] = '0 10px 30px 0 rgba(0,0,0,.1)'
+                    dd.style.display = 'flex';
+                    setTimeout(() => {dd.style.transform = 'translateY(0)';dd.style.opacity = '1';}, 1)
                 });
                 document.getElementById('btn-dropback').addEventListener('click', () => {
                     const dd = document.getElementById('dropdown-menus');
-                    dd.style.transform = 'translateY(calc(-100% - 20px))';
-                    dd.style['box-shadow'] = 'none'
+                    dd.style.transform = 'translateY(2.25rem)';                    
+                    dd.style.opacity = '0';
+                    setTimeout(() => {dd.style.display = 'none';}, 350);
                 });
             </script>
         <% } %>
