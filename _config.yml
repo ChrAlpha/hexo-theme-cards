@@ -324,6 +324,13 @@ vendors:
   # Version: 0.6.x
   # 如果你有自定义样式，请务必将此项修改为自己的 CDN 地址，或者单纯留空
   style: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.6/dist/css/style.min.css
+
+  # darkmode toggle
+  # https://github.com/ChrAlpha/hexo-theme-cards/tree/master/dist/js
+  # Version 0.6.1
+  darkmode: 
+    css: 
+    js: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.6.1/dist/js/darkmode.min.js
   
   # code highlight css
   # https://github.com/ChrAlpha/hexo-theme-cards/tree/master/dist/css
@@ -344,11 +351,6 @@ vendors:
   # https://github.com/ChrAlpha/hexo-theme-cards/tree/master/dist/js
   # Version 0.2
   back_to_top: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.2/dist/js/b2t.min.js
-
-  # darkmode toggle button
-  # https://github.com/ChrAlpha/hexo-theme-cards/tree/master/dist/js
-  # Version 0.5
-  darkmode: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.5/dist/js/darkmode.min.js
   
   # Valine comments system
   # https://github.com/xcss/Valine/

@@ -71,7 +71,8 @@
     <% } %>
 
     <% if (theme.optimize.darkmode.enable) { %>
-        <%- js(theme.vendors.darkmode || 'js/darkmode.js') %>
+        <%- css(theme.vendors.darkmode.css || 'css/dark.css') %>
+        <%- js(theme.vendors.darkmode.js || 'js/darkmode.js') %>
     <% } %>
 
     <% if (theme.analytics.busuanzi.enable) { %> 
