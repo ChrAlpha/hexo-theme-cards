@@ -1,5 +1,5 @@
 <% if (config.lazyload && config.lazyload.enable) { %>
-    <script defer crossorigin="anonymous" src="<%- theme.vendors.lazyload || 'https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.0.0/dist/lazyload.min.js' %>"></script>
+    <script defer src="<%- theme.vendors.lazyload || 'https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.0.0/dist/lazyload.min.js' %>"></script>
     <script>
         window.lazyLoadOptions = {
             elements_selector: ".lazyload",
@@ -11,12 +11,12 @@
 <%- partial('_third-party/analytics') %> 
 
 <% if (theme.optimize.fancybox.enable) { %>
-    <script crossorigin="anonymous" src="<%- theme.vendors.jquery || 'https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js' %>"></script>
+    <script src="<%- theme.vendors.jquery || 'https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js' %>"></script>
     <%- partial('_third-party/fancybox') %> 
 <% } %> 
 
 <% if (theme.optimize.back_to_top.enable && theme.optimize.back_to_top.smoothly) { %> 
-    <script defer crossorigin="anonymous" src="<%- theme.vendors.back_to_top || config.root + 'js/b2t.js' %>"></script>
+    <%- js(theme.vendors.back_to_top || 'js/b2t.js') %>
 <% } %>
 
 <% if (page.mathjax) { %>
