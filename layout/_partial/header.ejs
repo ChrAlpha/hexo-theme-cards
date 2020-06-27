@@ -49,8 +49,13 @@
             <script>
                 document.getElementById('btn-dropdown').addEventListener('click', () => {
                     const dd = document.getElementById('dropdown-menus');
-                    dd.style.display = 'flex';
-                    setTimeout(() => {dd.style.transform = 'translateY(0)';dd.style.opacity = '1';}, 1)
+                    requestAnimationFrame(() => {
+                        dd.style.display = 'flex';
+                        requestAnimationFrame(() => {
+                            dd.style.transform = 'translateY(0)';
+                            dd.style.opacity = '1';
+                        });
+                    });
                 });
                 document.getElementById('btn-dropback').addEventListener('click', () => {
                     const dd = document.getElementById('dropdown-menus');
