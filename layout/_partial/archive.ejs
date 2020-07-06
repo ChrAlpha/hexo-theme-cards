@@ -37,13 +37,13 @@
             <nav role="navigation" aria-label="Pagination Navigation">
                 <% if (page.prev != 0) { %>
                     <a href="<%- url_for(page.prev_link) %>" class="button">
-                        <%- __('post.prev_page') %>
+                        <%- __('symbol.angle_l') %><%- __('post.prev_page') %>
                     </a>
                 <% } %>
                 <span><%= page.current%> / <%= page.total%></span>
                 <% if (page.next != 0) { %>
                     <a href="<%- url_for(page.next_link) %>" class="button">
-                        <%- __('post.next_page') %>
+                        <%- __('post.next_page') %><%- __('symbol.angle_r') %>
                     </a>
                 <% } %>
             </nav>

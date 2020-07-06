@@ -22,5 +22,7 @@ symbol:
   comma: ", "
   period: ". "
   colon: ": "
+  angle_l: "< "
+  angle_r: " >"
   brackets_l: "("
   brackets_r: ")"
