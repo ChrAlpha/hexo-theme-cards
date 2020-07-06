@@ -65,11 +65,11 @@
     <%- css(theme.vendors.style || 'css/style.css') %> 
     
     <% if (is_post()) { %>
-        <link rel="stylesheet" href="<%-theme.vendors.highlight || config.root + 'css/github.min.css' %>" media="none" onload="this.media='all'">
+        <link rel="stylesheet" href="<%-theme.vendors.highlight || url_for('css/github.min.css') %>" media="none" onload="this.media='all'">
     <% } %>
 
     <% if (theme.optimize.note.enable) { %>
-        <link rel="stylesheet" href="<%-theme.vendors.note || config.root + 'css/note.css' %>" media="none" onload="this.media='all'">
+        <link rel="stylesheet" href="<%-theme.vendors.note || url_for('css/note.css') %>" media="none" onload="this.media='all'">
     <% } %>
 
     <% if (theme.optimize.darkmode.enable) { %>

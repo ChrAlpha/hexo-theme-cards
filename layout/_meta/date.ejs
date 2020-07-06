@@ -1,3 +1,3 @@
-<a href="<%- config.root %>archives/<%- date(post.date, 'YYYY/MM/') %>" class="button" style="color: #808080;">
+<a href="<%- url_for('archives/' + date(post.date, 'YYYY/MM/')) %>" class="button" style="color: #808080;">
     <%- theme.meta.date.title + date(post.date, theme.meta.date.format) %>
 </a>

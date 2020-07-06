@@ -3,7 +3,7 @@
     <div class="cover">
         <div class="cover__logo">
             <% if (theme.cover.logo) { %>
-                <img no-lazy alt="author Image" src="<%- theme.cover.logo %>">
+                <img no-lazy alt="author Image" src="<%- url_for(theme.cover.logo) %>">
             <% } else if (theme.cover.sitename) { %>
                 <h1><%- theme.cover.sitename %></h1>
             <% } else if (config.title) { %>
