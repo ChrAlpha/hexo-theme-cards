@@ -23,7 +23,7 @@
         <article class="post content-card">
             <div class="post__header">
                 <% if (theme.layout.post.header.indexOf('thumbnail') !== -1) { %>
-                    <%- partial('_meta/thumbnail', {post: post, position: 'article'}) %> 
+                    <%- partial('_meta/thumbnail') %> 
                 <% } %>
                 <% if (theme.layout.post.header.indexOf('expire')) { %>
                     <%- partial('_meta/expire') %>

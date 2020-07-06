@@ -1,6 +1,6 @@
 <div class="post-card__header">
     <% if (theme.layout.post.header.indexOf('thumbnail') !== -1) { %>
-        <%- partial('_meta/thumbnail', {post: post, position: 'list'}) %> 
+        <%- partial('_meta/thumbnail') %> 
     <% } %>
 </div>
 <div class="post-card__content">
@@ -18,7 +18,7 @@
                     <%- strip_html(truncate(post.content, {length: theme.meta.auto_excerpt.length})) %>
                 <% } %>
             </div>
-        <% } %>   
+        <% } %>
     </p>
 </div>
 <div class="post-card__meta">
@@ -32,3 +32,4 @@
 <% if (theme.layout.meta.indexOf('tags') !== -1) { %>
     <%- partial('_meta/tags') %> 
 <% } %>
+<a href="<%- url_for(post.link || post.path) %>" class="post-card__link">Link</a>
