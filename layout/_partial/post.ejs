@@ -12,10 +12,16 @@
     <div class="post-card__descrption">
         <% if (theme.layout.meta.indexOf('excerpt') !== -1) { %>
             <div class="md-content">
-                <% if (post.excerpt || post.description) { %>
-                    <%- post.excerpt || post.description %>
+                <% if (post.excerpt) { %>
+                    <%- post.excerpt %>
+                <% } else if (post.description) { %>
+                    <p>
+                        <%- strip_html(post.description) %>
+                    </p>
                 <% } else if (theme.meta.auto_excerpt.enable) { %>
-                    <%- strip_html(truncate(post.content, {length: theme.meta.auto_excerpt.length})) %>
+                    <p>
+                        <%- strip_html(truncate(post.content, {length: theme.meta.auto_excerpt.length})) %>
+                    </p>
                 <% } %>
             </div>
         <% } %>
