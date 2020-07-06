@@ -9,7 +9,7 @@
             <%- post.title || theme.meta.title %>
         </h2>
     </a>
-    <p class="post-card__descrption">
+    <div class="post-card__descrption">
         <% if (theme.layout.meta.indexOf('excerpt') !== -1) { %>
             <div class="md-content">
                 <% if (post.excerpt || post.description) { %>
@@ -19,7 +19,7 @@
                 <% } %>
             </div>
         <% } %>
-    </p>
+    </div>
 </div>
 <div class="post-card__meta">
     <% if (theme.layout.meta.indexOf('date') !== -1) { %>
