@@ -216,8 +216,9 @@ code
     border-radius 3px
 
 .highlight
-    margin-bottom 20px
-    width 100%
+    margin 1rem calc(0rem - var(--space)) !important
+    padding 0.4rem var(--space) !important
+    width auto
 
     pre
         margin-bottom 0
@@ -334,7 +335,6 @@ figure
     padding 0
     margin 0
     margin-bottom 20px
-    background-color var(--bg-codeblock)
     
 table
     display block
@@ -345,9 +345,6 @@ figure table
     border none
     padding 0
     max-width 100%
-    border 1px solid var(--border-color)
-    background-color var(--bg-codeblock)
-    border-radius 3px
 
     th
         font-weight 600
@@ -357,25 +354,20 @@ figure table
         border-top none
 
     td.gutter
-        display flex !important
-        background-color var(--bg-codeblock)
+        padding-right 1rem
         text-align right
-        border-right 1px solid var(--border-color)
-        position -webkit-sticky
-        position sticky
-        left 0
+        background-color transparent
 
 .highlight table 
     margin 0
-    padding 0
+    padding 0.6rem 0
 
 .highlight pre
 pre
-    padding 12px 16px
+    padding 0
     overflow auto
     font-size $code_fontsize
     line-height 1.45
-    background-color var(--bg-codeblock)
     border-radius 3px
 
 .task-list-item
