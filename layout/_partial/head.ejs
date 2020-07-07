@@ -62,18 +62,18 @@
         <%- feed_tag(config.feed.path, {title: config.title}) %>
     <% } %>
 
-    <%- css(theme.vendors.style || 'css/style.css') %> 
+    <%- css(theme.vendors.style || 'css/style/main.css') %> 
     
     <% if (config.highlight.enable === true && is_post()) { %>
         <link rel="stylesheet" href="<%- url_for(`css/highlight/${theme.style.highlight.theme || 'default'}.css`) %>" media="none" onload="this.media='all'">
     <% } %>
 
     <% if (theme.optimize.note.enable) { %>
-        <link rel="stylesheet" href="<%-theme.vendors.note || url_for('css/note.css') %>" media="none" onload="this.media='all'">
+        <link rel="stylesheet" href="<%-theme.vendors.note || url_for('css/style/note.css') %>" media="none" onload="this.media='all'">
     <% } %>
 
     <% if (theme.optimize.darkmode.enable) { %>
-        <%- css(theme.vendors.darkmode.css || 'css/dark.css') %>
+        <%- css(theme.vendors.darkmode.css || 'css/style/dark.css') %>
         <%- js(theme.vendors.darkmode.js || 'js/darkmode.js') %>
     <% } %>
 
