@@ -214,13 +214,13 @@ code
     border-radius 3px
 
 .highlight
-    margin 1rem calc(0rem - var(--space)) !important
-    padding 0.4rem var(--space) !important
+    margin 1rem
+    padding 0.4rem
     width auto
+    border-radius 3px
 
     pre
         margin-bottom 0
-        word-break normal
 
 h1 .octicon-link
 h2 .octicon-link
@@ -420,6 +420,13 @@ overflows
 
         &:hover
             text-decoration underline
+
+    &>.highlight
+        margin 1rem calc(0rem - var(--space)) !important
+        padding 0.4rem var(--space) !important
+        border none !important
+        border-radius 0 !important
+        width auto
 
     h1
         font-size 2em
