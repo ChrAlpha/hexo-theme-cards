@@ -4,7 +4,7 @@
   "description": "A Simple & Swift Theme for Hexo, designed as its name",
   "main": "README.md",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dist": "gulp rmHexoConfig && gulp"
   },
   "repository": {
     "type": "git",
@@ -21,5 +21,16 @@
   "bugs": {
     "url": "https://github.com/ChrAlpha/hexo-theme-cards/issues"
   },
-  "homepage": "https://github.com/ChrAlpha/hexo-theme-cards#readme"
+  "homepage": "https://github.com/ChrAlpha/hexo-theme-cards#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "del": "^5.1.0",
+    "gulp": "4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-stylus": "^2.7.0",
+    "gulp-uglify-es": "^2.0.0"
+  }
 }
