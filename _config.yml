@@ -367,8 +367,8 @@ vendors:
     js: 
   
   # code highlight css
-  # https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.6/dist/css/github.min.css
-  # Version: 0.6
+  # https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.7/dist/css/highlight/
+  # Version: 0.7
   highlight: 
 
   # tag-plugin note css
