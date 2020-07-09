@@ -1,0 +1,309 @@
+/*
+ * Copyright (c) 2017-present Arctic Ice Studio <development@arcticicestudio.com>
+ * Copyright (c) 2017-present Sven Greb <development@svengreb.de>
+ *
+ * Project:    Nord highlight.js
+ * Version:    0.1.0
+ * Repository: https://github.com/arcticicestudio/nord-highlightjs
+ * License:    MIT
+ * References:
+ *   https://github.com/arcticicestudio/nord
+ */
+
+.highlight {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #2E3440;
+}
+
+.highlight,
+.highlight .subst {
+  color: #D8DEE9;
+}
+
+.highlight .selector-tag {
+  color: #81A1C1;
+}
+
+.highlight .selector-id {
+  color: #8FBCBB;
+  font-weight: bold;
+}
+
+.highlight .selector-class {
+  color: #8FBCBB;
+}
+
+.highlight .selector-attr {
+  color: #8FBCBB;
+}
+
+.highlight .selector-pseudo {
+  color: #88C0D0;
+}
+
+.highlight .addition {
+  background-color: rgba(163, 190, 140, 0.5);
+}
+
+.highlight .deletion {
+  background-color: rgba(191, 97, 106, 0.5);
+}
+
+.highlight .built_in,
+.highlight .type {
+  color: #8FBCBB;
+}
+
+.highlight .class {
+  color: #8FBCBB;
+}
+
+.highlight .function {
+  color: #88C0D0;
+}
+
+.highlight .function > .highlight .title {
+  color: #88C0D0;
+}
+
+.highlight .keyword,
+.highlight .literal,
+.highlight .symbol {
+  color: #81A1C1;
+}
+
+.highlight .number {
+  color: #B48EAD;
+}
+
+.highlight .regexp {
+  color: #EBCB8B;
+}
+
+.highlight .string {
+  color: #A3BE8C;
+}
+
+.highlight .title {
+  color: #8FBCBB;
+}
+
+.highlight .params {
+  color: #D8DEE9;
+}
+
+.highlight .bullet {
+  color: #81A1C1;
+}
+
+.highlight .code {
+  color: #8FBCBB;
+}
+
+.highlight .emphasis {
+  font-style: italic;
+}
+
+.highlight .formula {
+  color: #8FBCBB;
+}
+
+.highlight .strong {
+  font-weight: bold;
+}
+
+.highlight .link:hover {
+  text-decoration: underline;
+}
+
+.highlight .quote {
+  color: #4C566A;
+}
+
+.highlight .comment {
+  color: #4C566A;
+}
+
+.highlight .doctag {
+  color: #8FBCBB;
+}
+
+.highlight .meta,
+.highlight .meta-keyword {
+  color: #5E81AC;
+}
+
+.highlight .meta-string {
+  color: #A3BE8C;
+}
+
+.highlight .attr {
+  color: #8FBCBB;
+}
+
+.highlight .attribute {
+  color: #D8DEE9;
+}
+
+.highlight .builtin-name {
+  color: #81A1C1;
+}
+
+.highlight .name {
+  color: #81A1C1;
+}
+
+.highlight .section {
+  color: #88C0D0;
+}
+
+.highlight .tag {
+  color: #81A1C1;
+}
+
+.highlight .variable {
+  color: #D8DEE9;
+}
+
+.highlight .template-variable {
+  color: #D8DEE9;
+}
+
+.highlight .template-tag {
+  color: #5E81AC;
+}
+
+.abnf .highlight .attribute {
+  color: #88C0D0;
+}
+
+.abnf .highlight .symbol {
+  color: #EBCB8B;
+}
+
+.apache .highlight .attribute {
+  color: #88C0D0;
+}
+
+.apache .highlight .section {
+  color: #81A1C1;
+}
+
+.arduino .highlight .built_in {
+  color: #88C0D0;
+}
+
+.aspectj .highlight .meta {
+  color: #D08770;
+}
+
+.aspectj > .highlight .title {
+  color: #88C0D0;
+}
+
+.bnf .highlight .attribute {
+  color: #8FBCBB;
+}
+
+.clojure .highlight .name {
+  color: #88C0D0;
+}
+
+.clojure .highlight .symbol {
+  color: #EBCB8B;
+}
+
+.coq .highlight .built_in {
+  color: #88C0D0;
+}
+
+.cpp .highlight .meta-string {
+  color: #8FBCBB;
+}
+
+.css .highlight .built_in {
+  color: #88C0D0;
+}
+
+.css .highlight .keyword {
+  color: #D08770;
+}
+
+.diff .highlight .meta {
+  color: #8FBCBB;
+}
+
+.ebnf .highlight .attribute {
+  color: #8FBCBB;
+}
+
+.glsl .highlight .built_in {
+  color: #88C0D0;
+}
+
+.groovy .highlight .meta:not(:first-child) {
+  color: #D08770;
+}
+
+.haxe .highlight .meta {
+  color: #D08770;
+}
+
+.java .highlight .meta {
+  color: #D08770;
+}
+
+.ldif .highlight .attribute {
+  color: #8FBCBB;
+}
+
+.lisp .highlight .name {
+  color: #88C0D0;
+}
+
+.lua .highlight .built_in {
+  color: #88C0D0;
+}
+
+.moonscript .highlight .built_in {
+  color: #88C0D0;
+}
+
+.nginx .highlight .attribute {
+  color: #88C0D0;
+}
+
+.nginx .highlight .section {
+  color: #5E81AC;
+}
+
+.pf .highlight .built_in {
+  color: #88C0D0;
+}
+
+.processing .highlight .built_in {
+  color: #88C0D0;
+}
+
+.scss .highlight .keyword {
+  color: #81A1C1;
+}
+
+.stylus .highlight .keyword {
+  color: #81A1C1;
+}
+
+.swift .highlight .meta {
+  color: #D08770;
+}
+
+.vim .highlight .built_in {
+  color: #88C0D0;
+  font-style: italic;
+}
+
+.yaml .highlight .meta {
+  color: #D08770;
+}
