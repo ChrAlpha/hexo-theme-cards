@@ -44,9 +44,8 @@
                 <%- partial('_meta/categories') %> 
             <% } %> 
         </article>
-        <br>
         <% if (theme.comments.enable && page.comments !== false) { %>
-            <div class="post__comment content-card">
+            <div class="post__comments content-card">
                 <%- partial('_third-party/comments.ejs') %>
             </div>
         <% } %>
@@ -76,9 +75,8 @@
             <%- partial('_meta/categories') %> 
         <% } %> 
     </article>
-    <br>
     <% if (theme.comments.enable && page.comments !== false) { %>
-        <div class="post__comment content-card">
+        <div class="post__comments content-card">
             <%- partial('_third-party/comments.ejs') %>
         </div>
     <% } %>

@@ -20,15 +20,6 @@
         transform translateY(-5px)
         box-shadow 1px 10px 30px 0 rgba(0,0,0,.1)
 
-.post-card__header
-    margin calc(var(--space)*-1)
-    margin-bottom calc(var(--space)/2)
-    overflow hidden
-    border-radius $radius_main
-
-    &:empty
-        display none
-
 .post-card__image
     min-width 100%
 
@@ -67,16 +58,12 @@
     opacity .8
     font-family rubik,sans-serif
 
+.post-card__header
 .post__header
-    margin calc(var(--space)*-1)
-    margin-bottom calc(var(--space)/2)
+    margin calc(var(--space) * -1)
+    margin-bottom calc(var(--space) / 2)
     overflow hidden
     border-radius $radius_main
-    
-    img
-        width 100%
-        height auto
-        max-height calc(width * 2.25)
 
     &:empty
         display none
@@ -100,10 +87,9 @@
             margin auto
 
 
-.post-comments
-    padding calc(var(--space)/2)
+.post__comments
     max-width var(--content-width)
-    margin 0 auto
+    margin var(--space) auto
     font-family rubik,sans-serif
 
     &:empty
