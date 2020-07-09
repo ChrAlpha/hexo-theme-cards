@@ -355,15 +355,15 @@ analytics:
 vendors:
 
   # main style css
-  # https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.6.1/dist/css/style.min.css
-  # Version: 0.6.1
+  # https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.7/dist/css/style/main.min.css
+  # Version: 0.7
   # 如果你有自定义样式，请务必将此项修改为自己的 CDN 地址，或者单纯留空
   style: 
 
   # darkmode
-  # https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.6.1/dist/css/dark.min.css
-  # https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.6/dist/js/darkmode.min.js
-  # Version 0.6.1
+  # https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.7/dist/css/style/dark.min.css
+  # https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.7/dist/js/darkmode.min.js
+  # Version 0.7
   darkmode: 
     css: 
     js: 
@@ -375,8 +375,8 @@ vendors:
 
   # tag-plugin note css
   # https://github.com/ChrAlpha/hexo-theme-cards
-  # https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.6/dist/css/note.min.css
-  # Version 0.6.1
+  # https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.7/dist/css/style/note.min.css
+  # Version 0.7
   note: 
 
   # Lazyload js
@@ -385,8 +385,8 @@ vendors:
   lazyload: 
   
   # back_to_top button
-  # https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.2/dist/js/b2t.min.js
-  # Version 0.2
+  # https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.7/dist/js/b2t.min.js
+  # Version 0.7
   back_to_top: 
   
   # Valine comments system
