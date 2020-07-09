@@ -1112,7 +1112,7 @@ nav a:hover {
     width: calc(100vw / 6 - 20px);
   }
   .post,
-  .post__comment {
+  .post__comments {
     max-width: calc(100vw / 6 * 4);
     width: calc(100vw / 6 * 4);
   }
