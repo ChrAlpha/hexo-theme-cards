@@ -1,9 +1,9 @@
-let requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
 
 document.addEventListener('DOMContentLoaded', function() {
     const goTopButton = document.querySelectorAll('#b2t')[0];
     const windowViewPortHeight = window.innerHeight;
-    let isRequestingAnimationFrame = false;
+    var isRequestingAnimationFrame = false;
 
     if (!goTopButton) {return;}
 
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     function filterGoTopButtonVisibility(timestamp) {
-        let windowPageYOffset = window.pageYOffset || document.documentElement.scrollTop;
+        var windowPageYOffset = window.pageYOffset || document.documentElement.scrollTop;
         if (windowPageYOffset > windowViewPortHeight) {
             goTopButton.style.display = 'block';
             isRequestingAnimationFrame = false;
