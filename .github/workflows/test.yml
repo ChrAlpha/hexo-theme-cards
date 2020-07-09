@@ -1,11 +1,14 @@
 name: Theme Cards Unit Test
 
-on: [push]
+on: [push, pull_request]
 
 jobs: 
   build: 
+
     runs-on: ubuntu-latest
+
     steps: 
+
       - name: Node.js envs
         uses: actions/setup-node@v1
         with:
