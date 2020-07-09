@@ -1,6 +1,6 @@
 name: Theme Cards Unit Test
 
-on: [push, pull_request]
+on: [push]
 
 jobs: 
   build: 
@@ -13,6 +13,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: "10.x"
+          
       - name: Generate
         run: |
           npm install hexo-cli --global
