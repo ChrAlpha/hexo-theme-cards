@@ -72,12 +72,12 @@
     <% if (config.highlight.enable === true && is_post()) { %>
         <% if (theme.vendors.highlight) { %>
             <link rel="stylesheet" id="hljs-default-theme" href="<%- `${theme.vendors.highlight}${theme.style.highlight.default || 'default'}.min.css` %>" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')===-1)this.media='all'">
-            <% if (theme.style.highlight.darkmode !== theme.style.highlight.default) { %>
+            <% if (theme.style.highlight.darkmode !== theme.style.highlight.default || theme.style.highlight.darkmode === null) { %>
                 <link rel="stylesheet" id="hljs-dark-theme" href="<%- `${theme.vendors.highlight}${theme.style.highlight.darkmode || 'dark'}.min.css` %>" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')!==-1)this.media='all'">
             <% } %>
         <% } else { %>
             <link rel="stylesheet" id="hljs-default-theme" href="<%- url_for(`css/highlight/${theme.style.highlight.default || 'default'}.css`) %>" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')===-1)this.media='all'">
-            <% if (theme.style.highlight.darkmode !== theme.style.highlight.default) { %>
+            <% if (theme.style.highlight.darkmode !== theme.style.highlight.default || theme.style.highlight.darkmode === null) { %>
                 <link rel="stylesheet" id="hljs-dark-theme" href="<%- url_for(`css/highlight/${theme.style.highlight.darkmode || 'dark'}.css`) %>" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')!==-1)this.media='all'">
             <% } %>
         <% } %>
