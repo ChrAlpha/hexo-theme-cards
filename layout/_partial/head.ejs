@@ -22,16 +22,12 @@
 
     <!-- meta -->
     <%
-        var title = page.title;
-        var keywords = page.keywords;
+        var title = page.title || '';
+        var keywords = page.keywords || '';
         if (!keywords) {
-            if (is_post() && page.tags && page.tags.length > 0) {
-                keywords += page.tags.map(t => t.name).join(', ');
-            }
-            keywords += config.keywords ? ', ' + config.keywords : '';
-        } else {
-            keywords += config.keywords ? ', ' + config.keywords : '';
+            keywords += page.tags && page.tags.length > 0 ? page.tags.map(t => t.name).join(', ') : '';
         }
+        keywords += config.keywords ? keywords ? ', ' + config.keywords : config.keywords : '';
         if (is_archive()) {
             title = __('navbar.archive');
             if (is_month()) {
@@ -43,8 +39,6 @@
             title = __('navbar.category') + __('symbol.colon') + page.category;
         } else if (is_tag()) {
             title = __('navbar.tag') + __('symbol.colon') + page.tag;
-        } else if (is_home()) {
-            keywords += config.keywords || '';
         }
     %>
     <title><% if (title) { %><%= title %> | <% } %><%= config.title %></title>
