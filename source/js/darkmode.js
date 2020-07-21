@@ -28,7 +28,7 @@
         const res = getComputedStyle(rootElement).getPropertyValue(
             darkModeMediaQueryKey
         );
-        if (res.length) return res.replace(/\"/g, "").trim();
+        if (res.length) return res.replace(/["'\s]/g, '');
         return res === "dark" ? "dark" : "light";
     };
 
