@@ -127,18 +127,25 @@
         color: #999
 
 nav
+    display block
     max-width var(--content-width)
     margin 0 auto
-    text-align center
+    height 2.166rem
+
+    .pagination_prev
+        float left
+        
+    .pagination_next
+        float right
 
     a
         margin 0 10px
         padding 3px 10px
         background-color transparent
-        border 2px dashed var(--main-color)
+        border 2px dashed var(--link-color)
 
         &:hover
-            border 2px solid var(--main-color)
-            background-color var(--main-color)
+            border 2px solid var(--link-color)
+            background-color var(--link-color)
             color var(--bg-content-color)
             text-decoration none
