@@ -1,3 +1,3 @@
-<% if (post.thumbnail) { %>
-    <div class="post-thumbnail" style="background-image: url('<%= post.thumbnail %>');"></div>
+<% if (theme.meta.thumbnail.enable === true && (post.thumbnail || theme.meta.thumbnail.default)) { %>
+    <div class="post-thumbnail" style="background-image: url('<%= post.thumbnail || theme.meta.thumbnail.default %>');"></div>
 <% } %>

@@ -113,6 +113,11 @@ meta:
     title: ''
     format: 'YYYY-MM-DD' # 日期格式 http://momentjs.com/docs/
 
+  # 文章缩略图
+  thumbnail: 
+    enable: true
+    default:  # 默认缩略图，当页面 `thumbnail` 字段为空时 fallback 至此参数
+
   # 文章过时提醒
   expire: 
     enable: true
