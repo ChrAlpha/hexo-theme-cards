@@ -1,7 +1,7 @@
 <% if (position === 'page') { %>
     <% if (theme.analytics.leancloud.enable && theme.analytics.leancloud.page_pv.enable) { %> 
         <span id="leancloud_container_page_pv" hidden>
-            <span>·</span>
+            <span class="separate-dot"></span>
             <span><%- theme.analytics.leancloud.page_pv.before_text %></span>
             <span id="leancloud_value_page_pv"></span>
             <span><%- theme.analytics.leancloud.page_pv.after_text %></span>
