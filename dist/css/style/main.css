@@ -155,6 +155,20 @@ body {
 .post__header:empty {
   display: none;
 }
+.post-card__header .post-thumbnail,
+.post__header .post-thumbnail {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding-bottom: 40%;
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: 50% 50%;
+  background-origin: padding-box;
+  background-attachment: scroll;
+}
 .post__content p {
   line-height: 1.8;
 }
@@ -1021,9 +1035,16 @@ overflows table td {
   color: #999;
 }
 nav {
+  display: block;
   max-width: var(--content-width);
   margin: 0 auto;
-  text-align: center;
+  height: 2.166rem;
+}
+nav .pagination_prev {
+  float: left;
+}
+nav .pagination_next {
+  float: right;
 }
 nav a {
   margin: 0 10px;
