@@ -5,8 +5,8 @@
         <div id="app">
             <%- partial('_partial/source/cover') %>
             <%- body %>
+            <%- partial('_partial/source/footer', null, {cache: !config.relative_link}) %>
         </div>
-        <%- partial('_partial/source/footer', null, {cache: !config.relative_link}) %>
         <%- partial('_partial/scripts/index') %>
     </body>
 </html>
