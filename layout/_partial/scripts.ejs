@@ -14,7 +14,7 @@
     <%- partial('_third-party/fancybox') %> 
 <% } %> 
 
-<% if (theme.optimize.back_to_top.enable && theme.optimize.back_to_top.smoothly) { %> 
+<% if (theme.optimize.back_to_top === true) { %> 
     <%- js(theme.vendors.back_to_top || 'js/b2t.js') %>
 <% } %>
 

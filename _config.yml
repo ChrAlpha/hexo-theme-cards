@@ -196,10 +196,8 @@ optimize:
     enable: false
     auto: false
     
-  # 返回顶部按钮
-  back_to_top: 
-    enable: false
-    smoothly: false
+  # 返回顶部
+  back_to_top: false
 
   # 深色模式
   darkmode: 
