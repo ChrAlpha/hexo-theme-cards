@@ -1,16 +1,42 @@
 <% if (theme.comments.use === 'gitalk') { %>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
     <script>
-        var gitalk = new Gitalk({
-            clientID: '<%- theme.comments.gitalk.clientID %>',
-            clientSecret: '<%- theme.comments.gitalk.clientSecret %>',
-            repo: '<%- theme.comments.gitalk.repo %>',
-            owner: '<%- theme.comments.gitalk.owner %>',
-            admin: '<%- theme.comments.gitalk.owner %>',
-            id: window.location.pathname,
-            distractionFreeMode: false
-        });
-        gitalk.render('gitalk-container');
+        function loadComment() {
+            let e, i;
+            (e = document.createElement("script")).src = 'https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js',
+            document.body.appendChild(e);
+            e.onload = () => {
+                var gitalk = new Gitalk({
+                    clientID: '<%- theme.comments.gitalk.clientID %>',
+                    clientSecret: '<%- theme.comments.gitalk.clientSecret %>',
+                    repo: '<%- theme.comments.gitalk.repo %>',
+                    owner: '<%- theme.comments.gitalk.owner %>',
+                    admin: '<%- theme.comments.gitalk.owner %>',
+                    id: window.location.pathname,
+                    distractionFreeMode: false
+                });
+                gitalk.render('gitalk-container');
+            };
+            (i = document.createElement("link")).rel = "stylesheet",
+            i.href = 'https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css',
+            document.head.appendChild(i);
+        }
+    
+        var runningOnBrowser = typeof window !== "undefined";
+        var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
+        var supportsIntersectionObserver = runningOnBrowser && "IntersectionObserver" in window;
+    
+        setTimeout(function () {
+            if (!isBot && supportsIntersectionObserver) {
+                var comment_observer = new IntersectionObserver(function(entries) {
+                    if (entries[0].isIntersecting) {
+                        loadComment();
+                        comment_observer.disconnect();
+                    }
+                }, { threshold: [0] });
+                comment_observer.observe(document.getElementById('comment'));
+            } else {
+                loadComment();
+            }
+        }, 1);
     </script>
 <% } %>

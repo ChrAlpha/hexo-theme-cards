@@ -1,22 +1,46 @@
 <% if (theme.comments === 'wildfire') { %>
-    <%- js(theme.vendors.wildfire || 'https://cdn.jsdelivr.net/npm/wildfire@0.3.9/dist/wildfire.auto.js') %>
     <script>
-        var wildfireConfig = () => ({
-            databaseProvider: '<%= theme.comments.wildfire.database_provider %>',
-            databaseConfig: {
-                <% if (theme.comments.wildfire.database_provider == "wilddog") { %>
-                    siteId: '<%= theme.comments.wildfire.wilddog_site_id %>' 
-                <% } else if (theme.comments.wildfire.database_provider == "firebase") { %>
-                    apiKey: '<%= theme.comments.wildfire.firebase_api_key %>',
-                    authDomain: '<%= theme.comments.wildfire.firebase_auth_domain %>',
-                    databaseURL: '<%= theme.comments.wildfire.firebase_database_url %>',
-                    projectId: '<%= theme.comments.wildfire.firebase_project_id %>',
-                    storageBucket: '<%= theme.comments.wildfire.firebase_storage_bucket %>',
-                    messagingSenderId: '<%= theme.comments.wildfire.firebase_messaging_sender_id %>'
-                <% } %>
-            },
-            theme: '<%= theme.comments.wildfire.theme %>',
-            locale: '<%= theme.comments.wildfire.locale %>'
-        })
+        function loadComment() {
+            let e;
+            (e = document.createElement("script")).src = '<%- url_for(theme.vendors.wildfire || 'https://cdn.jsdelivr.net/npm/wildfire@0.3.9/dist/wildfire.auto.js') %>',
+            document.body.appendChild(e);
+            e.onload = () => {
+                var wildfireConfig = () => ({
+                    databaseProvider: '<%= theme.comments.wildfire.database_provider %>',
+                    databaseConfig: {
+                        <% if (theme.comments.wildfire.database_provider == "wilddog") { %>
+                            siteId: '<%= theme.comments.wildfire.wilddog_site_id %>' 
+                        <% } else if (theme.comments.wildfire.database_provider == "firebase") { %>
+                            apiKey: '<%= theme.comments.wildfire.firebase_api_key %>',
+                            authDomain: '<%= theme.comments.wildfire.firebase_auth_domain %>',
+                            databaseURL: '<%= theme.comments.wildfire.firebase_database_url %>',
+                            projectId: '<%= theme.comments.wildfire.firebase_project_id %>',
+                            storageBucket: '<%= theme.comments.wildfire.firebase_storage_bucket %>',
+                            messagingSenderId: '<%= theme.comments.wildfire.firebase_messaging_sender_id %>'
+                        <% } %>
+                    },
+                    theme: '<%= theme.comments.wildfire.theme %>',
+                    locale: '<%= theme.comments.wildfire.locale %>'
+                });
+            };
+        }
+    
+        var runningOnBrowser = typeof window !== "undefined";
+        var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
+        var supportsIntersectionObserver = runningOnBrowser && "IntersectionObserver" in window;
+    
+        setTimeout(function () {
+            if (!isBot && supportsIntersectionObserver) {
+                var comment_observer = new IntersectionObserver(function(entries) {
+                    if (entries[0].isIntersecting) {
+                        loadComment();
+                        comment_observer.disconnect();
+                    }
+                }, { threshold: [0] });
+                comment_observer.observe(document.getElementById('comment'));
+            } else {
+                loadComment();
+            }
+        }, 1);
     </script>
 <% } %>

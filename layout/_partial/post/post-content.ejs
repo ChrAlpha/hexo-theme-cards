@@ -29,7 +29,7 @@
             <%- partial('_meta/categories') %> 
         </article>
         <% if (theme.comments.use && page.comments !== false) { %>
-            <div class="post__comments content-card">
+            <div class="post__comments content-card" id="comment">
                 <%- partial('_plugins/comments/placeholder') %>
             </div>
         <% } %>
@@ -48,7 +48,7 @@
         <%- partial('_meta/categories') %> 
     </article>
     <% if (theme.comments.use && page.comments !== false) { %>
-        <div class="post__comments content-card">
+        <div class="post__comments content-card" id="comment">
             <%- partial('_plugins/comments/placeholder') %>
         </div>
     <% } %>
