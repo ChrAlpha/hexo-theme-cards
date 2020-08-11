@@ -1,34 +1,65 @@
 <main class="main friends">
     <div class="links-list">
         <div class='links-content'>
-            <% (page.links || []).forEach((item) => { %>
-                <a class='links-card button' style='background:<%- item.backgroundColor %>; color:<%- item.textColor %>' target="<%- item.target || '_blank' %>" href='<%- url_for(item.url || '') %>'>
-                    <div class='links-left'>
-                    <% if (item.avatar) { %>
-                        <img no-lazy class='avatar' src='<%- item.avatar %>'/>
-                    <% } %>
-                    </div>
-                    <div class='links-right'>
-                    <p class="links-name"><%- item.name %></p>
-                    <% if (item.tags) { %>
-                        <div class='links-tags-wrapper'>
-                            <%
-                            var ts = [];
-                            (item.tags || []).forEach((tag) => {
-                                ts.push(tag);
-                            })
-                            %>
-                            <p class="tags"><%= ts.join(' | ') %></p>
+            <% if (page.links && !Array.isArray(page.links)) { %>
+                <script>
+                    fetch('<%- url_for(page.links) %>')
+                        .then(res => res.json())
+                        .then(links => {
+                            links.forEach(link => {
+                                let i;
+                                (i = document.createElement('a')).style = `background:${link.backgroundColor}; color:${link.textColor}`,
+                                i.className = 'links-card button',i.target = link.target || '_blank',i.href = link.url;
+                                let temp =  `<div class='links-left'>`;
+                                if (link.avatar) {
+                                    temp += `<img no-lazy class='avatar' src="${link.avatar}" />`;
+                                }                                   
+                                temp += `</div><div class='links-right'><p class="links-name">${link.name}</p><div class='links-tags-wrapper'>`
+                                if (link.desc) {
+                                    temp += `<p class="tags">${link.desc}</p>`
+                                } else if (link.tags) {
+                                    let ts = [];
+                                    (link.tags || []).forEach((tag) => {
+                                        ts.push(tag);
+                                    });
+                                    temp += `<p class="tags">${ts.join(' | ')}</p>`
+                                }
+                                temp += '</div></div>';
+                                i.innerHTML = temp;
+                                document.querySelectorAll('.links-content')[0].appendChild(i);
+                            });
+                        });
+                </script>
+            <% } else if (page.links && Array.isArray(page.links)) { %>
+                <% (page.links || []).forEach((item) => { %>
+                    <a class='links-card button' style='background:<%- item.backgroundColor %>; color:<%- item.textColor %>' target="<%- item.target || '_blank' %>" href='<%- url_for(item.url || '') %>'>
+                        <div class='links-left'>
+                            <% if (item.avatar) { %>
+                                <img no-lazy class='avatar' src='<%- item.avatar %>'/>
+                            <% } %>
                         </div>
-                    <% } %>
-                    <% if (item.desc) { %>
-                        <div class='links-tags-wrapper'>
-                            <p class="tags"><%= item.desc %></p>
+                        <div class='links-right'>
+                            <p class="links-name"><%= item.name %></p>
+                            <% if (item.tags) { %>
+                                <div class='links-tags-wrapper'>
+                                    <%
+                                    var ts = [];
+                                    (item.tags || []).forEach((tag) => {
+                                        ts.push(tag);
+                                    })
+                                    %>
+                                    <p class="tags"><%= ts.join(' | ') %></p>
+                                </div>
+                            <% } %>
+                            <% if (item.desc) { %>
+                                <div class='links-tags-wrapper'>
+                                    <p class="tags"><%= item.desc %></p>
+                                </div>
+                            <% } %>
                         </div>
-                    <% } %>
-                    </div>
-                </a>
-            <% }) %>
+                    </a>
+                <% }); %>
+            <% } %>
         </div>
     </div>
 </main>
