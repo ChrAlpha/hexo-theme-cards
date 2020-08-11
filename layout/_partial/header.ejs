@@ -2,15 +2,15 @@
     <div class="header__left">
         <a href="<%- url_for('/') %>" class="button">
             <span class="logo__text">
-                <%- config.title %> %>
+                <%- theme.navbar.sitename || config.title %>
             </span>
         </a>
     </div>
     <div class="header__right">
-        <% if (theme.cover.menu && theme.cover.menu.forEach) { %>
-            <div class="cover__menus">
-                <% theme.cover.menu.forEach((item) => { %>
-                    <a href="<%- url_for(item.url) %>" class="cover-menu button">
+        <% if (theme.navbar.menu && theme.navbar.menu.forEach) { %>
+            <div class="navbar__menus">
+                <% theme.navbar.menu.forEach((item) => { %>
+                    <a href="<%- url_for(item.url) %>" class="navbar-menu button">
                         <%- item.name %>
                     </a>
                 <% }); %>

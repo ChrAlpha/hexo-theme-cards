@@ -22,10 +22,10 @@
 
     .header__right
     
-        .cover__menus
+        .navbar__menus
             padding 0 0 0 15px
             
-            .cover-menu
+            .navbar-menu
                 font-size 16px
                 padding 16px 10px 16px 10px
                 border-radius 5px
@@ -80,8 +80,13 @@
             .dropdown-menu
                 padding 10px
 
+if (hexo-config('navbar.sticky'))
+    @media screen and (min-width: 1080px)
+        .header
+            position sticky
+
 @media screen and (max-width: 764px)
-    .cover__menus
+    .navbar__menus
         display none !important
     
     .dropdown-icon

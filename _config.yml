@@ -32,19 +32,13 @@ head:
     # - ''
     # - ''
 
-# 封面 cover 设置
-cover: 
+# 顶部导航栏设置
+navbar: 
 
-  # 显示在最上方 cover 处的站点名称
+  # 左侧名称显示
   sitename: Demo
-
-  # 若设置 logo，则优先使用 logo 代替 sitename
-  logo: 
   
-  # logo 下方的一句话介绍
-  description: Hi, nice to meet you!
-  
-  # cover 按钮菜单，通常用于站内导航
+  # 右侧站内导航链接
   menu: 
     - name: 首页
       url: /
@@ -56,6 +50,22 @@ cover:
       url: /friends/
     - name: Page
       url: /page/
+
+  # 导航栏永远显示在屏幕顶端
+  # 仅当屏幕宽度不小于 1080 px 时生效
+  sticky: false
+
+# 封面 cover 设置
+cover: 
+
+  # 显示在最上方 cover 处的站点名称
+  sitename: Demo
+
+  # 若设置 logo，则优先使用 logo 代替 sitename
+  logo: 
+  
+  # logo 下方的一句话介绍
+  description: Hi, nice to meet you!
 
 
 
