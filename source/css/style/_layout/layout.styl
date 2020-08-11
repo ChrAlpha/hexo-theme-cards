@@ -8,103 +8,11 @@
     box-shadow 1px 1px 5px 0 rgba(0,0,0,.02),1px 1px 15px 0 rgba(0,0,0,.03)
     transition transform .3s,background-color .3s,box-shadow .6s
 
-.post__with-side
-    max-width 'calc(var(--content-width) + %s * 2)' % $max_width_toc
-    margin 0 auto
+    &>:first-child
+        margin-top 0
 
-.post-card
-    margin-bottom var(--space)
-    position relative
+    &>:last-child
+        margin-bottom 0
 
-    &:hover
-        transform translateY(-5px)
-        box-shadow 1px 10px 30px 0 rgba(0,0,0,.1)
-
-.post-card__image
-    min-width 100%
-
-.post-card__title
-    margin-top 0
-
-.post-card__tags
-    z-index 1
-    position relative
-
-.post-card__cats
-    z-index 1
-    position relative
-
-.post-card__link
-    position absolute
-    top 0
-    left 0
-    width 100%
-    height 100%
-    opacity 0
-    overflow hidden
-    text-indent -9999px
-    z-index 0
-
-.post-title
-    padding calc(var(--space)/2) 0 calc(var(--space)/2)
-    text-align center
-
-.post-card__meta
-.post-title__meta
-    display block
-    z-index 1
-    position relative
-    font-size .8em
-    opacity .8
-    font-family rubik,sans-serif
-
-.post-card__header
-.post__header
-    margin calc(var(--space) * -1)
-    margin-bottom calc(var(--space) / 2)
-    overflow hidden
-    border-radius $radius_main
-
-    &:empty
-        display none
-
-    .post-thumbnail
-        display flex
-        width 100%
-        padding-bottom 40%
-        background-size cover
-        background-repeat repeat
-        background-position 50% 50%
-        background-origin padding-box
-        background-attachment scroll
-
-.post__content
-    p
-        line-height $lineheight
-
-    img
-        &.inline
-            display inline
-
-    div>img,p>img,div>picture>img,p>picture>img
-        display block
-        margin auto
-        border-radius 4px
-
-    span
-        img
-            display inline
-            margin auto
-
-
-.post__comments
-    max-width var(--content-width)
-    margin var(--space) auto
-    font-family rubik,sans-serif
-
-    &:empty
-        display none
-
-.post-footer__meta
-    font-size 14px
-    margin-top 1.5rem
+.separate-dot:after
+    content ' · '

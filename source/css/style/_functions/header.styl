@@ -37,6 +37,16 @@
         #btn-toggle-dark
             padding 16px 0px 16px 10px
 
+        #b2t
+            display none
+            width 40px
+            height 40px
+            position fixed
+            z-index 1001
+            right 20px
+            bottom 30px
+            background none
+
         .dropdown-icon
             display none
             padding 16px 10px 16px 10px
@@ -92,69 +102,3 @@ if (hexo-config('navbar.sticky'))
     .dropdown-icon
         display block !important
 
-.footer
-    display block
-    align-items center
-    justify-content center
-    padding 0
-    margin-top 4rem
-    margin-bottom 2rem
-    text-align center
-    font-size 1.1em
-    font-family rubik,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,pingfang sc,noto sans cjk sc,sarasa gothic sc,microsoft yahei,sans-serif,Apple Color Emoji,Segoe UI Emoji,Varela Round
-    color $color_footer_text
-
-    *
-        margin 0 auto
-        margin-block-start 0em
-        margin-block-end 0em
-        margin-inline-start 0px
-        margin-inline-end 0px
-
-    >span
-        margin 0 .35em
-
-    a
-        color $color_footer_link
-        text-decoration none
-
-    svg
-        margin-right .2rem
-
-.cover
-    display block
-    text-align center
-    margin 3rem auto 3rem auto
-
-    .cover__logo
-        max-width $max_width_logo
-        height auto
-        margin-left auto
-        margin-right auto
-    
-    .cover__intro
-        color: #999
-
-nav
-    display block
-    max-width var(--content-width)
-    margin 0 auto
-    height 2.166rem
-
-    .pagination_prev
-        float left
-        
-    .pagination_next
-        float right
-
-    a
-        margin 0 10px
-        padding 3px 10px
-        background-color transparent
-        border 2px dashed var(--main-color)
-
-        &:hover
-            border 2px solid var(--main-color)
-            background-color var(--main-color)
-            color var(--bg-content-color)
-            text-decoration none

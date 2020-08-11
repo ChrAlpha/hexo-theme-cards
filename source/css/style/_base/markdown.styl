@@ -20,18 +20,17 @@ h3
     font-size 1.4em
 
 h4
-    font-size 1.3em
+    font-size 1.2em
 
 h5
-    font-size 1.2em
+    font-size 1.05em
 
 small
     font-size .889em
 
 b
 strong
-    font-weight 600
-    font-weight bold
+    font-weight 700
 
 em
     font-style italic
@@ -69,32 +68,6 @@ img
         &:not(.loaded)
             filter blur(8px)
             padding-bottom 40%
-
-.katex-block
-    overflow: auto
-
-.octicon
-    display inline-block
-    fill currentColor
-    vertical-align text-bottom
-
-.anchor
-    float left
-    line-height 1
-    margin-left -20px
-    padding-right 4px
-
-    &:focus
-        outline none
-
-details
-    display block
-
-    summary
-        cursor pointer
-
-summary
-    display list-item
 
 hr
     box-sizing initial
@@ -178,11 +151,6 @@ pre
         background-color initial
         border 0
 
-a
-    &:not(.button):not([href])
-        color inherit
-        text-decoration none
-
 li
     word-wrap break-all
 
@@ -212,53 +180,6 @@ code
     font-size $code_fontsize
     background-color var(--bg-code)
     border-radius 3px
-
-.highlight
-    margin 1rem
-    padding 0.4rem
-    width auto
-    border-radius 3px
-
-    pre
-        margin-bottom 0
-
-h1 .octicon-link
-h2 .octicon-link
-h3 .octicon-link
-h4 .octicon-link
-h5 .octicon-link
-h6 .octicon-link
-    color #1b1f23
-    vertical-align middle
-    visibility hidden
-
-h1:hover .anchor
-h2:hover .anchor
-h3:hover .anchor
-h4:hover .anchor
-h5:hover .anchor
-h6:hover .anchor
-    text-decoration none
-
-h1:hover .anchor .octicon-link
-h2:hover .anchor .octicon-link
-h3:hover .anchor .octicon-link
-h4:hover .anchor .octicon-link
-h5:hover .anchor .octicon-link
-h6:hover .anchor .octicon-link
-    visibility visible
-
-h1:hover .anchor .octicon-link:before
-h2:hover .anchor .octicon-link:before
-h3:hover .anchor .octicon-link:before
-h4:hover .anchor .octicon-link:before
-h5:hover .anchor .octicon-link:before
-h6:hover .anchor .octicon-link:before
-    width 16px
-    height 16px
-    content ' '
-    display inline-block
-    background-image url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'%3E%3Cpath fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'%3E%3C/path%3E%3C/svg%3E")
 
 a:active
 a:hover
@@ -306,11 +227,6 @@ input::-webkit-outer-spin-button
     margin 0
     appearance none
 
-after
-before
-    display table
-    content ""
-
 blockquote
 details
 dl
@@ -356,6 +272,15 @@ figure table
         text-align right
         background-color transparent
 
+.highlight
+    margin-bottom 20px
+    padding 0.4rem
+    width auto
+    border-radius 3px
+
+    pre
+        margin-bottom 0
+
 .highlight table 
     margin 0
     padding 0.6rem 0
@@ -383,7 +308,7 @@ table
     border-collapse collapse
 
     th:not(.code):not(.gutter)
-        font-weight 600
+        font-weight 700
 
     tr:not(.code):not(.gutter)
         background-color #f6f8fa
@@ -407,7 +332,8 @@ overflows
         td
             white-space nowrap
 
-.md-content
+.post-card__descrption
+.post__content
     text-size-adjust 100%
     color var(--body-color)
     font-size 16px
@@ -429,32 +355,6 @@ overflows
         width auto
 
     h1
-        font-size 2em
-        margin .67em 0
-        font-size 32px
-
-    h2
-        font-size 24px
-        font-size 1.5em
-
-    h3
-        font-size 20px
-        font-size 1.25em
-
-    h4
-        font-size 16px
-        font-size 1em
-
-    h5
-        font-size 14px
-        font-size .875em
-
-    h6
-        font-size 12px
-        font-size .85em
-        color #6a737d
-
-    h1
     h2
     h3
     h4
@@ -462,11 +362,14 @@ overflows
     h6
         margin-top 24px
         margin-bottom 20px
-        font-weight 550
+        font-weight 700
         line-height 1.25
 
     h1
     h2
-        font-weight 600
         padding-bottom .3em
         border-bottom 1px solid #eaecef
+
+    h6
+        font-size .875em
+        color #6a737d

@@ -1,0 +1,48 @@
+.post-side
+    display block
+    height 0
+    float right
+    position -webkit-sticky
+    position sticky
+    top: 'calc(%s + 10px)' % $header_height
+            
+    .post-side__toc
+        display block
+        
+        .toc
+            display none
+            width $max_width_toc
+            font-size $toc_fontsize
+            overflow auto
+            height 'calc(100vh - %s - 20px)' % $header_height
+            list-style-type none
+            padding-left 0.6em
+
+            .toc-child
+                padding-left .35em
+                list-style-type none
+           
+@media screen and (max-width: 1246px)
+    .post-side
+        width calc(100vw / 6 - 20px)
+        
+        .post-side__toc
+            .toc
+                width calc(100vw / 6 - 20px)
+
+    .post
+    .post__comments
+        max-width calc(100vw / 6 * 4)
+        width calc(100vw / 6 * 4)
+
+@media screen and (min-width: 1080px)
+    .post-side
+        .post-side__toc
+            .toc
+                display block
+    
+@media screen and (max-width: 1080px)
+    .post
+    .post__comments
+        max-width var(--content-width)
+        width 100%

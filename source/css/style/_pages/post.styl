@@ -1,0 +1,158 @@
+.post__with-side
+    max-width 'calc(var(--content-width) + %s * 2)' % $max_width_toc
+    margin 0 auto
+
+.post-card
+    margin-bottom var(--space)
+    position relative
+
+    &:hover
+        transform translateY(-5px)
+        box-shadow 1px 10px 30px 0 rgba(0,0,0,.1)
+
+.post-card__image
+    min-width 100%
+
+.post-card__title
+    margin-top 0
+
+.post-card__tags
+    z-index 1
+    position relative
+
+.post-card__cats
+    z-index 1
+    position relative
+
+.post-card__link
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+    opacity 0
+    overflow hidden
+    text-indent -9999px
+    z-index 0
+
+.post-title
+    padding calc(var(--space)/2) 0 calc(var(--space)/2)
+    text-align center
+
+.post-meta__date
+    color #808080
+
+.post-card__meta
+.post-title__meta
+    display block
+    z-index 1
+    position relative
+    font-size .8em
+    opacity .8
+    font-family rubik,sans-serif
+
+.post-card__header
+.post__header
+    margin calc(var(--space) * -1) !important
+    margin-bottom calc(var(--space) / 2) !important
+    overflow hidden
+    border-radius $radius_main
+
+    &:empty
+        display none
+
+    .post-thumbnail
+        display flex
+        width 100%
+        padding-bottom 40%
+        background-size cover
+        background-repeat repeat
+        background-position 50% 50%
+        background-origin padding-box
+        background-attachment scroll
+
+.post__content
+    p
+        line-height $lineheight
+
+    img
+        &.inline
+            display inline
+
+    div>img,p>img,div>picture>img,p>picture>img
+        display block
+        margin auto
+        border-radius 4px
+
+    span
+        img
+            display inline
+            margin auto
+
+
+.post__comments
+    max-width var(--content-width)
+    margin var(--space) auto
+    font-family rubik,sans-serif
+
+    &:empty
+        display none
+
+.post-footer__meta
+    font-size 14px
+    margin-top 1.5rem
+
+.post-cats
+    display inline-block
+    margin 1em 0 0
+
+.post-cats__link
+    display inline-block
+    margin .35em
+    font-size .75em
+    color currentColor
+    text-decoration none
+    background-color var(--bg-cat-color)
+    color currentColor !important
+    padding 0.25rem 0.6rem 0.25rem 0.6rem
+    border-radius $radius_button
+
+.post-tags
+    display inline-block
+    margin 1em 0 0
+
+.post-tags__link
+    display inline-block
+    margin .35em
+    font-size .75em
+    color currentColor
+    text-decoration none
+    background-color var(--bg-tag-color)
+    color currentColor !important
+    padding 0.25rem 0.6rem 0.25rem 0.6rem
+    border-radius $radius_button
+
+.post__license
+    background-color rgb(245, 245, 245)
+    word-break break-all
+    margin 3em 0 1em 0
+    padding 0.5rem 0.8rem
+    border-left 4px solid rgb(244, 67, 54)
+    list-style none
+
+    p 
+        margin 3px 1px 3px 1px
+        padding 0
+
+.post__expire
+    display none
+    margin calc(var(--space) / 2) var(--space) 0 var(--space)
+    padding .5rem .8rem
+    background #ffffc0
+    border-left 4px solid #fff000
+    list-style none
+    
+    p
+        color #947600
+        margin 3px 1px 3px 1px
+        padding 0
