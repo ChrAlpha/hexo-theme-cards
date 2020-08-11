@@ -1,0 +1,11 @@
+<% if (theme.comments.use === 'valine') { %>
+    <%- js(theme.vendors.valine || 'https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js') %>
+    <script>
+        var valineConfig = <%- JSON.stringify(theme.comments.valine) %>;
+        valineConfig.el = '#valine_container';
+        for (var i in valineConfig) {
+            if (valineConfig[i] === null) delete valineConfig[i];
+        }
+        new Valine(valineConfig);
+    </script>
+<% } %>

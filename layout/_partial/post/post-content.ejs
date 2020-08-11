@@ -1,0 +1,59 @@
+<div class="post-title">
+    <h1 class="post-title__text">
+        <%- page.title %>
+    </h1>
+    <div class="post-title__meta">
+        <%- partial('_meta/date') %>
+        <%- partial('_meta/category') %> 
+        <%- partial('_plugins/statistics/index', {position: 'page'}) %> 
+    </div>
+</div>
+
+<% if (theme.meta.toc.enable && page.toc !== false) { %>
+    <div class="post__with-side">
+        <aside class="post-side">
+            <div class="post-side__toc">
+                <%- toc(page.content, {list_number: (theme.meta.toc.list_number || false), max_depth: 6, min_depth: 2}) %>
+            </div>
+        </aside>
+        <article class="post content-card">
+            <div class="post__header">
+                <%- partial('_meta/thumbnail') %> 
+                <%- partial('_meta/expire') %>
+            </div>
+            <div class="post__content">
+                <div class="md-content">
+                    <%- page.content %>
+                </div>
+            </div>
+            <%- partial('_meta/copyright') %> 
+            <%- partial('_meta/updated') %> 
+            <%- partial('_meta/categories') %> 
+        </article>
+        <% if (theme.comments.use && page.comments !== false) { %>
+            <div class="post__comments content-card">
+                <%- partial('_plugins/comments/placeholder') %>
+            </div>
+        <% } %>
+    </div>
+<% } else { %>
+    <article class="post content-card">
+        <div class="post__header">
+            <%- partial('_meta/thumbnail', {post: post, position: 'article'}) %> 
+            <%- partial('_meta/expire') %>
+        </div>
+        <div class="post__content">
+            <div class="md-content">
+                <%- page.content %>
+            </div>
+        </div>
+        <%- partial('_meta/copyright') %> 
+        <%- partial('_meta/updated') %> 
+        <%- partial('_meta/categories') %> 
+    </article>
+    <% if (theme.comments.use && page.comments !== false) { %>
+        <div class="post__comments content-card">
+            <%- partial('_plugins/comments/placeholder') %>
+        </div>
+    <% } %>
+<% } %>

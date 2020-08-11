@@ -1,0 +1,29 @@
+<!-- meta -->
+<%
+var title = page.title || theme.meta.title || '';
+var keywords = page.keywords || '';
+if (!keywords) {
+    keywords += page.tags && page.tags.length > 0 ? page.tags.map(t => t.name).join(', ') : '';
+}
+keywords += config.keywords ? keywords ? ', ' + config.keywords : config.keywords : '';
+if (is_archive()) {
+    title = __('navbar.archive');
+    if (is_month()) {
+        title += __('symbol.colon') + page.year + '/' + page.month;
+    } else if (is_year()) {
+        title += __('symbol.colon') + page.year;
+    }
+} else if (is_category()) {
+    title = __('navbar.category') + __('symbol.colon') + page.category;
+} else if (is_tag()) {
+    title = __('navbar.tag') + __('symbol.colon') + page.tag;
+} else if (is_home()) {
+    title = '';
+}
+%>
+
+<title><% if (title) { %><%= title %> | <% } %><%= config.title %></title>
+
+<% if (keywords) { %>
+    <meta name="keywords" content="<%= keywords %>">
+<% } %>

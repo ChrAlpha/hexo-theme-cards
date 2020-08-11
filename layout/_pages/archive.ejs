@@ -1,0 +1,46 @@
+<main class='main'>
+    <% if (page.year || page.month) { %>
+		<%- partial('_partial/post/post-list') %>
+	<% } else { %>
+        <div class="archives">
+            <%
+            var yr = -1, pd = -1;
+            site.posts.sort('date', -1).forEach((post) => {
+                post.year = date(post.date, 'YYYY');
+                if (post.year !== yr) {
+                    yr = post.year;
+            %>
+                    <div class="archives-item">
+                        <div class="archives-left">
+                            <div class="archives-icon icon-lg"></div>
+                        </div>
+                        <div class="archives-content">
+                            <h3><%= yr %></h3>
+                        </div>
+                    </div>
+                <% } %>
+                <div class="archives-item">
+                    <div class="archives-left">
+                        <div class="archives-icon">
+
+                        </div>
+                    </div>
+                    <span class="archives-content">
+                        <%= date(post.date, 'MM-DD') %>
+                        &nbsp;
+                        <a href="<%- url_for(post.link || post.path) %>">
+                            <span class="archives-title">
+                                <% if (post.title){ %>
+                                    <%- post.title %>
+                                <% } else if (post.date) { %>
+                                    <%= date(post.date, config.date_format) %>
+                                <% } %>
+                            </span>
+                        </a>
+                        <br><br>
+                    </span>
+                </div>
+            <% }) %>
+        </div>
+    <% } %>
+</main>

@@ -1,0 +1,11 @@
+<% if (theme.comments.use === 'minivaline') { %>
+    <%- js(theme.vendors.minivaline || 'https://cdn.jsdelivr.net/npm/minivaline@2.7.5/dist/MiniValine.min.js') %>
+    <script>
+        var minivalineConfig = <%- JSON.stringify(theme.comments.minivaline) %>;
+        minivalineConfig.el = '#minivaline_container';
+        for (var i in minivalineConfig) {
+            if (minivalineConfig[i] === null) delete minivalineConfig[i];
+        }
+        new MiniValine(minivalineConfig);
+    </script>
+<% } %>

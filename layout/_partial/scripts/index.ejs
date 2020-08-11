@@ -1,0 +1,33 @@
+<%- partial('./lazyload') %> 
+
+<%- partial('_plugins/analytics/index') %> 
+
+<%- partial('_plugins/statistics/index', {position: 'script'}) %>
+
+<%- partial('_plugins/fancybox/fancybox') %> 
+
+<%- partial('_plugins/back_to_top/source') %>
+
+<%- partial('_plugins/mathjax/mathjax') %>
+
+<% if (page.comments && theme.comments.use) { %>
+    <%- partial('_plugins/comments/disqus/source') %>
+
+    <%- partial('_plugins/comments/disqusjs/source') %>
+    
+    <%- partial('_plugins/comments/valine/source') %>
+
+    <%- partial('_plugins/comments/minivaline/source') %>
+    
+    <%- partial('_plugins/comments/gitalk/source') %>
+    
+    <%- partial('_plugins/comments/gitment/source') %>
+    
+    <%- partial('_plugins/comments/livere/source') %>
+    
+    <%- partial('_plugins/comments/changyan/source') %>
+
+    <%- partial('_plugins/comments/wildfire/source') %>
+<% } %>
+
+<%- partial('./custom') %>

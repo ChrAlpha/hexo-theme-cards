@@ -1,0 +1,14 @@
+<% if (theme.comments.use) { %>
+    <h4 style="margin-top: 0;"><%- __('post.comments') %></h4>
+    <%- partial('./disqus/main') %>
+    <%- partial('./disqusjs/main') %>
+    <%- partial('./valine/main') %>
+    <%- partial('./minivaline/main') %>
+    <%- partial('./gitalk/main') %>
+    <%- partial('./gitment/main') %>
+    <%- partial('./livere/main') %>
+    <%- partial('./changyan/main') %>
+    <%- partial('./wildfire/main') %>
+<% } else { %>
+    <% page.comments = false; %>
+<% } %>

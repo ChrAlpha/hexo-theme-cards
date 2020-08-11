@@ -1,0 +1,33 @@
+<head>
+    <meta charset="utf-8">
+
+    <% if (page.robots) { %>
+        <meta name="robots" content="<%- page.robots %>">
+    <% } %>
+
+    <!-- 渲染优化 -->
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="HandheldFriendly" content="True" >
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <%- partial('./icon') %>
+
+    <%- partial('./meta') %>
+
+    <%- partial('./opengraph') %>
+
+    <%- partial('./style') %>
+
+    <%- partial('_plugins/highlight/highlight/source') %>
+    <%- partial('_plugins/highlight/hljs/source') %>
+    <%- partial('_plugins/highlight/prismjs/source') %>
+
+    <%- partial('_plugins/tag-plugins/note/source') %>
+
+    <%- partial('_plugins/statistics/busuanzi/source') %>
+
+    <%- partial('./custom') %>
+</head>

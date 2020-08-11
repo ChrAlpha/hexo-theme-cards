@@ -1,0 +1,6 @@
+<!-- custom head -->
+<% if (theme.head.custom_head && theme.head.custom_head.forEach) { %>
+    <% theme.head.custom_head.forEach((item) => { %>
+        <%- item %> 
+    <% }); %>
+<% } %>

@@ -1,0 +1,6 @@
+<!--icon-->
+<% if (theme.head.favicon) { %>
+    <link rel="shortcut icon" type='image/x-icon' href="<%- url_for(theme.head.favicon) %>">
+<% } else if (config.favicon) { %>
+    <link rel="shortcut icon" type='image/x-icon' href="<%- url_for(config.favicon) %>">
+<% } %>

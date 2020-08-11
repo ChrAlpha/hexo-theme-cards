@@ -1,0 +1,13 @@
+<% if (position === 'page') { %>
+    <%- partial('./leancloud/page') %>
+    <%- partial('./busuanzi/page') %>
+<% } %>
+
+<% if (position === 'site') { %>
+    <%- partial('./leancloud/site') %>
+    <%- partial('./busuanzi/site') %>
+<% } %> 
+
+<% if (position === 'script') { %>
+    <%- partial('./leancloud/source') %>
+<% } %>

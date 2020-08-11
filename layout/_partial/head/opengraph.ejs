@@ -1,0 +1,11 @@
+<!-- OpenGraph -->
+<% if (theme.head.opengraph.enable) { %> 
+    <%- open_graph({
+        type: theme.head.opengraph.type,
+        twitter_card: theme.head.opengraph.twitter_card,
+        twitter_id: theme.head.opengraph.twitter_id,
+        image: eval(theme.head.opengraph.image),
+        fb_admins: theme.head.opengraph.fb_admins,
+        fb_app_id: theme.head.opengraph.fb_app_id
+    }) %>
+<% } %>

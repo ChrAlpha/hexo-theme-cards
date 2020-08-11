@@ -1,0 +1,156 @@
+<% if (theme.footer.statistics.use === 'leancloud') { %>
+    <script>
+        (function () {
+            function getRecord(Counter, target) {
+                return new Promise(function (resolve, reject) {
+                    Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({target})))
+                        .then(response => response.json())
+                        .then(({results}) => {
+                            if (results && results.length > 0) {
+                                var record = results[0];
+                                resolve(record);
+                            } else {
+                                Counter('post', '/classes/Counter', {
+                                        target, time: 0
+                                    })
+                                    .then(response => response.json())
+                                    .then(record => {
+                                        resolve(record);
+                                    }).catch(error => {
+                                        console.error('Failed to create', error);
+                                        reject(error);
+                                    });
+                            }
+                        }).catch(error => {
+                            console.error('LeanCloud Counter Error', error);
+                            reject(error);
+                        });
+                })
+            }
+        
+            function buildIncrement(objectId) {
+                return {
+                    "method": "PUT",
+                    "path": `/1.1/classes/Counter/${ objectId }`,
+                    "body": {
+                        "time": {
+                            '__op': 'Increment',
+                            'amount': 1
+                        }
+                    }
+                }
+            }
+        
+            function increment(Counter, incrArr) {
+                return new Promise(function (resolve, reject) {
+                    Counter('post', '/batch', {
+                        "requests": incrArr
+                    }).then((res) => {
+                        resolve(res);
+                    }).catch(error => {
+                        console.error('Failed to save visitor count', error);
+                        reject(error);
+                    });
+                });
+            }
+        
+            function validUV() {
+                var key = 'LeanCloud_UV_Flag';
+                var flag = localStorage.getItem(key);
+                if (flag) {
+                    if (new Date().getTime() - parseInt(flag) <= 86400000) {
+                        return false;
+                    }
+                }
+                localStorage.setItem(key, new Date().getTime().toString());
+                return true;
+            }
+        
+            function addCount(Counter) {
+                var enableIncr = '<%= theme.footer.statistics.use %>' === 'leancloud';
+                var getterArr = [];
+                var incrArr = [];
+                var pvCtn = document.querySelector('#leancloud_container_site_pv');
+                if (pvCtn || enableIncr) {
+                    var pvGetter = getRecord(Counter, 'site-pv').then((record) => {
+                        incrArr.push(buildIncrement(record.objectId))
+                        var ele = document.querySelector('#leancloud_value_site_pv');
+                        if (ele) {
+                            ele.innerText = record.time + 1;
+                            if (pvCtn) {
+                                pvCtn.style.display = 'inline';
+                            }
+                        }
+                    });
+                    getterArr.push(pvGetter);
+                }
+                var uvCtn = document.querySelector('#leancloud_container_site_uv');
+                if (uvCtn || enableIncr) {
+                    var uvGetter = getRecord(Counter, 'site-uv').then((record) => {
+                        var vuv = validUV();
+                        vuv && incrArr.push(buildIncrement(record.objectId))
+                        var ele = document.querySelector('#leancloud_value_site_uv');
+                        if (ele) {
+                            ele.innerText = record.time + (vuv ? 1 : 0);
+                            if (uvCtn) {
+                                uvCtn.style.display = 'inline';
+                            }
+                        }
+                    });
+                    getterArr.push(uvGetter);
+                }
+                if ('<%= is_post() %>' === 'true') {
+                    var viewCtn = document.querySelector('#leancloud_container_page_pv');
+                    if (viewCtn || enableIncr) {
+                        var target = decodeURI('<%= url_for(page.path) %>');
+                        var viewGetter = getRecord(Counter, target).then((record) => {
+                            incrArr.push(buildIncrement(record.objectId))
+                            if (viewCtn) {
+                                var ele = document.querySelector('#leancloud_value_page_pv');
+                                if (ele) {
+                                    ele.innerText = (record.time || 0) + 1;
+                                    viewCtn.style.display = 'inline';
+                                }
+                            }
+                        });
+                        getterArr.push(viewGetter);
+                    }
+                }
+                if (enableIncr) {
+                    Promise.all(getterArr).then(() => {
+                        incrArr.length > 0 && increment(Counter, incrArr);
+                    })
+                }
+            }
+        
+            var app_id = '<%= theme.footer.statistics.leancloud.appId %>';
+            var app_key = '<%= theme.footer.statistics.leancloud.appKey %>';
+            var server_url = '<%= theme.footer.statistics.leancloud.serverURL %>';
+        
+            function fetchData(api_server) {
+                var Counter = (method, url, data) => {
+                    return fetch(`${ api_server }/1.1${ url }`, {
+                        method,
+                        headers: {
+                                'X-LC-Id': app_id,
+                                'X-LC-Key': app_key,
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify(data)
+                    });
+                };
+                addCount(Counter);
+            }
+            var api_server = app_id.slice(-9) !== '-MdYXbMMI' ? server_url : `https://${ app_id.slice(0, 8).toLowerCase() }.api.lncldglobal.com`;
+            if (api_server) {
+                fetchData(api_server);
+            } else {
+                fetch('https://app-router.leancloud.cn/2/route?appId=' + app_id)
+                    .then(response => response.json())
+                    .then(({api_server}) => {
+                        fetchData('https://' + api_server);
+                    });
+            }
+        })();
+    </script>
+<% } %>

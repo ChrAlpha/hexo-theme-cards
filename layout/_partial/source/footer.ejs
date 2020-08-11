@@ -1,0 +1,22 @@
+<footer class="footer">
+    <%- partial('_plugins/statistics/index', {position: 'site'}) %> 
+    <% if (theme.footer.copyright_since !== false) { %>
+        <%
+        let copyright_yr;
+        if (theme.footer.copyright_since !== null) {
+            copyright_yr = `${theme.footer.copyright_since}&nbsp;-&nbsp;${date(Date.now(), 'YYYY')}`
+        } else {
+            copyright_yr = `${date(Date.now(), 'YYYY')}`
+        }
+        %>
+        <p class="footer-copyright">
+            Copyright&nbsp;©&nbsp;<%- copyright_yr %>&nbsp;<a href="<%- url_for('/') %>"><%= config.title %></a>
+        </p>
+    <% } %>
+    <% if (theme.footer.custom_text && theme.footer.custom_text.length) { %>
+        <% for(let i = 0; i < theme.footer.custom_text.length; ++i) { %>
+            <%- markdown(theme.footer.custom_text[i]) %>
+        <% } %>
+    <% } %>
+    <p>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme - <a href="https://github.com/ChrAlpha/hexo-theme-cards" target="_blank">Cards</a></p>
+</footer>
