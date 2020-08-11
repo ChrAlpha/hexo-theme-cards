@@ -63,16 +63,44 @@
         <%- js(theme.vendors.darkmode.js || 'js/darkmode.js') %>
     <% } %>
 
-    <% if (config.highlight.enable === true && is_post()) { %>
+    <% if (config.highlight.enable === true && config.highlight.hljs !== true && is_post()) { %>
         <% if (theme.vendors.highlight) { %>
-            <link rel="stylesheet" id="hljs-default-theme" href="<%- `${theme.vendors.highlight}${theme.style.highlight.default || 'default'}.min.css` %>" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')===-1)this.media='all'">
+            <link rel="stylesheet" id="hl-default-theme" href="<%- `${theme.vendors.highlight}${theme.style.highlight.default || 'default'}.min.css` %>" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')===-1)this.media='all'">
             <% if (theme.style.highlight.darkmode !== theme.style.highlight.default || theme.style.highlight.darkmode === null) { %>
-                <link rel="stylesheet" id="hljs-dark-theme" href="<%- `${theme.vendors.highlight}${theme.style.highlight.darkmode || 'dark'}.min.css` %>" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')!==-1)this.media='all'">
+                <link rel="stylesheet" id="hl-dark-theme" href="<%- `${theme.vendors.highlight}${theme.style.highlight.darkmode || 'dark'}.min.css` %>" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')!==-1)this.media='all'">
             <% } %>
         <% } else { %>
-            <link rel="stylesheet" id="hljs-default-theme" href="<%- url_for(`css/highlight/${theme.style.highlight.default || 'default'}.css`) %>" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')===-1)this.media='all'">
+            <link rel="stylesheet" id="hl-default-theme" href="<%- url_for(`css/highlight/${theme.style.highlight.default || 'default'}.css`) %>" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')===-1)this.media='all'">
             <% if (theme.style.highlight.darkmode !== theme.style.highlight.default || theme.style.highlight.darkmode === null) { %>
-                <link rel="stylesheet" id="hljs-dark-theme" href="<%- url_for(`css/highlight/${theme.style.highlight.darkmode || 'dark'}.css`) %>" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')!==-1)this.media='all'">
+                <link rel="stylesheet" id="hl-dark-theme" href="<%- url_for(`css/highlight/${theme.style.highlight.darkmode || 'dark'}.css`) %>" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')!==-1)this.media='all'">
+            <% } %>
+        <% } %>
+    <% } %>
+
+    <% if (config.highlight.enable === true && config.highlight.hljs === true && is_post()) { %>
+        <% if (theme.vendors.hljs) { %>
+            <link rel="stylesheet" id="hl-default-theme" href="<%- `${theme.vendors.hljs}${theme.style.hljs.default || 'default'}.css` %>" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')===-1)this.media='all'">
+            <% if (theme.style.hljs.darkmode !== theme.style.hljs.default || theme.style.hljs.darkmode === null) { %>
+                <link rel="stylesheet" id="hl-dark-theme" href="<%- `${theme.vendors.hljs}${theme.style.hljs.darkmode || 'dark'}.css` %>" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')!==-1)this.media='all'">
+            <% } %>
+        <% } else { %>
+            <link rel="stylesheet" id="hl-default-theme" href="<%- `https://cdn.jsdelivr.net/npm/highlightjs@9.16.2/styles/${theme.style.highlight.default || 'default'}.css` %>" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')===-1)this.media='all'">
+            <% if (theme.style.highlight.darkmode !== theme.style.highlight.default || theme.style.highlight.darkmode === null) { %>
+                <link rel="stylesheet" id="hl-dark-theme" href="<%- `https://cdn.jsdelivr.net/npm/highlightjs@9.16.2/styles/${theme.style.highlight.darkmode || 'dark'}.css` %>" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')!==-1)this.media='all'">
+            <% } %>
+        <% } %>
+    <% } %>
+
+    <% if (config.highlight.enable !== true && config.prismjs.enable === true && is_post()) { %>
+        <% if (theme.vendors.prismjs) { %>
+            <link rel="stylesheet" id="hl-default-theme" href="<%- `${theme.vendors.prismjs}${theme.style.prismjs.default || 'prism'}.css` %>" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')===-1)this.media='all'">
+            <% if (theme.style.prismjs.darkmode !== theme.style.prismjs.default || theme.style.prismjs.darkmode === null) { %>
+                <link rel="stylesheet" id="hl-dark-theme" href="<%- `${theme.vendors.prismjs}${theme.style.prismjs.darkmode || 'prism-dark'}.css` %>" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')!==-1)this.media='all'">
+            <% } %>
+        <% } else { %>
+            <link rel="stylesheet" id="hl-default-theme" href="<%- `https://cdn.jsdelivr.net/npm/prismjs@1.21.0/themes/${theme.style.prismjs.default || 'prism'}.css` %>" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')===-1)this.media='all'">
+            <% if (theme.style.prismjs.darkmode !== theme.style.prismjs.default) { %>
+                <link rel="stylesheet" id="hl-dark-theme" href="<%- `https://cdn.jsdelivr.net/npm/prismjs@1.21.0/themes/${theme.style.prismjs.darkmode || 'prism-dark'}.css` %>" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')!==-1)this.media='all'">
             <% } %>
         <% } %>
     <% } %>

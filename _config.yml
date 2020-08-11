@@ -78,8 +78,26 @@ style:
     main_space: 3.5rem
     sm_space: 1.5rem  # 当屏幕宽度小于 650px 时候启用
 
-  # 代码高亮
+  # 默认代码高亮
   highlight: 
+
+    # 默认代码高亮主题
+    default: 
+
+    # 暗色代码高亮主题
+    darkmode: 
+
+  # highlight.js 代码高亮
+  hljs: 
+
+    # 默认代码高亮主题
+    default: 
+
+    # 暗色代码高亮主题
+    darkmode: 
+
+  # prismjs 代码高亮
+  prismjs: 
 
     # 默认代码高亮主题
     default: 
@@ -411,6 +429,16 @@ vendors:
   # https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.7/dist/css/highlight/
   # Version: 0.7
   highlight: 
+
+  # highlight.js theme
+  # https://cdn.jsdelivr.net/npm/highlightjs@9.16.2/styles/
+  # Version: 9.16.2
+  hljs: 
+
+  # prism.js theme
+  # https://cdn.jsdelivr.net/npm/prismjs@1.21.0/themes/
+  # Version: 1.21.0
+  prism: 
 
   # tag-plugin note css
   # https://github.com/ChrAlpha/hexo-theme-cards
