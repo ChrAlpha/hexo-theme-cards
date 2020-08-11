@@ -200,8 +200,7 @@ optimize:
   back_to_top: false
 
   # 深色模式
-  darkmode: 
-    enable: false
+  darkmode: false
 
   # 站内搜索
   search:

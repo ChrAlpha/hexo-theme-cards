@@ -58,7 +58,7 @@
 
     <%- css(theme.vendors.style || 'css/style/main.css') %> 
     
-    <% if (theme.optimize.darkmode.enable) { %>
+    <% if (theme.optimize.darkmode === true) { %>
         <%- css(theme.vendors.darkmode.css || 'css/style/dark.css') %>
         <%- js(theme.vendors.darkmode.js || 'js/darkmode.js') %>
     <% } %>
