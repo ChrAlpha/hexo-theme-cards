@@ -1,7 +1,5 @@
 <div class="post-card__header">
-    <% if (theme.layout.post.header.indexOf('thumbnail') !== -1) { %>
         <%- partial('_meta/thumbnail') %> 
-    <% } %>
 </div>
 <div class="post-card__content">
     <a href="<%- url_for(post.link || post.path) %>" class="index-title">
@@ -10,32 +8,24 @@
         </h2>
     </a>
     <div class="post-card__descrption">
-        <% if (theme.layout.meta.indexOf('excerpt') !== -1) { %>
-            <div class="md-content">
-                <% if (post.excerpt) { %>
-                    <%- post.excerpt %>
-                <% } else if (post.description) { %>
-                    <p>
-                        <%- strip_html(post.description) %>
-                    </p>
-                <% } else if (theme.meta.auto_excerpt.enable) { %>
-                    <p>
-                        <%- strip_html(truncate(post.content, {length: theme.meta.auto_excerpt.length})) %>
-                    </p>
-                <% } %>
-            </div>
-        <% } %>
+        <div class="md-content">
+            <% if (post.excerpt) { %>
+                <%- post.excerpt %>
+            <% } else if (post.description) { %>
+                <p>
+                    <%- strip_html(post.description) %>
+                </p>
+            <% } else if (theme.meta.auto_excerpt.enable) { %>
+                <p>
+                    <%- strip_html(truncate(post.content, {length: theme.meta.auto_excerpt.length})) %>
+                </p>
+            <% } %>
+        </div>
     </div>
 </div>
 <div class="post-card__meta">
-    <% if (theme.layout.meta.indexOf('date') !== -1) { %>
-        <%- partial('_meta/date') %>
-    <% } %>
-    <% if (theme.layout.meta.indexOf('categories') !== -1) { %>
-        <%- partial('_meta/category') %> 
-    <% } %>
+    <%- partial('_meta/date') %>
+    <%- partial('_meta/category') %> 
 </div>
-<% if (theme.layout.meta.indexOf('tags') !== -1) { %>
-    <%- partial('_meta/tags') %> 
-<% } %>
+<%- partial('_meta/tags') %> 
 <a href="<%- url_for(post.link || post.path) %>" class="post-card__link">Link</a>

@@ -3,18 +3,14 @@
         <%- page.title %>
     </h1>
     <div class="post-title__meta">
-        <% if (theme.layout.meta.indexOf('date') !== -1) { %>
-            <%- partial('_meta/date') %>
-        <% } %>
-        <% if (theme.layout.post.header.indexOf('categories') !== -1) { %>
-            <%- partial('_meta/category') %> 
-        <% } %>
+        <%- partial('_meta/date') %>
+        <%- partial('_meta/category') %> 
         <%- partial('_third-party/busuanzi', {position: 'page'}) %> 
         <%- partial('_third-party/leancloud', {position: 'page'}) %> 
     </div>
 </div>
 
-<% if (theme.meta.toc.enable && theme.layout.post.side.indexOf('toc') !== -1 && page.toc !== false) { %>
+<% if (theme.meta.toc.enable && page.toc !== false) { %>
     <div class="post__with-side">
         <aside class="post-side">
             <div class="post-side__toc">
@@ -23,27 +19,17 @@
         </aside>
         <article class="post content-card">
             <div class="post__header">
-                <% if (theme.layout.post.header.indexOf('thumbnail') !== -1) { %>
-                    <%- partial('_meta/thumbnail') %> 
-                <% } %>
-                <% if (theme.layout.post.header.indexOf('expire')) { %>
-                    <%- partial('_meta/expire') %>
-                <% } %>
+                <%- partial('_meta/thumbnail') %> 
+                <%- partial('_meta/expire') %>
             </div>
             <div class="post__content">
                 <div class="md-content">
                     <%- page.content %>
                 </div>
             </div>
-            <% if (theme.layout.post.footer.indexOf('copyright') !== -1) { %>
-                <%- partial('_meta/copyright') %> 
-            <% } %>
-            <% if (theme.layout.post.footer.indexOf('updated') !== -1) { %>
-                <%- partial('_meta/updated') %> 
-            <% } %>
-            <% if (theme.layout.post.footer.indexOf('tags') !== -1) { %>
-                <%- partial('_meta/categories') %> 
-            <% } %> 
+            <%- partial('_meta/copyright') %> 
+            <%- partial('_meta/updated') %> 
+            <%- partial('_meta/categories') %> 
         </article>
         <% if (theme.comments.enable && page.comments !== false) { %>
             <div class="post__comments content-card">
@@ -54,27 +40,17 @@
 <% } else { %>
     <article class="post content-card">
         <div class="post__header">
-            <% if (theme.layout.post.header.indexOf('thumbnail') !== -1) { %>
-                <%- partial('_meta/thumbnail', {post: post, position: 'article'}) %> 
-            <% } %>
-            <% if (theme.layout.post.header.indexOf('expire')) { %>
-                <%- partial('_meta/expire') %>
-            <% } %>
+            <%- partial('_meta/thumbnail', {post: post, position: 'article'}) %> 
+            <%- partial('_meta/expire') %>
         </div>
         <div class="post__content">
             <div class="md-content">
                 <%- page.content %>
             </div>
         </div>
-        <% if (theme.layout.post.footer.indexOf('copyright') !== -1) { %>
-            <%- partial('_meta/copyright') %> 
-        <% } %>
-        <% if (theme.layout.post.footer.indexOf('updated') !== -1) { %>
-            <%- partial('_meta/updated') %> 
-        <% } %>
-        <% if (theme.layout.post.footer.indexOf('tags') !== -1) { %>
-            <%- partial('_meta/categories') %> 
-        <% } %> 
+        <%- partial('_meta/copyright') %> 
+        <%- partial('_meta/updated') %> 
+        <%- partial('_meta/categories') %> 
     </article>
     <% if (theme.comments.enable && page.comments !== false) { %>
         <div class="post__comments content-card">
