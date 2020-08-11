@@ -105,7 +105,7 @@
         <% } %>
     <% } %>
 
-    <% if (theme.optimize.note.enable) { %>
+    <% if (theme.optimize.note === true) { %>
         <link rel="stylesheet" href="<%-theme.vendors.note || url_for('css/style/note.css') %>" media="none" onload="this.media='all'">
     <% } %>
 

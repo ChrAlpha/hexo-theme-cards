@@ -189,8 +189,7 @@ optimize:
     loadingImg: 
 
   # note 标签插件
-  note: 
-    enable: true
+  note: true
 
   # 图片点击放大插件
   fancybox: 
