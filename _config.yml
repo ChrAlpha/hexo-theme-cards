@@ -215,23 +215,23 @@ optimize:
 # ---------------------------------------------------------------
 
 comments: 
-  enable: 
+  use:  # disqus | disqusjs | valine | minivaline | gitalk | gitment | levere | changyan | wildfire
 
   ## Disqus
-  disqus: 
-    enable: 
+  disqus:  
     shortname: 
-    disqusjs:
-      enable: 
-      siteName: 
-      api: 
-      apikey: 
-      admin: ''
-      nesting: 2
+
+  ## DisqusJS  
+  disqusjs: 
+    shortname: 
+    siteName: 
+    api: 
+    apikey: 
+    admin: ''
+    nesting: 2
 
   ## Valine
-  valine:
-    enable: 
+  valine: 
     appId: 
     appKey:
     placeholder: 
@@ -251,8 +251,7 @@ comments:
     emojiMaps: 
 
   # MiniValine
-  minivaline: 
-    enable: 
+  minivaline:  
     appId: 
     appKey: 
     mode: 
@@ -275,7 +274,6 @@ comments:
 
   ## Gitalk
   gitalk:
-    enable:
     repo:
     owner:
     clientID:
@@ -283,26 +281,22 @@ comments:
 
   ## Gitment
   gitment:
-    enable:
     repo:
     owner:
     client_id:
     client_secret:
   
   # Livere 来比力
-  livere:
-    enable: 
+  livere: 
     livere_uid:
 
   # 畅言
-  changyan:
-    enable: 
+  changyan: 
     appid:
     conf:
     thread_key_type: path # id | path，单独定义时候用 “id”
 
-  wildfire:
-    enable: 
+  wildfire: 
     database_provider: firebase # firebase | wilddog
     wilddog_site_id:
     firebase_api_key:

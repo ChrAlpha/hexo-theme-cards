@@ -31,7 +31,7 @@
             <%- partial('_meta/updated') %> 
             <%- partial('_meta/categories') %> 
         </article>
-        <% if (theme.comments.enable && page.comments !== false) { %>
+        <% if (theme.comments.use && page.comments !== false) { %>
             <div class="post__comments content-card">
                 <%- partial('_third-party/comments.ejs') %>
             </div>
@@ -52,7 +52,7 @@
         <%- partial('_meta/updated') %> 
         <%- partial('_meta/categories') %> 
     </article>
-    <% if (theme.comments.enable && page.comments !== false) { %>
+    <% if (theme.comments.use && page.comments !== false) { %>
         <div class="post__comments content-card">
             <%- partial('_third-party/comments.ejs') %>
         </div>

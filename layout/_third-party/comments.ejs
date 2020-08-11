@@ -1,21 +1,21 @@
-<% if (theme.comments.enable) { %>
+<% if (theme.comments.use) { %>
     <h4 style="margin-top: 0;"><%- __('post.comments') %></h4>
-    <% if (theme.comments.disqus.enable) { %>
+    <% if (theme.comments.use === 'disqus') { %>
         <div id="disqus_thread"><%- __('post.comments_placeholder', 'Disqus') %></div>
     <% } %>
-    <% if (theme.comments.valine.enable) { %>
+    <% if (theme.comments.use === 'valine') { %>
         <div id="valine_container" class="valine_thread"></div>
     <% } %>
-    <% if (theme.comments.minivaline.enable) { %>
+    <% if (theme.comments.use === 'minivaline') { %>
         <div id="minivaline_container" class="minivaline_thread"></div>
     <% } %>
-    <% if (theme.comments.gitalk.enable) { %>
+    <% if (theme.comments.use === 'gitalk') { %>
         <div id="gitalk-container"></div>
     <% } %>
-    <% if (theme.comments.gitment.enable) { %>
+    <% if (theme.comments.use === 'gitment') { %>
         <div id="gitment-container"></div>
     <% } %>
-    <% if (theme.comments.livere.enable) { %>
+    <% if (theme.comments.use === 'livere) { %>
         <div id="lv-container" data-id="city" data-uid="<%= theme.comments.livere.livere_uid %>">
         <noscript>
             <div>
@@ -24,10 +24,10 @@
         </noscript>
         </div>
     <% } %>
-    <% if (theme.comments.changyan.enable) { %>
+    <% if (theme.comments.use === 'changyan') { %>
         <div id="SOHUCS" sid="<%- page[theme.comments.changyan.thread_key_type] %>"></div>
     <% } %>
-    <% if (theme.comments.wildfire.enable) { %>
+    <% if (theme.comments.use === 'wildfire') { %>
         <div class="wildfire_thread"></div>
     <% } %>
 <% } else { %>
