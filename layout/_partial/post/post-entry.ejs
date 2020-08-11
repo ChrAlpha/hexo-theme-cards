@@ -8,19 +8,17 @@
         </h2>
     </a>
     <div class="post-card__descrption">
-        <div class="md-content">
-            <% if (post.excerpt) { %>
-                <%- post.excerpt %>
-            <% } else if (post.description) { %>
-                <p>
-                    <%- strip_html(post.description) %>
-                </p>
-            <% } else if (theme.meta.auto_excerpt.enable) { %>
-                <p>
-                    <%- strip_html(truncate(post.content, {length: theme.meta.auto_excerpt.length})) %>
-                </p>
-            <% } %>
-        </div>
+        <% if (post.excerpt) { %>
+            <%- post.excerpt %>
+        <% } else if (post.description) { %>
+            <p>
+                <%- strip_html(post.description) %>
+            </p>
+        <% } else if (theme.meta.auto_excerpt.enable) { %>
+            <p>
+                <%- strip_html(truncate(post.content, {length: theme.meta.auto_excerpt.length})) %>
+            </p>
+        <% } %>
     </div>
 </div>
 <div class="post-card__meta">

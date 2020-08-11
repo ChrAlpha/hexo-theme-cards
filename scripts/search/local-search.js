@@ -1,13 +1,13 @@
 hexo.theme.on('processAfter', () => {
 
-    if (!hexo.theme.config.optimize.search || !hexo.theme.config.optimize.search.enable) {
+    if (!hexo.theme.config.search || !hexo.theme.config.search.enable) {
         return;
     }
 
     const pathFn = require('path');
     const { stripHTML } = require('hexo-util');
 
-    let config = hexo.theme.config.optimize.search;
+    let config = hexo.theme.config.search;
 
     if (!config.path) {
         config.path = 'search.json';

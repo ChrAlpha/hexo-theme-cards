@@ -178,41 +178,6 @@ meta:
 
 
 # ---------------------------------------------------------------
-# 优化/功能 插件
-# ---------------------------------------------------------------
-
-optimize: 
-
-  # 注意！
-  # 如需开启，请复制下段内容至站点配置文件中
-  lazyload:
-    enable: true
-    onlypost: false
-    loadingImg: 
-
-  # note 标签插件
-  note: true
-
-  # 图片点击放大插件
-  fancybox: 
-    enable: false
-    auto: false
-    
-  # 返回顶部
-  back_to_top: false
-
-  # 深色模式
-  darkmode: false
-
-  # 站内搜索
-  search:
-    enable: true
-    path: search.json
-    field: All  # Page | Post | All
-
-
-    
-# ---------------------------------------------------------------
 # 评论系统
 # ---------------------------------------------------------------
 
@@ -311,6 +276,7 @@ comments:
     locale: en
 
 
+
 # ---------------------------------------------------------------
 # 统计服务
 # ---------------------------------------------------------------
@@ -375,6 +341,38 @@ footer:
 
 
 # ---------------------------------------------------------------
+# 优化/功能 插件
+# ---------------------------------------------------------------
+
+# 图片懒加载控件
+lazyload:
+  enable: false
+  onlypost: false
+  loadingImg: 
+
+# note 标签插件
+note: true
+
+# 图片点击放大插件
+fancybox: 
+  enable: false
+  auto: false
+  
+# 返回顶部
+back_to_top: false
+
+# 深色模式
+darkmode: false
+
+# 站内搜索
+search:
+  enable: false
+  path: search.json
+  field: All  # Page | Post | All
+
+
+
+# ---------------------------------------------------------------
 # CDN for vendors
 # ---------------------------------------------------------------
 
@@ -419,7 +417,7 @@ vendors:
 
   # Lazyload js
   # https://github.com/verlok/lazyload
-  # Version: 12.0.0
+  # Version: 17.1.0
   lazyload: 
   
   # back_to_top button
