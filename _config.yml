@@ -212,7 +212,7 @@ optimize:
 # ---------------------------------------------------------------
 
 comments: 
-  use:  # disqus | disqusjs | valine | minivaline | gitalk | gitment | levere | changyan | wildfire
+  use:   # disqus | disqusjs | valine | minivaline | gitalk | gitment | levere | changyan | wildfire
 
   ## Disqus
   disqus:  
@@ -316,67 +316,48 @@ analytics:
   baidu_site_id: 
   cnzz_site_id: 
 
-  # busuanzi 计数系统
-  busuanzi:
-    enable: false
-    
-    # 全站 UV（Unique Viewers）
-    site_uv:
-      enable: true
-      before_text: '' # 展示在数据前的内容，支持 HTML
-      after_text: Viewers  # 展示在数据后的内容，支持 HTML
-      divider: '&nbsp;&nbsp;&nbsp;|' # 分隔符，HTML 语法支持
-    
-    # 全站 PV（Page Views）
-    site_pv:
-      enable: true
-      before_text: ''  # 展示在数据前的内容，支持 HTML
-      after_text: Views  # 展示在数据后的内容，支持 HTML
-      divider: ''  # 分隔符，HTML 语法支持
-    
-    # 页面 PV
-    page_pv:
-      enable: true
-      before_text: ''
-      after_text: Views 
-
-  # LeanCloud 计数系统
-  leancloud: 
-    enable: true
-    
-    appId: 
-    appKey: 
-    serverURL: 
-    
-    # 全站 UV（Unique Viewers）
-    site_uv:
-      enable: true
-      before_text: '' # 展示在数据前的内容，支持 HTML
-      after_text: Viewers  # 展示在数据后的内容，支持 HTML
-      divider: '&nbsp;&nbsp;&nbsp;|' # 分隔符，HTML 语法支持
-    
-    # 全站 PV（Page Views）
-    site_pv:
-      enable: true
-      before_text: ''  # 展示在数据前的内容，支持 HTML
-      after_text: Views  # 展示在数据后的内容，支持 HTML
-      divider: ''  # 分隔符，HTML 语法支持
-    
-    # 页面 PV
-    page_pv:
-      enable: true
-      before_text: ''
-      after_text: Views 
 
 
 # 网站页脚
 footer:
   
   # 设置站点起始时间，用于底部 copyright 显示
-  # 例如：将此设为 `2018`，那么页脚就会显示 '© 2018 - 2020'（2020 为当前时间）
-  # 如果将此项留空，则单独显示 '© 2020'（2020 为当前时间）
+  # 例如：将此设为 `2018`，那么页脚就会显示 '© 2018 - 2020'（2020 为最后一次页面生成时间）
+  # 如果将此项留空，则单独显示 '© 2020'（2020 为最后一次页面生成时间）
   # 如果你不想显示任何内容，请将此项设为 `false`
   copyright_since: 
+
+  # 网站计数
+  statistics: 
+
+    # 选择 LeanCloud/busuanzi 为网站计数。如果你完全不想启用，将 `use` 项留空即可
+    use:   # leancloud | busuanzi
+
+    # 如果选择使用 LeanCloud，则需完善下面的配置项
+    leancloud: 
+      appId: 
+      appKey: 
+      serverURL:   # REST API 服务器地址，LeanCloud 国际版不填
+
+    # 全站 UV（Unique Viewers）
+    site_uv:
+      enable: true
+      before_text: '' # 展示在数据前的内容，支持 HTML
+      after_text: Viewers  # 展示在数据后的内容，支持 HTML
+      divider: '&nbsp;&nbsp;&nbsp;|' # 分隔符，HTML 语法支持
+    
+    # 全站 PV（Page Views）
+    site_pv:
+      enable: true
+      before_text: ''  # 展示在数据前的内容，支持 HTML
+      after_text: Views  # 展示在数据后的内容，支持 HTML
+      divider: ''  # 分隔符，HTML 语法支持
+    
+    # 页面 PV
+    page_pv:
+      enable: true
+      before_text: ''
+      after_text: Views 
 
   # 自定义页脚，支持 markdown
   custom_text: 
