@@ -208,6 +208,12 @@ optimize:
   darkmode: 
     enable: false
 
+  # 站内搜索
+  search:
+    enable: true
+    path: search.json
+    field: All  # Page | Post | All
+
 
     
 # ---------------------------------------------------------------

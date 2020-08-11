@@ -5,6 +5,9 @@ navbar:
   category: 分類
   tag: 標籤
   top: 回到頂部
+search:
+  main: 搜索
+  placeholder: 請輸入關鍵字...
 post:
   top: 置頂
   read_more: 閱讀全文

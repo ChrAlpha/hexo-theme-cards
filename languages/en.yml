@@ -5,6 +5,9 @@ navbar:
   category: Category
   tag: Tag
   top: Back to Top
+search:
+  main: "Search"
+  placeholder: "Please enter a keyword..."
 post:
   top: Top
   read_more: Read More

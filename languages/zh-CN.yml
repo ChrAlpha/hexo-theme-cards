@@ -5,6 +5,9 @@ navbar:
   category: 分类
   tag: 标签
   top: 回到顶部
+search:
+  main: 搜索
+  placeholder: 请输入关键字...
 post:
   top: 置顶
   read_more: 阅读全文

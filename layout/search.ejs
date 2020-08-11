@@ -1,0 +1,19 @@
+<main class="main">
+    <div class="content-card">
+        <h2 style="margin-top: 0;"><%- page.title %></h2>
+        <div id="search-card">
+            <form class="search-form" autocomplete="off">
+                <div class="search-input">
+                    <input maxlength="80" type="search" class="search-input" id="search-input" name="s" placeholder="<%= __('search.placeholder') %>" required>
+                </div>
+                <div class="search-button">
+                    <button class="search-button " type="submit"><%= __('search.main') %></button>
+                </div>
+            </form>
+        </div>
+        <div id="search-result"></div>
+        <script>var searchDataFile = "<%- url_for('<%- theme.optimize.search.path %>') %>";</script>
+        <script src="/js/local-search.js"></script>
+    </div>
+</main>
+<%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
