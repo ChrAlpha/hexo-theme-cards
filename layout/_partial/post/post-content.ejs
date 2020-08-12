@@ -1,7 +1,7 @@
 <% page.cover = false; %>
 <div class="post-title">
     <h1 class="post-title__text">
-        <%- page.title %>
+        <%- page.title || theme.meta.title %>
     </h1>
     <div class="post-title__meta">
         <%- partial('_meta/date') %>
