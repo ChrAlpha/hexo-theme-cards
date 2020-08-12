@@ -1,4 +1,4 @@
-<% if (config.highlight.enable !== true && config.prismjs.enable === true && is_post()) { %>
+<% if (config.highlight.enable !== true && config.prismjs.enable === true && page.cover === false) { %>
     <% if (theme.vendors.prismjs) { %>
         <link rel="stylesheet" id="hl-default-theme" href="<%- `${theme.vendors.prismjs}${theme.style.prismjs.default || 'prism'}.css` %>" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')===-1)this.media='all'">
         <% if (theme.style.prismjs.darkmode !== theme.style.prismjs.default || theme.style.prismjs.darkmode === null) { %>
