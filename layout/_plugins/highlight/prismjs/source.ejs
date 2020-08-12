@@ -10,4 +10,7 @@
             <link rel="stylesheet" id="hl-dark-theme" href="<%- `https://cdn.jsdelivr.net/npm/prismjs@1.21.0/themes/${theme.style.prismjs.darkmode || 'prism-dark'}.css` %>" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')!==-1)this.media='all'">
         <% } %>
     <% } %>
+    <% if (config.prismjs.line_number === true) { %>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.21.0/plugins/line-numbers/prism-line-numbers.css" media="none" onload="this.media='all'">
+    <% } %>
 <% } %>
