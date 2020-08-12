@@ -10,4 +10,4 @@
 </div>
 <div id="search-result"></div>
 <script>var searchDataFile = "<%- url_for(theme.search.path) %>";</script>
-<%- js(theme.vendors.local_search || 'js/local-search.js') %>
+<script defer src="<%- url_for(theme.vendors.local_search || 'js/local-search.js') %>"></script>
