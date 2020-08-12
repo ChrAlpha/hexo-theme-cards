@@ -1,5 +1,5 @@
 <%- partial('./header', null, {cache: false, path: path}) %>
-<% if (is_home() || is_tag() || is_category() || is_archive() || page.layout === 'tag' || page.layout === 'category' || page.layout === 'links' || page.layout === 'search') { %>
+<% if (page.cover !== false) { %>
     <div class="cover">
         <div class="cover__logo">
             <% if (theme.cover.logo) { %>
