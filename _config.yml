@@ -344,14 +344,22 @@ footer:
 # 优化/功能 插件
 # ---------------------------------------------------------------
 
-# 图片懒加载控件
+# 图片懒加载插件
+# 你需要将 `lazyload` 配置项移至 站点配置文件 才能使相关配置生效！！！
 lazyload:
   enable: false
   onlypost: false
   loadingImg: 
 
+# 站内搜索插件
+# 你需要将 `search` 配置项移至 站点配置文件 才能使相关配置生效！！！
+search:
+  enable: false
+  path: search.json
+  field: All  # Page | Post | All
+
 # note 标签插件
-note: true
+note: false
 
 # 图片点击放大插件
 fancybox: 
@@ -363,12 +371,6 @@ back_to_top: false
 
 # 深色模式
 darkmode: false
-
-# 站内搜索
-search:
-  enable: false
-  path: search.json
-  field: All  # Page | Post | All
 
 
 
