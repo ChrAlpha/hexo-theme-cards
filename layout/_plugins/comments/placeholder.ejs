@@ -1,4 +1,4 @@
-<% if (theme.comments.use) { %>
+<% if (page.comments && theme.comments.use) { %>
     <h4><%- __('post.comments') %></h4>
     <%- partial('./disqus/main') %>
     <%- partial('./disqusjs/main') %>
