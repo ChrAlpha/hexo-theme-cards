@@ -148,27 +148,27 @@ meta:
 
   # 文章缩略图
   thumbnail: 
-    enable: true
+    enable: false
     default:   # 默认缩略图，当页面 `thumbnail` 字段为空时 fallback 至此参数
 
   # 文章过时提醒
   expire: 
-    enable: true
+    enable: false
     duration: 120  # 超过此天数则显示过期提醒
 
   # 文章自动摘要
   auto_excerpt: 
-    enable: true
+    enable: false
     length: 150
 
   # 文章目录
   toc: 
-    enable: true
+    enable: false
     list_number: false
 
   # 文章版权声明
   copyright: 
-    enable: true
+    enable: false
     
     # 在作者声明和永久链接之后，可以多行，支持 markdown
     custom_text:
