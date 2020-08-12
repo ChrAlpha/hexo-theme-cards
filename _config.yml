@@ -400,8 +400,8 @@ vendors:
   highlight: 
 
   # highlight.js theme
-  # https://cdn.jsdelivr.net/npm/highlightjs@9.16.2/styles/
-  # Version: 9.16.2
+  # https://cdn.jsdelivr.net/npm/highlight.js@10.1.2/styles/
+  # Version: 10.1.2
   hljs: 
 
   # prism.js theme
