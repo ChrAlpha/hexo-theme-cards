@@ -426,6 +426,11 @@ vendors:
   # https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.0/dist/js/b2t.min.js
   # Version 1.0
   back_to_top: 
+
+  # local search plugin
+  # https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.0/dist/js/local-search.min.js
+  # Version 1.0
+  local_search: 
   
   # Valine comments system
   # https://github.com/xcss/Valine/
