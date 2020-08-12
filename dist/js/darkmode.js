@@ -81,14 +81,14 @@
         darkModeToggleBottonElement.addEventListener("click", () => {
             applyCustomDarkModeSettings(toggleCustomDarkMode());
         });
-        if (document.getElementById("hljs-dark-theme")) {
+        if (document.getElementById("hl-dark-theme")) {
             darkModeToggleBottonElement.addEventListener("click", () => {
                 if (getModeFromCSSMediaQuery() === 'dark') {
-                    document.getElementById("hljs-default-theme").media = 'none';
-                    document.getElementById("hljs-dark-theme").media = 'all';
+                    document.getElementById("hl-default-theme").media = 'none';
+                    document.getElementById("hl-dark-theme").media = 'all';
                 } else {
-                    document.getElementById("hljs-dark-theme").media = 'none';
-                    document.getElementById("hljs-default-theme").media = 'all';
+                    document.getElementById("hl-dark-theme").media = 'none';
+                    document.getElementById("hl-default-theme").media = 'all';
                 }
             });
         }
