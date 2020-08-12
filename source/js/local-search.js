@@ -56,12 +56,12 @@ function createPosts(resArr) {
         const pageInfo = resInfo[0];
         const postTemplate = 
         `
-        <a href="${pageInfo.link}" class="search-result-link">
-            <div class='search-result-item'>
+        <a href="${pageInfo.link}" class="search-result__link">
+            <div class='search-result__item'>
                 <strong>
                     ${pageInfo.title}
                 </strong>
-                <div class="md-content">
+                <div class="search-result__content">
                     ${pageInfo.content}
                 </div>
             </div>
@@ -128,7 +128,7 @@ function loadDataSearch(searchDataFile, skeys) {
                     tPage.link = data.url;
                     keywords.forEach((keyword)=>{
                         const regS = new RegExp(regEscape(keyword) + '(?!>)', 'gi');
-                        tPage.title = tPage.title.replace(regS, '<mark>$&</mark>');
+                        tPage.title = tPage.title.replace(regS, '<m>$&</m>');
                     });
                     if (indexs.firstOccur >= 0) {
                         const halfLenth = 100;
@@ -146,7 +146,7 @@ function loadDataSearch(searchDataFile, skeys) {
                         tPage.content = dataContent.substr(start, end-start);
                         keywords.forEach((keyword)=>{
                             const regS = new RegExp(regEscape(keyword) + '(?!>)', 'gi');
-                            tPage.content = tPage.content.replace(regS, '<mark>$&</mark>');
+                            tPage.content = tPage.content.replace(regS, '<m>$&</m>');
                         });
                     }
                     resultArray.push([tPage, dataWeight]);
