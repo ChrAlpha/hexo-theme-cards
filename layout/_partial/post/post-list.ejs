@@ -2,7 +2,7 @@
     <div class="posts">
         <% if (page.posts && page.posts.length > 0) { %>
             <% page.posts.each((post) => { %>
-                <div class='post-card content-card'>
+                <div class='post-entry content-card'>
                     <%- partial('./post-entry', {post: post}) %>
                 </div>
             <% }) %>

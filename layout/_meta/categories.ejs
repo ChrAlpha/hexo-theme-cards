@@ -1,4 +1,4 @@
-<div class="post-cats post-card__cats">
+<div class="post-meta__cats">
     <% (post.categories || []).forEach(function(item) { %>
         <a href="<%- url_for(item.path) %>" class="post-cats__link button"><%= item.name %></a>
     <% }); %>

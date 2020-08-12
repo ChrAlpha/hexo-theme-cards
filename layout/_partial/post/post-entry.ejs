@@ -1,29 +1,25 @@
-<div class="post-card__header">
-        <%- partial('_meta/thumbnail') %> 
+<div class="post-entry__header">
+    <%- partial('_meta/thumbnail') %> 
 </div>
-<div class="post-card__content">
-    <a href="<%- url_for(post.link || post.path) %>" class="index-title">
-        <h2 class="post-card__title">
-            <%- post.title || theme.meta.title %>
-        </h2>
-    </a>
-    <div class="post-card__descrption">
-        <% if (post.excerpt) { %>
-            <%- post.excerpt %>
-        <% } else if (post.description) { %>
-            <p>
-                <%- strip_html(post.description) %>
-            </p>
-        <% } else if (theme.meta.auto_excerpt.enable) { %>
-            <p>
-                <%- strip_html(truncate(post.content, {length: theme.meta.auto_excerpt.length})) %>
-            </p>
-        <% } %>
-    </div>
+<div class="post-entry__content">
+    <h2 class="post-entry__title">
+        <%- post.title || theme.meta.title %>
+    </h2>
+    <% if (post.excerpt) { %>
+        <%- post.excerpt %>
+    <% } else if (post.description) { %>
+        <p>
+            <%- strip_html(post.description) %>
+        </p>
+    <% } else if (theme.meta.auto_excerpt.enable) { %>
+        <p>
+            <%- strip_html(truncate(post.content, {length: theme.meta.auto_excerpt.length})) %>
+        </p>
+    <% } %>
 </div>
-<div class="post-card__meta">
+<div class="post-entry__meta">
     <%- partial('_meta/date') %>
     <%- partial('_meta/category') %> 
 </div>
 <%- partial('_meta/tags') %> 
-<a href="<%- url_for(post.link || post.path) %>" class="post-card__link">Link</a>
+<a href="<%- url_for(post.link || post.path) %>" class="post-entry__link">Link</a>

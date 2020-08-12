@@ -2,7 +2,7 @@
     max-width 'calc(var(--content-width) + %s * 2)' % $max_width_toc
     margin 0 auto
 
-.post-card
+.post-entry
     margin-bottom var(--space)
     position relative
 
@@ -10,21 +10,23 @@
         transform translateY(-5px)
         box-shadow 1px 10px 30px 0 rgba(0,0,0,.1)
 
-.post-card__image
-    min-width 100%
+.post-entry__content
+    .post-entry__title
+        color var(--title-color)
+        margin-top 0
+        border none
+        font-size 1.5rem
+        font-weight 450
+        line-height 1.125
 
-.post-card__title
-    margin-top 0
-
-.post-card__tags
-    z-index 1
+.post-meta__cats
+.post-entry__tags
+    display inline-block
     position relative
-
-.post-card__cats
+    margin 1em 0 0
     z-index 1
-    position relative
 
-.post-card__link
+.post-entry__link
     position absolute
     top 0
     left 0
@@ -42,7 +44,7 @@
 .post-meta__date
     color #808080
 
-.post-card__meta
+.post-entry__meta
 .post-title__meta
     display block
     z-index 1
@@ -51,7 +53,7 @@
     opacity .8
     font-family rubik,sans-serif
 
-.post-card__header
+.post-entry__header
 .post__header
     margin calc(var(--space) * -1) !important
     margin-bottom calc(var(--space) / 2) !important
@@ -102,10 +104,10 @@
     font-size 14px
     margin-top 1.5rem
 
-.post-cats
-    display inline-block
-    margin 1em 0 0
+    &>:last-child
+        margin-bottom 0
 
+.post-tags__link
 .post-cats__link
     display inline-block
     margin .35em
@@ -117,20 +119,8 @@
     padding 0.25rem 0.6rem 0.25rem 0.6rem
     border-radius $radius_button
 
-.post-tags
-    display inline-block
-    margin 1em 0 0
-
 .post-tags__link
-    display inline-block
-    margin .35em
-    font-size .75em
-    color currentColor
-    text-decoration none
     background-color var(--bg-tag-color)
-    color currentColor !important
-    padding 0.25rem 0.6rem 0.25rem 0.6rem
-    border-radius $radius_button
 
 .post__license
     background-color rgb(245, 245, 245)
