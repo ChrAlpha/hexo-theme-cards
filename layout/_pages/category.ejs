@@ -3,12 +3,9 @@
         <% if (page.layout === 'category') { %>
             <div class="all-categories content-card">
                 <% if (page.title) { %>
-                    <div class="post-title">
-                        <h2 class="post-title__text">
-                            <%- page.title %>
-                        </h2>
-                        <hr>
-                    </div>
+                    <h2>
+                        <%- page.title %>
+                    </h2>
                 <% } %>
                 <% if (site.categories && site.categories.length && site.categories.forEach) { %>
                     <% site.categories.sort('path').forEach((category) => { %>
@@ -18,7 +15,7 @@
                                 (<%- category.posts.length %>)
                             </span>
                         </a>
-                        <br>
+                        <br />
                     <% }) %>
                 <% } %>
             </div>
