@@ -14,7 +14,7 @@ post:
   sticky: 置頂
   comments: 評論
   comments_placeholder: 無法加載 %s 評論系統，請確保您的網絡能夠正常訪問。
-  updated: 更新於
+  updated: '更新於 '
   prev_page: 上一頁
   next_page: 下一頁
   copyright: 

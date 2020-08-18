@@ -14,7 +14,7 @@ post:
   sticky: 置顶
   comments: 评论
   comments_placeholder: 您所在的地区可能无法访问 %s 评论系统，请切换网络环境再尝试。
-  updated: 更新于
+  updated: '更新于 '
   prev_page: 上一页
   next_page: 下一页
   copyright: 

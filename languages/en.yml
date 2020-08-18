@@ -14,7 +14,7 @@ post:
   sticky: Sticky
   comments: Comments
   comments_placeholder: Unable to load %s, please make sure your network can access.
-  updated: updated at
+  updated: 'updated at '
   prev_page: Previous
   next_page: Next
   copyright: 
