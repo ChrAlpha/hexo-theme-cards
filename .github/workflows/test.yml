@@ -9,30 +9,16 @@ jobs:
       - name: Node.js envs
         uses: actions/setup-node@v1
         with:
-          node-version: "10.x"
+          node-version: "12.x"
       - name: Generate
-        env: 
-          KEY: ${{ secrets.GH_token }}
-          EMAIL: ${{ secrets.GH_email }}
         run: |
-          git config --global user.name "ChrAlpha"
-          git config --global user.email "$EMAIL"
-          npm install hexo-cli --global
-          mkdir ~/theme-cards-docs
-          cd ~/theme-cards-docs
-          git clone https://github.com/ChrAlpha/theme-cards-docs.git docs
-          git clone https://github.com/ChrAlpha/hexo-theme-cards-unit-test.git demo
-          cd ./docs
-          git checkout master
-          npm install
-          hexo clean && hexo generate
-          cp -rf ./public ../push
-          cd ../demo
+          git clone https://github.com/hexojs/hexo-theme-unit-test.git test
+          git clone https://github.com/ChrAlpha/hexo-theme-cards-unit-test.git theme
+          cd ./test
           git clone https://github.com/ChrAlpha/hexo-theme-cards.git themes/cards
           npm install
-          hexo clean && hexo generate
-          cp -rf ./public ../push/demo
-          cd ../push
-          git init
-          git add . && git commit -m "Documents Continuous Deployment"
-          git push https://$KEY@github.com/ChrAlpha/theme-cards-docs master:gh-pages --force
+          npx hexo clean && npx hexo generate
+          cd ../theme
+          git clone https://github.com/ChrAlpha/hexo-theme-cards.git themes/cards
+          npm install
+          npx hexo clean && npx hexo generate
