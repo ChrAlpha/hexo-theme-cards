@@ -22,15 +22,11 @@
   :root:not([data-user-color-scheme]) .post__license {
     background-color: rgba(255,255,255,0.2);
   }
-  :root:not([data-user-color-scheme]) .post-entry__header img,
-  :root:not([data-user-color-scheme]) .post__header img,
   :root:not([data-user-color-scheme]) .post__content img {
     opacity: 0.8;
     -webkit-filter: brightness(0.8) contrast(1.2);
             filter: brightness(0.8) contrast(1.2);
   }
-  :root:not([data-user-color-scheme]) .post-entry__header img:hover,
-  :root:not([data-user-color-scheme]) .post__header img:hover,
   :root:not([data-user-color-scheme]) .post__content img:hover {
     opacity: 1;
     -webkit-filter: none;
@@ -61,15 +57,11 @@
 [data-user-color-scheme="dark"] .post__license {
   background-color: rgba(255,255,255,0.2);
 }
-[data-user-color-scheme="dark"] .post-card__header img,
-[data-user-color-scheme="dark"] .post__header img,
 [data-user-color-scheme="dark"] .post__content img {
   opacity: 0.8;
   -webkit-filter: brightness(0.8) contrast(1.2);
           filter: brightness(0.8) contrast(1.2);
 }
-[data-user-color-scheme="dark"] .post-card__header img:hover,
-[data-user-color-scheme="dark"] .post__header img:hover,
 [data-user-color-scheme="dark"] .post__content img:hover {
   opacity: 1;
   -webkit-filter: none;

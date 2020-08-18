@@ -619,6 +619,9 @@ overflows table td {
   margin-top: calc(2.25 * 16px + 32px);
   color: #444;
   background: #fff;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 10px 30px 0 rgba(0,0,0,0.3);
+          box-shadow: 1px 10px 30px 0 rgba(0,0,0,0.3);
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
@@ -740,10 +743,6 @@ overflows table td {
   overflow: hidden;
   text-indent: -9999px;
   z-index: 0;
-}
-.post-title {
-  padding: calc(var(--space) / 2) 0 calc(var(--space) / 2);
-  text-align: center;
 }
 .post-meta__date {
   color: #808080;
