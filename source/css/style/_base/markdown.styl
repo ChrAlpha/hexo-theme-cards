@@ -48,9 +48,11 @@ s
     box-sizing border-box
     font-smoothing antialiased
     osx-font-smoothing grayscale
-
-    &[id]
-        scroll-margin-top 54px
+    
+    if (hexo-config('navbar.sticky'))
+        @media screen and (min-width: 1080px)
+            &[id]
+                scroll-margin-top $header_height
 
 a
     color var(--main-color)
