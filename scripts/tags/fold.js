@@ -3,10 +3,6 @@
 hexo.extend.tag.register('fold', (args, content) => {
     const config = hexo.theme.config.fold;
 
-    if (!config || config.enable !== true) {
-        return;
-    }
-
     const text = hexo.render.renderSync({ text: content, engine: 'markdown' });
 
     args = args.join(' ').split(',');
@@ -21,6 +17,15 @@ hexo.extend.tag.register('fold', (args, content) => {
     }
 
     title = title ? title : config.summary;
+
+    if (!config || config.enable !== true) {
+        return `
+        <blockquote>
+            <p><strong>${title}</strong></p>
+            ${text}
+        </blockquote>
+        `;
+    }
 
     if (config.motion === true) {
         return `
