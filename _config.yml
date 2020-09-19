@@ -350,7 +350,6 @@ lazyload:
   loadingImage: 
 
 # 站内搜索插件
-# 你需要将 `search` 配置项移至 站点配置文件 才能使相关配置生效！！！
 search:
   enable: false
   path: search.json
