@@ -4,8 +4,8 @@ function searchEscape(keyword) {
         '<': '&lt;',
         '>': '&gt;',
         '"': '&quot;',
-        '\'': '&#39;',
-        '/': '&#x2F;'
+        "'": '&#39;',
+        '/': '&#x2F;',
     };
 
     return keyword.replace(/[&<>"'/]/g, function (i) {
@@ -15,18 +15,18 @@ function searchEscape(keyword) {
 
 function regEscape(keyword) {
     const regEntityMap = {
-        '{': '\\\{',
-        '}': '\\\}',
-        '[': '\\\[',
-        ']': '\\\]',
-        '(': '\\\(',
-        ')': '\\\)',
-        '?': '\\\?',
-        '*': '\\\*',
-        '.': '\\\.',
-        '+': '\\\+',
-        '^': '\\\^',
-        '$': '\\\$'
+        '{': '\\{',
+        '}': '\\}',
+        '[': '\\[',
+        ']': '\\]',
+        '(': '\\(',
+        ')': '\\)',
+        '?': '\\?',
+        '*': '\\*',
+        '.': '\\.',
+        '+': '\\+',
+        '^': '\\^',
+        $: '\\$',
     };
 
     return keyword.replace(/[\{\}\[\]\(\)\?\*\.\+\^\$]/g, function (i) {
@@ -35,7 +35,7 @@ function regEscape(keyword) {
 }
 
 function getParam(reqParam) {
-    reqParam = reqParam.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+    reqParam = reqParam.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
     const paraReg = new RegExp('[\\?&]' + reqParam + '=([^&#]*)');
     const results = paraReg.exec(window.location);
     return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
@@ -50,12 +50,11 @@ function createPosts(resArr) {
     const resultSectionElement = document.getElementById('search-result');
     let resultString = '';
 
-    resArr.forEach(resInfo => {
-        resultString += '<hr />'
+    resArr.forEach((resInfo) => {
+        resultString += '<hr />';
 
         const pageInfo = resInfo[0];
-        const postTemplate = 
-        `
+        const postTemplate = `
         <a href="${pageInfo.link}" class="search-result__link">
             <div class='search-result__item'>
                 <strong>
@@ -76,33 +75,38 @@ function createPosts(resArr) {
 
 function loadDataSearch(searchDataFile, skeys) {
     fetch(searchDataFile)
-        .then(res => {
+        .then((res) => {
             return res.json();
         })
-        .then(datas => {
+        .then((datas) => {
             let resultArray = [];
             let resultCount = 0;
             let keywords = skeys.trim().toLowerCase().split(/\s/);
 
-            datas.forEach(data => {
+            datas.forEach((data) => {
                 if (typeof data.title === 'undefined' || typeof data.content === 'undefined') {
                     return;
                 }
 
                 let matched = false;
 
-                const dataTitle      = data.title.trim().toLowerCase();
-                const dataContent    = data.content ? data.content.trim().replace(/<[^>]+>/g, '').toLowerCase() : '';
-                let   dataWeight     = 0;
+                const dataTitle = data.title.trim().toLowerCase();
+                const dataContent = data.content
+                    ? data.content
+                          .trim()
+                          .replace(/<[^>]+>/g, '')
+                          .toLowerCase()
+                    : '';
+                let dataWeight = 0;
 
                 let indexs = {};
-                indexs.title        = -1;
-                indexs.content      = -1;
-                indexs.firstOccur   = -1;
-                indexs.lastOccur    = -1;
+                indexs.title = -1;
+                indexs.content = -1;
+                indexs.firstOccur = -1;
+                indexs.lastOccur = -1;
 
                 if (dataTitle) {
-                    keywords.forEach((keyword)=>{
+                    keywords.forEach((keyword) => {
                         indexs.title = dataTitle.indexOf(keyword);
                         indexs.content = dataContent.indexOf(keyword);
                         if (indexs.title !== -1 || indexs.content !== -1) {
@@ -115,7 +119,7 @@ function loadDataSearch(searchDataFile, skeys) {
                                     indexs.lastOccur = indexs.content;
                                 }
                             }
-                            dataWeight += indexs.title   !== -1 ? 2 : 0;
+                            dataWeight += indexs.title !== -1 ? 2 : 0;
                             dataWeight += indexs.content !== -1 ? 1 : 0;
                             resultCount++;
                         }
@@ -126,14 +130,14 @@ function loadDataSearch(searchDataFile, skeys) {
                     let tPage = {};
                     tPage.title = data.title;
                     tPage.link = data.url;
-                    keywords.forEach((keyword)=>{
+                    keywords.forEach((keyword) => {
                         const regS = new RegExp(regEscape(keyword) + '(?!>)', 'gi');
                         tPage.title = tPage.title.replace(regS, '<m>$&</m>');
                     });
                     if (indexs.firstOccur >= 0) {
                         const halfLenth = 100;
                         let start = indexs.firstOccur - halfLenth;
-                        let end   = indexs.lastOccur + halfLenth;
+                        let end = indexs.lastOccur + halfLenth;
                         if (start < 0) {
                             start = 0;
                         }
@@ -143,15 +147,14 @@ function loadDataSearch(searchDataFile, skeys) {
                         if (end > dataContent.length) {
                             end = dataContent.length;
                         }
-                        tPage.content = dataContent.substr(start, end-start);
-                        keywords.forEach((keyword)=>{
+                        tPage.content = dataContent.substr(start, end - start);
+                        keywords.forEach((keyword) => {
                             const regS = new RegExp(regEscape(keyword) + '(?!>)', 'gi');
                             tPage.content = tPage.content.replace(regS, '<m>$&</m>');
                         });
                     }
                     resultArray.push([tPage, dataWeight]);
                 }
-
             });
             if (resultCount !== 0) {
                 resultArray.sort((a, b) => {
@@ -170,15 +173,15 @@ function keySearch(skeys) {
 
 function inpSearch() {
     const skeys = document.getElementById('search-input').value;
-    window.history.pushState({},0,window.location.href.split('?')[0]+'?s=' + skeys.replace(/\s/g, '+'));
+    window.history.pushState({}, 0, window.location.href.split('?')[0] + '?s=' + skeys.replace(/\s/g, '+'));
     keySearch(skeys);
     return false;
 }
 
-(()=>{
+(() => {
     const skeys = getParam('s');
     if (skeys !== '') {
         document.getElementById('search-input').value = skeys;
         keySearch(skeys);
     }
-})(); 
+})();

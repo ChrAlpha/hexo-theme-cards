@@ -1,20 +1,23 @@
-var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+var requestAnimationFrame =
+    window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const goTopButton = document.querySelectorAll('#b2t')[0];
     const windowViewPortHeight = window.innerHeight;
     var isRequestingAnimationFrame = false;
 
-    if (!goTopButton) {return;}
+    if (!goTopButton) {
+        return;
+    }
 
-    goTopButton.addEventListener('click', function() {
+    goTopButton.addEventListener('click', function () {
         window.scrollTo({
             top: 0,
-            behavior: 'smooth'
+            behavior: 'smooth',
         });
     });
 
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
         if (!isRequestingAnimationFrame) {
             requestAnimationFrame(filterGoTopButtonVisibility);
             isRequestingAnimationFrame = true;

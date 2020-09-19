@@ -1,8 +1,8 @@
 (() => {
     const rootElement = document.documentElement;
-    const darkModeStorageKey = "user-color-scheme";
-    const darkModeMediaQueryKey = "--color-mode";
-    const rootElementDarkModeAttributeName = "data-user-color-scheme";
+    const darkModeStorageKey = 'user-color-scheme';
+    const darkModeMediaQueryKey = '--color-mode';
+    const rootElementDarkModeAttributeName = 'data-user-color-scheme';
 
     const setLS = (k, v) => {
         try {
@@ -10,13 +10,13 @@
         } catch (e) {}
     };
 
-    const removeLS = k => {
+    const removeLS = (k) => {
         try {
             localStorage.removeItem(k);
         } catch (e) {}
     };
 
-    const getLS = k => {
+    const getLS = (k) => {
         try {
             return localStorage.getItem(k);
         } catch (e) {
@@ -25,11 +25,9 @@
     };
 
     const getModeFromCSSMediaQuery = () => {
-        const res = getComputedStyle(rootElement).getPropertyValue(
-            darkModeMediaQueryKey
-        );
+        const res = getComputedStyle(rootElement).getPropertyValue(darkModeMediaQueryKey);
         if (res.length) return res.replace(/["'\s]/g, '');
-        return res === "dark" ? "dark" : "light";
+        return res === 'dark' ? 'dark' : 'light';
     };
 
     const resetRootDarkModeAttributeAndLS = () => {
@@ -39,10 +37,10 @@
 
     const validColorModeKeys = {
         dark: true,
-        light: true
+        light: true,
     };
 
-    const applyCustomDarkModeSettings = mode => {
+    const applyCustomDarkModeSettings = (mode) => {
         const currentSetting = mode || getLS(darkModeStorageKey);
 
         if (currentSetting === getModeFromCSSMediaQuery()) {
@@ -55,8 +53,8 @@
     };
 
     const invertDarkModeObj = {
-        dark: "light",
-        light: "dark"
+        dark: 'light',
+        light: 'dark',
     };
 
     const toggleCustomDarkMode = () => {
@@ -67,7 +65,7 @@
         } else if (currentSetting === null) {
             currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
         } else {
-            return; 
+            return;
         }
         setLS(darkModeStorageKey, currentSetting);
 
@@ -77,20 +75,20 @@
     applyCustomDarkModeSettings();
 
     window.onload = () => {
-        const darkModeToggleBottonElement = document.getElementById("btn-toggle-dark");
-        darkModeToggleBottonElement.addEventListener("click", () => {
+        const darkModeToggleBottonElement = document.getElementById('btn-toggle-dark');
+        darkModeToggleBottonElement.addEventListener('click', () => {
             applyCustomDarkModeSettings(toggleCustomDarkMode());
         });
-        if (document.getElementById("hl-dark-theme")) {
-            darkModeToggleBottonElement.addEventListener("click", () => {
+        if (document.getElementById('hl-dark-theme')) {
+            darkModeToggleBottonElement.addEventListener('click', () => {
                 if (getModeFromCSSMediaQuery() === 'dark') {
-                    document.getElementById("hl-default-theme").media = 'none';
-                    document.getElementById("hl-dark-theme").media = 'all';
+                    document.getElementById('hl-default-theme').media = 'none';
+                    document.getElementById('hl-dark-theme').media = 'all';
                 } else {
-                    document.getElementById("hl-dark-theme").media = 'none';
-                    document.getElementById("hl-default-theme").media = 'all';
+                    document.getElementById('hl-dark-theme').media = 'none';
+                    document.getElementById('hl-default-theme').media = 'all';
                 }
             });
         }
-    }
+    };
 })();

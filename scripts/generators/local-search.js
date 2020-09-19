@@ -1,20 +1,20 @@
-"use strict";
+'use strict';
 
-hexo.extend.generator.register("searchdb", (locals) => {
+hexo.extend.generator.register('searchdb', (locals) => {
     const config = hexo.theme.config.search;
 
     if (!config || config.enable !== true) {
         return;
     }
 
-    const pathFn = require("path");
-    const { stripHTML } = require("hexo-util");
+    const pathFn = require('path');
+    const { stripHTML } = require('hexo-util');
 
-    if (pathFn.extname(config.path) !== ".json") {
+    if (pathFn.extname(config.path) !== '.json') {
         return;
     }
 
-    const url_for = hexo.extend.helper.get("url_for").bind(hexo);
+    const url_for = hexo.extend.helper.get('url_for').bind(hexo);
 
     const parse = (item) => {
         let _item = {};
@@ -33,13 +33,13 @@ hexo.extend.generator.register("searchdb", (locals) => {
                 _item.categories.push([cate.name, url_for(cate.path)]);
             });
         } else {
-            _item.categories.push([" ", ""]);
+            _item.categories.push([' ', '']);
         }
         if (item.content) {
-            _item.content = stripHTML(item.content.trim().replace(/<pre(.*?)\<\/pre\>/gs, ""))
-                .replace(/\n/g, " ")
-                .replace(/\s+/g, " ")
-                .replace(new RegExp("(https?|ftp|file)://[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]", "g"), "");
+            _item.content = stripHTML(item.content.trim().replace(/<pre(.*?)\<\/pre\>/gs, ''))
+                .replace(/\n/g, ' ')
+                .replace(/\s+/g, ' ')
+                .replace(new RegExp('(https?|ftp|file)://[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]', 'g'), '');
         }
         return _item;
     };
@@ -49,16 +49,16 @@ hexo.extend.generator.register("searchdb", (locals) => {
     let posts, pages;
 
     if (searchfield) {
-        if (searchfield === "post") {
-            posts = locals.posts.sort("-date");
-        } else if (searchfield === "page") {
+        if (searchfield === 'post') {
+            posts = locals.posts.sort('-date');
+        } else if (searchfield === 'page') {
             pages = locals.pages;
         } else {
-            posts = locals.posts.sort("-date");
+            posts = locals.posts.sort('-date');
             pages = locals.pages;
         }
     } else {
-        posts = locals.posts.sort("-date");
+        posts = locals.posts.sort('-date');
         pages = locals.pages;
     }
 
