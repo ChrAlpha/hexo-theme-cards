@@ -345,10 +345,8 @@ footer:
 # ---------------------------------------------------------------
 
 # 图片懒加载插件
-# 你需要将 `lazyload` 配置项移至 站点配置文件 才能使相关配置生效！！！
 lazyload:
   enable: false
-  onlypost: false
   loadingImage: 
 
 # 站内搜索插件

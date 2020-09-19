@@ -1,5 +1,5 @@
 <% if (theme.meta.thumbnail.enable === true && (post.thumbnail || theme.meta.thumbnail.default)) { %>
-    <% if (config.lazyload && config.lazyload.enable === true) { %>
+    <% if (theme.lazyload && theme.lazyload.enable === true) { %>
         <div class="post-thumbnail lazyload" data-bg="<%= post.thumbnail || theme.meta.thumbnail.default %>"></div>
     <% } else { %>
         <div class="post-thumbnail" style="background-image: url('<%= post.thumbnail || theme.meta.thumbnail.default %>');"></div>

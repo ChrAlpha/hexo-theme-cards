@@ -1,8 +1,8 @@
-<% if (config.lazyload && config.lazyload.enable) { %>
+<% if (theme.lazyload && theme.lazyload.enable) { %>
     <script defer src="<%- theme.vendors.lazyload || 'https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js' %>"></script>
     <script>
         window.lazyLoadOptions = {
-            elements_selector: ".lazyload",
+            elements_selector: ".lazy",
             threshold: 0
         };
     </script>
