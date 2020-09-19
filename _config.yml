@@ -358,6 +358,12 @@ search:
 # note 标签插件
 note: false
 
+# fold 内容折叠插件
+fold: 
+  enable: true
+  summary:   # 默认摘要
+  motion: 
+
 # 图片点击放大插件
 fancybox: 
   enable: false

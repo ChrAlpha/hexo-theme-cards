@@ -1,0 +1,12 @@
+<% if (theme.fold.enable === true && theme.fold.motion === true) { %>
+    <script>
+        window.onload = () => {
+            document.querySelectorAll('.sliding-fold').forEach((item) => {
+                item.querySelector('summary').onclick = () => {
+                    item.classList.toggle("collapsed");
+                    item.classList.toggle("expanded");
+                };
+            });
+        };
+    </script>
+<% } %>
