@@ -2,14 +2,15 @@
 <% if (page.cover !== false) { %>
     <div class="cover">
         <div class="cover__logo">
-            <% if (theme.cover.logo) { %>
-                <img no-lazy alt="author Image" src="<%- url_for(theme.cover.logo) %>">
+            <% if (theme.cover.avatar) { %>
+                <img no-lazy alt="author Image" class="cover__avatar" src="<%- url_for(theme.cover.avatar) %>">
             <% } else if (theme.cover.sitename) { %>
                 <h1><%- theme.cover.sitename %></h1>
             <% } else if (config.title) { %>
                 <h1><%- config.title %></h1>
             <% } %>
         </div>
+        
         <% if (theme.cover.description) { %>
             <div class="cover__intro">
                 <%- markdown(theme.cover.description) %> 

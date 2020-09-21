@@ -66,10 +66,10 @@ cover:
   # 显示在最上方 cover 处的站点名称
   sitename: Demo
 
-  # 若设置 logo，则优先使用 logo 代替 sitename
-  logo: 
+  # 若 avatar 配置不为空，则优先使用 avatar 覆盖 sitename
+  avatar: 
   
-  # logo 下方的一句话介绍
+  # sitename/avatar 下方的一句话介绍
   description: Hi, nice to meet you!
 
 
