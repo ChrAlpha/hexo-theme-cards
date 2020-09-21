@@ -16,9 +16,9 @@
             border-radius 50%
             color var(--main-color)
             display block
-            height 1.2rem
+            height 1.6rem
             text-align center
-            width 1.2rem
+            width 1.6rem
 
             &.icon-lg
                 background var(--main-color)
@@ -28,6 +28,9 @@
             flex 1 1 auto
             box-flex 1
             padding 2px 0 2px .8rem
+
+            .archives-year
+                margin 0
             
             .archives-title
                 color var(--title-color)
@@ -39,31 +42,23 @@
             content ""
             display block
             height .4rem
-            left .4rem
+            left .6rem
             position absolute
-            top .4rem
+            top .8rem
             width .4rem
 
         &:hover
             .archives-icon::before
-                border .1rem solid var(--main-color)
                 background var(--main-color)
-                border-radius 50%
-                content ""
-                display block
-                height .4rem
-                left .4rem
-                position absolute
-                top .4rem
-                width .4rem
 
         &::before
             background #e7e9ed
             content ""
             height 100%
-            left 11px
+            left .8rem
             position absolute
-            top 1.2rem
+            top 1.6rem
             width 2px
+
         &:last-child::before
             background 0 0
