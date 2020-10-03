@@ -1,8 +1,8 @@
 <div class="post-meta__cats">
     <% (post.categories || []).forEach(function(item) { %>
-        <a href="<%- url_for(item.path) %>" class="post-cats__link button"><%= item.name %></a>
+        <a href="<%= url_for(item.path) %>" class="post-cats__link button"><%= item.name %></a>
     <% }); %>
     <% (post.tags || []).forEach(function(item) { %>
-        <a href="<%- url_for(item.path) %>" class="post-tags__link button"># <%= item.name %></a>
+        <a href="<%= url_for(item.path) %>" class="post-tags__link button"># <%= item.name %></a>
     <% }); %>
 </div>

@@ -1,8 +1,8 @@
 <header class="header">
     <div class="header__left">
-        <a href="<%- url_for('/') %>" class="button">
+        <a href="<%= url_for('/') %>" class="button">
             <span class="logo__text">
-                <%- theme.navbar.sitename || config.title %>
+                <%= theme.navbar.sitename || config.title %>
             </span>
         </a>
     </div>
@@ -10,8 +10,8 @@
         <% if (theme.navbar.menu && theme.navbar.menu.forEach) { %>
             <div class="navbar__menus">
                 <% theme.navbar.menu.forEach((item) => { %>
-                    <a href="<%- url_for(item.url) %>" class="navbar-menu button">
-                        <%- item.name %>
+                    <a href="<%= url_for(item.url) %>" class="navbar-menu button">
+                        <%= item.name %>
                     </a>
                 <% }); %>
             </div>
@@ -31,8 +31,8 @@
             </a>
             <div class="dropdown-menus" id="dropdown-menus">
                 <% theme.navbar.menu.forEach((item) => { %>
-                    <a href="<%- url_for(item.url) %>" class="dropdown-menu button">
-                        <%- item.name %>
+                    <a href="<%= url_for(item.url) %>" class="dropdown-menu button">
+                        <%= item.name %>
                     </a>
                 <% }); %>
             </div>

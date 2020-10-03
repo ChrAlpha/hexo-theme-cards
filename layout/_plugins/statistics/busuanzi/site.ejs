@@ -1,21 +1,21 @@
 <% if (theme.footer.statistics.use === 'busuanzi') { %>
     <% if (theme.footer.statistics.site_uv.enable) { %>
         <span id="busuanzi_container_site_uv" hidden>
-            <span><%- theme.footer.statistics.site_uv.before_text %></span>
+            <span><%= theme.footer.statistics.site_uv.before_text %></span>
             <span id="busuanzi_value_site_uv"></span>
-            <span><%- theme.footer.statistics.site_uv.after_text %></span>
+            <span><%= theme.footer.statistics.site_uv.after_text %></span>
             <% if (theme.footer.statistics.site_uv.divider) { %>
-                <span><%- theme.footer.statistics.site_uv.divider %></span>
+                <span><%= theme.footer.statistics.site_uv.divider %></span>
             <% } %>
         </span>
     <% } %>
     <% if (theme.footer.statistics.site_pv.enable) { %>
         <span id="busuanzi_container_site_pv" hidden>
-            <span><%- theme.footer.statistics.site_pv.before_text %></span>
+            <span><%= theme.footer.statistics.site_pv.before_text %></span>
             <span id="busuanzi_value_site_pv"></span>
-            <span><%- theme.footer.statistics.site_pv.after_text %></span>
+            <span><%= theme.footer.statistics.site_pv.after_text %></span>
             <% if (theme.footer.statistics.site_pv.divider) { %>
-                <span><%- theme.footer.statistics.site_pv.divider %></span>
+                <span><%= theme.footer.statistics.site_pv.divider %></span>
             <% } %>
         </span>
     <% } %>

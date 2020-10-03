@@ -2,7 +2,7 @@
     <script>
         function loadComment() {
             let e;
-            (e = document.createElement("script")).src = '<%- url_for(theme.vendors.wildfire || 'https://cdn.jsdelivr.net/npm/wildfire@0.3.9/dist/wildfire.auto.js') %>',
+            (e = document.createElement("script")).src = '<%= url_for(theme.vendors.wildfire || 'https://cdn.jsdelivr.net/npm/wildfire@0.3.9/dist/wildfire.auto.js') %>',
             document.body.appendChild(e);
             e.onload = () => {
                 var wildfireConfig = () => ({

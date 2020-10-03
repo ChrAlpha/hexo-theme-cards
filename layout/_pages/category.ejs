@@ -4,15 +4,15 @@
             <div class="all-categories content-card">
                 <% if (page.title) { %>
                     <h2>
-                        <%- page.title %>
+                        <%= page.title %>
                     </h2>
                 <% } %>
                 <% if (site.categories && site.categories.length && site.categories.forEach) { %>
                     <% site.categories.sort('path').forEach((category) => { %>
-                        <a class="<%= category.parent ? ' child' : ''%>" href="<%- url_for(category.path) %>">
+                        <a class="<%= category.parent ? ' child' : ''%>" href="<%= url_for(category.path) %>">
                             <time>&nbsp;&nbsp;<%= category.name %></time>
                             <span class="title">
-                                (<%- category.posts.length %>)
+                                (<%= category.posts.length %>)
                             </span>
                         </a>
                         <br />

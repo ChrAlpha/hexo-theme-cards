@@ -13,15 +13,15 @@
             <nav role="navigation" aria-label="Pagination Navigation">
                 <% if (page.prev != 0) { %>
                     <div class="pagination_prev">
-                        <a href="<%- url_for(page.prev_link) %>" class="button">
-                            <%- __('symbol.angle_l') %><%- __('post.prev_page') %>
+                        <a href="<%= url_for(page.prev_link) %>" class="button">
+                            <%= __('symbol.angle_l') %><%= __('post.prev_page') %>
                         </a>
                     </div>
                 <% } %>
                 <% if (page.next != 0) { %>
                     <div class="pagination_next">
-                        <a href="<%- url_for(page.next_link) %>" class="button">
-                            <%- __('post.next_page') %><%- __('symbol.angle_r') %>
+                        <a href="<%= url_for(page.next_link) %>" class="button">
+                            <%= __('post.next_page') %><%= __('symbol.angle_r') %>
                         </a>
                     </div>
                 <% } %>

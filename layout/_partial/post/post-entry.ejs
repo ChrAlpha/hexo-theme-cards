@@ -1,7 +1,7 @@
 <div class="post-entry__header"><%- partial('_meta/thumbnail') %></div>
 <div class="post-entry__content">
     <h2 class="post-entry__title">
-        <%- post.title || theme.meta.title %>
+        <%= post.title || theme.meta.title %>
     </h2>
     <% if (post.excerpt) { %>
         <%- post.excerpt %>
@@ -20,4 +20,4 @@
     <%- partial('_meta/category') %> 
 </div>
 <%- partial('_meta/tags') %> 
-<a href="<%- url_for(post.link || post.path) %>" class="post-entry__link">Link</a>
+<a href="<%= url_for(post.link || post.path) %>" class="post-entry__link">Link</a>

@@ -1,13 +1,13 @@
 <% if (theme.meta.copyright.enable && page.copyright !== false) { %>
     <div class="post__license">
         <p>
-            <strong><%- __('post.copyright.author') %></strong><%- theme.meta.author.name %>
+            <strong><%= __('post.copyright.author') %></strong><%= theme.meta.author.name %>
         </p>
         <p>
             <strong>
-                <%- __('post.copyright.permalink') %>
+                <%= __('post.copyright.permalink') %>
             </strong>
-            <a href="<%- page.permalink %>"><%- page.permalink %></a>
+            <a href="<%= page.permalink %>"><%= page.permalink %></a>
         </p>
         <% (theme.meta.copyright.custom_text || []).forEach((text) => { %>
             <strong>

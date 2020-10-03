@@ -3,7 +3,7 @@
         <div class='links-content'>
             <% if (page.links && !Array.isArray(page.links)) { %>
                 <script>
-                    fetch('<%- url_for(page.links) %>')
+                    fetch('<%= url_for(page.links) %>')
                         .then(res => res.json())
                         .then(links => {
                             links.forEach(link => {
@@ -32,10 +32,10 @@
                 </script>
             <% } else if (page.links && Array.isArray(page.links)) { %>
                 <% (page.links || []).forEach((item) => { %>
-                    <a class='links-card button' style='background:<%- item.backgroundColor %>; color:<%- item.textColor %>' target="<%- item.target || '_blank' %>" href='<%- url_for(item.url || '') %>'>
+                    <a class='links-card button' style='background:<%= item.backgroundColor %>; color:<%= item.textColor %>' target="<%= item.target || '_blank' %>" href='<%= url_for(item.url || '') %>'>
                         <div class='links-left'>
                             <% if (item.avatar) { %>
-                                <img no-lazy class='avatar' src='<%- item.avatar %>'/>
+                                <img no-lazy class='avatar' src='<%= item.avatar %>'/>
                             <% } %>
                         </div>
                         <div class='links-right'>

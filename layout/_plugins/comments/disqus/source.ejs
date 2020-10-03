@@ -2,8 +2,8 @@
     <script>
         function loadComment() {
             window.disqus_config = function () {
-                this.page.url = '<%- page.permalink %>';
-                this.page.identifier = '<%- page.path %>';
+                this.page.url = '<%= page.permalink %>';
+                this.page.identifier = '<%= page.path %>';
             };
             (function(){
                 var dsq = document.createElement('script');

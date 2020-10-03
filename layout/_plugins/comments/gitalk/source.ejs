@@ -6,11 +6,11 @@
             document.body.appendChild(e);
             e.onload = () => {
                 var gitalk = new Gitalk({
-                    clientID: '<%- theme.comments.gitalk.clientID %>',
-                    clientSecret: '<%- theme.comments.gitalk.clientSecret %>',
-                    repo: '<%- theme.comments.gitalk.repo %>',
-                    owner: '<%- theme.comments.gitalk.owner %>',
-                    admin: '<%- theme.comments.gitalk.owner %>',
+                    clientID: '<%= theme.comments.gitalk.clientID %>',
+                    clientSecret: '<%= theme.comments.gitalk.clientSecret %>',
+                    repo: '<%= theme.comments.gitalk.repo %>',
+                    owner: '<%= theme.comments.gitalk.owner %>',
+                    admin: '<%= theme.comments.gitalk.owner %>',
                     id: window.location.pathname,
                     distractionFreeMode: false
                 });
