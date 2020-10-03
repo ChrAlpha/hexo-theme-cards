@@ -10,7 +10,7 @@
         }
         %>
         <p class="footer-copyright">
-            Copyright&nbsp;©&nbsp;<%= copyright_yr %>&nbsp;<a href="<%= url_for('/') %>"><%= config.title %></a>
+            Copyright © <%- copyright_yr %> <a href="<%= url_for('/') %>"><%= config.title %></a>
         </p>
     <% } %>
     <% if (theme.footer.custom_text && theme.footer.custom_text.length) { %>
