@@ -11,15 +11,18 @@
         
         .toc
             display none
-            width $max_width_toc
+            width 'calc((100vw - %s) / 2 - 12.6px)' % $max_width_main
             font-size $toc_fontsize
             overflow auto
-            height 'calc(100vh - %s - 20px)' % $header_height
+            height 'calc(100vh - %s * 2 - 20px)' % $header_height
             list-style-type none
-            padding-left 0.6em
+            padding-left 0.6rem
+
+            .toc-link
+                color var(--t-l)
 
             .toc-child
-                padding-left .35em
+                padding-left 0.6rem
                 list-style-type none
            
 @media screen and (max-width: 1246px)
@@ -33,16 +36,27 @@
     .post
     .post__comments
         max-width calc(100vw / 6 * 4)
-        width calc(100vw / 6 * 4)
 
-@media screen and (min-width: 1080px)
+@media screen and (max-width: 1080px)
+    .post-side
+        width calc(100vw / 4 - 30px)
+        
+        .post-side__toc
+            .toc
+                width calc(100vw / 4 - 30px)
+    
+    .post
+    .post__comments
+        max-width calc(100vw / 4 * 3)
+        margin-left 0
+
+@media screen and (min-width: 765px)
     .post-side
         .post-side__toc
             .toc
                 display block
     
-@media screen and (max-width: 1080px)
+@media screen and (max-width: 764px)
     .post
     .post__comments
-        max-width var(--content-width)
-        width 100%
+        max-width var(--w)

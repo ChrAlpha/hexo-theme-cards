@@ -1,4 +1,5 @@
 <% page.cover = false; %>
+
 <div class="post-title">
     <h1 class="post-title__text">
         <%- page.title || theme.meta.title %>
@@ -11,40 +12,26 @@
 </div>
 
 <% if (theme.meta.toc.enable && page.toc !== false) { %>
-    <div class="post__with-side">
-        <aside class="post-side">
-            <div class="post-side__toc">
-                <%- toc(page.content, {list_number: (theme.meta.toc.list_number || false), max_depth: 6, min_depth: 2}) %>
-            </div>
-        </aside>
-        <article class="post content-card">
-            <div class="post__header"><%- partial('_meta/thumbnail') %><%- partial('_meta/expire') %></div>
-            <div class="post__content">
-                <%- page.content %>
-            </div>
-            <%- partial('_meta/copyright') %> 
-            <%- partial('_meta/updated') %> 
-            <%- partial('_meta/categories') %> 
-        </article>
-        <% if (theme.comments.use && page.comments !== false) { %>
-            <div class="post__comments content-card" id="comment">
-                <%- partial('_plugins/comments/placeholder') %>
-            </div>
-        <% } %>
-    </div>
-<% } else { %>
-    <article class="post content-card">
-        <div class="post__header"><%- partial('_meta/thumbnail') %><%- partial('_meta/expire') %></div>
-        <div class="post__content">
-            <%- page.content %>
+    <aside class="post-side">
+        <div class="post-side__toc">
+            <%- toc(page.content, {list_number: (theme.meta.toc.list_number || false), max_depth: 6, min_depth: 2}) %>
         </div>
-        <%- partial('_meta/copyright') %> 
-        <%- partial('_meta/updated') %> 
-        <%- partial('_meta/categories') %> 
-    </article>
-    <% if (theme.comments.use && page.comments !== false) { %>
-        <div class="post__comments content-card" id="comment">
-            <%- partial('_plugins/comments/placeholder') %>
-        </div>
-    <% } %>
+    </aside>
 <% } %>
+
+<article class="post content-card">
+    <div class="post__header"><%- partial('_meta/thumbnail') %><%- partial('_meta/expire') %></div>
+    <div class="post__content">
+        <%- page.content %>
+    </div>
+    <%- partial('_meta/copyright') %> 
+    <%- partial('_meta/updated') %> 
+    <%- partial('_meta/categories') %> 
+</article>
+
+<% if (theme.comments.use && page.comments !== false) { %>
+    <div class="post__comments content-card" id="comment">
+        <%- partial('_plugins/comments/placeholder') %>
+    </div>
+<% } %>
+
