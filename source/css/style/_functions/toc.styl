@@ -1,3 +1,61 @@
+.toc
+    display block
+    font-size $toc_fontsize
+    overflow auto
+    list-style-type none
+    padding-left 0
+
+
+    .toc-link
+        color #808080
+
+    .toc-child
+        padding-left 0.6rem
+        list-style-type none
+
+.btn-toc
+    display none
+    width 3rem
+    height 3rem
+    position fixed
+    z-index 1001
+    right 1.2rem
+    bottom 4.8rem
+    border-radius $radius_button
+    color var(--title-color)
+    background var(--bg-content-color)
+    box-shadow 0 .3rem .6rem rgba(48,55,66,.15);
+
+    *
+        margin 8px
+
+    &:hover + .toc-menus
+        display block
+
+.toc-menus
+    display none
+    position fixed
+    left 12px
+    right 12px
+    bottom 12px
+    max-height 60vh
+    overflow auto
+    border-radius 6px
+    padding 24px
+    background var(--bg-content-color)
+    box-shadow 1px 1px 5px 0 rgba(0,0,0,.02),1px 1px 15px 0 rgba(0,0,0,.03)
+    z-index 9999
+
+    &:hover
+        display block
+
+    .toc-title
+        font-size 0.9rem
+        color #808080
+        margin-bottom 0.8rem
+        padding-bottom 0.2rem
+        border-bottom 1px solid #eaecef
+
 .post-side
     display block
     height 0
@@ -12,19 +70,10 @@
         .toc
             display none
             width 'calc((100vw - %s) / 2 - 12.6px)' % $max_width_main
-            font-size $toc_fontsize
-            overflow auto
             height 'calc(100vh - %s * 2 - 20px)' % $header_height
-            list-style-type none
             padding-left 0.6rem
 
-            .toc-link
-                color var(--t-l)
 
-            .toc-child
-                padding-left 0.6rem
-                list-style-type none
-           
 @media screen and (max-width: 1246px)
     .post-side
         width calc(100vw / 6 - 20px)
@@ -60,3 +109,6 @@
     .post
     .post__comments
         max-width var(--w)
+
+    #btn-toc
+        display block

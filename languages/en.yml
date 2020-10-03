@@ -17,6 +17,7 @@ post:
   updated: 'updated at '
   prev_page: Previous
   next_page: Next
+  toc: Article Directory
   copyright: 
     author: 'Author: '
     permalink: 'Permalink: '

@@ -46,8 +46,8 @@
             right 1.2rem
             bottom 1.2rem
             border-radius $radius_button
-            color var(--ic)
-            background var(--bg-c)
+            color var(--title-color)
+            background var(--bg-content-color)
             box-shadow 0 .3rem .6rem rgba(48,55,66,.15);
 
             *
@@ -72,7 +72,7 @@
             position absolute
             left 12px
             right 12px
-            top 'calc(%s + 10px)' % $header_height
+            top $header_height
             z-index 9999
             border-radius 6px
             padding 24px
