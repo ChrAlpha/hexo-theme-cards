@@ -38,14 +38,20 @@
             padding 16px 10px 16px 10px
 
         #b2t
-            display none
-            width 40px
-            height 40px
+            display block
+            width 3rem
+            height 3rem
             position fixed
             z-index 1001
-            right 20px
-            bottom 30px
-            background none
+            right 1.2rem
+            bottom 1.2rem
+            border-radius $radius_button
+            color var(--ic)
+            background var(--bg-c)
+            box-shadow 0 .3rem .6rem rgba(48,55,66,.15);
+
+            *
+                margin 8px
 
         .dropdown-icon
             display none
