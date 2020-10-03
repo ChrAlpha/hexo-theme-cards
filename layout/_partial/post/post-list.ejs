@@ -1,5 +1,5 @@
 <% if (site.posts && site.posts.length > 0) { %>
-    <div class="posts">
+    <div class="post-list">
         <% if (page.posts && page.posts.length > 0) { %>
             <% page.posts.each((post) => { %>
                 <div class='post-entry content-card'>
@@ -8,24 +8,42 @@
             <% }) %>
         <% } %>
     </div>
-    <% if (page && page.posts) { %>
-        <% if (page.total > 1) { %>
-            <nav role="navigation" aria-label="Pagination Navigation">
-                <% if (page.prev != 0) { %>
-                    <div class="pagination_prev">
-                        <a href="<%= url_for(page.prev_link) %>" class="button">
-                            <%= __('symbol.angle_l') %><%= __('post.prev_page') %>
-                        </a>
-                    </div>
+    <% if (page.prev || page.next) { %>
+        <div class="nav">
+            <div class="nav__prev">
+                <% if (page.prev) { %>
+                    <a href="<%- url_for(page.prev_link) %>" class="nav__link">
+                        <div>
+                            <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M589.088 790.624L310.464 512l278.624-278.624 45.248 45.248L400.96 512l233.376 233.376z" fill="#808080"></path></svg>
+                        </div>
+                        <div>
+                            <div class="nav__label">
+                                <%= __('page.prev_page') %>
+                            </div>
+                            <div class="nav__title">
+                                <%= __('page.pagination', page.current - 1) %>
+                            </div>
+                        </div>
+                    </a>
                 <% } %>
-                <% if (page.next != 0) { %>
-                    <div class="pagination_next">
-                        <a href="<%= url_for(page.next_link) %>" class="button">
-                            <%= __('post.next_page') %><%= __('symbol.angle_r') %>
-                        </a>
-                    </div>
+            </div>
+            <div class="nav__next">
+                <% if (page.next) { %>
+                    <a href="<%- url_for(page.next_link) %>" class="nav__link">
+                        <div>
+                            <div class="nav__label">
+                                <%= __('page.next_page') %>
+                            </div>
+                            <div class="nav__title">
+                                <%= __('page.pagination', page.current + 1) %>
+                            </div>
+                        </div>
+                        <div>
+                            <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M434.944 790.624l-45.248-45.248L623.04 512l-233.376-233.376 45.248-45.248L713.568 512z" fill="#808080"></path></svg>
+                        </div>
+                    </a>
                 <% } %>
-            </nav>
-        <% } %>
+            </div>
+        </div>
     <% } %>
 <% } %>

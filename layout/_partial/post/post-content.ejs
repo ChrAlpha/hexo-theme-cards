@@ -38,6 +38,45 @@
     <%- partial('_meta/categories') %> 
 </article>
 
+<% if (post.prev || post.next) { %>
+    <div class="nav">
+        <div class="nav__prev">
+            <% if (post.prev) { %>
+                <a href="<%= url_for(post.prev.path) %>" class="nav__link">
+                    <div>
+                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M589.088 790.624L310.464 512l278.624-278.624 45.248 45.248L400.96 512l233.376 233.376z" fill="#808080"></path></svg>
+                    </div>
+                    <div>
+                        <div class="nav__label">
+                            <%= __('post.prev') %>
+                        </div>
+                        <div class="nav__title">
+                            <%= post.prev.title || theme.meta.title %>
+                        </div>
+                    </div>
+                </a>
+            <% } %>
+        </div>
+        <div class="nav__next">
+            <% if (post.next) { %>
+                <a href="<%= url_for(post.next.path) %>" class="nav__link">
+                    <div>
+                        <div class="nav__label">
+                            <%= __('post.next') %>
+                        </div>
+                        <div class="nav__title">
+                            <%= post.next.title || theme.meta.title %>
+                        </div>
+                    </div>
+                    <div>
+                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M434.944 790.624l-45.248-45.248L623.04 512l-233.376-233.376 45.248-45.248L713.568 512z" fill="#808080"></path></svg>
+                    </div>
+                </a>
+            <% } %>
+        </div>
+    </div>
+<% } %>
+
 <% if (theme.comments.use && page.comments !== false) { %>
     <div class="post__comments content-card" id="comment">
         <%- partial('_plugins/comments/placeholder') %>

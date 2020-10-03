@@ -1,3 +1,7 @@
+page: 
+  pagination: 'Page %s'
+  prev_page: Previous
+  next_page: Next
 navbar:
   home: Home
   link: Link
@@ -15,8 +19,8 @@ post:
   comments: Comments
   comments_placeholder: Unable to load %s, please make sure your network can access.
   updated: 'updated at '
-  prev_page: Previous
-  next_page: Next
+  prev: Previous Post
+  next: Next Post
   toc: Article Directory
   copyright: 
     author: 'Author: '
