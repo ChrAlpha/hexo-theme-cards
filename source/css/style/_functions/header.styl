@@ -57,35 +57,27 @@
                 width 20px
                 height 20px
 
+            &:hover + .dropdown-menus
+                display flex
+
+
         .dropdown-menus
             display none
-            background var(--bg-content-color)
             position absolute
-            left 10px
-            right 10px
-            top 10px
-            z-index 10000
+            left 12px
+            right 12px
+            top 'calc(%s + 10px)' % $header_height
+            z-index 9999
             border-radius 6px
             padding 24px
+            background var(--bg-content-color)
+            box-shadow 1px 1px 5px 0 rgba(0,0,0,.02),1px 1px 15px 0 rgba(0,0,0,.03)
             justify-items center
             justify-content center 
             flex-direction column
-            transition all 0.35s ease
-            transform translateY(2.25rem)
-            opacity 0
 
-
-            .dropback-icon
-                position absolute
-                top 10px
-                right 10px
-                padding 16px 10px 16px 10px
-                border 0 !important
-                background-color transparent
-
-                *
-                    width 20px
-                    height 20px
+            &:hover
+                display flex
 
             .dropdown-menu
                 padding 10px
