@@ -168,13 +168,13 @@ a .index-title {
 img {
   max-width: 100%;
 }
-img.lazyload {
+img.lazy {
   -webkit-transition: -webkit-filter 0.375s ease 0s;
   transition: -webkit-filter 0.375s ease 0s;
   transition: filter 0.375s ease 0s;
   transition: filter 0.375s ease 0s, -webkit-filter 0.375s ease 0s;
 }
-img.lazyload:not(.loaded) {
+img.lazy:not(.loaded) {
   -webkit-filter: blur(8px);
           filter: blur(8px);
   padding-bottom: 40%;
