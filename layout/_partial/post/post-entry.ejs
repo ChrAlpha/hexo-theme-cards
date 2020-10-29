@@ -20,4 +20,4 @@
     <%- partial('_meta/category') %> 
 </div>
 <%- partial('_meta/tags') %> 
-<a href="<%= url_for(post.link || post.path) %>" class="post-entry__link">Link</a>
+<a href="<%= url_for(post.link || post.path) %>" class="post-entry__link"><%= post.title || theme.meta.title %></a>
