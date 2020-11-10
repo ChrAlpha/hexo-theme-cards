@@ -29,7 +29,7 @@ hexo.extend.tag.register('fold', (args, content) => {
 
     if (config.motion === true) {
         return `
-        <div class="sliding-fold ${style.indexOf('open') > -1 ? 'expanded' : 'collapsed'}">
+        <div class="sliding-fold ${typeof style !== 'undefined' && style.indexOf('open') > -1 ? 'expanded' : 'collapsed'}">
             <summary>${title}</summary>
             <div class="fold-content">
                 ${text}
