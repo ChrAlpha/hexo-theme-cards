@@ -5,16 +5,10 @@ hexo.extend.tag.register('note', (args, content) => {
     const text = hexo.render.renderSync({ text: content, engine: 'markdown' });
 
     if (hexo.theme.config.note !== true) {
-        return `
-        <blockquote>
-            <p><strong>${args.join(' ')}</strong></p>
-            ${text}
-        </blockquote>
-        `;
+        return `<blockquote><p><strong>${args.join(' ')}</strong></p>${text}</blockquote>`;
     }
 
-    let header = '',
-        result = '';
+    let header = '';
 
     if (args.length) {
         header += `<div class="blockquote-note__header">`;
@@ -31,10 +25,6 @@ hexo.extend.tag.register('note', (args, content) => {
         }
         header += `${args.join(' ')}</div>`;
     }
-
-    result += `<blockquote class="blockquote-note blockquote-note__${type}">${header}<div class="blockquote-note__content">`;
-    result += text;
-    result += '</div></blockquote>';
-
-    return result;
+    
+    return `<blockquote class="blockquote-note blockquote-note__${type}">${header}<div class="blockquote-note__content">${text}</div></blockquote>`;
 }, { ends: true });

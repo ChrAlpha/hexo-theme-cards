@@ -17,33 +17,15 @@ hexo.extend.tag.register('fold', (args, content) => {
     }
 
     title = title ? title : config.summary;
+    style = style ? style.indexOf('open') > -1 : false;
 
     if (!config || config.enable !== true) {
-        return `
-        <blockquote>
-            <p><strong>${title}</strong></p>
-            ${text}
-        </blockquote>
-        `;
+        return `<blockquote><p><strong>${title}</strong></p>${text}</blockquote>`;
     }
 
     if (config.motion === true) {
-        return `
-        <div class="sliding-fold ${typeof style !== 'undefined' && style.indexOf('open') > -1 ? 'expanded' : 'collapsed'}">
-            <summary>${title}</summary>
-            <div class="fold-content">
-                ${text}
-            </div>
-        </div>
-        `
+        return `<div class="sliding-fold ${style ? 'expanded' : 'collapsed'}"><summary>${title}</summary><div class="fold-content">${text}</div></div>`
     }
 
-    return `
-    <details ${style ? style : ''}>
-        <summary>${title}</summary>
-        <div class="fold-content">
-            ${text}
-        </div>
-    </details>
-    `
+    return `<details ${style ? style : ''}><summary>${title}</summary><div class="fold-content">${text}</div></details>`
 }, { ends: true });
