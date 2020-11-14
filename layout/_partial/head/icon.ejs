@@ -1,6 +1,20 @@
 <!--icon-->
 <% if (theme.head.favicon) { %>
-    <link rel="shortcut icon" type='image/x-icon' href="<%= url_for(theme.head.favicon) %>">
+    <% if (theme.head.favicon.ico) { %>
+        <link rel="shortcut icon" href="<%= url_for(theme.head.favicon.ico) %>">
+    <% } %>
+    <% if (theme.head.favicon.small) { %>
+        <link rel="icon" type="image/png" sizes="16x16" href="<%= url_for(theme.head.favicon.small) %>">
+    <% } %>
+    <% if (theme.head.favicon.medium) { %>
+        <link rel="icon" type="image/png" sizes="32x32" href="<%= url_for(theme.head.favicon.medium) %>">
+    <% } %>
+    <% if (theme.head.favicon.apple_touch_icon) { %>
+        <link rel="apple-touch-icon" sizes="180x180" href="<%= url_for(theme.head.favicon.apple_touch_icon) %>">
+    <% } %>
+    <% if (theme.head.favicon.safari_pinned_tab) { %>
+        <link rel="mask-icon" href="<%= url_for(theme.head.favicon.safari_pinned_tab) %>">
+    <% } %>
 <% } else if (config.favicon) { %>
     <link rel="shortcut icon" type='image/x-icon' href="<%= url_for(config.favicon) %>">
 <% } %>
