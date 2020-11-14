@@ -1,0 +1,38 @@
+<% if (theme.comments.use === 'artalk') { %>
+    <script>
+        function loadComment() {
+            let e, i;
+            (e = document.createElement("script")).src = '<%= url_for(theme.vendors.artalk.js || 'https://cdn.jsdelivr.net/npm/artalk@1.0.6/dist/Artalk.js') %>',
+            document.body.appendChild(e);
+            e.onload = () => {
+                var artalkConfig = <%= JSON.stringify(theme.comments.artalk) %>;
+                artalkConfig.el = '#artalk_thread';
+                for (var i in artalkConfig) {
+                    if (artalkConfig[i] === null) delete artalkConfig[i];
+                }
+                new Artalk(artalkConfig);
+            };
+            (i = document.createElement("link")).rel = "stylesheet",
+            i.href = '<%= url_for(theme.vendors.artalk.css || 'https://cdn.jsdelivr.net/npm/artalk@1.0.6/dist/Artalk.css') %>',
+            document.head.appendChild(i);
+        }
+    
+        var runningOnBrowser = typeof window !== "undefined";
+        var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
+        var supportsIntersectionObserver = runningOnBrowser && "IntersectionObserver" in window;
+    
+        setTimeout(function () {
+            if (!isBot && supportsIntersectionObserver) {
+                var comment_observer = new IntersectionObserver(function(entries) {
+                    if (entries[0].isIntersecting) {
+                        loadComment();
+                        comment_observer.disconnect();
+                    }
+                }, { threshold: [0] });
+                comment_observer.observe(document.getElementById('comment'));
+            } else {
+                loadComment();
+            }
+        }, 1);
+    </script>
+<% } %>

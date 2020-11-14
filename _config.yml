@@ -184,11 +184,11 @@ meta:
 comments: 
   use:   # disqus | disqusjs | valine | minivaline | gitalk | gitment | levere | changyan | wildfire
 
-  ## Disqus
+  # Disqus
   disqus:  
     shortname: 
 
-  ## DisqusJS  
+  # DisqusJS  
   disqusjs: 
     shortname: 
     siteName: 
@@ -197,7 +197,7 @@ comments:
     admin: ''
     nesting: 2
 
-  ## Valine
+  # Valine
   valine: 
     appId: 
     appKey:
@@ -239,19 +239,33 @@ comments:
     visitor: 
     serverURLs: 
 
-  ## Gitalk
+  # Gitalk
   gitalk:
     repo:
     owner:
     clientID:
     clientSecret:
 
-  ## Gitment
+  # Gitment
   gitment:
     repo:
     owner:
     client_id:
     client_secret:
+
+  # Artalk
+  artalk: 
+    serverUrl: 
+    placeholder: 
+    noComment: 
+    defaultAvatar: 
+    pageKey: 
+    gravatar: 
+      cdn: 
+    readMore: 
+      pageSize: 
+      autoLoad: 
+    emoticons: 
   
   # Livere 来比力
   livere: 
@@ -263,6 +277,7 @@ comments:
     conf:
     thread_key_type: path # id | path，单独定义时候用 “id”
 
+  # Wildfire
   wildfire: 
     database_provider: firebase # firebase | wilddog
     wilddog_site_id:
@@ -444,6 +459,13 @@ vendors:
   # https://github.com/MiniValine/MiniValine
   # Version 2.7.5
   minivaline: 
+
+  # Artalk
+  # https://github.com/qwqcode/Artalk
+  # Version 1.0.6
+  artalk: 
+    css: 
+    js: 
   
   # Wildfire comments system
   # https://github.com/cheng-kang/wildfire/
