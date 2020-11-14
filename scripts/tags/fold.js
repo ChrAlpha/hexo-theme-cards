@@ -27,5 +27,5 @@ hexo.extend.tag.register('fold', (args, content) => {
         return `<div class="sliding-fold ${style ? 'expanded' : 'collapsed'}"><summary>${title}</summary><div class="fold-content">${text}</div></div>`
     }
 
-    return `<details ${style ? style : ''}><summary>${title}</summary><div class="fold-content">${text}</div></details>`
+    return `<details ${style ? 'open' : ''}><summary>${title}</summary><div class="fold-content">${text}</div></details>`
 }, { ends: true });
