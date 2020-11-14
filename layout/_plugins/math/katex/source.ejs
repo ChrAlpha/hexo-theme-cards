@@ -1,0 +1,4 @@
+<% if (page.katex) { %>
+    <link rel="stylesheet" href="<%= url_for(theme.vendors.katex.css || 'https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css') %>" crossorigin="anonymous">
+    <script defer src="<%= theme.vendors.katex.js || 'https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js' %>" crossorigin="anonymous"></script>
+<% } %>
