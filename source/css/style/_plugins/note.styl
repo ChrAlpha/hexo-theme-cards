@@ -1,7 +1,7 @@
 if hexo-config('note')
     .blockquote-note
-        margin 1rem calc(0rem - var(--space))
-        padding 1rem var(--space)
+        margin 1rem 0
+        padding 1rem
         transition transform .3s, background-color .3s, box-shadow .6s
         border none !important
 
@@ -9,7 +9,6 @@ if hexo-config('note')
             font-family miriam libre, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, pingfang sc, source han sans sc, noto sans cjk sc, sarasa gothic sc, microsoft yahei, sans-serif, Apple Color Emoji, Segoe UI Emoji, Varela Round
             font-size 1.125em
             font-weight 550
-            margin-bottom 20px
             
             .blockquote-note__icon
                 display inline-block
@@ -25,12 +24,17 @@ if hexo-config('note')
 
         .blockquote-note__content
             color var(--body-color) !important
+            margin-bottom 20px
             
             >:first-child
                 margin-top 0
 
             >:last-child
                 margin-bottom 0
+    .post__content
+        &>.blockquote-note
+            margin 1rem calc(0rem - var(--space))
+            padding 1rem var(--space)
 
     .blockquote-note__info
         color #0070f3 !important
