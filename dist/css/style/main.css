@@ -718,6 +718,10 @@ overflows table td {
   margin: 1em 0 0;
   z-index: 1;
 }
+.post-meta__cats:empty,
+.post-entry__tags:empty {
+  display: none;
+}
 .post-entry__link {
   position: absolute;
   top: 0;
@@ -744,6 +748,10 @@ overflows table td {
   font-size: 0.8em;
   opacity: 0.8;
   font-family: rubik, sans-serif;
+}
+.post-entry__meta:empty,
+.post-title__meta:empty {
+  display: none;
 }
 .post-entry__header,
 .post__header {
@@ -802,6 +810,9 @@ overflows table td {
 }
 .post-footer__meta>:last-child {
   margin-bottom: 0;
+}
+.post-footer__meta:empty {
+  display: none;
 }
 .post-tags__link,
 .post-cats__link {
@@ -1315,8 +1326,8 @@ details .fold-content>:last-child {
   transition: all 0.375s;
 }
 .blockquote-note {
-  margin: 1rem calc(0rem - var(--space));
-  padding: 1rem var(--space);
+  margin: 1rem 0;
+  padding: 1rem;
   -webkit-transition: background-color 0.3s, -webkit-transform 0.3s, -webkit-box-shadow 0.6s;
   transition: background-color 0.3s, -webkit-transform 0.3s, -webkit-box-shadow 0.6s;
   transition: transform 0.3s, background-color 0.3s, box-shadow 0.6s;
@@ -1327,7 +1338,6 @@ details .fold-content>:last-child {
   font-family: miriam libre, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, pingfang sc, source han sans sc, noto sans cjk sc, sarasa gothic sc, microsoft yahei, sans-serif, Apple Color Emoji, Segoe UI Emoji, Varela Round;
   font-size: 1.125em;
   font-weight: 550;
-  margin-bottom: 20px;
 }
 .blockquote-note .blockquote-note__header .blockquote-note__icon {
   display: inline-block;
@@ -1343,12 +1353,17 @@ details .fold-content>:last-child {
 }
 .blockquote-note .blockquote-note__content {
   color: var(--body-color) !important;
+  margin-bottom: 20px;
 }
 .blockquote-note .blockquote-note__content >:first-child {
   margin-top: 0;
 }
 .blockquote-note .blockquote-note__content >:last-child {
   margin-bottom: 0;
+}
+.post__content>.blockquote-note {
+  margin: 1rem calc(0rem - var(--space));
+  padding: 1rem var(--space);
 }
 .blockquote-note__info {
   color: #0070f3 !important;
