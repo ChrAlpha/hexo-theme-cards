@@ -406,22 +406,22 @@ darkmode: false
 vendors:
 
   # main style css
-  # https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.1/dist/css/style/main.min.css
-  # Version: 1.1
+  # https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.2/dist/css/style/main.min.css
+  # Version: 1.2
   # 如果你有自定义样式，请务必将此项修改为自己的 CDN 地址，或者单纯留空
   style: 
 
   # darkmode
-  # https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.0/dist/css/style/dark.min.css
-  # https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.0/dist/js/darkmode.min.js
-  # Version 1.0
+  # https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.2/dist/css/style/dark.min.css
+  # https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.2/dist/js/darkmode.min.js
+  # Version 1.2
   darkmode: 
     css: 
     js: 
   
   # code highlight css
-  # https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.0/dist/css/highlight/
-  # Version: 1.0
+  # https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.2/dist/css/highlight/
+  # Version: 1.2
   highlight: 
 
   # highlight.js theme
@@ -436,8 +436,8 @@ vendors:
 
   # tag-plugin note css
   # https://github.com/ChrAlpha/hexo-theme-cards
-  # https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.1/dist/css/style/note.min.css
-  # Version 1.1
+  # https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.2/dist/css/style/note.min.css
+  # Version 1.2
   note: 
 
   # Lazyload js
@@ -446,13 +446,13 @@ vendors:
   lazyload: 
   
   # back_to_top button
-  # https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.1/dist/js/b2t.min.js
-  # Version 1.1
+  # https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.2/dist/js/b2t.min.js
+  # Version 1.2
   back_to_top: 
 
   # local search plugin
-  # https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.1/dist/js/local-search.min.js
-  # Version 1.1
+  # https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.2/dist/js/local-search.min.js
+  # Version 1.2
   local_search: 
   
   # Valine comments system
