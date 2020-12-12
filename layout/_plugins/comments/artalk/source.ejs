@@ -5,7 +5,7 @@
             (e = document.createElement("script")).src = '<%= url_for(theme.vendors.artalk.js || 'https://cdn.jsdelivr.net/npm/artalk@1.0.6/dist/Artalk.js') %>',
             document.body.appendChild(e);
             e.onload = () => {
-                var artalkConfig = <%= JSON.stringify(theme.comments.artalk) %>;
+                var artalkConfig = <%- JSON.stringify(theme.comments.artalk) %>;
                 artalkConfig.el = '#artalk_thread';
                 for (var i in artalkConfig) {
                     if (artalkConfig[i] === null) delete artalkConfig[i];

@@ -5,7 +5,7 @@
             (e = document.createElement("script")).src = '<%= url_for(theme.vendors.minivaline || 'https://cdn.jsdelivr.net/npm/minivaline@2.7.5/dist/MiniValine.min.js') %>',
             document.body.appendChild(e);
             e.onload = () => {
-                var minivalineConfig = <%= JSON.stringify(theme.comments.minivaline) %>;
+                var minivalineConfig = <%- JSON.stringify(theme.comments.minivaline) %>;
                 minivalineConfig.el = '#minivaline_container';
                 for (var i in minivalineConfig) {
                     if (minivalineConfig[i] === null) delete minivalineConfig[i];
