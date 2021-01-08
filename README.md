@@ -44,7 +44,7 @@ hexo s --debug
 
 **Theme Cards** © [ChrAlpha](https://github.com/ChrAlpha), Released under the [GPL-3.0](/LICENSE) License.
 
->   [Personal HomePage](https://ichr.me/) · [Blog](https://blog.ichr.me/) · GitHub [@ChrAlpha](https://github.com/ChrAlpha) · Twitter [@ichralpha](https://twitter.com/ichralpha) · Keybase [@chralpha](https://keybase.io/chralpha) 
+>   [Personal HomePage](https://ichr.me/) · [Blog](https://blog.ichr.me/) · GitHub [@ChrAlpha](https://github.com/ChrAlpha) · Telegram Channel [@ChrAlphaChannel](https://t.me/s/ChrAlphaChannel) · Twitter [@ichralpha](https://twitter.com/ichralpha) · Keybase [@chralpha](https://keybase.io/chralpha) 
 
 Special thanks to [Spencer](https://github.com/spencerwooo) for providing style support for **Theme Cards**.
 
