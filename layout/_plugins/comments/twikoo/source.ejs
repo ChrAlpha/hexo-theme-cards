@@ -1,0 +1,33 @@
+<% if (theme.comments.use === 'twikoo') { %>
+    <script>
+        function loadComment() {
+            let e;
+            (e = document.createElement("script")).src = '<%= url_for(theme.vendors.twikoo || 'https://cdn.jsdelivr.net/npm/twikoo@0.3.2/dist/twikoo.all.min.js') %>',
+            document.body.appendChild(e);
+            e.onload = () => {
+                twikoo.init({
+                    envId: '<%- theme.comments.twikoo.envId %>',
+                    el: '#tcomment'
+                });
+            };
+        }
+    
+        var runningOnBrowser = typeof window !== "undefined";
+        var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
+        var supportsIntersectionObserver = runningOnBrowser && "IntersectionObserver" in window;
+    
+        setTimeout(function () {
+            if (!isBot && supportsIntersectionObserver) {
+                var comment_observer = new IntersectionObserver(function(entries) {
+                    if (entries[0].isIntersecting) {
+                        loadComment();
+                        comment_observer.disconnect();
+                    }
+                }, { threshold: [0] });
+                comment_observer.observe(document.getElementById('comment'));
+            } else {
+                loadComment();
+            }
+        }, 1);
+    </script>
+<% } %>

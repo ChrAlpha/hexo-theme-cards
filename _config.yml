@@ -294,6 +294,10 @@ comments:
     firebase_messaging_sender_id:
     theme: light # light | dark
     locale: en
+    
+  # Twikoo
+  twikoo:
+    envId: # 你的 CloudBase 环境 ID
 
 
 
@@ -477,6 +481,11 @@ vendors:
   # Version: 0.3.9
   wildfire: 
   
+  # Twikoo
+  # https://github.com/imaegoo/twikoo
+  # Version 0.3.2
+  twikoo: 
+
   # MathJax
   # https://www.mathjax.org/
   # Version: 3
