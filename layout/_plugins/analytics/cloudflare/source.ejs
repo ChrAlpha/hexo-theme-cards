@@ -1,0 +1,5 @@
+<% if (theme.analytics && theme.analytics.cloudflare_site_id) { %>
+    <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+        data-cf-beacon='{"token": "<%= theme.analytics.cloudflare_site_id %>"}'></script>
+    </script>
+    <% } %>
