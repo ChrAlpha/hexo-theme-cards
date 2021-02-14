@@ -28,7 +28,7 @@
     </div>
 <% } %>
 
-<article class="post content-card">
+<article class="post<% if (theme.meta.toc.enable && page.toc !== false) { %> post__with-toc<% } %> content-card">
     <div class="post__header"><%- partial('_meta/thumbnail') %><%- partial('_meta/expire') %></div>
     <div class="post__content">
         <%- page.content %>
@@ -78,7 +78,7 @@
 <% } %>
 
 <% if (theme.comments.use && page.comments !== false) { %>
-    <div class="post__comments content-card" id="comment">
+    <div class="post__comments<% if (theme.meta.toc.enable && page.toc !== false) { %> post__with-toc<% } %> content-card" id="comment">
         <%- partial('_plugins/comments/placeholder') %>
     </div>
 <% } %>
