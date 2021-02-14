@@ -1,13 +1,13 @@
 <% if (config.highlight.enable !== true && config.prismjs.enable === true && page.cover === false) { %>
     <% if (theme.vendors.prismjs) { %>
-        <link rel="stylesheet" id="hl-default-theme" href="<%= `${theme.vendors.prismjs}${theme.style.prismjs.default || 'prism'}.css` %>" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')===-1)this.media='all'">
+        <link rel="stylesheet" id="hl-default-theme" href="<%= `${theme.vendors.prismjs}${theme.style.prismjs.default || 'prism'}.css` %>" media="none">
         <% if (theme.darkmode === true && (theme.style.prismjs.darkmode !== theme.style.prismjs.default || theme.style.prismjs.darkmode === null)) { %>
-            <link rel="stylesheet" id="hl-dark-theme" href="<%= `${theme.vendors.prismjs}${theme.style.prismjs.darkmode || 'prism-dark'}.css` %>" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')!==-1)this.media='all'">
+            <link rel="stylesheet" id="hl-dark-theme" href="<%= `${theme.vendors.prismjs}${theme.style.prismjs.darkmode || 'prism-dark'}.css` %>" media="none">
         <% } %>
     <% } else { %>
-        <link rel="stylesheet" id="hl-default-theme" href="<%= `https://cdn.jsdelivr.net/npm/prismjs@1.21.0/themes/${theme.style.prismjs.default || 'prism'}.min.css` %>" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')===-1)this.media='all'">
+        <link rel="stylesheet" id="hl-default-theme" href="<%= `https://cdn.jsdelivr.net/npm/prismjs@1.21.0/themes/${theme.style.prismjs.default || 'prism'}.min.css` %>" media="none">
         <% if (theme.darkmode === true && (theme.style.prismjs.darkmode !== theme.style.prismjs.default || theme.style.prismjs.darkmode === null)) { %>
-            <link rel="stylesheet" id="hl-dark-theme" href="<%= `https://cdn.jsdelivr.net/npm/prismjs@1.21.0/themes/${theme.style.prismjs.darkmode || 'prism-dark'}.min.css` %>" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')!==-1)this.media='all'">
+            <link rel="stylesheet" id="hl-dark-theme" href="<%= `https://cdn.jsdelivr.net/npm/prismjs@1.21.0/themes/${theme.style.prismjs.darkmode || 'prism-dark'}.min.css` %>" media="none">
         <% } %>
     <% } %>
     <% if (config.prismjs.line_number === true) { %>

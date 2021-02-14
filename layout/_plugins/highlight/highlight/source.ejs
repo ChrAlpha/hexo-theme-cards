@@ -1,13 +1,13 @@
 <% if (config.highlight.enable === true && config.highlight.hljs !== true && page.cover === false) { %>
     <% if (theme.vendors.highlight) { %>
-        <link rel="stylesheet" id="hl-default-theme" href="<%= `${theme.vendors.highlight}${theme.style.highlight.default || 'default'}.min.css` %>" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')===-1)this.media='all'">
+        <link rel="stylesheet" id="hl-default-theme" href="<%= `${theme.vendors.highlight}${theme.style.highlight.default || 'default'}.min.css` %>" media="none">
         <% if (theme.darkmode === true && (theme.style.highlight.darkmode !== theme.style.highlight.default || theme.style.highlight.darkmode === null)) { %>
-            <link rel="stylesheet" id="hl-dark-theme" href="<%= `${theme.vendors.highlight}${theme.style.highlight.darkmode || 'dark'}.min.css` %>" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')!==-1)this.media='all'">
+            <link rel="stylesheet" id="hl-dark-theme" href="<%= `${theme.vendors.highlight}${theme.style.highlight.darkmode || 'dark'}.min.css` %>" media="none">
         <% } %>
     <% } else { %>
-        <link rel="stylesheet" id="hl-default-theme" href="<%= url_for(`css/highlight/${theme.style.highlight.default || 'default'}.css`) %>" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')===-1)this.media='all'">
+        <link rel="stylesheet" id="hl-default-theme" href="<%= url_for(`css/highlight/${theme.style.highlight.default || 'default'}.css`) %>" media="none">
         <% if (theme.darkmode === true && (theme.style.highlight.darkmode !== theme.style.highlight.default || theme.style.highlight.darkmode === null)) { %>
-            <link rel="stylesheet" id="hl-dark-theme" href="<%= url_for(`css/highlight/${theme.style.highlight.darkmode || 'dark'}.css`) %>" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')!==-1)this.media='all'">
+            <link rel="stylesheet" id="hl-dark-theme" href="<%= url_for(`css/highlight/${theme.style.highlight.darkmode || 'dark'}.css`) %>" media="none">
         <% } %>
     <% } %>
 <% } %>

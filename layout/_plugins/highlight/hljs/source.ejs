@@ -1,13 +1,13 @@
 <% if (config.highlight.enable === true && config.highlight.hljs === true && page.cover === false) { %>
     <% if (theme.vendors.hljs) { %>
-        <link rel="stylesheet" id="hl-default-theme" href="<%= `${theme.vendors.hljs}${theme.style.hljs.default || 'default'}.css` %>" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')===-1)this.media='all'">
+        <link rel="stylesheet" id="hl-default-theme" href="<%= `${theme.vendors.hljs}${theme.style.hljs.default || 'default'}.css` %>" media="none">
         <% if (theme.darkmode === true && (theme.style.hljs.darkmode !== theme.style.hljs.default || theme.style.hljs.darkmode === null)) { %>
-            <link rel="stylesheet" id="hl-dark-theme" href="<%= `${theme.vendors.hljs}${theme.style.hljs.darkmode || 'dark'}.css` %>" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')!==-1)this.media='all'">
+            <link rel="stylesheet" id="hl-dark-theme" href="<%= `${theme.vendors.hljs}${theme.style.hljs.darkmode || 'dark'}.css` %>" media="none">
         <% } %>
     <% } else { %>
-        <link rel="stylesheet" id="hl-default-theme" href="<%= `https://cdn.jsdelivr.net/npm/highlight.js@10.1.2/styles/${theme.style.hljs.default || 'default'}.min.css` %>" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')===-1)this.media='all'">
+        <link rel="stylesheet" id="hl-default-theme" href="<%= `https://cdn.jsdelivr.net/npm/highlight.js@10.1.2/styles/${theme.style.hljs.default || 'default'}.min.css` %>" media="none">
         <% if (theme.darkmode === true && (theme.style.hljs.darkmode !== theme.style.hljs.default || theme.style.hljs.darkmode === null)) { %>
-            <link rel="stylesheet" id="hl-dark-theme" href="<%= `https://cdn.jsdelivr.net/npm/highlight.js@10.1.2/styles/${theme.style.hljs.darkmode || 'dark'}.min.css` %>" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')!==-1)this.media='all'">
+            <link rel="stylesheet" id="hl-dark-theme" href="<%= `https://cdn.jsdelivr.net/npm/highlight.js@10.1.2/styles/${theme.style.hljs.darkmode || 'dark'}.min.css` %>" media="none">
         <% } %>
     <% } %>
 <% } %>
