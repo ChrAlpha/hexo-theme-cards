@@ -68,6 +68,7 @@
 
 
         .dropdown-menus
+            animation slide-in 0.15s ease 1
             display none
             position absolute
             left 12px
@@ -87,6 +88,18 @@
 
             .dropdown-menu
                 padding 10px
+
+@keyframes slide-in {
+    0% {
+        opacity: 0;
+        transform: translateY(-1.6rem)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
 
 if (hexo-config('navbar.sticky'))
     @media screen and (min-width: 1080px)
