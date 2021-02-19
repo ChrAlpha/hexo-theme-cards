@@ -997,6 +997,8 @@ overflows table td {
   display: flex;
 }
 .header .header__right .dropdown-menus {
+  -webkit-animation: slide-in 0.15s ease 1;
+          animation: slide-in 0.15s ease 1;
   display: none;
   position: absolute;
   left: 12px;
@@ -1040,6 +1042,30 @@ overflows table td {
   }
   .dropdown-icon {
     display: block !important;
+  }
+}
+@-webkit-keyframes slide-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-1.6rem);
+            transform: translateY(-1.6rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-1.6rem);
+            transform: translateY(-1.6rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 .nav {
@@ -1242,8 +1268,7 @@ a.search-result__link:hover {
   .post-side .post-side__toc .toc {
     width: calc(100vw / 6 - 20px);
   }
-  .post,
-  .post__comments {
+  .post__with-toc {
     max-width: calc(100vw / 6 * 4);
   }
 }
@@ -1254,8 +1279,7 @@ a.search-result__link:hover {
   .post-side .post-side__toc .toc {
     width: calc(100vw / 4 - 30px);
   }
-  .post,
-  .post__comments {
+  .post__with-toc {
     max-width: calc(100vw / 4 * 3);
     margin-left: 0;
   }
@@ -1266,8 +1290,7 @@ a.search-result__link:hover {
   }
 }
 @media screen and (max-width: 764px) {
-  .post,
-  .post__comments {
+  .post__with-toc {
     max-width: var(--w);
   }
   #btn-toc {
