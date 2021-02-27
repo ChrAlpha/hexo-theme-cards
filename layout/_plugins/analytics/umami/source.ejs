@@ -1,0 +1,4 @@
+<% if (theme.analytics && theme.analytics.umami_site_id && theme.analytics.umami_site_url) { %>
+    <script async defer data-website-id="<%= theme.analytics.umami_site_id %>"
+        src="<%= theme.analytics.umami_site_url %>"></script>
+    <% } %>
