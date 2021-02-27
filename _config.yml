@@ -311,8 +311,9 @@ analytics:
   baidu_site_id: 
   cnzz_site_id: 
   cloudflare_site_id: 
-  umami_site_id:
-  umami_site_url:
+  umami:
+    id:
+    url:
 
 
 
