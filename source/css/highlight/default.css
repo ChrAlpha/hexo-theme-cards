@@ -5,10 +5,10 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
 */
 
 .highlight {
-  display: block;
-  overflow-x: auto;
-  padding: 0.5em;
-  background: #F0F0F0;
+    display: block;
+    overflow-x: auto;
+    padding: 0.5em;
+    background: #F0F0F0;
 }
 
 
@@ -16,11 +16,11 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
 
 .highlight,
 .highlight .subst {
-  color: #444;
+    color: #444;
 }
 
 .highlight .comment {
-  color: #888888;
+    color: #888888;
 }
 
 .highlight .keyword,
@@ -29,7 +29,7 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
 .highlight .meta-keyword,
 .highlight .doctag,
 .highlight .name {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 
@@ -43,13 +43,13 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
 .highlight .quote,
 .highlight .template-tag,
 .highlight .deletion {
-  color: #880000;
+    color: #880000;
 }
 
 .highlight .title,
 .highlight .section {
-  color: #880000;
-  font-weight: bold;
+    color: #880000;
+    font-weight: bold;
 }
 
 .highlight .regexp,
@@ -59,41 +59,41 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
 .highlight .link,
 .highlight .selector-attr,
 .highlight .selector-pseudo {
-  color: #BC6060;
+    color: #BC6060;
 }
 
 
 /* Language color: hue: 90; */
 
 .highlight .literal {
-  color: #78A960;
+    color: #78A960;
 }
 
 .highlight .built_in,
 .highlight .bullet,
 .highlight .code,
 .highlight .addition {
-  color: #397300;
+    color: #397300;
 }
 
 
 /* Meta color: hue: 200 */
 
 .highlight .meta {
-  color: #1f7199;
+    color: #1f7199;
 }
 
 .highlight .meta-string {
-  color: #4d99bf;
+    color: #4d99bf;
 }
 
 
 /* Misc effects */
 
 .highlight .emphasis {
-  font-style: italic;
+    font-style: italic;
 }
 
 .highlight .strong {
-  font-weight: bold;
+    font-weight: bold;
 }

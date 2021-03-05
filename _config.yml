@@ -14,11 +14,11 @@ head:
   
   # 网站图标
   favicon:
-    ico: 
-    small: 
-    medium: 
-    apple_touch_icon: 
-    safari_pinned_tab: 
+    ico: /captain-america-shield-captain-america.png
+    small: /favicon-16x16.png
+    medium: /favicon-32x32.png
+    apple_touch_icon: /apple-touch-icon.png
+    safari_pinned_tab: /safari-pinned-tab.svg
   
   # 社交分享链接
   opengraph: 
@@ -33,6 +33,9 @@ head:
 
   # 自定义 head
   custom_head: 
+    - '<meta name="google-site-verification" content="MdF6kGSidGrvCpYUMmpTpg9Rxq2vUoK5C8kA5T9VxoQ" />'
+    - '<meta name="baidu-site-verification" content="code-X7mm2HpCMG" />'
+ 
     # - ''
     # - ''
 
@@ -46,20 +49,20 @@ head:
 navbar: 
 
   # 左侧名称显示
-  sitename: Demo
+  sitename: Furyton's blog
   
   # 右侧站内导航链接
   menu: 
-    - name: 首页
+    - name: Main
       url: /
-    - name: 标签
+    - name: Tags
       url: /tags/
-    - name: 归档
+    - name: Archives
       url: /archives/
-    - name: 友链
-      url: /friends/
-    - name: Page
-      url: /page/
+    - name: Categories
+      url: /categories/
+    - name: About
+      url: /about/
 
   # 导航栏永远显示在屏幕顶端
   # 仅当屏幕宽度不小于 1080 px 时生效
@@ -69,10 +72,10 @@ navbar:
 cover: 
 
   # 显示在最上方 cover 处的站点名称
-  sitename: Demo
+  sitename: Furyton
 
   # 若 avatar 配置不为空，则优先使用 avatar 覆盖 sitename
-  avatar: 
+  avatar: /graph.jpg
   
   # sitename/avatar 下方的一句话介绍
   description: Hi, nice to meet you!
@@ -91,39 +94,36 @@ style:
 
   # 弧度设置
   radius: 
-    main_radius: 5px
+    main_radius: 25px
     
   # 间距设置
   space: 
-    main_space: 3.5rem
+    main_space: 2.5rem
     sm_space: 1.5rem  # 当屏幕宽度小于 650px 时候启用
 
   # 默认代码高亮
   highlight: 
-
     # 默认代码高亮主题
-    default: 
+    default: atom-one-light
 
     # 暗色代码高亮主题
-    darkmode: 
+    darkmode: atom-one-dark
 
   # highlight.js 代码高亮
   hljs: 
-
     # 默认代码高亮主题
-    default: 
+    default: atom-one-light
 
     # 暗色代码高亮主题
-    darkmode: 
+    darkmode: atom-one-dark
 
   # prismjs 代码高亮
   prismjs: 
-
     # 默认代码高亮主题
-    default: 
+    default: prism-tomorrow
 
     # 暗色代码高亮主题
-    darkmode: 
+    darkmode: prism-dark
 
 
 
@@ -138,8 +138,8 @@ meta:
   
   # 默认文章作者（可在front-matter中覆盖）
   author:
-    name: ChrAlpha
-    url: https://chralpha.com
+    name: Furyton
+    url: https://github.Furyton
   
   # 文章创建日期
   date:
@@ -153,7 +153,7 @@ meta:
 
   # 文章缩略图
   thumbnail: 
-    enable: false
+    enable: true
     default:   # 默认缩略图，当页面 `thumbnail` 字段为空时 fallback 至此参数
 
   # 文章过时提醒
@@ -376,12 +376,12 @@ lazyload:
 
 # 站内搜索插件
 search:
-  enable: false
+  enable: true
   path: search.json
   field: All  # Page | Post | All
 
 # note 标签插件
-note: false
+note: true
 
 # fold 内容折叠插件
 fold: 
@@ -391,14 +391,14 @@ fold:
 
 # 图片点击放大插件
 fancybox: 
-  enable: false
+  enable: true
   auto: false
   
 # 返回顶部
-back_to_top: false
+back_to_top: true
 
 # 深色模式
-darkmode: false
+darkmode: true
 
 
 
@@ -427,17 +427,17 @@ vendors:
   # code highlight css
   # https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.2/dist/css/highlight/
   # Version: 1.2
-  highlight: 
+  highlight: https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.2/dist/css/highlight/
 
   # highlight.js theme
   # https://cdn.jsdelivr.net/npm/highlight.js@10.1.2/styles/
   # Version: 10.1.2
-  hljs: 
+  hljs: /css/highlight/
 
   # prism.js theme
   # https://cdn.jsdelivr.net/npm/prismjs@1.21.0/themes/
   # Version: 1.21.0
-  prism: 
+  prism: https://cdn.jsdelivr.net/npm/prismjs@1.21.0/themes/
 
   # tag-plugin note css
   # https://github.com/ChrAlpha/hexo-theme-cards
