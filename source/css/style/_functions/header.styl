@@ -104,6 +104,7 @@
 if (hexo-config('navbar.sticky'))
     @media screen and (min-width: 1080px)
         .header
+            transition color 0.6s, background-color 0.6s
             position sticky
             background-color var(--bg-header-color)
             -webkit-backdrop-filter blur(20px)
