@@ -5,23 +5,49 @@
 
     .search-input
         flex 1 1 auto
-        border 1px solid #dbdbdb
-        background-color #fff
-        border-radius 4px 0 0 4px
+        transition border-bottom-color .18s cubic-bezier(.4,0,.2,1)
+        color var(--body-color)
+        opacity .87
+        border none
+        outline none
+        border-bottom 1px solid var(--border-color)
+        background-color transparent
 
+        &::-webkit-search-decoration
+        &::-webkit-search-cancel-button
+        &::-webkit-search-results-button
+        &::-webkit-search-results-decoration
+            display none
+
+        &:focus
+            border none
+            border-bottom 1px solid var(--main-color)
 
     #search-input 
         width 100%
 
-    .search-button 
-        border-radius 0 4px 4px 0
-        padding 0 0.35rem 0 0.35rem
-        background-color #3273dc
-        border-color transparent
-        color #fff
+.search-result
+    .search-result__notice
+        opacity .67
+        max-width var(--content-width)
+        margin 0 auto
+        padding-top calc(var(--space)/4)
+        padding-bottom calc(var(--space)/4)
 
-a.search-result__link
-    color inherit
+    .search-result__list:empty
+        display none
 
-    &:hover
-        text-decoration none
+    a.search-result__link
+        color inherit
+
+        &:hover
+            text-decoration none
+        
+        &:not(:first-of-type)
+            .search-result__item
+                padding-top calc(var(--space)/4)
+
+        &:not(:last-of-type)
+            .search-result__item
+                padding-bottom calc(var(--space)/4)
+                border-bottom 1px solid var(--border-color)

@@ -41,18 +41,21 @@ function getParam(reqParam) {
     return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 }
 
+function setNotice(info) {
+    const noticeSectionElement = document.getElementById('search-result__notice');
+    noticeSectionElement.innerHTML = info;
+}
+
 function clearPosts() {
-    const resultSectionElement = document.getElementById('search-result');
+    const resultSectionElement = document.getElementById('search-result__list');
     resultSectionElement.innerHTML = '';
 }
 
 function createPosts(resArr) {
-    const resultSectionElement = document.getElementById('search-result');
+    const resultSectionElement = document.getElementById('search-result__list');
     let resultString = '';
 
     resArr.forEach((resInfo) => {
-        resultString += '<hr />';
-
         const pageInfo = resInfo[0];
         const postTemplate = `
         <a href="${pageInfo.link}" class="search-result__link">
@@ -79,6 +82,7 @@ function loadDataSearch(searchDataFile, skeys) {
             return res.json();
         })
         .then((datas) => {
+            const startTime = performance.now();
             let resultArray = [];
             let resultCount = 0;
             let keywords = skeys.trim().toLowerCase().split(/\s/);
@@ -156,12 +160,17 @@ function loadDataSearch(searchDataFile, skeys) {
                     resultArray.push([tPage, dataWeight]);
                 }
             });
+
             if (resultCount !== 0) {
+                const finishTime = performance.now();
+                setNotice(`${resultCount} related results found (in ${Math.round((finishTime - startTime) * 100) / 100} ms)`);
                 resultArray.sort((a, b) => {
                     return b[1] - a[1];
                 });
                 createPosts(resultArray);
             } else {
+                const finishTime = performance.now();
+                setNotice(`No related result found (in ${Math.round((finishTime - startTime) * 100) / 100} ms)`);
                 clearPosts();
             }
         });
