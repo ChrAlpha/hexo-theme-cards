@@ -399,6 +399,11 @@ back_to_top: false
 # 深色模式
 darkmode: false
 
+# Mermaid Diagrams
+mermaid: 
+  enable: false
+  options: 
+
 
 
 # ---------------------------------------------------------------
@@ -497,6 +502,11 @@ vendors:
   katex: 
     css: 
     js: 
+
+  # Mermiad Disgrams
+  # https://mermaid-js.github.io/
+  # Version 8.10.2
+  mermaid: 
 
   # busuanzi counter js
   # https://busuanzi.ibruce.info
