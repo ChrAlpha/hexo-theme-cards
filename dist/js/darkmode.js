@@ -43,6 +43,28 @@
     const applyCustomDarkModeSettings = (mode) => {
         const currentSetting = mode || getLS(darkModeStorageKey);
 
+        if (document.getElementById('hl-dark-theme')) {
+            if (validColorModeKeys[currentSetting]) {
+                if (currentSetting === 'dark') {
+                    document.getElementById('hl-default-theme').media = 'none';
+                    document.getElementById('hl-dark-theme').media = 'all';
+                } else {
+                    document.getElementById('hl-dark-theme').media = 'none';
+                    document.getElementById('hl-default-theme').media = 'all';
+                }
+            } else {
+                if (getModeFromCSSMediaQuery() === 'dark') {
+                    document.getElementById('hl-default-theme').media = 'none';
+                    document.getElementById('hl-dark-theme').media = 'all';
+                } else {
+                    document.getElementById('hl-dark-theme').media = 'none';
+                    document.getElementById('hl-default-theme').media = 'all';
+                }
+            }
+        } else if (document.getElementById('hl-default-theme')) {
+            document.getElementById('hl-default-theme').media = 'all';
+        }
+
         if (currentSetting === getModeFromCSSMediaQuery()) {
             resetRootDarkModeAttributeAndLS();
         } else if (validColorModeKeys[currentSetting]) {
@@ -79,16 +101,5 @@
         darkModeToggleBottonElement.addEventListener('click', () => {
             applyCustomDarkModeSettings(toggleCustomDarkMode());
         });
-        if (document.getElementById('hl-dark-theme')) {
-            darkModeToggleBottonElement.addEventListener('click', () => {
-                if (getModeFromCSSMediaQuery() === 'dark') {
-                    document.getElementById('hl-default-theme').media = 'none';
-                    document.getElementById('hl-dark-theme').media = 'all';
-                } else {
-                    document.getElementById('hl-dark-theme').media = 'none';
-                    document.getElementById('hl-default-theme').media = 'all';
-                }
-            });
-        }
     };
 })();
