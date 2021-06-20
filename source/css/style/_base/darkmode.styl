@@ -4,8 +4,8 @@
 
         &:not([data-user-color-scheme])
             --main-color $color_main
-            --bg-color #181c27
-            --bg-content-color #232222
+            --bg-color #383f54
+            --bg-content-color #282928
             --bg-menu #3e4b5e
             --bg-tag-color #696969
             --bg-cat-color #778899
@@ -24,12 +24,12 @@
 
             .post__content
                 img
-                    opacity 0.8
-                    filter brightness(.8) contrast(1.2)
+                    opacity 1
+                    filter brightness(1) contrast(1)
 
                     &:hover
-                        opacity 1
-                        filter none
+                        opacity 0.8
+                        filter brightness(1) contrast(1.2)
 
             table
                 tr:not(.code):not(.gutter):nth-child(2n)
@@ -39,8 +39,8 @@
     --color-mode 'dark'
     
     --main-color $color_main
-    --bg-color #181c27
-    --bg-content-color #232222
+    --bg-color #383f54
+    --bg-content-color #282928
     --bg-menu #3e4b5e
     --bg-tag-color #696969
     --bg-cat-color #778899
@@ -59,12 +59,12 @@
 
     .post__content
         img
-            opacity 0.8
-            filter brightness(.8) contrast(1.2)
+            opacity 1
+            filter brightness(1) contrast(1)
 
             &:hover
-                opacity 1
-                filter none
+                opacity 0.8
+                filter brightness(1) contrast(1.2)
 
     table
         tr:not(.code):not(.gutter):nth-child(2n)

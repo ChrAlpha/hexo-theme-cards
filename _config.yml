@@ -32,9 +32,10 @@ head:
     fb_app_id: 
 
   # 自定义 head
-  custom_head: 
+  custom_head:
+    - '<meta name="baidu-site-verification" content="code-X7mm2HpCMG" />' 
     - '<meta name="google-site-verification" content="MdF6kGSidGrvCpYUMmpTpg9Rxq2vUoK5C8kA5T9VxoQ" />'
-    - '<meta name="baidu-site-verification" content="code-X7mm2HpCMG" />'
+
  
     # - ''
     # - ''
@@ -90,7 +91,7 @@ style:
 
   # 颜色配置
   color: 
-    main_color: '#eb5757'
+    main_color: '#898989' # '#eb5757'
 
   # 弧度设置
   radius: 
@@ -104,6 +105,7 @@ style:
   # 默认代码高亮
   highlight: 
     # 默认代码高亮主题
+    enable : true
     default: atom-one-light
 
     # 暗色代码高亮主题
@@ -112,6 +114,7 @@ style:
   # highlight.js 代码高亮
   hljs: 
     # 默认代码高亮主题
+    enable : false
     default: atom-one-light
 
     # 暗色代码高亮主题
@@ -119,13 +122,22 @@ style:
 
   # prismjs 代码高亮
   prismjs: 
+    enable : true
     # 默认代码高亮主题
     default: prism-tomorrow
 
     # 暗色代码高亮主题
     darkmode: prism-dark
 
-
+pdf:
+  enable: true
+  # Default height
+  height: 500px
+  pdfobject:
+    # Use 2.1.1 as default, jsdelivr as default CDN, works everywhere even in China
+    cdn: //cdn.jsdelivr.net/npm/pdfobject@2.1.1/pdfobject.min.js
+    # CDNJS, provided by cloudflare, maybe the best CDN, but not works in China
+    #cdn: //cdnjs.cloudflare.com/ajax/libs/pdfobject/2.1.1/pdfobject.min.js
 
 # ---------------------------------------------------------------
 # meta 库
@@ -187,7 +199,7 @@ meta:
 # ---------------------------------------------------------------
 
 comments: 
-  use:   # disqus | disqusjs | valine | minivaline | gitalk | gitment | levere | changyan | wildfire
+  use:    gitalk # disqus | disqusjs | valine | minivaline | gitalk | gitment | levere | changyan | wildfire
 
   # Disqus
   disqus:  
@@ -246,10 +258,10 @@ comments:
 
   # Gitalk
   gitalk:
-    repo:
-    owner:
-    clientID:
-    clientSecret:
+    repo: Furyton.github.io
+    owner: Furyton
+    clientID: 81d54a40aac37cc18601
+    clientSecret: e0cd9af81f74865269915de47331371f431a2c7d
 
   # Gitment
   gitment:
@@ -308,7 +320,7 @@ comments:
 analytics:
   google_site_id:
   gtags_site_id:
-  baidu_site_id: 
+  baidu_site_id: 00b1c580974b8695725e0ac0c3bc5826
   cnzz_site_id: 
   cloudflare_site_id: 
 
@@ -427,12 +439,12 @@ vendors:
   # code highlight css
   # https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.2/dist/css/highlight/
   # Version: 1.2
-  highlight: https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.2/dist/css/highlight/
+  highlight: /css/highlight/ #https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.2/dist/css/highlight/
 
   # highlight.js theme
   # https://cdn.jsdelivr.net/npm/highlight.js@10.1.2/styles/
   # Version: 10.1.2
-  hljs: /css/highlight/
+  hljs: https://cdn.jsdelivr.net/npm/highlight.js@10.1.2/styles/
 
   # prism.js theme
   # https://cdn.jsdelivr.net/npm/prismjs@1.21.0/themes/

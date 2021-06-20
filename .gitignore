@@ -1,5 +1,7 @@
 _site/
 .sass-cache/
+source/files/
+source/upload_image/
 .jekyll-metadata
 .DS_Store
 *.log

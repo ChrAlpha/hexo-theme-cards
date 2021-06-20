@@ -163,6 +163,7 @@ pre
 
 li
     word-wrap break-all
+    
 
     >p
         margin-top 16px
@@ -243,7 +244,6 @@ dl
 ol
 p
 pre
-table
 ul
     margin-top 0px
     margin-bottom 20px
@@ -254,33 +254,6 @@ ul ol
 ul ul
     margin-top 0
     margin-bottom 0
-
-figure
-    padding 0
-    margin 0
-    margin-bottom 20px
-    
-table
-    display block
-    width 100%
-    overflow auto
-
-figure table
-    border none
-    padding 0
-    max-width 100%
-
-    th
-        font-weight 600
-
-    tr
-        background-color transparent
-        border-top none
-
-    td.gutter
-        padding-right 1rem
-        text-align right
-        background-color transparent
 
 .highlight
     margin-bottom 20px
@@ -314,8 +287,10 @@ pre
         vertical-align middle
 
 table
+    max-width 100%
     border-spacing 0
     border-collapse collapse
+    overflow scroll
 
     th:not(.code):not(.gutter)
         font-weight 700
@@ -336,7 +311,7 @@ table
 
 overflows
     table
-        overflow auto
+        overflow scroll
 
         th
         td
@@ -349,6 +324,9 @@ overflows
     font-size 16px
     word-wrap break-word
 
+    p
+    ul
+        overflow auto
     a
         background-color initial
         color #0366d6

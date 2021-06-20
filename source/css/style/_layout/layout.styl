@@ -5,7 +5,7 @@
     transition background-color .6s
     padding var(--space)
     border-radius $radius_main
-    box-shadow 1px 1px 5px 0 rgba(0,0,0,.02),1px 1px 15px 0 rgba(0,0,0,.03)
+    box-shadow 1px 1px 5px 5px rgba(0,0,0,.02),1px 1px 15px 15px rgba(0,0,0,.0)
     transition transform .3s,background-color .3s,box-shadow .6s
 
     &>:first-child
@@ -14,8 +14,13 @@
     &>:last-child
         margin-bottom 0
 
+@media screen and (min-width: 800px)
+    .content-card
+        max-width 61.8%
+
+
 .MathJax
-    overflow-x auto
+    overflow-x scroll
     overflow-y hidden
 
 .separate-dot:after
