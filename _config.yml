@@ -87,7 +87,8 @@ style:
 
   # 颜色配置
   color: 
-    main_color: '#eb5757'
+    main_color: '#6200ee'
+    main_color_dark: '#bb86fc'
 
   # 弧度设置
   radius: 
