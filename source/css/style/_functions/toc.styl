@@ -33,6 +33,7 @@
         display block
 
 .toc-menus
+    animation slide-up 0.15s ease 1
     display none
     position fixed
     left 12px
@@ -73,7 +74,6 @@
             height 'calc(100vh - %s * 2 - 20px)' % $header_height
             padding-left 0.6rem
 
-
 @media screen and (max-width: 1246px)
     .post-side
         width calc(100vw / 6 - 20px)
@@ -109,3 +109,15 @@
 
     #btn-toc
         display block
+
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(1.6rem)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
