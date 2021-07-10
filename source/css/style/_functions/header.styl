@@ -89,14 +89,8 @@
 if (hexo-config('navbar.sticky'))
     @media screen and (min-width: 1080px)
         .header
-            transition color 0.6s, background-color 0.6s
             position sticky
-            background-color var(--bg-header-color)
-            -webkit-backdrop-filter blur(20px)
-            backdrop-filter blur(20px)
-            -webkit-box-shadow 0 0.3125rem 0.3125rem -0.3125rem rgba(0,0,0,0.12)
-            -moz-box-shadow 0 0.3125rem 0.3125rem -0.3125rem rgba(0, 0, 0, 0.12)
-            box-shadow 0 0.3125rem 0.3125rem -0.3125rem rgba(0,0,0,0.12)
+            backdrop-filter blur(5px)
 
 @media screen and (max-width: 764px)
     .navbar__menus
