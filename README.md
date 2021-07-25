@@ -13,10 +13,6 @@
 -   [ChrAlpha Blog](https://blog.ichr.me/)
 -   [Theme Cards Demo](https://theme-cards.ichr.me/demo/)
 
-更多链接可前往 [Demo - 友链页](https://theme-cards.ichr.me/demo/links/) 探索。
-
-如果你也在使用「Cards」并且希望被他人发现，欢迎将链接 [告诉我们](https://github.com/ChrAlpha/hexo-theme-cards/issues/10)。
-
 ## Installation 安装
 
 ```bash
@@ -38,7 +34,19 @@ hexo s --debug
 
 ## Contribution 贡献
 
-欢迎各种形式的贡献，包括但不限于：主题优化，功能添加，代码改进，bug 反馈。我们期待你的参与！
+欢迎各种形式的贡献，包括但不限于：主题优化，功能添加，代码改进，bug 反馈。期待你的参与！
+
+## 谁在使用 Cards 主题
+
+- ChrAlpha：[ChrAlpha Blog](https://blog.ichr.me/)
+- Alendia：[Alendia's Blog](https://alendia.github.io/)
+- guiqiqi：[初始化博客](https://init.blog/)
+- nozomi：[Hays' Blog](https://blog.haysc.tech/)
+- Flexiston：[Flexiston's Blog](https://blog.flesx.cn/)
+
+更多链接可前往 [Demo - 友链页](https://theme-cards.ichr.me/demo/links/) 探索。
+
+如果你也在使用「Cards」并且希望被他人发现，欢迎 [把网站分享出来](https://github.com/ChrAlpha/hexo-theme-cards/issues/10)！
 
 ## Maintainer 维护者
 
