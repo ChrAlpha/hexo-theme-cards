@@ -7,7 +7,10 @@
     position relative
 
     &:hover
+        -webkit-transform translateY(-5px)
+        -ms-transform translateY(-5px)
         transform translateY(-5px)
+        -webkit-box-shadow 1px 10px 30px 0 rgba(0,0,0,0.1)
         box-shadow 1px 10px 30px 0 rgba(0,0,0,.1)
 
 .post-entry__content
@@ -70,6 +73,8 @@
         display none
 
     .post-thumbnail
+        display -webkit-box
+        display -ms-flexbox
         display flex
         width 100%
         padding-bottom 40%

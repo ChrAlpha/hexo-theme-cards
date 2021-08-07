@@ -1,6 +1,13 @@
 .nav
+    display -webkit-box
+    display -ms-flexbox
     display flex
-    flex-direction row 
+    -webkit-box-orient horizontal
+    -webkit-box-direction normal
+    -ms-flex-direction row
+    flex-direction row
+    -webkit-box-pack center
+    -ms-flex-pack center
     justify-content center
     max-width var(--content-width)
     margin 1.5rem auto
@@ -10,21 +17,40 @@
         margin-top 0
 
     .nav__prev
+        display -webkit-box
+        display -ms-flexbox
         display flex
+        -webkit-box-flex 50%
+        -ms-flex 50% 1
         flex 50% 1
+        -webkit-box-pack start
+        -ms-flex-pack start
         justify-content flex-start
         text-align left
 
 
     .nav__next
+        display -webkit-box
+        display -ms-flexbox
         display flex
+        -webkit-box-flex 50%
+        -ms-flex 50% 1
         flex 50% 1
+        -webkit-box-pack end
+        -ms-flex-pack end
         justify-content flex-end
         text-align right
 
     .nav__link
+        display -webkit-box
+        display -ms-flexbox
         display flex
+        -webkit-box-orient horizontal
+        -webkit-box-direction normal
+        -ms-flex-direction row
         flex-direction row
+        -webkit-box-align center
+        -ms-flex-align center
         align-items center
         color var(--title-color)
 

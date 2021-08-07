@@ -24,6 +24,7 @@
     border-radius $radius_button
     color var(--title-color)
     background var(--bg-menu)
+    -webkit-box-shadow 0 0.3rem 0.6rem rgba(48,55,66,0.15)
     box-shadow 0 .3rem .6rem rgba(48,55,66,.15);
 
     *
@@ -33,6 +34,7 @@
         display block
 
 .toc-menus
+    -webkit-animation slide-up 0.15s ease 1
     animation slide-up 0.15s ease 1
     display none
     position fixed
@@ -44,6 +46,7 @@
     border-radius 6px
     padding 24px
     background var(--bg-content-color)
+    -webkit-box-shadow 1px 1px 5px 0 rgba(0,0,0,0.02), 1px 1px 15px 0 rgba(0,0,0,0.03)
     box-shadow 1px 1px 5px 0 rgba(0,0,0,.02),1px 1px 15px 0 rgba(0,0,0,.03)
     z-index 9999
 
@@ -110,14 +113,27 @@
     #btn-toc
         display block
 
+@-webkit-keyframes slide-up {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(1.6rem);
+        transform: translateY(1.6rem);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
 @keyframes slide-up {
     0% {
         opacity: 0;
-        transform: translateY(1.6rem)
+        -webkit-transform: translateY(1.6rem);
+        transform: translateY(1.6rem);
     }
-
     100% {
         opacity: 1;
-        transform: translateY(0)
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
     }
 }

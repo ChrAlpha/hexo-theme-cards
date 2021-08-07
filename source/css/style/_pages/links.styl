@@ -1,75 +1,84 @@
 .links-list
-    margin 0 auto
-    max-width 1080px
-
-    .links-content
-        display: flex
-        flex-wrap: wrap
-        margin: -0.5 * 16px
-        border-radius: $radius_main
-        align-items: flex-start
-        line-height: 1.3
-
-        .links-card
-            display: flex
-            padding: 16px * 0.5
-            margin: 0 auto
-            margin-top: "calc(2.25 * %s + 32px)" % 16px
-            color: #444
-            background: #fff
-            border-radius $radius_main
-            box-shadow 1px 5px 15px 0 rgba(0,0,0,.3)
-            justify-content: flex-start
-            align-content: flex-start
-            flex-direction: column
-            max-width $max_link_item
-            width: "calc(100%/4 - %s)" % 16px
-
-            @media screen and (max-width: 1280px)
-                width: "calc(100%/3 - %s)" % 16px
-
-            @media screen and (max-width: 1080px)
-                width: "calc(100%/2 - %s)" % 16px
-
-            @media screen and (max-width: 768px)
-                width: "calc(100%/1 - %s)" % 16px
-
-        .links-left
-            display: flex
-            align-self: center
-
-            .avatar
-                width: 64px
-                height: 64px
-                margin: 16px 16px * 0.5 16px * 0.25 16px * 0.5
-                margin-top: "calc(-1.25 * %s - 32px)" % 16px
-                border-radius: 100%
-                border: 2px solid white
-                background: white
-
-        .links-right
-            margin: 16px * 0.25 16px * 0.5
-            display: flex
-            flex-direction: column
-            text-align: center
-
-            p
-                text-align: center
-
-            .links-tags-wrapper
-                margin-left: -2px
-                word-break:break-all
-
-            p
-                margin: 0
-
-                &.links-name
-                    padding-top: 6px
-                    padding-bottom 4px
-                    font-weight: bold
-
-                &.tags
-                    display: inline
-                    background: none
-                    word-wrap: break-word
-                    padding-right: 4px
+  margin 0 auto
+  max-width 1080px
+  .links-content
+    display -webkit-box
+    display -ms-flexbox
+    display flex
+    -ms-flex-wrap wrap
+    flex-wrap wrap
+    margin -8px
+    border-radius $radius_main
+    -webkit-box-align start
+    -ms-flex-align start
+    align-items flex-start
+    line-height 1.3
+    .links-card
+      display -webkit-box
+      display -ms-flexbox
+      display flex
+      padding 8px
+      margin 0 auto
+      margin-top calc(2.25 * 16px + 32px)
+      color #444
+      background #fff
+      border-radius $radius_main
+      -webkit-box-shadow 1px 5px 15px 0 rgba(0,0,0,0.3)
+      box-shadow 1px 5px 15px 0 rgba(0,0,0,0.3)
+      -webkit-box-pack start
+      -ms-flex-pack start
+      justify-content flex-start
+      -ms-flex-line-pack start
+      align-content flex-start
+      -webkit-box-orient vertical
+      -webkit-box-direction normal
+      -ms-flex-direction column
+      flex-direction column
+      max-width $max_link_item
+      width calc(100%/4 - 16px)
+      @media screen and (max-width: 1280px)
+        width calc(100%/3 - 16px)
+      @media screen and (max-width: 1080px)
+        width calc(100%/2 - 16px)
+      @media screen and (max-width: 768px)
+        width calc(100%/1 - 16px)
+    .links-left
+      display -webkit-box
+      display -ms-flexbox
+      display flex
+      -ms-flex-item-align center
+      -ms-grid-row-align center
+      align-self center
+      .avatar
+        width 64px
+        height 64px
+        margin 16px 8px 4px 8px
+        margin-top calc(-1.25 * 16px - 32px)
+        border-radius 100%
+        border 2px solid #fff
+        background #fff
+    .links-right
+      margin 4px 8px
+      display -webkit-box
+      display -ms-flexbox
+      display flex
+      -webkit-box-orient vertical
+      -webkit-box-direction normal
+      -ms-flex-direction column
+      flex-direction column
+      text-align center
+      p
+        text-align center
+        margin 0
+        &.links-name
+          padding-top 6px
+          padding-bottom 4px
+          font-weight bold
+        &.tags
+          display inline
+          background none
+          word-wrap break-word
+          padding-right 4px
+      .links-tags-wrapper
+        margin-left -2px
+        word-break break-all

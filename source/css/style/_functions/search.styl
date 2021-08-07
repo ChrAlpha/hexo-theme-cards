@@ -1,13 +1,21 @@
 .search-form 
+    display -webkit-box
+    display -ms-flexbox
     display flex
+    -webkit-box-pack start
+    -ms-flex-pack start
     justify-content flex-start
     margin-top 1.5rem
 
     .search-input
+        -webkit-box-flex 1
+        -ms-flex 1 1 auto
         flex 1 1 auto
-        transition border-bottom-color .18s cubic-bezier(.4,0,.2,1)
+        -webkit-transition border-bottom-color 0.18s cubic-bezier(0.4, 0, 0.2, 1)
+        -o-transition border-bottom-color 0.18s cubic-bezier(0.4, 0, 0.2, 1)
+        transition border-bottom-color 0.18s cubic-bezier(0.4, 0, 0.2, 1)
         color var(--body-color)
-        opacity .87
+        opacity 0.87
         border none
         outline none
         border-bottom 1px solid var(--border-color)
