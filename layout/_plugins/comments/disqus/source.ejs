@@ -1,31 +1,32 @@
 <% if (theme.comments.use === 'disqus') { %>
-    <script>
+    <script type="text/javascript">
+
         function loadComment() {
-            window.disqus_config = function () {
-                this.page.url = '<%= page.permalink %>';
-                this.page.identifier = '<%= page.path %>';
-            };
-            (function(){
-                var dsq = document.createElement('script');
-                dsq.type = 'text/javascript';
-                dsq.async = true;
-                dsq.src = '//' + '<%= theme.comments.disqus.shortname %>' + '.disqus.com/<% if (page.comments) { %>embed.js<% } else { %>count.js<% } %>';
-                (document.head || document.body).appendChild(dsq);
-            })();
+            let utterances, i;
+            (utterances = document.createElement("script")).src = 'https://utteranc.es/client.js';
+            document.getElementById('disqus_thread').appendChild(utterances);
+            utterances.async = true;
+            utterances.setAttribute('issue-term','title')
+            utterances.setAttribute('theme','github-light')
+            utterances.setAttribute('repo','Furyton/Furyton.github.io')
+            utterances.setAttribute('label','Comment')
+            utterances.crossorigin = 'anonymous';
         }
-    
+        
         var runningOnBrowser = typeof window !== "undefined";
         var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
         var supportsIntersectionObserver = runningOnBrowser && "IntersectionObserver" in window;
-    
-        setTimeout(function () {
+
+        setTimeout(function() {
             if (!isBot && supportsIntersectionObserver) {
                 var comment_observer = new IntersectionObserver(function(entries) {
                     if (entries[0].isIntersecting) {
                         loadComment();
                         comment_observer.disconnect();
                     }
-                }, { threshold: [0] });
+                }, {
+                    threshold: [0]
+                });
                 comment_observer.observe(document.getElementById('comment'));
             } else {
                 loadComment();

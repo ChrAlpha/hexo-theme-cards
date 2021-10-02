@@ -67,7 +67,7 @@ navbar:
 
   # 导航栏永远显示在屏幕顶端
   # 仅当屏幕宽度不小于 1080 px 时生效
-  sticky: false
+  sticky: true
 
 # 封面 cover 设置
 cover: 
@@ -105,7 +105,6 @@ style:
   # 默认代码高亮
   highlight: 
     # 默认代码高亮主题
-    enable : true
     default: atom-one-light
 
     # 暗色代码高亮主题
@@ -114,7 +113,6 @@ style:
   # highlight.js 代码高亮
   hljs: 
     # 默认代码高亮主题
-    enable : false
     default: atom-one-light
 
     # 暗色代码高亮主题
@@ -122,7 +120,6 @@ style:
 
   # prismjs 代码高亮
   prismjs: 
-    enable : true
     # 默认代码高亮主题
     default: prism-tomorrow
 
@@ -199,7 +196,7 @@ meta:
 # ---------------------------------------------------------------
 
 comments: 
-  use:    gitalk # disqus | disqusjs | valine | minivaline | gitalk | gitment | levere | changyan | wildfire
+  use:    disqus # gitalk | disqus | disqusjs | valine | minivaline | gitalk | gitment | levere | changyan | wildfire
 
   # Disqus
   disqus:  
@@ -342,7 +339,7 @@ footer:
   statistics: 
 
     # 选择 LeanCloud/busuanzi 为网站计数。如果你完全不想启用，将 `use` 项留空即可
-    use:   # leancloud | busuanzi
+    use:   busuanzi # leancloud | busuanzi
 
     # 如果选择使用 LeanCloud，则需完善下面的配置项
     leancloud: 
@@ -355,7 +352,7 @@ footer:
       enable: true
       before_text: '' # 展示在数据前的内容，支持 HTML
       after_text: Viewers  # 展示在数据后的内容，支持 HTML
-      divider: '&nbsp;&nbsp;&nbsp;|' # 分隔符，HTML 语法支持
+      divider: '|' # 分隔符，HTML 语法支持
     
     # 全站 PV（Page Views）
     site_pv:
@@ -383,7 +380,7 @@ footer:
 
 # 图片懒加载插件
 lazyload:
-  enable: false
+  enable: true
   loadingImage: 
 
 # 站内搜索插件
