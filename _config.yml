@@ -93,8 +93,8 @@ style:
 
   # 颜色配置
   color: 
-    main_color: '#6200ee'
-    main_color_dark: '#bb86fc'
+    main_color: '#1e1e1e'
+    main_color_dark: '#f4f4f4'
 
   # 弧度设置
   radius: 

@@ -3,7 +3,7 @@
     --color-mode: 'dark';
   }
   :root:not([data-user-color-scheme]) {
-    --main-color: #bb86fc;
+    --main-color: #696969;
     --bg-color: #121212;
     --bg-content-color: #1e1e1e;
     --bg-menu: #363636;
