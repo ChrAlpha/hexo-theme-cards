@@ -64,6 +64,8 @@ navbar:
       url: /categories/
     - name: About
       url: /about/
+    - name: Talk
+      url: /small-talk/
 
   # 导航栏永远显示在屏幕顶端
   # 仅当屏幕宽度不小于 1080 px 时生效
@@ -516,6 +518,8 @@ vendors:
   # https://github.com/ArtitalkJS/Artitalk
   # Version: 3.1.2
   artitalk: 
+    appId: 'pc6T28AXUS8sG9WyO55zspqm-MdYXbMMI'
+    appKey: 'MaMQh4WRUfuR5eRj7miFQDOJ'
   
   # jQuery js
   # https://github.com/jquery/jquery/
