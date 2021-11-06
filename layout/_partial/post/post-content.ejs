@@ -6,7 +6,7 @@
     </h1>
     <div class="post-title__meta">
         <%- partial('_meta/date') %>
-        <%- partial('_meta/category') %> 
+        <%- partial('_meta/categories') %> 
         <%- partial('_plugins/statistics/index', {position: 'page'}) %> 
     </div>
 </div>
@@ -35,7 +35,7 @@
     </div>
     <%- partial('_meta/copyright') %> 
     <%- partial('_meta/updated') %> 
-    <%- partial('_meta/categories') %> 
+    <%- partial('_meta/tags') %> 
 </article>
 
 <% if (post.prev || post.next) { %>

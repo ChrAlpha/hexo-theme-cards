@@ -1,64 +1,59 @@
 .archives
+  position relative
+  max-width var(--content-width)
+  margin 0 auto
+  .archives-item
+    display -webkit-box
+    display -ms-flexbox
+    display flex
+    margin-bottom 1.2rem
     position relative
-    max-width var(--content-width)
-    margin 0 auto
-
-    .archives-item
-        display flex
-        margin-bottom 1.2rem
-        position relative
-
-        .archives-left
-            flex 0 0 auto
-            box-flex 0
-
-        .archives-icon
-            border-radius 50%
-            color var(--main-color)
-            display block
-            height 1.6rem
-            text-align center
-            width 1.6rem
-
-            &.icon-lg
-                background var(--main-color)
-                line-height 1.2rem
-
-        .archives-content
-            flex 1 1 auto
-            box-flex 1
-            padding 2px 0 2px .8rem
-
-            .archives-year
-                margin 0
-            
-            .archives-title
-                color var(--title-color)
-                font-size 20px
-
-        .archives-icon::before
-            border .1rem solid var(--main-color)
-            border-radius 50%
-            content ""
-            display block
-            height .4rem
-            left .6rem
-            position absolute
-            top .8rem
-            width .4rem
-
-        &:hover
-            .archives-icon::before
-                background var(--main-color)
-
-        &::before
-            background #e7e9ed
-            content ""
-            height 100%
-            left .8rem
-            position absolute
-            top 1.6rem
-            width 2px
-
-        &:last-child::before
-            background 0 0
+    .archives-left
+      -webkit-box-flex 0
+      -ms-flex 0 0 auto
+      flex 0 0 auto
+      box-flex 0
+    .archives-icon
+      border-radius 50%
+      color var(--main-color)
+      display block
+      height 1.6rem
+      text-align center
+      width 1.6rem
+      &.icon-lg
+        background var(--main-color)
+        line-height 1.2rem
+      &::before
+        border 0.1rem solid var(--main-color)
+        border-radius 50%
+        content ""
+        display block
+        height 0.4rem
+        left 0.6rem
+        position absolute
+        top 0.8rem
+        width 0.4rem
+    .archives-content
+      -webkit-box-flex 1
+      -ms-flex 1 1 auto
+      flex 1 1 auto
+      box-flex 1
+      padding 2px 0 2px 0.8rem
+      .archives-year
+        margin 0
+      .archives-title
+        color var(--title-color)
+        font-size 20px
+    &:hover
+      .archives-icon::before
+          background var(--main-color)
+    &::before
+      background #e7e9ed
+      content ""
+      height 100%
+      left 0.8rem
+      position absolute
+      top 1.6rem
+      width 2px
+    &:last-child::before
+        background 0 0

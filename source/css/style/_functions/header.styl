@@ -1,8 +1,14 @@
 tr.header
     display contents
 .header
+    display -webkit-box
+    display -ms-flexbox
     display flex
+    -webkit-box-pack justify
+    -ms-flex-pack justify
     justify-content space-between
+    -webkit-box-align center
+    -ms-flex-align center
     align-items center
     min-height $header_height
     padding 0 calc(var(--space)/2)
@@ -11,7 +17,11 @@ tr.header
 
     .header__left
     .header__right
+        display -webkit-box
+        display -ms-flexbox
         display flex
+        -webkit-box-align center
+        -ms-flex-align center
         align-items center
         font-family rubik,sans-serif,Varela Round
 
@@ -39,22 +49,6 @@ tr.header
         #btn-toggle-dark
             padding 16px 10px 16px 10px
 
-        #b2t
-            display block
-            width 3rem
-            height 3rem
-            position fixed
-            z-index 1001
-            right 1.2rem
-            bottom 1.2rem
-            border-radius $radius_button
-            color var(--title-color)
-            background var(--bg-content-color)
-            box-shadow 0 .3rem .6rem rgba(48,55,66,.15);
-
-            *
-                margin 8px
-
         .dropdown-icon
             display none
             padding 16px 10px 16px 10px
@@ -66,11 +60,13 @@ tr.header
                 height 20px
 
             &:focus + .dropdown-menus
+                display -webkit-box
+                display -ms-flexbox
                 display flex
 
-
         .dropdown-menus
-            animation slide-in 0.15s ease 1
+            -webkit-animation slide-down 0.15s ease 1
+            animation slide-down 0.15s ease 1
             display none
             position absolute
             left 12px
@@ -80,18 +76,26 @@ tr.header
             border-radius 6px
             padding 24px
             background var(--bg-content-color)
+            -webkit-box-shadow 1px 1px 5px 0 rgba(0,0,0,0.02), 1px 1px 15px 0 rgba(0,0,0,0.03)
             box-shadow 1px 1px 5px 0 rgba(0,0,0,.02),1px 1px 15px 0 rgba(0,0,0,.03)
             justify-items center
-            justify-content center 
+            -webkit-box-pack center
+            -ms-flex-pack center
+            justify-content center
+            -webkit-box-orient vertical
+            -webkit-box-direction normal
+            -ms-flex-direction column
             flex-direction column
 
             &:hover
+                display -webkit-box
+                display -ms-flexbox
                 display flex
 
             .dropdown-menu
                 padding 10px
 
-@keyframes slide-in {
+@keyframes slide-down {
     0% {
         opacity: 0;
         transform: translateY(-1.6rem)
@@ -107,6 +111,7 @@ if (hexo-config('navbar.sticky'))
     @media screen and (min-width: 1080px)
         .header
             position sticky
+            backdrop-filter blur(20px)
 
 @media screen and (max-width: 764px)
     .navbar__menus

@@ -17,7 +17,7 @@
 </div>
 <div class="post-entry__meta">
     <%- partial('_meta/date') %>
-    <%- partial('_meta/category') %> 
+    <%- partial('_meta/categories') %> 
 </div>
 <%- partial('_meta/tags') %> 
 <a href="<%= url_for(post.link || post.path) %>" class="post-entry__link"><%= post.title || theme.meta.title %></a>

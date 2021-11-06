@@ -1,6 +1,10 @@
 .footer
     display block
+    -webkit-box-align center
+    -ms-flex-align center
     align-items center
+    -webkit-box-pack center
+    -ms-flex-pack center
     justify-content center
     padding 0
     margin-top 4rem
@@ -12,9 +16,13 @@
 
     *
         margin 0 auto
+        -webkit-margin-before 0em
         margin-block-start 0em
+        -webkit-margin-after 0em
         margin-block-end 0em
+        -webkit-margin-start 0px
         margin-inline-start 0px
+        -webkit-margin-end 0px
         margin-inline-end 0px
 
     >span
@@ -26,3 +34,20 @@
 
     svg
         margin-right .2rem
+
+    #b2t
+            display block
+            width 3rem
+            height 3rem
+            position fixed
+            z-index 1001
+            right 1.2rem
+            bottom 1.2rem
+            border-radius $radius_button
+            color var(--title-color)
+            background-color var(--bg-menu)
+            -webkit-box-shadow 0 0.3rem 0.6rem rgba(48,55,66,0.15)
+            box-shadow 0 .3rem .6rem rgba(48,55,66,.15);
+
+            *
+                margin 8px

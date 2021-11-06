@@ -1,7 +1,8 @@
 <footer class="footer">
-    <%- partial('_plugins/statistics/index', {position: 'site'}) %>
-        <% if (theme.footer.copyright_since !== false) { %>
-            <%
+    <%- partial('_plugins/back_to_top/main') %>
+    <%- partial('_plugins/statistics/index', {position: 'site'}) %> 
+    <% if (theme.footer.copyright_since !== false) { %>
+        <%
         let copyright_yr;
         if (theme.footer.copyright_since !== null) {
             copyright_yr = `${theme.footer.copyright_since}&nbsp;-&nbsp;${date(Date.now(), 'YYYY')}`
