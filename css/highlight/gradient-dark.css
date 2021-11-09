@@ -1,0 +1,122 @@
+/*
+
+Gradient Dark (c) Samia Ali <samiaab1990@gmail.com>
+
+*/
+
+.highlight
+{
+display: block;
+overflow-x: auto;
+padding: 0.5em;
+background: rgb(80,31,122);
+background: linear-gradient(166deg, rgba(80,31,122,1) 0%, rgba(40,32,179,1) 80%);
+color:#e7e4eb;
+}
+
+.highlight .subtr{
+  color:#e7e4eb;
+}
+
+.highlight .doctag,
+.highlight .meta,
+.highlight .comment,
+.highlight .quote
+{
+  color:#af8dd9;
+}
+
+.highlight .selector-tag,
+.highlight .selector-id,
+.highlight .template-tag,
+.highlight .regexp,
+.highlight .attr,
+.highlight .tag
+{
+  color:#AEFBFF;
+}
+
+.highlight .params,
+.highlight .selector-class,
+.highlight .bullet
+
+{
+  color:#F19FFF;
+  
+}
+
+.highlight .keyword,
+.highlight .section,
+.highlight .meta-keyword,
+.highlight .symbol,
+.highlight .type
+
+{
+
+  color:#17fc95;
+}
+
+.highlight .addition,
+.highlight .number,
+.highlight .link
+{
+  color:#C5FE00;
+}
+
+
+.highlight .string
+{
+  color: #38c0ff;
+}
+
+
+.highlight .attribute,
+.highlight .addition
+{
+  color:#E7FF9F;
+}
+
+.highlight .variable,
+.highlight .template-variable
+
+{
+  color:#E447FF;
+}
+
+.highlight .builtin-name,
+.highlight .built_in,
+.highlight .formula,
+.highlight .name,
+.highlight .title,
+.highlight .class,
+.highlight .function
+{
+  color: #FFC800;
+
+}
+
+.highlight .selector-pseudo,
+.highlight .deletion,
+.highlight .literal
+{
+  color:#FF9E44;
+
+}
+
+.highlight .emphasis,
+.highlight .quote
+{
+  font-style:italic;
+}
+
+.highlight .params,
+.highlight .selector-class,
+.highlight .strong,
+.highlight .selector-tag,
+.highlight .selector-id,
+.highlight .template-tag,
+.highlight .section,
+.highlight .keyword
+{
+  font-weight:bold;
+}

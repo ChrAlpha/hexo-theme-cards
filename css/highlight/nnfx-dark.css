@@ -1,0 +1,106 @@
+/**
+ * nnfx dark - a theme inspired by Netscape Navigator/Firefox
+ *
+ * @version 1.0.0
+ * @author (c) 2020 Jim Mason <jmason@ibinx.com>
+ * @license https://creativecommons.org/licenses/by-sa/4.0  CC BY-SA 4.0
+ */
+
+.highlight {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #333;
+  color: #fff;
+}
+
+.xml .highlight .meta {
+  font-weight: bold;
+  font-style: italic;
+  color: #69f;
+}
+
+.highlight .comment,
+.highlight .quote {
+  font-style: italic;
+  color: #9c6;
+}
+
+.highlight .name,
+.highlight .keyword {
+  color: #a7a;
+}
+
+.highlight .name,
+.highlight .attr {
+  font-weight: bold;
+}
+
+.highlight .string {
+  font-weight: normal;
+}
+
+.highlight .variable,
+.highlight .template-variable {
+  color: #588;
+}
+
+.highlight .code,
+.highlight .string,
+.highlight .meta-string,
+.highlight .number,
+.highlight .regexp,
+.highlight .link {
+  color: #bce;
+}
+
+.highlight .title,
+.highlight .symbol,
+.highlight .bullet,
+.highlight .built_in,
+.highlight .builtin-name {
+  color: #d40;
+}
+
+.highlight .section,
+.highlight .meta {
+  color: #a85;
+}
+
+.highlight .class .highlight .title,
+.highlight .type {
+  color: #96c;
+}
+
+.highlight .function .highlight .title,
+.highlight .attr,
+.highlight .subst {
+  color: #fff;
+}
+
+.highlight .formula {
+  background-color: #eee;
+  font-style: italic;
+}
+
+.highlight .addition {
+  background-color: #797;
+}
+
+.highlight .deletion {
+  background-color: #c99;
+}
+
+.highlight .selector-id,
+.highlight .selector-class {
+  color: #964;
+}
+
+.highlight .doctag,
+.highlight .strong {
+  font-weight: bold;
+}
+
+.highlight .emphasis {
+  font-style: italic;
+}
