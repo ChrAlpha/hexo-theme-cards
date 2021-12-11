@@ -1,7 +1,7 @@
 page: 
   pagination: '第 %s 页'
-  prev: 上一篇
-  next: 下一篇
+  prev_page: 上一页
+  next_page: 下一页
 navbar:
   home: 首页
   link: 友链
@@ -19,8 +19,8 @@ post:
   comments: 评论
   comments_placeholder: 您所在的地区可能无法访问 %s 评论系统，请切换网络环境再尝试。
   updated: '更新于 '
-  prev_page: 上一页
-  next_page: 下一页
+  prev: 上一篇
+  next: 下一篇
   toc: 文章目录
   copyright: 
     author: '本文作者：'
