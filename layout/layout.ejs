@@ -2,7 +2,7 @@
 <html lang="<%= config.language%>">
     <%- partial('_partial/head/index') %>
     <body>
-        <div id="app">
+        <div id="app" tabindex="-1">
             <%- partial('_partial/source/cover') %>
             <%- body %>
             <%- partial('_partial/source/footer', null, {cache: !config.relative_link}) %>
