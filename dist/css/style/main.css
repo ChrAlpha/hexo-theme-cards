@@ -450,10 +450,6 @@ overflows table td {
 }
 .post-entry__content,
 .post__content {
-  -webkit-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  text-size-adjust: 100%;
   color: var(--body-color);
   font-size: 16px;
   word-wrap: break-word;
@@ -1037,7 +1033,7 @@ overflows table td {
     position: -webkit-sticky;
     position: sticky;
     -webkit-backdrop-filter: blur(20px);
-            backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
   }
 }
 @media screen and (max-width: 764px) {
@@ -1299,7 +1295,8 @@ overflows table td {
   .post-side .post-side__toc .toc {
     width: calc(100vw / 6 - 20px);
   }
-  .post__with-toc {
+  .post__with-toc,
+  .nav {
     max-width: calc(100vw / 6 * 4);
   }
 }
@@ -1310,7 +1307,8 @@ overflows table td {
   .post-side .post-side__toc .toc {
     width: calc(100vw / 4 - 30px);
   }
-  .post__with-toc {
+  .post__with-toc,
+  .nav {
     max-width: calc(100vw / 4 * 3);
     margin-left: 0;
   }
@@ -1321,7 +1319,8 @@ overflows table td {
   }
 }
 @media screen and (max-width: 764px) {
-  .post__with-toc {
+  .post__with-toc,
+  .nav {
     max-width: var(--w);
   }
   #btn-toc {
