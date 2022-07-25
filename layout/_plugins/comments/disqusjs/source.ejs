@@ -2,10 +2,10 @@
 <script>
     function loadComment() {
         let e, i;
-        (e = document.createElement("script")).src = "<%- theme.vendors.disqusjs.js || "https://cdn.jsdelivr.net/npm/disqusjs@1.3/dist/disqus.js" %>",
+        (e = document.createElement("script")).src = '<%- theme.vendors.disqusjs.js || "https://cdn.jsdelivr.net/npm/disqusjs@1.3/dist/disqus.js" %>',
         document.body.appendChild(e);
         e.onload = () => {
-            new DisqusJS({
+            const disqusjs = new DisqusJS({
                 shortname: "<%- theme.comments.disqusjs.shortname %>",
                 siteName: "<%- config.title %>",
                 api: "<%- theme.comments.disqusjs.api %>",
@@ -15,9 +15,10 @@
                 url: "<%- page.permalink %>",
                 nesting: "<%- theme.comments.disqusjs.nesting %>"
             });
+            disqusjs.render(document.getElementById('disqusjs'));
         };
         (i = document.createElement("link")).rel = "stylesheet",
-        i.href = "<%- theme.vendors.disqusjs.css || "https://cdn.jsdelivr.net/npm/disqusjs@1.3/dist/disqusjs.css" %>",
+        i.href = '<%- theme.vendors.disqusjs.css || "https://cdn.jsdelivr.net/npm/disqusjs@1.3/dist/disqusjs.css" %>',
         document.head.appendChild(i);
     }
 
