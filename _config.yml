@@ -468,6 +468,13 @@ vendors:
   # https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.2/dist/js/local-search.min.js
   # Version 1.2
   local_search: 
+
+  # DisqusJS
+  # https://github.com/SukkaW/DisqusJS
+  # Version 3.0
+  disqusjs:
+    css:
+    js: 
   
   # Valine comments system
   # https://github.com/xcss/Valine/
