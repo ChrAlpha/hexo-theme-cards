@@ -6,14 +6,14 @@
             document.body.appendChild(e);
             e.onload = () => {
                 new DisqusJS({
-                    shortname: '<%= theme.comments.disqusjs.shortname %>',
-                    siteName: '<%= config.title %>',
-                    api: '<%= theme.comments.disqusjs.api %>',
-                    apikey: '<%= theme.comments.disqusjs.apikey %>',
-                    admin: '<%= theme.comments.disqusjs.admin %>',
-                    identifier: '<%= page.path %>',
-                    url: '<%= page.permalink %>',
-                    nesting: '<%= theme.comments.disqusjs.nesting %>'
+                    shortname: "<%- theme.comments.disqusjs.shortname %>",
+                    siteName: "<%- config.title %>",
+                    api: "<%- theme.comments.disqusjs.api %>",
+                    apikey: "<%- theme.comments.disqusjs.apikey %>",
+                    admin: "<%- theme.comments.disqusjs.admin %>",
+                    identifier: "<%- page.path %>",
+                    url: "<%- page.permalink %>",
+                    nesting: "<%- theme.comments.disqusjs.nesting %>"
                 });
             };
             (i = document.createElement("link")).rel = "stylesheet",
