@@ -24,17 +24,17 @@
         font-family rubik,sans-serif,Varela Round
 
     .header__left
-    
+
         .logo__text
             font-size 18px
             padding 16px 10px 16px 10px
             border-radius 5px
 
     .header__right
-    
+
         .navbar__menus
             padding 0 0 0 15px
-            
+
             .navbar-menu
                 font-size 16px
                 padding 16px 10px 16px 10px
@@ -45,17 +45,19 @@
 
         #btn-search
         #btn-toggle-dark
-            padding 16px 10px 16px 10px
+            height 55.5px
+            padding 15px 10px
 
         .dropdown-icon
             display none
-            padding 16px 10px 16px 10px
+            height 55.5px
+            padding 15px 10px
             border 0 !important
             background-color transparent
 
             *
-                width 20px
-                height 20px
+                width 24px
+                height 24px
 
             &:focus + .dropdown-menus
                 display -webkit-box
@@ -115,7 +117,7 @@ if (hexo-config('navbar.sticky'))
 @media screen and (max-width: 764px)
     .navbar__menus
         display none !important
-    
+
     .dropdown-icon
         display block !important
 
