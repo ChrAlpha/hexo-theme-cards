@@ -89,6 +89,7 @@ style:
   color: 
     main_color: '#6200ee'
     main_color_dark: '#bb86fc'
+    selection_color: '#318efd'
 
   # 弧度设置
   radius: 

@@ -42,6 +42,14 @@ body
     padding 0
     line-height $lineheight
 
+::selection
+    color $color_card
+    background-color $color_selection
+
+::-moz-selection
+    color $color_card
+    background-color $color_selection
+
 @media screen and (max-width:650px)
     body
         --space $space_sm
