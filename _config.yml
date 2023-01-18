@@ -155,7 +155,6 @@ meta:
   # 文章缩略图
   thumbnail: 
     enable: false
-    relative: false
     default:   # 默认缩略图，当页面 `thumbnail` 字段为空时 fallback 至此参数
 
   # 文章过时提醒
