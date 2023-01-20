@@ -246,6 +246,18 @@ comments:
     visitor: 
     serverURLs: 
 
+  # Giscus
+  giscus:
+    repo: 
+    repoId: 
+    category: 
+    categoryId: 
+    mapping: 
+    strict: 
+    position: 
+    theme: 
+    lang: 
+
   # Gitalk
   gitalk:
     repo:
