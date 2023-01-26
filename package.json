@@ -4,7 +4,7 @@
   "description": "A Simple & Swift Theme for Hexo, designed as its name",
   "main": "README.md",
   "scripts": {
-    "dist": "gulp rmHexoConfig && gulp"
+    "dist": "npx gulp rmHexoConfig && npx gulp"
   },
   "repository": {
     "type": "git",
