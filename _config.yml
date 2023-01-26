@@ -435,22 +435,22 @@ mermaid:
 vendors:
 
   # main style css
-  # https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.2/dist/css/style/main.min.css
-  # Version: 1.2
+  # https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.4/dist/css/style/main.min.css
+  # Version: 1.4
   # 如果你有自定义样式，请务必将此项修改为自己的 CDN 地址，或者单纯留空
   style: 
 
   # darkmode
-  # https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.2/dist/css/style/dark.min.css
-  # https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.2/dist/js/darkmode.min.js
-  # Version 1.2
+  # https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.4/dist/css/style/dark.min.css
+  # https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.4/dist/js/darkmode.min.js
+  # Version 1.4
   darkmode: 
     css: 
     js: 
   
   # code highlight css
   # https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.2/dist/css/highlight/
-  # Version: 1.2
+  # Version: 1.4
   highlight: 
 
   # highlight.js theme
@@ -465,8 +465,8 @@ vendors:
 
   # tag-plugin note css
   # https://github.com/ChrAlpha/hexo-theme-cards
-  # https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.2/dist/css/style/note.min.css
-  # Version 1.2
+  # https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.4/dist/css/style/note.min.css
+  # Version 1.4
   note: 
 
   # Lazyload js
@@ -475,13 +475,13 @@ vendors:
   lazyload: 
   
   # back_to_top button
-  # https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.2/dist/js/b2t.min.js
-  # Version 1.2
+  # https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.4/dist/js/b2t.min.js
+  # Version 1.4
   back_to_top: 
 
   # local search plugin
-  # https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.2/dist/js/local-search.min.js
-  # Version 1.2
+  # https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.4/dist/js/local-search.min.js
+  # Version 1.4
   local_search: 
 
   # DisqusJS
