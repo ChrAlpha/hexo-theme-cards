@@ -1335,7 +1335,7 @@ overflows table td {
 @media screen and (max-width: 764px) {
   .post__with-toc,
   .nav {
-    max-width: var(--w);
+    max-width: var(--content-width);
   }
   #btn-toc {
     display: block;
