@@ -463,12 +463,6 @@ vendors:
   # Version: 1.21.0
   prism: 
 
-  # tag-plugin note css
-  # https://github.com/ChrAlpha/hexo-theme-cards
-  # https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.4/dist/css/style/note.min.css
-  # Version 1.4
-  note: 
-
   # Lazyload js
   # https://github.com/verlok/lazyload
   # Version: 17.1.2
