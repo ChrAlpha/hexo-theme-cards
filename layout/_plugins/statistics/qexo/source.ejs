@@ -1,0 +1,36 @@
+<% if (theme.footer.statistics.use === 'qexo') { %> 
+    <script>
+
+function loadStatistic(e) {
+    var t = e + "/pub/statistic/";
+    
+    function qexoInner(a,b) {if (document.getElementById(a)) document.getElementById(a).innerHTML = b;}
+    
+    fetch(t, {
+        referrerPolicy: "no-referrer-when-downgrade"
+    }).then(function (res) {
+        if (res.ok) {
+            res.json().then(function (e) {
+                if (e.status) {
+                    qexoInner("qexo_site_uv", e.site_uv);
+                    qexoInner("qexo_site_pv", e.site_pv);
+                    qexoInner("qexo_page_pv", e.page_pv);
+                    document.querySelector('#qexo_container_site_pv').style.display = 'inline';
+                    document.querySelector('#qexo_container_site_uv').style.display = 'inline';
+                    if ('<%= is_post() %>' === 'true') {
+                         document.querySelector('#qexo_container_page_pv').style.display = 'inline';
+                    }
+                } else {
+                    console.log(e.error);
+                }
+            })
+        } else {
+            console.log('连接失败！')
+        }
+    }, function (ex) {
+        console.log('站点统计失败! 网络错误')
+    });
+}
+    </script>
+    <script>loadStatistic('<%= theme.footer.statistics.qexo.url %>')</script>
+<% } %> 

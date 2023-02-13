@@ -348,8 +348,12 @@ footer:
   # 网站计数
   statistics: 
 
-    # 选择 LeanCloud/busuanzi 为网站计数。如果你完全不想启用，将 `use` 项留空即可
-    use:   # leancloud | busuanzi
+    # 选择 LeanCloud/busuanzi/Qexo 为网站计数。如果你完全不想启用，将 `use` 项留空即可
+    use:   # leancloud | busuanzi | qexo
+
+    # 如果选择使用 Qexo，则需完善下面的配置项
+    qexo:
+      url: #部署了qexo的地址，如https://admin.example.org
 
     # 如果选择使用 LeanCloud，则需完善下面的配置项
     leancloud: 
