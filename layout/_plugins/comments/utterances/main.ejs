@@ -1,0 +1,22 @@
+<% if (theme.comments.use === 'utterances') { %>
+<div id="utterances-container" sid="<%= page.path %>"></div>
+<script type="text/javascript">
+  var repo = "<%= theme.comments.utterances.repo%>";
+  var issueTerm = "<%= theme.comments.utterances.issueTerm%>";
+  var theme = "<%= theme.comments.utterances.theme%>";
+  var label = "<%= theme.comments.utterances.label%>";
+  (function () {
+    var container = document.getElementById("utterances-container");
+    var script = document.createElement("script");
+    script.src = "https://utteranc.es/client.js";
+    script.setAttribute("repo", repo);
+    script.setAttribute("issue-term", issueTerm);
+    script.setAttribute("theme", theme);
+    script.setAttribute("label", label);
+    script.crossorigin = "anonymous";
+    script.async = true;
+
+    container.appendChild(script);
+  })();
+</script>
+<% } %>

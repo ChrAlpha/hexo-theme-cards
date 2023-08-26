@@ -188,9 +188,18 @@ meta:
 # ---------------------------------------------------------------
 # 评论系统
 # ---------------------------------------------------------------
+comments:
+  use: # utterances |  disqus | disqusjs | valine | minivaline | gitalk | gitment | levere | changyan | wildfire
 
-comments: 
-  use:   # disqus | disqusjs | valine | minivaline | gitalk | gitment | levere | changyan | wildfire
+  # utterances
+  # Docs: https://utteranc.es/
+  # Tips: Make sure you have installed [utterances app](https://github.com/apps/utterances) in your repo
+  utterances:
+    enable: true
+    repo: # Repository
+    issueTerm: title # Blog post ↔️ issue mapping: pathname | url | title | og:title
+    theme: github-light # Theme: github-light | github-dark | github-dark-orange | icy-dark | dark-blue | photon-dark
+    label: # Issue label
 
   # Disqus
   disqus:  
