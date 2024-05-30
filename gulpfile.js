@@ -31,7 +31,7 @@ function clean() {
 }
 
 function ignore() {
-    return del(['./tmp']);
+    return del(['./dist/**/_*', './tmp']);
 }
 
 function minifyJS() {
