@@ -5,9 +5,9 @@
             <link rel="stylesheet" id="hl-dark-theme" href="<%= `${theme.vendors.highlight}${theme.style.highlight.darkmode || 'dark'}.min.css` %>" media="none">
         <% } %>
     <% } else { %>
-        <link rel="stylesheet" id="hl-default-theme" href="<%= url_for(`css/highlight/${theme.style.highlight.default || 'default'}.css`) %>" media="none" <%- theme.darkmode === true ? "" : `onload="this.media='all'"` %>>
+        <link rel="stylesheet" id="hl-default-theme" href="<%= url_for(`css/highlight/highlight.css`) %>" media="none" <%- theme.darkmode === true ? "" : `onload="this.media='all'"` %>>
         <% if (theme.darkmode === true && (theme.style.highlight.darkmode !== theme.style.highlight.default || theme.style.highlight.darkmode === null)) { %>
-            <link rel="stylesheet" id="hl-dark-theme" href="<%= url_for(`css/highlight/${theme.style.highlight.darkmode || 'dark'}.css`) %>" media="none">
+            <link rel="stylesheet" id="hl-dark-theme" href="<%= url_for(`css/highlight/highlight.dark.css`) %>" media="none">
         <% } %>
     <% } %>
 <% } %>
