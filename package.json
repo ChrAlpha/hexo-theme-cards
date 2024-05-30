@@ -22,7 +22,10 @@
     "url": "https://github.com/ChrAlpha/hexo-theme-cards/issues"
   },
   "homepage": "https://github.com/ChrAlpha/hexo-theme-cards#readme",
-  "dependencies": {},
+  "dependencies": {
+    "hexo-renderer-ejs": "^2.0.0",
+    "hexo-renderer-stylus": "^3.0.1"
+  },
   "devDependencies": {
     "del": "^5.1.0",
     "gulp": "4.0.2",
@@ -31,6 +34,7 @@
     "gulp-rename": "^2.0.0",
     "gulp-replace": "^1.0.0",
     "gulp-stylus": "^2.7.0",
-    "gulp-uglify-es": "^2.0.0"
+    "gulp-uglify-es": "^2.0.0",
+    "stylus": "^0.63.0"
   }
 }

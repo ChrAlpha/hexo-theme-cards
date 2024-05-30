@@ -31,7 +31,7 @@ function clean() {
 }
 
 function ignore() {
-    return del(['./dist/**/_*/**', './dist/**/_*', './tmp']);
+    return del(['./tmp']);
 }
 
 function minifyJS() {
@@ -43,8 +43,10 @@ function minifyJS() {
 }
 
 function compileStylus() {
-    return gulp.src('./tmp/**/*.styl')
-        .pipe(stylus())
+    return gulp.src(['./tmp/**/*.styl', '!./tmp/**/_*/**/*'])
+        .pipe(stylus({
+            'include css': true
+          }))
         .pipe(autoprefixer(configs.autoprefixer))
         .pipe(gulp.dest('./dist'))
         .pipe(cleanCSS(configs.cleanCSS))
@@ -70,16 +72,17 @@ module.exports = {
 };
 
 gulp.task('rmHexoConfig', function () {
-    gulp.src('./source/**/*.styl')
+    return gulp.src(['./source/**/*.styl', './source/**/*.css'])
         .pipe(replace(/convert\((.*?)\) \|\|\ /g, ''))
+        .pipe(replace(/hexo-config\((.*?)\)/g, ''))
         .pipe(gulp.dest('./tmp'));
 });
 
 gulp.task('dist', gulp.series(
     clean,
+    compileStylus,
     gulp.parallel(
         minifyJS,
-        compileStylus,
         minifyCSS
     ),
     ignore
