@@ -189,7 +189,7 @@ meta:
 # 评论系统
 # ---------------------------------------------------------------
 comments:
-  use: # utterances |  disqus | disqusjs | valine | minivaline | gitalk | gitment | levere | changyan | wildfire
+  use: # utterances |  disqus | disqusjs | valine | minivaline | gitalk | gitment | levere | changyan | wildfire | twikoo
 
   # utterances
   # Docs: https://utteranc.es/
