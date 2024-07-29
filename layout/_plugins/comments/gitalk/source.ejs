@@ -11,7 +11,7 @@
                     repo: '<%= theme.comments.gitalk.repo %>',
                     owner: '<%= theme.comments.gitalk.owner %>',
                     admin: '<%= theme.comments.gitalk.owner %>',
-                    id: '<%= theme.comments.gitalk.id %>' || window.location.pathname,
+                    id: '<%= page.gitalk || page.path %>',
                     distractionFreeMode: false
                 });
                 gitalk.render('gitalk-container');
