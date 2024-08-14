@@ -2,7 +2,7 @@
     <script>
         function loadComment() {
             let e;
-            (e = document.createElement("script")).src = '<%= url_for(theme.vendors.twikoo || 'https://cdn.jsdelivr.net/npm/twikoo@0.3.2/dist/twikoo.all.min.js') %>',
+            (e = document.createElement("script")).src = '<%= url_for(theme.vendors.twikoo || 'https://unpkg.com/twikoo') %>',
             document.body.appendChild(e);
             e.onload = () => {
                 twikoo.init({
