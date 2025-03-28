@@ -1,7 +1,7 @@
 <% if (theme.meta.copyright.enable && page.copyright !== false) { %>
     <div class="post__license">
         <p>
-            <strong><%= __('post.copyright.author') %></strong><%= page.author.name || theme.meta.author.name %>
+            <strong><%= __('post.copyright.author') %></strong><%= page?.author?.name || theme.meta.author.name %>
         </p>
         <p>
             <strong>
