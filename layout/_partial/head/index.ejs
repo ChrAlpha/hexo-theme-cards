@@ -1,6 +1,9 @@
 <head>
     <meta charset="utf-8">
 
+    <!-- 把 analytics 的代码放在 head 开始后 -->
+    <%- partial('_plugins/analytics/index') %>
+
     <% if (page.robots) { %>
         <meta name="robots" content="<%= page.robots %>">
     <% } %>
