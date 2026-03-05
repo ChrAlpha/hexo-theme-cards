@@ -42,7 +42,7 @@ hexo s --debug
 - Alendia：[Alendia's Blog](https://alendia.github.io/)
 - guiqiqi：[初始化博客](https://init.blog/)
 - nozomi：[Hays' Blog](https://blog.haysc.tech/)
-- Flexiston：[Flexiston's Blog](https://blog.flesx.cn/)
+- Flexiston：[Meshtastic 中国社区](https://meshcn.net/)
 
 更多链接可前往 [Demo - 友链页](https://theme-cards.ichr.me/demo/links/) 探索。
 
