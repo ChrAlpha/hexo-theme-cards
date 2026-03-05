@@ -3,36 +3,124 @@
         <div class='links-content'>
             <% if (page.links && !Array.isArray(page.links)) { %>
                 <script>
-                    fetch('<%= url_for(page.links) %>')
-                        .then(res => res.json())
-                        .then(links => {
-                            links.forEach(link => {
-                                let i;
-                                (i = document.createElement('a')).style = `background:${link.backgroundColor}; color:${link.textColor}`,
-                                i.className = 'links-card button',i.target = link.target || '_blank',i.href = link.url;
-                                let temp =  `<div class='links-left'>`;
-                                if (link.avatar) {
-                                    temp += `<img no-lazy class='avatar' src="${link.avatar}" />`;
-                                }                                   
-                                temp += `</div><div class='links-right'><p class="links-name">${link.name}</p><div class='links-tags-wrapper'>`
-                                if (link.desc) {
-                                    temp += `<p class="tags">${link.desc}</p>`
-                                } else if (link.tags) {
-                                    let ts = [];
-                                    (link.tags || []).forEach((tag) => {
-                                        ts.push(tag);
-                                    });
-                                    temp += `<p class="tags">${ts.join(' | ')}</p>`
+                    (function () {
+                        var linksRoot = document.querySelector('.links-content');
+                        var allowedTargets = {
+                            _blank: true,
+                            _self: true,
+                            _parent: true,
+                            _top: true
+                        };
+
+                        function sanitizeUrl(rawUrl) {
+                            if (typeof rawUrl !== 'string') {
+                                return '#';
+                            }
+                            var value = rawUrl.trim();
+                            if (!value || /^(javascript|data|vbscript):/i.test(value)) {
+                                return '#';
+                            }
+                            if (/^(https?:|mailto:|tel:|\/\/|\/|\.\/|\.\.\/|#)/i.test(value)) {
+                                return value;
+                            }
+                            return '#';
+                        }
+
+                        function sanitizeAvatarUrl(rawUrl) {
+                            if (typeof rawUrl !== 'string') {
+                                return '';
+                            }
+                            var value = rawUrl.trim();
+                            if (!value || /^(javascript|data|vbscript):/i.test(value)) {
+                                return '';
+                            }
+                            return /^(https?:|\/\/|\/|\.\/|\.\.\/)/i.test(value) ? value : '';
+                        }
+
+                        function sanitizeTarget(rawTarget) {
+                            var value = typeof rawTarget === 'string' ? rawTarget.trim().toLowerCase() : '';
+                            return allowedTargets[value] ? value : '_blank';
+                        }
+
+                        function createTagsText(link) {
+                            if (typeof link.desc === 'string' && link.desc.trim()) {
+                                return link.desc;
+                            }
+                            if (Array.isArray(link.tags) && link.tags.length) {
+                                return link.tags.join(' | ');
+                            }
+                            return '';
+                        }
+
+                        function createCard(link) {
+                            var card = document.createElement('a');
+                            card.className = 'links-card button';
+                            card.target = sanitizeTarget(link.target);
+                            card.href = sanitizeUrl(link.url);
+                            if (card.target === '_blank') {
+                                card.rel = 'noopener noreferrer';
+                            }
+                            if (typeof link.backgroundColor === 'string') {
+                                card.style.backgroundColor = link.backgroundColor;
+                            }
+                            if (typeof link.textColor === 'string') {
+                                card.style.color = link.textColor;
+                            }
+
+                            var left = document.createElement('div');
+                            left.className = 'links-left';
+                            var avatar = sanitizeAvatarUrl(link.avatar);
+                            if (avatar) {
+                                var img = document.createElement('img');
+                                img.setAttribute('no-lazy', '');
+                                img.className = 'avatar';
+                                img.src = avatar;
+                                left.appendChild(img);
+                            }
+
+                            var right = document.createElement('div');
+                            right.className = 'links-right';
+                            var name = document.createElement('p');
+                            name.className = 'links-name';
+                            name.textContent = typeof link.name === 'string' ? link.name : '';
+                            right.appendChild(name);
+
+                            var tagsText = createTagsText(link);
+                            if (tagsText) {
+                                var tagsWrapper = document.createElement('div');
+                                tagsWrapper.className = 'links-tags-wrapper';
+                                var tags = document.createElement('p');
+                                tags.className = 'tags';
+                                tags.textContent = tagsText;
+                                tagsWrapper.appendChild(tags);
+                                right.appendChild(tagsWrapper);
+                            }
+
+                            card.appendChild(left);
+                            card.appendChild(right);
+                            return card;
+                        }
+
+                        fetch('<%= url_for(page.links) %>')
+                            .then(function (res) {
+                                return res.json();
+                            })
+                            .then(function (links) {
+                                if (!Array.isArray(links) || !linksRoot) {
+                                    return;
                                 }
-                                temp += '</div></div>';
-                                i.innerHTML = temp;
-                                document.querySelectorAll('.links-content')[0].appendChild(i);
+                                links.forEach(function (link) {
+                                    if (link && typeof link === 'object') {
+                                        linksRoot.appendChild(createCard(link));
+                                    }
+                                });
                             });
-                        });
+                    })();
                 </script>
             <% } else if (page.links && Array.isArray(page.links)) { %>
                 <% (page.links || []).forEach((item) => { %>
-                    <a class='links-card button' style='background:<%= item.backgroundColor %>; color:<%= item.textColor %>' target="<%= item.target || '_blank' %>" href='<%= url_for(item.url || '') %>'>
+                    <% var itemTarget = item.target || '_blank'; %>
+                    <a class='links-card button' style='background:<%= item.backgroundColor %>; color:<%= item.textColor %>' target="<%= itemTarget %>" <% if (itemTarget === '_blank') { %>rel="noopener noreferrer"<% } %> href='<%= url_for(item.url || '') %>'>
                         <div class='links-left'>
                             <% if (item.avatar) { %>
                                 <img no-lazy class='avatar' src='<%= item.avatar %>'/>
