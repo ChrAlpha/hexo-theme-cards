@@ -34,6 +34,23 @@ function regEscape(keyword) {
     });
 }
 
+function sanitizeResultLink(link) {
+    if (typeof link !== 'string') {
+        return '#';
+    }
+    const value = link.trim();
+    if (!value || /^(javascript|data|vbscript):/i.test(value)) {
+        return '#';
+    }
+    return /^(https?:|mailto:|tel:|\/\/|\/|\.\/|\.\.\/|#)/i.test(value) ? value : '#';
+}
+
+function sanitizeHighlightedHTML(text) {
+    return searchEscape(String(text || ''))
+        .replace(/&lt;m&gt;/gi, '<m>')
+        .replace(/&lt;(?:\/|&#x2F;)m&gt;/gi, '</m>');
+}
+
 function getParam(reqParam) {
     reqParam = reqParam.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
     const paraReg = new RegExp('[\\?&]' + reqParam + '=([^&#]*)');
@@ -43,12 +60,12 @@ function getParam(reqParam) {
 
 function setNotice(info) {
     const noticeSectionElement = document.getElementById('search-result__notice');
-    noticeSectionElement.innerHTML = info;
+    noticeSectionElement.textContent = info;
 }
 
 function clearPosts() {
     const resultSectionElement = document.getElementById('search-result__list');
-    resultSectionElement.innerHTML = '';
+    resultSectionElement.textContent = '';
 }
 
 function createPosts(resArr) {
@@ -57,14 +74,17 @@ function createPosts(resArr) {
 
     resArr.forEach((resInfo) => {
         const pageInfo = resInfo[0];
+        const safeLink = sanitizeResultLink(pageInfo.link);
+        const safeTitle = sanitizeHighlightedHTML(pageInfo.title);
+        const safeContent = sanitizeHighlightedHTML(pageInfo.content);
         const postTemplate = `
-        <a href="${pageInfo.link}" class="search-result__link">
+        <a href="${safeLink}" class="search-result__link">
             <div class='search-result__item'>
                 <strong>
-                    ${pageInfo.title}
+                    ${safeTitle}
                 </strong>
                 <div class="search-result__content">
-                    ${pageInfo.content}
+                    ${safeContent}
                 </div>
             </div>
         </a>
