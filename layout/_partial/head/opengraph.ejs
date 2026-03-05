@@ -1,10 +1,40 @@
 <!-- OpenGraph -->
-<% if (theme.head.opengraph.enable) { %> 
+<% if (theme.head.opengraph.enable) { %>
+    <%
+    var ogImageRaw = theme.head.opengraph.image;
+    var ogImage = ogImageRaw;
+    if (typeof ogImageRaw === 'string') {
+        var ogImagePath = ogImageRaw.trim();
+        var isJsonLiteral = (ogImagePath.charAt(0) === '[' && ogImagePath.charAt(ogImagePath.length - 1) === ']')
+            || (ogImagePath.charAt(0) === '"' && ogImagePath.charAt(ogImagePath.length - 1) === '"');
+        var isDotPath = /^[A-Za-z_$][\w$]*(\.[A-Za-z_$][\w$]*)*$/.test(ogImagePath);
+        if (isJsonLiteral) {
+            try {
+                ogImage = JSON.parse(ogImagePath);
+            } catch (e) {
+                ogImage = ogImagePath;
+            }
+        } else if (isDotPath) {
+            var ogRoots = {
+                page: typeof page !== 'undefined' ? page : undefined,
+                theme: typeof theme !== 'undefined' ? theme : undefined,
+                config: typeof config !== 'undefined' ? config : undefined
+            };
+            var ogSegments = ogImagePath.split('.');
+            ogImage = ogRoots[ogSegments[0]];
+            for (var i = 1; i < ogSegments.length && ogImage !== undefined && ogImage !== null; i++) {
+                ogImage = ogImage[ogSegments[i]];
+            }
+        } else {
+            ogImage = ogImagePath;
+        }
+    }
+    %>
     <%- open_graph({
         type: theme.head.opengraph.type,
         twitter_card: theme.head.opengraph.twitter_card,
         twitter_id: theme.head.opengraph.twitter_id,
-        image: eval(theme.head.opengraph.image),
+        image: ogImage,
         fb_admins: theme.head.opengraph.fb_admins,
         fb_app_id: theme.head.opengraph.fb_app_id
     }) %>
