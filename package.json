@@ -4,7 +4,7 @@
   "description": "A Simple & Swift Theme for Hexo, designed as its name",
   "main": "README.md",
   "scripts": {
-    "dist": "npx gulp rmHexoConfig && npx gulp"
+    "dist": "node ./scripts/build-dist.mjs"
   },
   "repository": {
     "type": "git",
@@ -27,14 +27,19 @@
     "hexo-renderer-stylus": "^3.0.1"
   },
   "devDependencies": {
-    "del": "^5.1.0",
-    "gulp": "4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-rename": "^2.0.0",
-    "gulp-replace": "^1.0.0",
-    "gulp-stylus": "^2.7.0",
-    "gulp-uglify-es": "^2.0.0",
-    "stylus": "^0.63.0"
+    "autoprefixer": "^10.4.27",
+    "clean-css": "^5.3.3",
+    "postcss": "^8.5.10",
+    "stylus": "^0.63.0",
+    "terser": "^5.46.1"
+  },
+  "pnpm": {
+    "overrides": {
+      "brace-expansion@1.1.11": "1.1.13",
+      "brace-expansion@2.0.1": "2.0.3",
+      "filelist>minimatch": "5.1.8",
+      "glob>minimatch": "3.1.4",
+      "jake>minimatch": "3.1.4"
+    }
   }
 }
